@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+	bootstrap="tests/phpunit/bootstrap.php"
+	colors="true"
+	backupGlobals="false"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true">
+  <testsuites>
+    <!-- Default test suite to run all tests -->
+    <testsuite>
+      <directory phpVersion="5.4.0" suffix=".php">tests/phpunit</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

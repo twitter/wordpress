@@ -1,0 +1,30 @@
+{
+  "name": "twitter/wordpress",
+  "type": "wordpress-plugin",
+  "description": "Official Twitter plugin for WordPress",
+  "homepage": "https://dev.twitter.com/web/wordpress",
+  "license": "MIT",
+  "keywords": ["twitter","wordpress","plugin"],
+  "require": {
+    "php": ">=5.4.0",
+  },
+  "authors": [
+    {
+      "name": "Twitter",
+      "homepage": "https://github.com/twitter/wordpress/contributors"
+    }
+  ],
+  "support": {
+    "forum": "https://twittercommunity.com/c/websites"
+  },
+  "autoload": {
+    "psr-4": {
+      "Twitter\\": "src/Twitter/"
+    }
+  },
+  "autoload-dev": {
+	"psr-4": {
+      "Twitter\\Tests\\": "tests/phpunit/"
+	}
+  }
+}

@@ -1,0 +1,295 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "Twitter 自定义文本"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "发推"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "参数"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "文本"
+
+msgid "Hashtags"
+msgstr "话题标签(#)"
+
+msgid "Pre-populate Tweet text"
+msgstr "预先填写推文文本"
+
+msgid "Twitter Card"
+msgstr "Twitter 卡片"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "属性"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "标题"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "描述"
+
+msgid "Customize Twitter link previews"
+msgstr "自定义 Twitter 链接预览"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "Twitter @用户名"
+
+msgid "Embedded Tweet"
+msgstr "嵌入推文"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "对话视图"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "加入媒体"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "自定义嵌入推文的视觉显示"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "在回复帖子中加入先前的推文"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"推文可以是另一推文的回复。如果您想要"
+"在帖子中显示先前的推文则选择该选项。"
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "显示推文中引用的图片、视频和链接预览"
+
+msgid "Twitter settings"
+msgstr "Twitter 设置"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "网站归因"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "将分享的内容归属至您网站的 Twitter 账号"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"网站归因用于将网站内容按"
+"%1$s 和 %2$s 归属至 Twitter 账号。"
+
+msgid "Twitter Cards"
+msgstr "Twitter 卡片"
+
+msgid "Twitter Analytics"
+msgstr "Twitter Analytics（分析）"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"该账号也可用于对源自您网站上的发推按钮的推文添加注释"
+"。"
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "主题"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "浅色"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "深色"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "主题"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "链接颜色"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "边框颜色"
+
+msgid "Warnings"
+msgstr "警告"
+
+msgid "Content Security Policy"
+msgstr "内容安全政策"
+
+msgid "Restrictions"
+msgstr "限制"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "个性化"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "自定义 Twitter 小工具中所使用的颜色以匹配您的网站主题"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "Twitter 小工具中链接文本的颜色。"
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "Twitter 小工具的边框颜色。"
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"Twitter 嵌入推文和时间线小工具支持经过渲染的小工具中的"
+"颜色主题、链接颜色和边框颜色的自定义。"
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"选择浅色或深色主题来最好地匹配周围内容的背景颜色和"
+"文字颜色。"
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"链接颜色适用于链接文本，包括 URL、#话题标签和"
+"@提及。"
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"边框颜色适用于分隔推文部分或单独的"
+"推文的边框。"
+
+msgid "Limit Twitter functionality"
+msgstr "限制 Twitter 功能"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"请勿使用我的网站来定制 Twitter 用户的内容和建议"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"Twitter 可追踪网站访客用于广告定位、推荐的"
+"Twitter 账号和其他用途。"
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "了解更多"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"在网页上出现 Twitter 按钮或小工具时"
+"如果您想要退出 Twitter 访客追踪，则选择此选项。"
+
+msgid "Warnings and error display"
+msgstr "警告和错误显示"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "限制内容安全政策警告"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"请注意：当应用 %s 时并非支持所有小工具功能"
+
+msgid "Tweet Button"
+msgstr "发推按钮"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "位置"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "计数"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "为每个公开发表添加一个发推按钮。"
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "前面"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "后面"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "前后"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "显示发推按钮 %s 发布内容"
+
+msgid "Large button"
+msgstr "大按钮"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "显示引用发布 URL 的推文数量"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "关注 %s"
+
+msgid "Twitter Follow Button"
+msgstr "Twitter 关注按钮"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "让读者关注您的 Twitter 账号"
+
+msgid "Title:"
+msgstr "标题："
+
+msgid "@username:"
+msgstr "@用户名："
+
+msgid "Show username?"
+msgstr "是否显示用户名？"
+
+msgid "Show number of followers?"
+msgstr "是否显示关注者数量？"
+
+msgid "Button size:"
+msgstr "按钮大小："
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "中"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "大"

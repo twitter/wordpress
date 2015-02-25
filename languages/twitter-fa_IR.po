@@ -1,0 +1,297 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "متن سفارشی توییتر"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "توییت"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "پارامتر"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "متن"
+
+msgid "Hashtags"
+msgstr "هشتگ"
+
+msgid "Pre-populate Tweet text"
+msgstr "متن توییت از قبل آماده شده"
+
+msgid "Twitter Card"
+msgstr "کارت توییتر"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "دارایی"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "عنوان"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "توضیح"
+
+msgid "Customize Twitter link previews"
+msgstr "تنظیم سفارشی پیش نمایس پیوند توییتر"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "توییتر @نام کاربری"
+
+msgid "Embedded Tweet"
+msgstr "توییت تعبیه شده"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "نمای مکالمه"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "افزودن رسانه"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "تنظیم سفارشی حالت نمایش توییت های تعبیه شده"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "افزودن توییت های قبلی در رشته پاسخ"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"توییت ممکن است پاسخ به یک توییت دیگر باشد. اگر می خواهید توییت قبلی در رشته "
+"گفتار نشان داده شود، این گزینه را انتخاب کنید."
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "تصاویر، ویدیو و پیش نمایش های پیوند ارجاع داده شده در توییت را نمایش دهید"
+
+msgid "Twitter settings"
+msgstr "تنظیمات توییتر"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "ذکر منبع سایت"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "محتوای به اشتراک گذاشته شده را به عنوان منبع در حساب توییتر سایت خودتان اضافه کنید"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"منبع سایت برای ارجاع محتوای سایت به یک حساب توییتر در "
+"%1$s و %2$s استفاده می شود."
+
+msgid "Twitter Cards"
+msgstr "کارت های توییتر"
+
+msgid "Twitter Analytics"
+msgstr "تجزیه و تحلیل توییتر"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"از این حساب همچنین برای عنوان کردن یک دکمه توییت مبتنی بر توییت در سایت شما "
+"استفاده می شود."
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "طرح زمینه"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "روشن"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "تیره"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "طرح زمینه"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "رنگ پیوند"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "رنگ حاشیه"
+
+msgid "Warnings"
+msgstr "هشدارها"
+
+msgid "Content Security Policy"
+msgstr "سیاست ایمنی محتوا"
+
+msgid "Restrictions"
+msgstr "محدودیت ها"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "تنظیم شخصی"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "تنظیم سفارشی رنگ های به کار رفته در ویجت های توییتر برای مطابقت با طرح زمینه سایت شما"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "رنگ متن پیوند در یک ویجت توییتر."
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "رنگ حاشیه اطراف یک ویجت توییتر."
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"توییت تعبیه شده توییتر و ویجت های خط زمان از طرح زمینه رنگی، "
+"رنگ پیوند و رنگ حاشیه داخل یک ویجت تبدیل شده پشتیبانی می کنند."
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"یک طرح زمینه روشن یا تاریک را انتخاب کنید تا به بهترین شکل با رنگ پس زمینه و رنگ متن "
+"اطراف محتوا مطابقت داشته باشد."
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"رنگ پیوند برای متن پیوندی کاربرد دارد از جمله نشانی های اینترنتی، #هشتگ ها، و "
+"@مواردی که از شما نام برده شده است."
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"رنگ حاشیه در مورد حاشیه هایی به کار می رود که قسمت های توییت یا توییت های "
+"تکی را از یکدیگر جدا می کند."
+
+msgid "Limit Twitter functionality"
+msgstr "محدود کردن عملکرد توییتر"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"از وب سایت من برای تنظیم سفارشی محتوا و پیشنهادها برای کاربران توییتر استفاده نشود"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"ممکن است توییتر بازدیدکنندگان وب سایت را دنبال کند تا برای تبلیغات هدفمند، حساب های "
+"توییتر پیشنهادی و اهدافی دیگر از آنها استفاده شود."
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "اطلاعات بیشتری کسب کنید"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"اگر می خواهید با نمایش دکمه توییتر یا ویجت بر روی صفحه وب، بازدیدکنندگان توییتر "
+"دنبال نشوند، این  گزینه را انتخاب کنید."
+
+msgid "Warnings and error display"
+msgstr "هشدارها و نمایش خطا"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "هشدار سیاست ایمنی محتوا"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"لطفاً توجه کنید: وقتی %s اعمال می شود، عملکرد همه ویجت ها پشتیبانی نمی شود"
+
+msgid "Tweet Button"
+msgstr "دکمه توییت"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "موقعیت"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "تعداد"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "یک دکمه توییت به هر پست عمومی اضافه کنید."
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "قبل"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "بعد"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "قبل و بعد"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "نمایش محتوای پست %s دکمه توییت"
+
+msgid "Large button"
+msgstr "دکمه بزرگ"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "نمایش تعداد توییت هایی که نشانی اینترنتی پست در آنها آورده شده است"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "دنبال کردن %s"
+
+msgid "Twitter Follow Button"
+msgstr "دکمه دنبال کردن توییتر"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "به یک بازدیدکننده اجازه می دهد حساب توییتر شما را دنبال کند"
+
+msgid "Title:"
+msgstr "عنوان:"
+
+msgid "@username:"
+msgstr "@نام کاربر:"
+
+msgid "Show username?"
+msgstr "نام کاربر نمایش داده شود؟"
+
+msgid "Show number of followers?"
+msgstr "تعداد دنبال کنندگان نمایش داده شود؟"
+
+msgid "Button size:"
+msgstr "اندازه دکمه:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "متوسط"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "بزرگ"
+
+ 

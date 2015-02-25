@@ -1,0 +1,297 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "טקסט מותאם אישית של טוויטר"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "ציוץ"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "פרמטר"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "טקסט"
+
+msgid "Hashtags"
+msgstr "תגיות"
+
+msgid "Pre-populate Tweet text"
+msgstr "הזנה מראש של הטקסט לציוץ"
+
+msgid "Twitter Card"
+msgstr "כרטיס טוויטר"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "מאפיין"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "כותרת"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "תיאור"
+
+msgid "Customize Twitter link previews"
+msgstr "התאמה אישית לתצוגות מקדימות של קישורים בטוויטר"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "@שם משתמש בטוויטר"
+
+msgid "Embedded Tweet"
+msgstr "ציוץ מוטבע"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "תצוגת השיחה"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "הכללת מדיה"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "בצע התאמה אישית של התצוגה החזותית של ציוצים מוטבעים"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "כלול ציוצים קודמים בשרשור התשובה"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"ציוץ עשוי להיות תשובה לציוץ אחר. בחר באפשרות זו אם אתה "
+"מעוניין להציג את הציוץ הקודם בשרשור."
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "הצג תמונות, וידאו ותצוגות מקדימות של קישורים שאוזכרו בציוץ"
+
+msgid "Twitter settings"
+msgstr "הגדרות בטוויטר"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "שיוך לאתר"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "שייך תוכן ששותף לחשבון טוויטר של האתר שלך"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"שיוך לאתר נועד כדי לשייך תוכן מהאתר לחשבון טוויטר "
+"ב-%1$s ו-%2$s."
+
+msgid "Twitter Cards"
+msgstr "כרטיסי טוויטר"
+
+msgid "Twitter Analytics"
+msgstr "ניתוח נתונים בטוויטר"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"ניתן להשתמש בחשבון גם כדי לציין ציוץ שמקורו בלחצן ציוץ המוצב "
+"באתר שלך."
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "ערכת עיצוב"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "בהירה"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "כהה"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "ערכת עיצוב"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "צבע הקישור"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "צבע הגבול"
+
+msgid "Warnings"
+msgstr "אזהרות"
+
+msgid "Content Security Policy"
+msgstr "מדיניות אבטחת תוכן"
+
+msgid "Restrictions"
+msgstr "הגבלות"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "התאמה אישית"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "בצע התאמה אישית של הצבעים שנעשה בהם שימוש בווידג'טים של טוויטר כך שיתאימו לערכת העיצוב של האתר שלך"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "צבע הטקסט בקישור המוצג בתוך וידג'ט של טוויטר."
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "צבע הטקסט הגבול המקיף את הווידג'ט של טוויטר."
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"מאפיין הציוץ המוטבע של טוויטר ווידג'טים של ציר הזמן תומכים בהתאמה אישית של ערכת "
+"צבעים, צבע קישור וצבע הגבול בווידג'ט מעובד"
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"בחר ערכת עיצוב בהירה או כהה שתתאים בצורה הטובה ביותר לצבע הרקע ולצבע הטקסט "
+"של התוכן מסביב."
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"צבע הקישור יוחל על טקסט מקושר, כולל כתובות, #תגים "
+"ו-@אזכורים"
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"צבע הגבול יוחל על גבולות המפרידים בין מקטעי ציוץ או בין ציוצים "
+"יחידים."
+
+msgid "Limit Twitter functionality"
+msgstr "הגבלת הפונקציונליות של טוויטר"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"אין להשתמש באתר שלי כדי להתאים תוכן והצעות למשתמשי טוויטר"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"טוויטר עשויה לעקוב אחר מבקרים באתר לצורך מיקוד פרסומים, הצעות "
+"לחשבונות טוויטר ומטרות אחרות."
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "המשך לקרוא"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"בחר באפשרות זו אם אתה מעוניין לבטל את המעקב של טוויטר אחר מבקרים "
+"כאשר לחצן ציוץ או וידג'ט של טוויטר מצוגים בדף אינטרנט."
+
+msgid "Warnings and error display"
+msgstr "הצגה של אזהרות ושגיאות"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "אל תציג אזהרות הקשורות למדיניות אבטחת תוכן"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"שים לב: הפונקציונליות המלאה של הווידג'ט אינה נתמכת כאשר מחילים עליו %s"
+
+msgid "Tweet Button"
+msgstr "לחצן ציוץ"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "מיקום"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "מונה"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "הוסף לחצן ציוץ לכל פרסום ציבורי."
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "לפני"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "אחרי"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "לפני ואחרי"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "הצג לחצן ציוץ %s תוכן הפרסום"
+
+msgid "Large button"
+msgstr "לחצן גדול"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "הצג את מספר הציוצים המצטטים את הכתובת של הפרסום"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "עקוב אחרי %s"
+
+msgid "Twitter Follow Button"
+msgstr "לחצן מעקב של טוויטר"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "מאפשר למציג לעקוב אחרי חשבון טוויטר שלך"
+
+msgid "Title:"
+msgstr "כותרת:"
+
+msgid "@username:"
+msgstr "@שם משתמש:"
+
+msgid "Show username?"
+msgstr "להציג שם משתמש?"
+
+msgid "Show number of followers?"
+msgstr "להציג מספר עוקבים?"
+
+msgid "Button size:"
+msgstr "גודל הלחצן:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "בינוני"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "גדול"
+
+ 

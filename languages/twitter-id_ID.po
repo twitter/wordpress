@@ -1,0 +1,297 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "Teks Tersuai Twitter"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "Tweet"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "Parameter"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "Teks"
+
+msgid "Hashtags"
+msgstr "Hashtag"
+
+msgid "Pre-populate Tweet text"
+msgstr "Isi otomatis teks Tweet"
+
+msgid "Twitter Card"
+msgstr "Kartu Twitter"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "Properti"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "Judul"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "Deskripsi"
+
+msgid "Customize Twitter link previews"
+msgstr "Menyesuaikan pratinjau tautan Twitter"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "@namapengguna Twitter"
+
+msgid "Embedded Tweet"
+msgstr "Tweet Terlampir"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "Tampilan percakapan"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "Sertakan media"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "Menyesuaikan tampilan visual Tweet terlampir"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "Menyertakan Tweet sebelumnya di utas balasan"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"Sebuah Tweet mungkin merupakan balasan untuk Tweet lain. Pilih pilihan ini jika Anda ingin "
+"menampilkan Tweet sebelumnya di utas tersebut."
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "Menampilkan pratinjau gambar, video, dan tautan yang dirujuk di Tweet ini"
+
+msgid "Twitter settings"
+msgstr "Pengaturan Twitter"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "Atribusi situs"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "Konten yang disebarkan atribut ke akun Twitter situs Anda"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"Atribusi situs digunakan untuk mengatribusi konten situs ke akun Twitter di "
+"%1$s dan %2$s."
+
+msgid "Twitter Cards"
+msgstr "Kartu Twitter"
+
+msgid "Twitter Analytics"
+msgstr "Twitter Analitik"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"Akun tersebut juga digunakan untuk mencatat Tweet yang berasal dari Tombol Tweet di "
+"situs Anda."
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "Tema"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "terang"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "gelap"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "Tema"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "Warna tautan"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "Warna batas"
+
+msgid "Warnings"
+msgstr "Peringatan"
+
+msgid "Content Security Policy"
+msgstr "Kebijakan Keamanan Konten"
+
+msgid "Restrictions"
+msgstr "Pembatasan"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "Personalisasi"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "Menyesuaikan warna yang digunakan di widget Twitter agar selaras dengan tema situs Anda"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "Warna teks tautan di dalam widget Twitter."
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "Warna batas di sekeliling widget Twitter."
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"Tweet Terlampir Twitter dan widget Timeline mendukung penyesuaian tema "
+"warna, warna tautan, dan warna batas di dalam widget yang ditampilkan."
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"Pilih tema terang atau gelap untuk menyesuaikan warna latar belakang dan warna "
+"teks dari konten di sekelilingnya."
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"Warna tautan diterapkan pada teks yang ditautkan termasuk URL, hashtag, dan "
+"@sebutan."
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"Warna batas diterapkan pada batas yang memisahkan bagian Tweet atau tiap-tiap "
+"Tweet."
+
+msgid "Limit Twitter functionality"
+msgstr "Batasi fungsionalitas Twitter"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"Jangan gunakan situs web saya untuk menyesuaikan konten dan usulan bagi pengguna Twitter"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"Twitter dapat melacak pengunjung situs web untuk penargetan iklan, akun Twitter "
+"yang diusulkan, dan tujuan lainnya."
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "Selengkapnya"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"Pilih pilihan ini jika Anda ingin menyisih dari pelacakan pengunjung Twitter saat "
+"tombol atau widget Twitter muncul di halaman web."
+
+msgid "Warnings and error display"
+msgstr "Tampilan peringatan dan kesalahan"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "Menyembunyikan peringatan Kebijakan Keamanan Konten"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"Perhatikan: Tidak semua fungsionalitas widget didukung saat %s diterapkan"
+
+msgid "Tweet Button"
+msgstr "Tombol Tweet"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "Posisi"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "Jumlah"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "Menambahkan Tombol Tweet ke setiap kiriman publik."
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "sebelum"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "setelah"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "sebelum & setelah"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "Menampilkan konten kiriman %s Tombol Tweet"
+
+msgid "Large button"
+msgstr "Tombol besar"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "Menampilkan jumlah Tweet yang mengutip URL kiriman"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "Ikuti %s"
+
+msgid "Twitter Follow Button"
+msgstr "Tombol Ikuti Twitter"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "Mengizinkan pembaca mengikuti akun Twitter Anda"
+
+msgid "Title:"
+msgstr "Judul:"
+
+msgid "@username:"
+msgstr "@namapengguna:"
+
+msgid "Show username?"
+msgstr "Tampilkan nama pengguna?"
+
+msgid "Show number of followers?"
+msgstr "Tampilkan jumlah pengikut?"
+
+msgid "Button size:"
+msgstr "Ukuran tombol:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "sedang"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "besar"
+
+ 

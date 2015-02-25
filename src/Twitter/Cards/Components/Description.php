@@ -1,0 +1,85 @@
+<?php
+/*
+The MIT License (MIT)
+
+Copyright (c) 2015 Twitter Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+*/
+
+namespace Twitter\Cards\Components;
+
+/**
+ * A card with a description
+ *
+ * @since 1.0.0
+ */
+trait Description
+{
+    /**
+     * A description of the content. 200 characters max
+     *
+     * @since 1.0.0
+     *
+     * @type string
+     */
+    protected $description;
+
+    /**
+     * Prepare a passed description for the requirements of a Twitter Card description
+     *
+     * @since 1.0.0
+     *
+     * @param string $description short description of the page
+     *
+     * @return string sanitized description, or empty string of minimum requirements not met
+     */
+    public static function sanitizeDescription($description)
+    {
+        if (! ( is_string($description) && $description )) {
+            return '';
+        }
+
+        $description = trim($description);
+        if (! $description) {
+            return '';
+        }
+
+        return $description;
+    }
+
+    /**
+     * Set the description of the content
+     *
+     * @since 1.0.0
+     *
+     * @param string $description content description
+     *
+     * @return __CLASS__ support chaining
+     */
+    public function setDescription($description)
+    {
+        $description = static::sanitizeDescription($description);
+        if ($description) {
+            $this->description = $description;
+        }
+
+        return $this;
+    }
+}

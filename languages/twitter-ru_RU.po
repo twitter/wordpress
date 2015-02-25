@@ -1,0 +1,295 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "Настраиваемый текст Твиттера"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "Твитнуть"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "Параметр"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "Текст"
+
+msgid "Hashtags"
+msgstr "Метки"
+
+msgid "Pre-populate Tweet text"
+msgstr "Автоматический текст твита"
+
+msgid "Twitter Card"
+msgstr "Карточка Твиттера"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "Свойство"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "Заголовок"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "Описание"
+
+msgid "Customize Twitter link previews"
+msgstr "Настройка предварительного просмотра ссылок Твиттера"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "@имя_пользователя в Твиттере"
+
+msgid "Embedded Tweet"
+msgstr "Встроенный твит"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "Отображение переписки"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "Включить медиафайлы"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "Настройка визуального отображения встроенных твитов"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "Включить предыдущие твиты в ответную ветку"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"Твит может быть ответом на другой твит. Установите этот флажок, если хотите, "
+"чтобы предыдущий твит отображался в ветке."
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "Включить предварительный просмотр изображений, видео и ссылок, упомянутых в твите"
+
+msgid "Twitter settings"
+msgstr "Настройки Твиттера"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "Отнесение к сайту"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "Связать совместно используемое содержимое с учетной записью вашего сайта в Твиттере"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"Отнесение к сайту позволяет связать содержимое сайта с учетной записью в Твиттере в "
+"%1$s и %2$s."
+
+msgid "Twitter Cards"
+msgstr "Карточки Твиттера"
+
+msgid "Twitter Analytics"
+msgstr "Аналитика Твиттера"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"Учетная запись также позволяет отмечать твиты, отправленные при помощи кнопки «Твитнуть» на вашем "
+"сайте."
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "Тема"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "светлая"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "темная"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "Тема"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "Цвет ссылок"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "Цвет рамки"
+
+msgid "Warnings"
+msgstr "Предупреждения"
+
+msgid "Content Security Policy"
+msgstr "Политика защиты содержимого"
+
+msgid "Restrictions"
+msgstr "Ограничения"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "Персонализация"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "Настройка цветов в виджетах Твиттера в соответствии с темой вашего сайта"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "Цвет текста ссылки в виджете Твиттера."
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "Цвет рамки вокруг виджета Твиттера."
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"Встроенные твиты и виджеты ленты Твиттера поддерживают настройку цветовой "
+"темы, цвета ссылок и цвета рамки визуализированного виджета."
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"Выберите светлую или темную тему — в зависимости от того, что лучше соответствует "
+"цвету фона и текста окружающего содержимого."
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"Цвет ссылок применяется ко всем текстовым ссылкам, в том числе URL-адресам, #меткам и "
+"@упоминаниям."
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"Цвет рамки применяется к рамкам вокруг разделов твита или отдельных "
+"твитов."
+
+msgid "Limit Twitter functionality"
+msgstr "Ограничение функциональности Твиттера"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"Не использовать мой веб-сайт для отображения содержимого и рекомендаций пользователям Твиттера с учетом их интересов"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"Твиттер может отслеживать посетителей веб-сайта для показа рекламы целевой аудитории, рекомендации "
+"учетных записей в Твиттере и других целей."
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "Подробнее"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"Установите этот флажок, если хотите отказаться от отслеживания посетителей Твиттером при "
+"показе кнопки или виджета Твиттера на веб-странице."
+
+msgid "Warnings and error display"
+msgstr "Отображение предупреждений и ошибок"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "Не выводить предупреждения политики защиты содержимого"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"Примечание. Если используется %s, часть функциональности виджета не поддерживается."
+
+msgid "Tweet Button"
+msgstr "Кнопка «Твитнуть»"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "Местоположение"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "Количество"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "Добавить кнопку «Твитнуть» в каждую общедоступную запись."
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "до"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "после"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "до и после"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "Отображать кнопку «Твитнуть» %s записи"
+
+msgid "Large button"
+msgstr "Большая кнопка"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "Показывать количество твитов, ссылающихся на URL-адрес записи"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "Начать читать %s"
+
+msgid "Twitter Follow Button"
+msgstr "Кнопка Твиттера «Читать»"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "Позволяет посетителю начать читать вашу учетную запись в Твиттере"
+
+msgid "Title:"
+msgstr "Заголовок:"
+
+msgid "@username:"
+msgstr "@имя_пользователя:"
+
+msgid "Show username?"
+msgstr "Показывать имя пользователя?"
+
+msgid "Show number of followers?"
+msgstr "Показывать количество читателей?"
+
+msgid "Button size:"
+msgstr "Размер кнопки:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "средний"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "большой"

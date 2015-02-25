@@ -1,0 +1,297 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "Προσαρμοσμένο κείμενο Twitter"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "Tweet"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "Παράμετρος"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "Κείμενο"
+
+msgid "Hashtags"
+msgstr "Ετικέτες"
+
+msgid "Pre-populate Tweet text"
+msgstr "Προσυμπληρωμένο κείμενο Tweet"
+
+msgid "Twitter Card"
+msgstr "Κάρτα Twitter"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "Ιδιότητα"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "Τίτλος"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "Περιγραφή"
+
+msgid "Customize Twitter link previews"
+msgstr "Προσαρμογή προεπισκοπήσεων συνδέσμου Twitter"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "@όνομα χρήστη Twitter"
+
+msgid "Embedded Tweet"
+msgstr "Ενσωματωμένο Tweet"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "Προβολή συνομιλίας"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "Συμπερίληψη μέσων"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "Προσαρμογή της εμφάνισης ενσωματωμένων Tweet"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "Συμπερίληψη προηγούμενων Tweet στο νήμα απάντησης"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"Ένα Tweet μπορεί να είναι η απάντηση σε κάποιο άλλο Tweet. Επιλέξτε αυτή την επιλογή εάν θέλετε "
+"να εμφανίζεται το προηγούμενο Tweet στο νήμα."
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "Προβολή προεπισκοπήσεων εικόνων, βίντεο και συνδέσμων που αναφέρονται στο Tweet"
+
+msgid "Twitter settings"
+msgstr "Ρυθμίσεις Twitter"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "Εκχώρηση περιεχομένου"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "Εκχωρήστε κοινοποιημένο περιεχόμενο στο λογαριασμό Twitter της διαδικτυακής τοποθεσίας σας"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"Η εκχώρηση περιεχομένου χρησιμοποιείται για να εκχωρήστε περιεχόμενο μιας διαδικτυακής τοποθεσίας σε λογαριασμό Twitter σε "
+"%1$s και %2$s."
+
+msgid "Twitter Cards"
+msgstr "Κάρτες Twitter"
+
+msgid "Twitter Analytics"
+msgstr "Στατιστικά Twitter"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"Ο λογαριασμός μπορεί επίσης να χρησιμοποιείται για να δηλώσει Tweet που προέκυψε από το Κουμπί Tweet στη "
+"διαδικτυακή τοποθεσία σας."
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "Θέμα"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "ανοιχτό"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "σκούρο"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "Θέμα"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "Χρώμα συνδέσμων"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "Χρώμα περιγράμματος"
+
+msgid "Warnings"
+msgstr "Προειδοποιήσεις"
+
+msgid "Content Security Policy"
+msgstr "Πολιτική ασφαλείας περιεχομένου"
+
+msgid "Restrictions"
+msgstr "Περιορισμοί"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "Εξατομίκευση"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "Προσαρμόστε τα χρώματα που χρησιμοποιούνται στα widget του Twitter ώστε να ταιριάζουν με το θέμα της διαδικτυακής σας τοποθεσίας"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "Χρώμα του κειμένου του συνδέσμου μέσα σε widget του Twitter."
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "Χρώμα του περιγράμματος γύρω από ένα widget του Twitter."
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"Τα Ενσωματωμένα Tweet και τα widget στο Χρονολόγιο από το Twitter υποστηρίζουν την προσαρμογή χρώματος "
+"θέμα, χρώμα συνδέσμου και χρώμα περιγράμματος μέσα σε ενσωματωμένο widget."
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"Επιλέξτε ένα ανοιχτό ή σκούρο θέμα για να ταιριάζει καλύτερα στο χρώμα του φόντου και του κειμένου "
+"χρώμα του περιβάλλοντος περιεχομένου."
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"Το χρώμα του συνδέσμου εφαρμόζεται στο κείμενο του συνδέσμου, συμπεριλαμβανομένων διευθύνσεων URL, #ετικέτες και "
+"@επισημάνσεις."
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"Το χρώμα περιγράμματος εφαρμόζεται στα περιγράμματα που χωρίζουν τις ενότητες των Tweet ή τα μεμονωμένα "
+"Tweet."
+
+msgid "Limit Twitter functionality"
+msgstr "Περιορισμός λειτουργιών Twitter"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"Να μην χρησιμοποιείται η διαδικτυακή μας τοποθεσία για την προσαρμογή περιεχομένου και προτάσεων προς τους χρήστες του Twitter"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"Το Twitter μπορεί να παρακολουθεί τους επισκέπτες μιας διαδικτυακής τοποθεσίας με σκοπό τη στοχοθέτηση διαφημίσεων, την προώθηση προτεινόμενων "
+"λογαριασμών Twitter και για άλλους σκοπούς."
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "Διαβάστε περισσότερα"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"Κάντε αυτή την επιλογή αν θέλετε να αρνηθείτε την παρακολούθηση επισκεπτών από το Twitter όταν "
+"εμφανίζεται ένα κουμπί Twitter ή ένα widget σε μια διαδικτυακή τοποθεσία."
+
+msgid "Warnings and error display"
+msgstr "Προειδοποιήσεις και οθόνη σφάλματος"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "Απόκρυψη προειδοποιήσεων σχετικά με την Πολιτική ασφαλείας περιεχομένου"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"Λάβετε υπ' όψιν ότι: Δεν υποστηρίζονται όλες οι λειτουργίες ενός widget όταν εφαρμόζεται ένα %s"
+
+msgid "Tweet Button"
+msgstr "Κουμπί Tweet"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "Θέση"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "Μέτρημα"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "Προσθήκη Κουμπιού Tweet σε κάθε δημόσια ανάρτηση."
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "πριν"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "μετά"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "πριν και μετά"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "Εμφάνιση Κουμπιού Tweet %s μετά το περιεχόμενο"
+
+msgid "Large button"
+msgstr "Μεγάλο κουμπί"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "Εμφάνιση του αριθμού των Tweet που αναφέρουν τη διεύθυνση URL της ανάρτησης"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "Follow %s"
+
+msgid "Twitter Follow Button"
+msgstr "Κουμπί Follow Twitter"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "Επιτρέπει σε έναν θεατή να ακολουθήσει το λογαριασμό σας στο Twitter"
+
+msgid "Title:"
+msgstr "Τίτλος:"
+
+msgid "@username:"
+msgstr "@όνομαχρήστη:"
+
+msgid "Show username?"
+msgstr "Εμφάνιση ονόματος χρήστη;"
+
+msgid "Show number of followers?"
+msgstr "Να εμφανίζεται ο αριθμός των follower;"
+
+msgid "Button size:"
+msgstr "Μέγεθος κουμπιού:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "μέσο"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "μεγάλο"
+
+ 

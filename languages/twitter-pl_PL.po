@@ -1,0 +1,295 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "Dostosowany tekst Twittera"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "Tweetnij"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "Parametr"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "Tekst"
+
+msgid "Hashtags"
+msgstr "Hasztagi"
+
+msgid "Pre-populate Tweet text"
+msgstr "Wypełnij wstępnie tekst tweeta"
+
+msgid "Twitter Card"
+msgstr "Karta Twittera"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "Właściwość"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "Tytuł"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "Opis"
+
+msgid "Customize Twitter link previews"
+msgstr "Dostosuj podglądy linków na Twitterze"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "@nazwa_użytkownika na Twitterze"
+
+msgid "Embedded Tweet"
+msgstr "Wbudowany tweet"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "Podgląd rozmowy"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "Dodaj multimedia"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "Dostosuj sposób wyświetlania wbudowanych tweetów"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "Dodaj do odpowiedzi poprzednie tweety z wątku"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"Tweet może być odpowiedzią na innego tweeta. Zaznacz tę opcję, jeśli "
+"chcesz, by pozostałe tweety z wątku były wyświetlane."
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "Wyświetlaj zdjęcia, filmy i podglądy linków zawarte w tweecie"
+
+msgid "Twitter settings"
+msgstr "Ustawienia Twittera"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "Przypisywanie do strony"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "Przypisz udostępniane treści do swojego konta na Twitterze"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"Funkcja ta służy do przypisywania treści ze strony do konta na Twitterze w "
+"%1$s i %2$s."
+
+msgid "Twitter Cards"
+msgstr "Karty Twittera"
+
+msgid "Twitter Analytics"
+msgstr "Statystyki Twittera"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"Konto może być także używane do oznaczania tweetów wysłanych za pomocą przycisku do tweetowania znajdującego się na Twojej "
+"stronie."
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "Motyw"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "jasny"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "ciemny"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "Motyw"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "Kolor linka"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "Kolor obramowania"
+
+msgid "Warnings"
+msgstr "Ostrzeżenia"
+
+msgid "Content Security Policy"
+msgstr "Zasady bezpieczeństwa"
+
+msgid "Restrictions"
+msgstr "Ograniczenia"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "Personalizacja"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "Dostosuj kolory w widżetach Twittera i dopasuj je do motywu strony"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "Kolor linka w widżecie Twittera."
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "Koror obramowania w widżecie Twittera."
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"Zmiana koloru wątku, linków, obramowania wewnątrz widżeta wiąże się także ze zmianą koloru "
+"we wbudowanych tweetach i widżetach wykorzystujących oś czasu Twittera."
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"Wybierz motyw jasny lub ciemny, aby dopasować kolor tła i kolor "
+"tekstu na Twitterze."
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"Zmiana koloru linka wiąże się ze zmianą koloru treści linka, w tym adresów www, #hasztagów i "
+"@wzmianek."
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"Zmiana koloru linka wiąże się ze zmianą obramowania oddzielającego sekcje na Twitterze i poszczególne "
+"tweety."
+
+msgid "Limit Twitter functionality"
+msgstr "Ogranicz funkcje Twittera"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"Nie korzystaj z mojej strony w celu dostosowania treści i sugestii dla użytkowników Twittera"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"Twitter może monitorować odwiedzających na stronie, m.in. w celu kierowania reklam i sugerowania "
+"kont użytkowników Twittera."
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "Więcej informacji"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"Zaznacz tę opcję, jeśli chcesz, by Twitter nie monitorował odwiedzających, gdy "
+"przycisk lub widżet Twittera pojawi się na stronie."
+
+msgid "Warnings and error display"
+msgstr "Wyświetlanie ostrzeżeń i błędów"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "Pomijaj ostrzeżenia dotyczące zasad bezpieczeństwa"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"Uwaga: określone funkcje niektórych widżetów mogą być niedostępne, gdy %s ma zastosowanie."
+
+msgid "Tweet Button"
+msgstr "Przycisk tweetnij"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "Umiejscowienie"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "Licznik"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "Dodaj przycisk tweetnij do każdego publicznego wpisu."
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "przed"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "za"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "przed i za"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "Wyświetl przycisk tweetnij %s po treści wpisu"
+
+msgid "Large button"
+msgstr "Duży przycisk"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "Pokaż liczbę tweetów zawierających adres www zawarty we wpisie"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "Obserwuj %s"
+
+msgid "Twitter Follow Button"
+msgstr "Przycisk Obserwuj na Twitterze"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "Zezwól użytkownikom obserwować Twoje konto na Twitterze"
+
+msgid "Title:"
+msgstr "Tytuł:"
+
+msgid "@username:"
+msgstr "@nazwa_użytkownika:"
+
+msgid "Show username?"
+msgstr "Pokaż nazwę użytkownika?"
+
+msgid "Show number of followers?"
+msgstr "Pokazać liczbę obserwujących?"
+
+msgid "Button size:"
+msgstr "Rozmiar przycisku:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "średni"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "duży"

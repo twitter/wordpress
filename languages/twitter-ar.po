@@ -1,0 +1,297 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "نص تويتر مُخصص"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "غرِّد"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "مُعامِل"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "النصّ"
+
+msgid "Hashtags"
+msgstr "الوسوم"
+
+msgid "Pre-populate Tweet text"
+msgstr "النشر المسبق لنص تغريدة"
+
+msgid "Twitter Card"
+msgstr "بطاقة تويتر"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "الملكية"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "اللقب"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "وصف"
+
+msgid "Customize Twitter link previews"
+msgstr "تخصيص معاينات رابط تويتر"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "@اسم المستخدم في تويتر"
+
+msgid "Embedded Tweet"
+msgstr "تغريدة مضمنة"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "عرض المحادثة"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "تضمين الوسائط"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "تخصيص العرض المرئي للتغريدات المضمنة"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "تضمين التغريدات السابقة في موضوع الرد"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"قد تكون التغريدة ردًا على تغريدة أخرى. حدد هذا الخيار إذا كنت ترغب في "
+"عرض التغريدة السابقة في الموضوع."
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "عرض الصور والفيديو ومعاينات الروابط المشار إليها في التغريدة"
+
+msgid "Twitter settings"
+msgstr "إعدادات تويتر"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "سمة الموقع"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "اعمل على توفير سمة محتوى مشترك لحساب تويتر لموقعك"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"تستخدم سمة الموقع لتوفير سمة محتوى موقع لحساب تويتر في "
+"%1$s و%2$s."
+
+msgid "Twitter Cards"
+msgstr "بطاقات تويتر"
+
+msgid "Twitter Analytics"
+msgstr "تحليلات تويتر"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"قد يتم أيضًا استخدام الحساب لملاحظة زر تغريد مع مصدر التغريدة على "
+"موقعك."
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "السمة"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "فاتحة"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "داكنة"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "السمة"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "لون الرابط"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "لون الإطار"
+
+msgid "Warnings"
+msgstr "تحذيرات"
+
+msgid "Content Security Policy"
+msgstr "سياسة أمان المحتوى"
+
+msgid "Restrictions"
+msgstr "القيود"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "التخصيص"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "تمتع بتخصيص الألوان المستخدمة في التطبيقات المصغّرة لتويتر لتلائم سمة موقعك"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "لون نص الرابط داخل التطبيق المصغّر لتويتر."
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "لون الإطار المحيط بالتطبيق المصغّر لتويتر."
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"تدعم التغريدة المضمنة والتطبيقات المصغّرة لتويتر إمكانية تخصيص سمة "
+"سمة اللون، ولون الرابط، ولون الإطار داخل التطبيق المصغّر المعروض."
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"اختر سمة فاتحة أو داكنة لتلائم لون الخلفية ولون "
+"المحتوى المحيط."
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"يتم تطبيق لون الرابط على النص ذات الروابط بما في ذلك الروابط و #الوسوم "
+"و@الإشارات."
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"يتم تطبيق لون الإطار على الإطارات التي تفصل أقسام التغريدة أو التغريدات "
+"التغريدات المفردة."
+
+msgid "Limit Twitter functionality"
+msgstr "تقييد وظائف تويتر"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"لا تستخدم موقعي على الويب لتخصيص المحتوى والاقتراحات لمستخدمي تويتر"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"قد يتتبع تويتر زوار مواقع الويب للاستهداف الإعلاني وحسابات "
+"تويتر المقترحة وأهداف أخرى."
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "اقرأ المزيد"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"حدد هذا الخيار إلى كنت ترغب في إلغاء الاشتراك في تتبع تويتر للزوار "
+"عندما يظهر زر تويتر أو تطبيق مصغّر على صفحة ويب."
+
+msgid "Warnings and error display"
+msgstr "التحذيرات وعرض الأخطاء"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "منع تحذيرات سياسة أمان المحتوى"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"الرجاء ملاحظة: ليس جميع وظائف التطبيقات المصغّرة مدعومة عند تطبيق %s"
+
+msgid "Tweet Button"
+msgstr "زر التغريد"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "موضع"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "عد"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "أضف زِر تغريد إلى كل منشور عام."
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "قبل"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "بعد"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "قبل وبعد"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "عرض زر التغريد %s نشر المحتوى"
+
+msgid "Large button"
+msgstr "زرّ كبير"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "عرض عدد التغريدات التي تذكر رابط المنشور"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "متابعة %s"
+
+msgid "Twitter Follow Button"
+msgstr "زر المتابعة بتويتر"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "يتيح تويتر للعارض متابعة حسابك على تويتر"
+
+msgid "Title:"
+msgstr "اللقب:"
+
+msgid "@username:"
+msgstr "@اسم المستخدم"
+
+msgid "Show username?"
+msgstr "هل ترغب في عرض اسم المستخدم؟"
+
+msgid "Show number of followers?"
+msgstr "هل ترغب في عرض عدد المُتابِعين؟"
+
+msgid "Button size:"
+msgstr "حجم الزر:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "متوسط"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "كبير"
+
+ 

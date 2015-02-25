@@ -1,0 +1,297 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "Egyedi Twitter-szöveg"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "Tweet"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "Paraméter"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "Szöveg"
+
+msgid "Hashtags"
+msgstr "Címkék"
+
+msgid "Pre-populate Tweet text"
+msgstr "Előre feltöltött Tweet-szöveg"
+
+msgid "Twitter Card"
+msgstr "Twitter Kártya"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "Tulajdonság"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "Cím"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "Leírás"
+
+msgid "Customize Twitter link previews"
+msgstr "Twitter-hivatkozások előnézetének személyre szabása"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "Twitter @felhasználónév"
+
+msgid "Embedded Tweet"
+msgstr "Beágyazott Tweet"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "Beszélgetési nézet"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "Médiatartalom megjelenítése"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "A beágyazott Tweetek vizuális megjelenésének személyre szabása"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "Előző Tweetek megjelenítése a válaszban"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"Egy Tweet válasz lehet egy másik Tweetre. Válaszd ezt a lehetőséget, ha "
+"meg szeretnéd jeleníteni a korábbi Tweeteket az üzenetben."
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "A Tweetben hivatkozott képek, videók és hivatkozások előnézetének megjelenítése"
+
+msgid "Twitter settings"
+msgstr "Twitter-beállítások"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "Oldal-hozzárendelés"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "Megosztott tartalom hozzárendelése az oldalad Twitter-fiókjához"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"Az oldal-hozzárendeléssel hozzá lehet rendelni egy oldal tartalmát egy Twitter-fiókhoz itt: "
+"%1$s és %2$s."
+
+msgid "Twitter Cards"
+msgstr "Twitter Kártyák"
+
+msgid "Twitter Analytics"
+msgstr "Twitter Elemzések"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"A fiókban azt is láthatod, ha valaki a weboldalon lévő Tweet gombbal küld "
+"egy Tweetet."
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "Téma"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "világos"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "sötét"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "Téma"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "Hivatkozás színe"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "Keret színe"
+
+msgid "Warnings"
+msgstr "Figyelmeztetések"
+
+msgid "Content Security Policy"
+msgstr "Tartalombiztonsági irányelv"
+
+msgid "Restrictions"
+msgstr "Korlátozások"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "Személyreszabás"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "Szabd személyre a Twitter widgetek színét, hogy azok passzoljanak az oldalad témájához"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "Hivatkozás szövegének színe a Twitter widgetben."
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "A Twitter widget körüli keret színe."
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"A beágyazott Twitter Tweetek és az idővonali widgetek támogatják az egyéni "
+"témaszíneket, hivatkozásszíneket és keretszíneket a leképezett widgetben."
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"Válassz világos vagy sötét témát, hogy az a legjobban illeszkedjen a környező "
+"tartalom háttérszínéhez és szövegszínéhez."
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"A hivatkozás színe a hivatkozott szövegre érvényes, beleértve az URL-címeket, a #címkéket és "
+"az @említéseket."
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"A keret színe a Tweeteket elválasztó keretekre vagy az egyéni "
+"Tweetekre érvényes."
+
+msgid "Limit Twitter functionality"
+msgstr "A Twitter funkcióinak korlátozása"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"Ne használja a webhelyemet a tartalmak és javaslatok Twitter-felhasználóknak történő személyre szabásához"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"A Twitter nyomon követheti a látogatókat célzott hirdetések és javasolt "
+"Twitter-fiókok megjelenítéséhez és egyéb célokhoz."
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "Tudj meg többet!"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"Ezt a lehetőséget választva kikapcsolhatod a látogatók Twitter általi nyomon követését, "
+"amikor egy Twitter gomb vagy widget látható egy webhelyen."
+
+msgid "Warnings and error display"
+msgstr "Figyelmeztetések és hibaüzenetek"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "Tartalombiztonsági irányelvvel kapcsolatos figyelmeztetések elrejtése"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"Ne feledd: A %s alkalmazásakor nem minden widgetszolgáltatás támogatott"
+
+msgid "Tweet Button"
+msgstr "Tweet gomb"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "Pozíció"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "Szám"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "Tweet gomb hozzáadása minden nyilvános bejegyzéshez."
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "előtt"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "után"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "előtt és után"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "Tweet gomb megjelenítése a bejegyzés %s"
+
+msgid "Large button"
+msgstr "Nagy gomb"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "A bejegyzés URL-címét idéző Tweetek számának megjelenítése"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "%s követése"
+
+msgid "Twitter Follow Button"
+msgstr "Twitter Követés gomb"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "A megtekintő követheti a Twitter-fiókodat"
+
+msgid "Title:"
+msgstr "Cím:"
+
+msgid "@username:"
+msgstr "@felhasználónév:"
+
+msgid "Show username?"
+msgstr "Felhasználónév megjelenítése?"
+
+msgid "Show number of followers?"
+msgstr "Felhasználók számának megjelenítése?"
+
+msgid "Button size:"
+msgstr "Gomb mérete:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "közepes"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "nagy"
+
+ 

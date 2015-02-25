@@ -1,0 +1,295 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "Twitter Özel Metni"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "Tweetle"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "Parametre"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "Metin"
+
+msgid "Hashtags"
+msgstr "Etiketler"
+
+msgid "Pre-populate Tweet text"
+msgstr "Tweet metnini önceden doldurma"
+
+msgid "Twitter Card"
+msgstr "Twitter Kartı"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "Mülkiyet"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "Unvan"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "Açıklama"
+
+msgid "Customize Twitter link previews"
+msgstr "Twitter bağlantı önizlemelerini özelleştirme"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "Twitter @kullanıcıadı"
+
+msgid "Embedded Tweet"
+msgstr "Katıştırılmış Tweet"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "Sohbet görünümü"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "Medya ekleme"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "Katıştırılmış Tweetlerin görünümünü özelleştirme"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "Yanıt dizisinde önceki Tweetlere yer verme"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"Bir Tweet, başka bir Tweet'in yanıtı olabilir. Dizideki bir önceki Tweet'i görüntülemek isterseniz "
+"bu seçeneği belirleyin."
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "Tweet'te bahsedilen resim, video ve bağlantı önizlemelerini görüntüleme"
+
+msgid "Twitter settings"
+msgstr "Twitter ayarları"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "Siteye özellik atama"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "Paylaşılan içeriği sitenizin Twitter hesabına atama"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"Siteye özellik atama, site içeriğinin %1$s ve %2$s olarak "
+"bir Twitter hesabına atanması için kullanılır."
+
+msgid "Twitter Cards"
+msgstr "Twitter Kartları"
+
+msgid "Twitter Analytics"
+msgstr "Twitter İstatistikleri"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"Hesap, sitenizdeki Tweet Butonundan gönderilmiş bir Tweet'i not etmek için de "
+"kullanılabilir."
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "Tema"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "açık"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "koyu"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "Tema"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "Bağlantı rengi"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "Çerçeve rengi"
+
+msgid "Warnings"
+msgstr "Uyarılar"
+
+msgid "Content Security Policy"
+msgstr "İçerik Güvenliği Politikası"
+
+msgid "Restrictions"
+msgstr "Kısıtlamalar"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "Kişiselleştirme"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "Twitter bileşenlerinde kullanılan renkleri sitenizin temasıyla uyumlu olacak şekilde özelleştirme"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "Bir Twitter bileşeni içindeki bağlantı metninin rengi."
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "Bir Twitter bileşeni etrafındaki çerçevenin rengi."
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"Twitter Katıştırılmış Tweet ve Zaman Akışı bileşenleri, görüntülenen bir bileşen içindeki "
+"renk teması, bağlantı rengi ve çerçeve renginin özelleştirilmesini destekler."
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"Çevreleyen içeriğin arkaplan rengine ve metin rengine en iyi şekilde uyan "
+"açık veya koyu bir tema seçin."
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"Bağlantı rengi, bağlantılar, #etiketler ve @bahsedenler dahil olmak üzere "
+"bağlantı içeren metinlere uygulanır."
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"Çerçeve rengi Tweet bölümlerini veya ayrı Tweetleri ayıran çerçevelere "
+"uygulanır."
+
+msgid "Limit Twitter functionality"
+msgstr "Twitter işlevlerini sınırlandırma"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"Twitter kullanıcıları için içerik ve öneri düzenlemek üzere web sitemi kullanmayın"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"Twitter, reklam hedefleme, önerilen Twitter hesapları ve diğer amaçlarla "
+"web site ziyaretçilerini takip edebilir."
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "Daha fazla bilgi edinin"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"Bir web sitesinde bir Twitter butonu veya bileşeni göründüğünde Twitter'ın ziyaretçileri takip etmesini "
+"iptal etmek istiyorsanız bu seçeneği belirleyin."
+
+msgid "Warnings and error display"
+msgstr "Uyarılar ve hata görüntüleme"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "İçerik Güvenliği Politikası uyarılarını gizleme"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"Lütfen unutmayın: Bir %s uygulandığında tüm bileşen işlevleri desteklenmez"
+
+msgid "Tweet Button"
+msgstr "Tweet Butonu"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "Konum"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "Sayı"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "Tüm genel gönderilere bir Tweet Butonu ekleyin."
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "önce"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "sonra"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "önce ve sonra"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "Tweet Butonu %s gönderi içeriğini görüntüleme"
+
+msgid "Large button"
+msgstr "Büyük buton"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "Gönderi bağlantısından alıntı yapan Tweet sayısının gösterme"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "%s kullanıcısını takip et"
+
+msgid "Twitter Follow Button"
+msgstr "Twitter Takip Et Butonu"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "Görüntüleyen kişinin Twitter hesabınızı takip etmesini sağlar"
+
+msgid "Title:"
+msgstr "Unvan:"
+
+msgid "@username:"
+msgstr "@kullanıcıadı:"
+
+msgid "Show username?"
+msgstr "Kullanıcı adı gösterilsin mi?"
+
+msgid "Show number of followers?"
+msgstr "Takipçi sayısı gösterilsin mi?"
+
+msgid "Button size:"
+msgstr "Buton boyutu:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "orta"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "büyük"

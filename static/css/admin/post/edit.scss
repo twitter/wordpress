@@ -1,0 +1,29 @@
+// match #postcustomstuff custom field table styling
+// see wp-admin/edit.css
+#twitter-custom {
+  table {
+    margin: 0;
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    border-spacing: 0;
+    background-color: #f9f9f9;
+  }
+
+  thead th {
+  	padding: 5px 8px 8px;
+  	background-color: #f1f1f1;
+  }
+
+  input {
+    width: 96%;
+    margin: 8px;
+  }
+}
+
+#tweet-intent {
+	width: 100%;
+}
+
+#twitter-card {
+	width: 100%;
+}

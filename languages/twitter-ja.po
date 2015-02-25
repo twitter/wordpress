@@ -1,0 +1,297 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "Twitterカスタムテキスト"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "ツイート"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "パラメーター"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "テキスト"
+
+msgid "Hashtags"
+msgstr "ハッシュタグ"
+
+msgid "Pre-populate Tweet text"
+msgstr "ツイートの本文を自動入力"
+
+msgid "Twitter Card"
+msgstr "Twitterカード"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "プロパティ"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "タイトル"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "説明"
+
+msgid "Customize Twitter link previews"
+msgstr "Twitterリンクプレビューをカスタマイズ"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "Twitterのユーザー名"
+
+msgid "Embedded Tweet"
+msgstr "埋め込みツイート"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "会話ビュー"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "メディアを含める"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "埋め込みツイートの表示方法をカスタマイズ"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "返信スレッドに前のツイートを含める"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"ツイートが別のツイートへの返信である場合もあります。スレッドに前のツイートを表示する場合は"
+"このオプションを選択してください。"
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "ツイートで言及されている画像、動画、リンクのプレビューを表示する"
+
+msgid "Twitter settings"
+msgstr "Twitter設定"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "サイトアトリビューション"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "共有コンテンツから自分のサイトのTwitterアカウントへのアトリビューションを実施"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"サイトアトリビューションは、サイトのコンテンツから%1$sと%2$sのTwitterアカウントへの"
+"アトリビューションに使用します。"
+
+msgid "Twitter Cards"
+msgstr "Twitterカード"
+
+msgid "Twitter Analytics"
+msgstr "Twitterアナリティクス"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"アカウントは自分のサイトのツイートボタンから投稿されたツイートを引用する際にも"
+"使われる場合があります。"
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "テーマ"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "明るい"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "暗い"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "テーマ"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "リンクの色"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "枠線の色"
+
+msgid "Warnings"
+msgstr "警告"
+
+msgid "Content Security Policy"
+msgstr "コンテンツのセキュリティポリシー"
+
+msgid "Restrictions"
+msgstr "制限"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "カスタマイズ"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "自分のサイトのテーマに合うようTwitterウィジェットで使う色をカスタマイズ"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "Twitterウィジェット内のリンクテキストの色。"
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "Twitterウィジェットを囲む枠線の色。"
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"Twitterの埋め込みツイートとタイムラインウィジェットは、表示されるウィジェット内の色のテーマ、リンクの色、枠線の色の"
+"カスタマイズをサポートしています。"
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"周囲のコンテンツの背景色とテキストの色に最もマッチする、明るいまたは暗い色調のテーマを"
+"選択してください。"
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"リンクの色はURL、#ハッシュタグ、@ツイートなどのリンクテキストに"
+"適用されます。"
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"枠線の色はツイートセクションまたはそれぞれのツイートを分ける枠線に"
+"適用されます。"
+
+msgid "Limit Twitter functionality"
+msgstr "Twitterの機能を制限"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"コンテンツとおすすめのTwitterユーザーをカスタマイズするために自分のWebサイトを使用しない"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"Twitterは、ターゲティング広告、おすすめのTwitterアカウントおよびその他の目的でWebサイトの訪問者を"
+"トラッキングする場合があります。"
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "詳細"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"WebサイトにTwitterボタンまたはウィジェットを表示する際、Twitterの訪問者のトラッキングをオプトアウトするには"
+"このオプションを選択してください。"
+
+msgid "Warnings and error display"
+msgstr "警告とエラーの表示"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "コンテンツのセキュリティ ポリシーの警告を表示しない"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"注記: %sが適用されている場合、ウィジェットの一部の機能はサポートされません"
+
+msgid "Tweet Button"
+msgstr "ツイートボタン"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "位置"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "カウント"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "すべての公開投稿にツイートボタンを追加します。"
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "前"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "後"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "前と後"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "投稿コンテンツの%sにツイートボタンを表示"
+
+msgid "Large button"
+msgstr "ボタン(大)"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "投稿URLを引用しているツイートの数を表示"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "%sをフォロー"
+
+msgid "Twitter Follow Button"
+msgstr "Twitterフォローボタン"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "訪問してくれたユーザーにあなたのTwitterアカウントをフォローしてもらいましょう"
+
+msgid "Title:"
+msgstr "タイトル:"
+
+msgid "@username:"
+msgstr "@ユーザー名:"
+
+msgid "Show username?"
+msgstr "ユーザー名を表示しますか?"
+
+msgid "Show number of followers?"
+msgstr "フォロワー数を表示しますか?"
+
+msgid "Button size:"
+msgstr "ボタンのサイズ:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "中"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "大"
+
+ 

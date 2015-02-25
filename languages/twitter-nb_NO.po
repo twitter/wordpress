@@ -1,0 +1,295 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "Twitter, egendefinert tekst"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "Tweet"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "Parameter"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "Tekst"
+
+msgid "Hashtags"
+msgstr "Hashtagger"
+
+msgid "Pre-populate Tweet text"
+msgstr "Forhåndsfyll tweet-tekst"
+
+msgid "Twitter Card"
+msgstr "Twitter-kort"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "Egenskap"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "Tittel"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "Beskrivelse"
+
+msgid "Customize Twitter link previews"
+msgstr "Tilpass forhåndsvisninger av linker på Twitter"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "Twitter-@brukernavn"
+
+msgid "Embedded Tweet"
+msgstr "Innebygd tweet"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "Samtalevisning"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "Inkluder medier"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "Tilpass den visuelle visningen av innebygde tweets"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "Ta med tidligere tweets i svartråden"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"En tweet kan være et svar på en annen tweet. Velg dette alternativet hvis du "
+"vil vise den tidligere tweeten i tråden."
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "Vis bilder, video og forhåndsvisninger av linker som omtales i tweeten"
+
+msgid "Twitter settings"
+msgstr "Twitter-innstillinger"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "Nettstedattribusjon"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "Tilskriv delt innhold til Twitter-kontoen for nettstedet ditt"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"Nettstedattribusjon brukes til å tilskrive innhold på nettsider til en Twitter-konto i "
+"%1$s og %2$s."
+
+msgid "Twitter Cards"
+msgstr "Twitter-kort"
+
+msgid "Twitter Analytics"
+msgstr "Twitter-statistikk"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"Kontoen kan også brukes til å legge ut en Tweet-knapp som viser at den stammer fra en annen Tweet på "
+"nettstedet ditt."
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "Tema"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "lyst"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "mørkt"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "Tema"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "Linkfarge"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "Kantfarge"
+
+msgid "Warnings"
+msgstr "Advarsler"
+
+msgid "Content Security Policy"
+msgstr "Sikkerhetspolicy for innhold"
+
+msgid "Restrictions"
+msgstr "Restriksjoner"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "Personlig tilpasning"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "Tilpass fargene i Twitter-skjermelementer etter temaet på nettstedet ditt"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "Fargen på teksten i en link i et Twitter-skjermelement."
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "Fargen på kanten rundt et Twitter-skjermelement."
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"Twitters skjermelementer for Innebygd tweet- og Tidslinje støtter tilpasning av farge "
+"tema, linkfarge og kantfarge i et gjengitt skjermelement."
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"Velg et lyst eller mørkt tema ut i fra hva som passer best til bakgrunnsfargen og "
+"tekstfargen til det øvrige innholdet."
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"Linkfargen brukes i linket tekst, inkludert URL-er, #hashtagger og "
+"@omtaler."
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"Kantfargen brukes på kanter som skiller deler av tweets eller individuelle "
+"tweets."
+
+msgid "Limit Twitter functionality"
+msgstr "Begrens Twitter-funksjonaliteten"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"Ikke bruk nettstedet mitt for å tilpasse innhold og forslag for Twitter-brukere"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"Twitter kan spore besøk på nettsteder i forbindelse med målretting av annonser, "
+"foreslåtte Twitter-kontoer og andre formål."
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "Les mer"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"Velg dette alternativet hvis du ønsker å velge bort Twitter-sporing av besøkende når "
+"en Twitter-knapp eller et skjermelement vises på en nettside."
+
+msgid "Warnings and error display"
+msgstr "Advarsler og feilvisninger"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "Advarsler om sikkerhetsretningslinjer for utelatt innhold"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"Merk deg følgende: All funksjonalitet i skjermelementet støttes ikke når en %s tas i bruk"
+
+msgid "Tweet Button"
+msgstr "Tweet-knapp"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "Posisjon"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "Antall"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "Legg til en Tweet-knapp i alle offentlige innlegg."
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "før"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "etter"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "før og etter"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "Vis Tweet-knapp %s innholdet i innlegget"
+
+msgid "Large button"
+msgstr "Stor knapp"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "Vis antall tweets som nevner URL-en i innlegget"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "Følg %s"
+
+msgid "Twitter Follow Button"
+msgstr "Følg på Twitter-knapp"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "Dette gjør at en besøkende kan følge Twitter-kontoen din"
+
+msgid "Title:"
+msgstr "Tittel:"
+
+msgid "@username:"
+msgstr "@brukernavn:"
+
+msgid "Show username?"
+msgstr "Vis brukernavn?"
+
+msgid "Show number of followers?"
+msgstr "Vis antall følgere?"
+
+msgid "Button size:"
+msgstr "Knappstørrelse:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "mellomstor"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "stor"

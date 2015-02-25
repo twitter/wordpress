@@ -1,0 +1,295 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "Twitter Custom na Teksto"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "Tweet"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "Parametro"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "Text"
+
+msgid "Hashtags"
+msgstr "Mga Hashtag"
+
+msgid "Pre-populate Tweet text"
+msgstr "Pre-populate ang teksto ng Tweet"
+
+msgid "Twitter Card"
+msgstr "Preview ng Twitter Card"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "Ari-arian"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "Pamagat"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "Paglalarawan"
+
+msgid "Customize Twitter link previews"
+msgstr "Mga preview ng Customize Twitter link"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "Twitter @username"
+
+msgid "Embedded Tweet"
+msgstr "Naka-embed na Tweet"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "Tinginan ng usapan"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "Isama ang media"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "I-customize ang visual display ng mga naka-embed na Tweet"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "Isama ang mga naunang Tweet sa thread ng sagot"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"Maaaring ang Tweet ay sagot sa isa pang Tweet Pilin ang opsyong ito kung gusto mong "
+"ipakita ang mga naunang Tweet sa thread."
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "Ipakita ang mga larawan, video, at link sa mga preview sinangguni sa Tweet"
+
+msgid "Twitter settings"
+msgstr "Mga setting sa Twitter"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "Site attribution"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "Namahagi ang attribute ng nilalaman sa site ng iyong Twitter account"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"Ginamit ang attribution ng site sa nilalaman ng attribute site sa Twitter account nina "
+"%1$s at %2$s."
+
+msgid "Twitter Cards"
+msgstr "Mga Twitter Card"
+
+msgid "Twitter Analytics"
+msgstr "Twitter Analytics"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"Ang account ay maaring gamitin din para itala ang Tweet na nanggaling sa Tweet Button sa iyong "
+"site."
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "Tema"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "maliwanag"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "madilim"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "Tema"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "Kulay ng link"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "Kulay ng border"
+
+msgid "Warnings"
+msgstr "Mga Babala"
+
+msgid "Content Security Policy"
+msgstr "Patakaran sa Seguridad ng Patakaran"
+
+msgid "Restrictions"
+msgstr "Mga Paghihigpit"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "Personalisasyon"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "Mga customize na kulay na ginagamit sa mga Twitter widget para tumugma sa tema ng iyong site"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "Kulay ng teksto ng link sa loob ng Twitter widget."
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "Kulay ng border na pumapalibot sa Twitter widget."
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"Ang Twitter Naka-Embed na Tweet at mga Timeline widget at suportado ang pagpapasadya ng kulay "
+"tema, kulay ng link, at kulay ng border sa loob na na-render na kulay sa widget."
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"Pumili ng maliwanag o madilim na tema upang tumugna sa kulay at teksto ng background "
+"kulang ng mga nakapaligid na nilalaman."
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"Nilalapat ang kulay ng teksto ng link kabilang ang mga URL, #hashtag, at "
+"@mgapagbanggit"
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"Nilalapat ang kulay ng border na naghihiwalay sa mga seksyo ng Tweet o indibidwal "
+"Mga Tweet."
+
+msgid "Limit Twitter functionality"
+msgstr "Limitahan ang functionality ng Twitter"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"Huwag gamitin ang website ko para ipasasya ang nilalaman at mungkahi para sa mga user ng Twitter"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"Maaaring subaybayan ng Twitter ang mga bisita para sa mga pag-target ng advertising "
+"Mga account ng Twitter at iba pang layunin."
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "Magbasa pa"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"Pilin itong opsyon kung gusto mong umalisa pagsubaybay sa mga bisita ng Twitter kapag "
+"ang Twitter button o widget ay lumitaw sa webpage."
+
+msgid "Warnings and error display"
+msgstr "Mga babala at pagpapakita ng error"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "Mga babala sa pagpigil sa Nilalaman ng Patakaran sa Seguridad"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"Pakitandaan: Hindi lahat ng functionality ng widget ay suportado kapag ang % ay nilapat"
+
+msgid "Tweet Button"
+msgstr "Tweet Button"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "Posisyon"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "Bilang"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "Magdagdag ng Twitter button sa bawat pampublikong post."
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "bago"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "pagkatapos"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "bago at pagkatapos"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "Ipakita Botom ng Tweet %s nilalaman ng post"
+
+msgid "Large button"
+msgstr "Malaking button"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "Ipakita ang bilang ng mga Tweet na pinapatungkulan ang post sa URL"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "Sundan%s"
+
+msgid "Twitter Follow Button"
+msgstr "Button sa Pagsunod sa Twitter"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "Hayaan ang tumitingin na sundan ang iyong Twitter account"
+
+msgid "Title:"
+msgstr "Pamagat:"
+
+msgid "@username:"
+msgstr "@username:"
+
+msgid "Show username?"
+msgstr "Ipakita ang username?"
+
+msgid "Show number of followers?"
+msgstr "Ipakita ang bilang ng mag tagasunod?"
+
+msgid "Button size:"
+msgstr "Laki ng button:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "katamtaman"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "malaki"

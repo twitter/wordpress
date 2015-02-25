@@ -1,0 +1,295 @@
+# Copyright (C) 2015 Twitter
+# This file is distributed under an MIT license
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/twitter\n"
+"POT-Creation-Date: 2015-02-03 20:24:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgctxt "Text displayed for a Twitter audience"
+msgid "Twitter Custom Text"
+msgstr "ข้อความปรับแต่งบนทวิตเตอร์"
+
+msgctxt "Tweet verb. Sharing."
+msgid "Tweet"
+msgstr "ทวีต"
+
+msgctxt "Customization or variable"
+msgid "Parameter"
+msgstr "พารามิเตอร์"
+
+msgctxt "Share / Tweet text"
+msgid "Text"
+msgstr "ข้อความ"
+
+msgid "Hashtags"
+msgstr "แฮชแท็ก"
+
+msgid "Pre-populate Tweet text"
+msgstr "กรอกข้อความทวีตล่วงหน้า"
+
+msgid "Twitter Card"
+msgstr "การ์ดทวิตเตอร์"
+
+msgctxt "Object component, such as a title and description of an article"
+msgid "Property"
+msgstr "คุณสมบัติ"
+
+msgctxt "News article title"
+msgid "Title"
+msgstr "หัวข้อ"
+
+msgctxt "Brief summary or excerpt"
+msgid "Description"
+msgstr "คําอธิบาย"
+
+msgid "Customize Twitter link previews"
+msgstr "ปรับแต่งตัวอย่างลิงก์ทวิตเตอร์"
+
+msgctxt "Prompt requesting entry of a Twitter username"
+msgid "Twitter @username"
+msgstr "ทวิตเตอร์ @ชื่อผู้ใช้"
+
+msgid "Embedded Tweet"
+msgstr "ทวีตฝังตัว"
+
+msgctxt "A threaded view of Tweets in reply to a previous Tweet"
+msgid "Conversation view"
+msgstr "มุมมองบทสนทนา"
+
+msgctxt "Option to include images, video, and link previews with Tweet content"
+msgid "Include media"
+msgstr "รวมสื่อ"
+
+msgid "Customize the visual display of embedded Tweets"
+msgstr "ปรับแต่งการแสดงผลของทวีตฝังตัว"
+
+msgid "Include previous Tweets in the reply thread"
+msgstr "ใส่ทวีตก่อนหน้าในเธรดตอบกลับ"
+
+msgid ""
+"A Tweet may be a reply to another Tweet. Select this option if you would "
+"like to display the previous Tweet in the thread."
+msgstr ""
+"ทวีตอาจเป็นการตอบกลับทวีตอื่น เลือกตัวเลือกนี้ถ้าคุณต้องการ "
+"แสดงทวีตก่อนหน้าในเธรด"
+
+msgid "Display images, video, and link previews referenced in the Tweet"
+msgstr "แสดงตัวอย่างภาพ วิดีโอ และลิงก์ที่อ้างอิงในทวีต"
+
+msgid "Twitter settings"
+msgstr "การตั้งค่าทวิตเตอร์"
+
+msgctxt "Attribute content on a website to a Twitter account"
+msgid "Site attribution"
+msgstr "การระบุแหล่งที่มาของไซต์"
+
+msgid "Attribute shared content to your site's Twitter account"
+msgstr "ระบุแหล่งที่มาของเนื้อหาที่แชร์กับบัญชีทวิตเตอร์ของไซต์ของคุณ"
+
+msgid ""
+"Site attribution is used to attribute site content to a Twitter account in "
+"%1$s and %2$s."
+msgstr ""
+"การระบุแหล่งที่มาของไซต์ใช้เพื่อระบุแหล่งที่มาของเนื้อหาไซต์ในบัญชีทวิตเตอร์ใน "
+"%1$s และ %2$s"
+
+msgid "Twitter Cards"
+msgstr "การ์ดทวิตเตอร์"
+
+msgid "Twitter Analytics"
+msgstr "การวิเคราะห์ทวิตเตอร์"
+
+msgid ""
+"The account may also be used to note a Tweet originated Tweet Button on your "
+"site."
+msgstr ""
+"นอกจากนี้ บัญชียังอาจใช้เพื่อบันทึกทวีตที่สร้างขึ้นจากปุ่มทวีตบน "
+"ไซต์ของคุณอีกด้วย"
+
+msgctxt "Visual and color theme"
+msgid "Theme"
+msgstr "ธีม"
+
+msgctxt "Option for content to appear with a light background and dark text"
+msgid "light"
+msgstr "สว่าง"
+
+msgctxt "Option for content to appear with a dark background and light text"
+msgid "dark"
+msgstr "มืด"
+
+msgctxt "A choice of color options grouped as a theme"
+msgid "Theme"
+msgstr "ธีม"
+
+msgctxt "CSS color styling of a link text"
+msgid "Link color"
+msgstr "สีลิงก์"
+
+msgctxt "CSS color styling of a box border"
+msgid "Border color"
+msgstr "สีขอบ"
+
+msgid "Warnings"
+msgstr "คําเตือน"
+
+msgid "Content Security Policy"
+msgstr "นโยบายความปลอดภัยของเนื้อหา"
+
+msgid "Restrictions"
+msgstr "ข้อจำกัด"
+
+msgctxt "Personalize Twitter content based on website visits"
+msgid "Personalization"
+msgstr "การปรับแต่งให้เป็นส่วนบุคคล"
+
+msgid "Customize colors used in Twitter widgets to match your site's theme"
+msgstr "ปรับแต่งสีที่ใช้ในวิดเจททวิตเตอร์ให้เข้ากับธีมของไซต์ของคุณ"
+
+msgid "Color of link text inside a Twitter widget."
+msgstr "สีของข้อความลิงก์ภายในวิดเจททวิตเตอร์"
+
+msgid "Color of border surrounding a Twitter widget."
+msgstr "สีของขอบรอบวิดเจททวิตเตอร์"
+
+msgid ""
+"Twitter Embedded Tweet and Timeline widgets support customization of color "
+"theme, link color, and border color inside a rendered widget."
+msgstr ""
+"ทวีตที่ฝังตัวในทวิตเตอร์และวิดเจทลําดับเหตุการณ์รองรับการปรับแต่งสี "
+"ธีม สีลิงก์ และสีขอบภายในวิดเจทที่แสดง"
+
+msgid ""
+"Choose a light or dark theme to best match the background color and text "
+"color of surrounding content."
+msgstr ""
+"เลือกธีมสว่างหรือมืดเพื่อให้เหมาะกับข้อความและสีพื้นหลังมากที่สุด "
+"สีของเนื้อหาโดยรอบ"
+
+msgid ""
+"Link color is applied to linked text including URLs, #hashtags, and "
+"@mentions."
+msgstr ""
+"สีลิงก์ใช้กับข้อความที่ลิงก์ รวมถึง URL, #แฮชแท็ก และ "
+"@คนที่พูดถึง"
+
+msgid ""
+"Border color applies to borders separating Tweet sections or individual "
+"Tweets."
+msgstr ""
+"สีขอบใช้กับขอบที่แยกส่วนทวิตเตอร์ออกจากกัน "
+"ทวีต"
+
+msgid "Limit Twitter functionality"
+msgstr "จำกัดฟังก์ชันการทำงานของทวิตเตอร์"
+
+msgid ""
+"Do not use my website to tailor content and suggestions for Twitter users"
+msgstr ""
+"อย่าใช้เว็บไซต์ของฉันปรับแต่งเนื้อหาและคำแนะนำสำหรับผู้ใช้ทวิตเตอร์"
+
+msgid ""
+"Twitter may track website visitors for advertising targeting, suggested "
+"Twitter accounts, and other purposes."
+msgstr ""
+"ทวิตเตอร์อาจติดตามผู้เข้าชมเว็บไซต์เพื่อวัตถุประสงค์ด้านการกำหนดเป้าหมายการโฆษณา "
+"บัญชีทวิตเตอร์ที่แนะนำ และอื่นๆ"
+
+msgctxt "learn more about this topic"
+msgid "Read more"
+msgstr "อ่านเพิ่มเติม"
+
+msgid ""
+"Select this option if you wish to opt-out of Twitter tracking visitors when "
+"a Twitter button or widget appears on a webpage."
+msgstr ""
+"เลือกตัวเลือกนี้หากคุณต้องการเลือกไม่ให้ทวิตเตอร์ติดตามผู้เข้าชมเมื่อ "
+"ปุ่มทวิตเตอร์หรือวิดเจทแสดงบนหน้าเว็บ"
+
+msgid "Warnings and error display"
+msgstr "การแสดงคำเตือนและข้อผิดพลาด"
+
+msgid "Suppress Content Security Policy warnings"
+msgstr "ระงับคำเตือนนโยบายความปลอดภัยของเนื้อหา"
+
+msgid ""
+"Please note: Not all widget functionality is supported when a %s is applied"
+msgstr ""
+"โปรดทราบว่า: ฟังก์ชันการทำงานของวิดเจทบางส่วนเท่านั้นที่จะได้รับการรองรับเมื่อมีการใช้ %s"
+
+msgid "Tweet Button"
+msgstr "ปุ่มทวีต"
+
+msgctxt ""
+"Display of content relative to other content. above, below, left, right"
+msgid "Position"
+msgstr "ตำแหน่ง"
+
+msgctxt "Numeric sum: number of Tweets referencing this URL"
+msgid "Count"
+msgstr "จํานวน"
+
+msgid "Add a Tweet Button to every public post."
+msgstr "เพิ่มปุ่มทวีตไปยังโพสต์สาธารณะทั้งหมด"
+
+msgctxt "before another piece of content"
+msgid "before"
+msgstr "ก่อน"
+
+msgctxt "after another piece of content"
+msgid "after"
+msgstr "หลัง"
+
+msgctxt "before and after another piece of content"
+msgid "before & after"
+msgstr "ก่อนและหลัง"
+
+msgctxt "display Tweet Button relative to the content of an article"
+msgid "Display Tweet Button %s post content"
+msgstr "แสดงปุ่มทวีต % โพสต์เนื้อหา"
+
+msgid "Large button"
+msgstr "ปุ่มขนาดใหญ่"
+
+msgid "Show the number of Tweets citing the post URL"
+msgstr "แสดงจำนวนทวีตที่อ้างถึง URL ของโพสต์"
+
+msgctxt "Follow a Twitter user"
+msgid "Follow %s"
+msgstr "ติดตาม %s"
+
+msgid "Twitter Follow Button"
+msgstr "ปุ่มติดตามทวิตเตอร์"
+
+msgid "Lets a viewer follow your Twitter account"
+msgstr "ให้ผู้เข้าชมสามารถติดตามบัญชีทวิตเตอร์ของคุณ"
+
+msgid "Title:"
+msgstr "หัวข้อ:"
+
+msgid "@username:"
+msgstr "@ชื่อผู้ใช้:"
+
+msgid "Show username?"
+msgstr "แสดงชื่อผู้ใช้หรือไม่"
+
+msgid "Show number of followers?"
+msgstr "แสดงจำนวนผู้ติดตามหรือไม่"
+
+msgid "Button size:"
+msgstr "ขนาดปุ่ม:"
+
+msgctxt "medium size button"
+msgid "medium"
+msgstr "กลาง"
+
+msgctxt "large size button"
+msgid "large"
+msgstr "ใหญ่"
