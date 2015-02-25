@@ -6,7 +6,7 @@ sudo: false
 # PHP
 language: php
 
-# Test backwards compatability 
+# Test backwards compatibility 
 php:
     - 5.6
     - 5.5

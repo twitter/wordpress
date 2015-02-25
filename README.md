@@ -6,6 +6,8 @@ The Twitter plugin for WordPress requires PHP 5.4 or newer to take advantage of 
 
 Current version: `1.0.0`
 
+[![Build Status](https://travis-ci.org/twitter/wordpress.svg)](https://travis-ci.org/twitter/wordpress)
+
 ## Features
 
 ### Embedded Tweets
