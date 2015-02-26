@@ -6,7 +6,7 @@
   "license": "MIT",
   "keywords": ["twitter","wordpress","plugin"],
   "require": {
-    "php": ">=5.4.0",
+    "php": ">=5.4.0"
   },
   "authors": [
     {
@@ -15,7 +15,7 @@
     }
   ],
   "support": {
-    "forum": "https://twittercommunity.com/c/websites"
+    "forum": "https://wordpress.org/support/plugin/twitter"
   },
   "autoload": {
     "psr-4": {
@@ -23,8 +23,8 @@
     }
   },
   "autoload-dev": {
-	"psr-4": {
+    "psr-4": {
       "Twitter\\Tests\\": "tests/phpunit/"
-	}
+    }
   }
 }
