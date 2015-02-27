@@ -28,12 +28,20 @@ require_once( dirname(__FILE__) . '/autoload.php' );
 // discover the WordPress testing framework
 $_tests_dir = getenv('WP_TESTS_DIR');
 if (! $_tests_dir) {
-    $_tests_dir = '/tmp/wordpress-tests-lib';
+    if (false !== getenv('WP_DEVELOP_DIR')) {
+        $_tests_dir = getenv('WP_DEVELOP_DIR') . 'tests/phpunit';
+    } elseif (file_exists('../../../../../tests/phpunit/includes/bootstrap.php')) {
+        $_tests_dir = '../../../../../tests/phpunit';
+    } elseif (file_exists('/tmp/wordpress-tests-lib/includes/bootstrap.php')) {
+        $_tests_dir = '/tmp/wordpress-tests-lib';
+    }
+    echo $_tests_dir;
 }
 
 // @link https://core.trac.wordpress.org/browser/trunk/tests/phpunit/includes/functions.php
 require_once $_tests_dir . '/includes/functions.php';
 
+// activate the plugin
 tests_add_filter('muplugins_loaded', function() {
     require_once( (defined('TWITTER_PLUGIN_DIR') ? TWITTER_PLUGIN_DIR : dirname(dirname(__DIR__))) . '/twitter.php' );
 

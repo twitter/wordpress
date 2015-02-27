@@ -1,24 +1,33 @@
 # Travis CI Configuration file
+# @link https://travis-ci.org/
 
 # Use new Travis container-based infrastructure
 # http://docs.travis-ci.com/user/workers/container-based-infrastructure/
 sudo: false
 
 # PHP
+# @link http://docs.travis-ci.com/user/languages/php/
 language: php
 
-# Test backwards compatibility 
+# Declare versions of PHP to test
 php:
+  # bleeding edge. alias of 7 until GA
   - nightly
+  # aliased to a recent 5.6.x version
   - 5.6
+  # aliased to a recent 5.5.x version
   - 5.5
+  # aliased to a recent 5.4.x version
   - 5.4
 
 # WordPress comes from the Git mirror, where 'master' mirrors svn 'trunk' and
 # x.y mirrors the latest from the x.y branch
 env:
+  # WordPress 4.1
   - WP_VERSION=4.1
+  # WordPress 4.0
   - WP_VERSION=4.0
+  # WordPress 3.9
   - WP_VERSION=3.9
 
 matrix:
@@ -43,7 +52,7 @@ before_install:
   - sed -i "s/youremptytestdbnamehere/wordpress_test/" wp-tests-config.php
   - sed -i "s/yourusernamehere/travis/" wp-tests-config.php
   - sed -i "s/yourpasswordhere//" wp-tests-config.php
-  # set up database
+  # create database
   - mysql -e 'CREATE DATABASE wordpress_test;' -uroot
   # prepare for running the tests
   - cd $plugin_dir
