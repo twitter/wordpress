@@ -35,7 +35,6 @@ if (! $_tests_dir) {
     } elseif (file_exists('/tmp/wordpress-tests-lib/includes/bootstrap.php')) {
         $_tests_dir = '/tmp/wordpress-tests-lib';
     }
-    echo $_tests_dir;
 }
 
 // @link https://core.trac.wordpress.org/browser/trunk/tests/phpunit/includes/functions.php

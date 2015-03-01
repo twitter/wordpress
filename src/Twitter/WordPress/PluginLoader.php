@@ -120,7 +120,7 @@ class PluginLoader
 		load_plugin_textdomain(
 			static::TEXT_DOMAIN,
 			false, // deprecated parameter as of WP 2.7
-			dirname( plugin_basename( static::getPluginMainFile() ) ) . '/languages/' // directory location of MO files
+			dirname( plugin_basename( static::getPluginMainFile() ) ) . '/languages' // directory location of MO files
 		);
 	}
 
