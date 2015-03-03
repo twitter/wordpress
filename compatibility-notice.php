@@ -227,5 +227,7 @@ class Twitter_CompatibilityNotice {
 		}
 
 		echo '</div>';
+
+		echo '<script>if ( history.replaceState ) { history.replaceState( {}, document.title, document.location.href.replace(/activate=true/g, "") ); }</script>';
 	}
 }
