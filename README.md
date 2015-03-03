@@ -2,7 +2,7 @@
 
 The Twitter plugin for WordPress optimizes your website for a Twitter audience through easy to use sharing buttons, embedded Tweets, auto-generated markup indexed by Twitter, and Follow buttons to help grow your Twitter audience. All features are deeply integrated with WordPress APIs to make building your webpages and administrative features as easy as possible with the extensibility you expect from WordPress.
 
-The Twitter plugin for WordPress requires PHP 5.4 or newer to take advantage of [traits](http://php.net/manual/language.oop5.traits.php), [late static bindings](http://php.net/manual/language.oop5.late-static-bindings.php) for extensibility, [namespaces](http://php.net/manual/language.namespaces.rationale.php), and Twitter libraries. Embedded Tweets require a server capable of communicating with Twitter's servers over TLS/SSL; the [cURL library](http://php.net/manual/book.curl.php) typically works best.
+The Twitter plugin for WordPress requires PHP 5.4 or greater to take advantage of [traits](http://php.net/manual/language.oop5.traits.php), [late static bindings](http://php.net/manual/language.oop5.late-static-bindings.php) for extensibility, [namespaces](http://php.net/manual/language.namespaces.rationale.php), and Twitter libraries. Embedded Tweets require a server capable of communicating with Twitter's servers over TLS/SSL; the [cURL library](http://php.net/manual/book.curl.php) typically works best.
 
 Current version: `1.0.0`
 

@@ -7,13 +7,13 @@ Stable tag: 1.0.0
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
-Official Twitter plugin for WordPress. Embed Twitter content and grow your audience on Twitter. Requires PHP 5.4 or above.
+Official Twitter plugin for WordPress. Embed Twitter content and grow your audience on Twitter. Requires PHP 5.4 or greater.
 
 == Description ==
 
 The Twitter plugin for WordPress optimizes your website for a Twitter audience through easy to use sharing buttons, embedded Tweets, auto-generated markup indexed by Twitter, and Follow buttons to help grow your Twitter audience. All features are deeply integrated with WordPress APIs to make building your webpages and administrative features as easy as possible with the extensibility you expect from WordPress.
 
-Requires PHP version 5.4 or above.
+Requires PHP version 5.4 or greater.
 
 * [Embedded Tweet](https://dev.twitter.com/web/embedded-tweets) - customize backgrounds and color schemes to match your site's theme
 * [Embedded Twitter video](https://dev.twitter.com/web/embedded-video) - showcase video uploaded to Twitter

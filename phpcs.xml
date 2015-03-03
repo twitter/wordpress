@@ -4,6 +4,7 @@
 
 	<file>src/Twitter/WordPress</file>
 	<file>twitter.php</file>
+	<file>compatibility-notice.php</file>
 	<file>uninstall.php</file>
 
 	<rule ref="PEAR.Commenting.FunctionComment.MissingParamTag" />
