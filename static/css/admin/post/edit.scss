@@ -10,8 +10,16 @@
   }
 
   thead th {
-  	padding: 5px 8px 8px;
-  	background-color: #f1f1f1;
+    padding: 5px 8px 8px;
+    background-color: #f1f1f1;
+  }
+
+  tbody th {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-align: inherit;
   }
 
   input {
@@ -21,9 +29,9 @@
 }
 
 #tweet-intent {
-	width: 100%;
+  width: 100%;
 }
 
 #twitter-card {
-	width: 100%;
+  width: 100%;
 }

@@ -164,7 +164,7 @@ class TweetIntent
 		}
 
 		echo '<tr>';
-		echo '<td scope="row" class="left"><label for="tweet-text">' . esc_html( _x( 'Text', 'Share / Tweet text', 'twitter' ) ) . '</label></th>';
+		echo '<th scope="row" class="left"><label for="tweet-text">' . esc_html( _x( 'Text', 'Share / Tweet text', 'twitter' ) ) . '</label></th>';
 		echo '<td><input id="tweet-text" name="' . esc_attr( static::META_KEY . '[' . static::TEXT_KEY . ']' ) . '" type="text" maxlength="' . $available_characters . '" autocomplete="off"';
 		if ( isset( $stored_values[ static::TEXT_KEY ] ) ) {
 			echo ' value="' . esc_attr( $stored_values[ static::TEXT_KEY ] ) . '"';
@@ -174,7 +174,7 @@ class TweetIntent
 		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '></td>';
 		echo '</tr>';
 		echo '<tr>';
-		echo '<td scope="row" class="left"><label for"tweet-hashtags">' . esc_html( __( 'Hashtags', 'twitter' ) ) . '</label></th>';
+		echo '<th scope="row" class="left"><label for="tweet-hashtags">' . esc_html( __( 'Hashtags', 'twitter' ) ) . '</label></th>';
 		echo '<td><input id="tweet-hashtags" name="' . esc_attr( static::META_KEY . '[' . static::HASHTAGS_KEY . ']' ) . '" type="text" maxlength="' . ($available_characters - 2) . '" autocomplete="off"';
 		if ( isset( $stored_values[ static::HASHTAGS_KEY ] ) && is_array( $stored_values[ static::HASHTAGS_KEY ] ) ) {
 			echo ' value="' . esc_attr( implode( ',', $stored_values[ static::HASHTAGS_KEY ] ) ) . '"';

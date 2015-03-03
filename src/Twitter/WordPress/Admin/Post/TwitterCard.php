@@ -142,7 +142,7 @@ class TwitterCard
 			echo '<thead><tr><th scope="col">' . esc_html( _x( 'Property', 'Object component, such as a title and description of an article', 'twitter' ) ) . '</th><th scope="col">' . esc_html( __( 'Value' ) ) . '</th></tr></thead><tbody>';
 
 			echo '<tr>';
-			echo '<td scope="row" class="left"><label for="twitter-card-title">' . esc_html( __( 'Title' ) ) . '</label></th>';
+			echo '<th scope="row" class="left"><label for="twitter-card-title">' . esc_html( __( 'Title' ) ) . '</label></th>';
 			echo '<td><input type="text" id="twitter-card-title" name="' . esc_attr( static::META_KEY . '[' . static::TITLE_KEY . ']' ) . '" maxlength="70" autocomplete="off"';
 			if ( isset( $stored_values[ static::TITLE_KEY ] ) ) {
 				echo ' value="' . esc_attr( $stored_values[ static::TITLE_KEY ] ) . '"';
@@ -156,7 +156,7 @@ class TwitterCard
 
 		if ( isset( $cards_fields_supported_by_post_type[ static::DESCRIPTION_KEY ] ) ) {
 			echo '<tr>';
-			echo '<td scope="row" class="left"><label for="twitter-card-description">' . esc_html( __( 'Description' ) ) . '</label></th>';
+			echo '<th scope="row" class="left"><label for="twitter-card-description">' . esc_html( __( 'Description' ) ) . '</label></th>';
 			echo '<td><input type="text" id="twitter-card-description" name="' . esc_attr( static::META_KEY . '[' . static::DESCRIPTION_KEY . ']' ) . '" maxlength="200" autocomplete="off"';
 			if ( isset( $stored_values[ static::DESCRIPTION_KEY ] ) ) {
 				echo ' value="' . esc_attr( $stored_values[ static::DESCRIPTION_KEY ] ) . '"';
