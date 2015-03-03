@@ -177,9 +177,6 @@ class Follow extends \WP_Widget
 		}
 
 		$filtered_options = $follow_button->toArray( /* dashed_keys */ false );
-		if ( empty( $filtered_options ) ) {
-			return false;
-		}
 		$screen_name = $follow_button->getScreenName();
 		if ( $screen_name ) {
 			$filtered_options['screen_name'] = $screen_name;
