@@ -180,7 +180,18 @@ class PluginLoader
 			return;
 		}
 
-		$twitter_content_priority = apply_filters( 'twitter_content_filter_priority', 10 );
+		/**
+		 * Set the priority to apply to Twitter elements automatically added to the_content
+		 *
+		 * Allow publishers to adjust the order of Twitter buttons relative to other the_content actors
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param int $priority filter priority
+		 */
+		$twitter_content_priority = apply_filters( 'twitter_content_filter_priority', 15 );
+
+		// possibly add Tweet button(s)
 		add_filter(
 			'the_content',
 			array( '\Twitter\WordPress\Content\TweetButton', 'contentFilter' ),
