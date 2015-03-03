@@ -205,14 +205,22 @@ class Twitter_CompatibilityNotice {
 		echo '<p>' . esc_html( sprintf( __( 'The Twitter plugin for WordPress requires PHP version %s or greater.', 'twitter' ), Twitter_CompatibilityNotice::MIN_PHP_VERSION ) ) . '</p>';
 
 		$release_date = _x( 'an unknown date', 'the day the event occurred is unknown', 'twitter' );
-		if ( array_key_exists( PHP_VERSION, Twitter_CompatibilityNotice::$PHP_RELEASE_DATES ) ) {
+		$php_version  = PHP_VERSION;
+		$first_dash   = strpos ( $php_version, '-' );
+
+		if ( $first_dash !== false ) {
+			$php_version = substr( $php_version, 0, $first_dash );
+		}
+
+		if ( array_key_exists( $php_version, Twitter_CompatibilityNotice::$PHP_RELEASE_DATES ) ) {
 			$release_date = date_i18n(
 				get_option( 'date_format' ),
-				strtotime( Twitter_CompatibilityNotice::$PHP_RELEASE_DATES[ PHP_VERSION ] ),
+				strtotime( Twitter_CompatibilityNotice::$PHP_RELEASE_DATES[ $php_version ] ),
 				/* GMT */ true
 			);
 		}
-		echo '<p>' . esc_html( sprintf( _x( 'This server is running PHP version %1$s released on %2$s.', 'The web server is running a version of the PHP software released on a locale-formatted date', 'twitter' ), PHP_VERSION, esc_html( $release_date ) ) ) . '</p>';
+
+		echo '<p>' . esc_html( sprintf( _x( 'This server is running PHP version %1$s released on %2$s.', 'The web server is running a version of the PHP software released on a locale-formatted date', 'twitter' ), $php_version, esc_html( $release_date ) ) ) . '</p>';
 
 		if ( is_plugin_inactive( Twitter_CompatibilityNotice::getPluginPath() ) ) {
 			echo '<p>' . __( 'Plugin <strong>deactivated</strong>.' ) . '</p>';
