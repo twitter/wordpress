@@ -244,7 +244,27 @@ final class Tweet extends \Twitter\Tests\TestWithPrivateAccess
     }
 
     /**
-     * Test setting a via screen_name
+     * Test getting a via username
+     *
+     * @since 1.0.1
+     *
+     * @covers ::getVia
+     * @small
+     *
+     * @return void
+     */
+    public function testGetVia()
+    {
+        // empty string
+        $this->assertEquals('', $this->intent->getVia(), 'Failed to return an empty string for null via');
+
+        $username = 'twitter';
+        self::setProperty($this->intent, 'via', $username);
+        $this->assertEquals($username, $this->intent->getVia(), 'Failed to retrieve via');
+    }
+
+    /**
+     * Test setting a via username
      *
      * @since 1.0.0
      *

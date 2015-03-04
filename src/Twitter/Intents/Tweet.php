@@ -283,6 +283,18 @@ class Tweet
     }
 
     /**
+     * Get the stored via value
+     *
+     * @since 1.0.1
+     *
+     * @return string source Twitter account username
+     */
+    public function getVia()
+    {
+        return $this->via ?: '';
+    }
+
+    /**
      * Associate Tweet with a source account
      *
      * @since 1.0.0

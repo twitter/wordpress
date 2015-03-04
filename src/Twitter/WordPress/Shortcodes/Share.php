@@ -198,6 +198,14 @@ class Share
 			unset( $intent );
 		}
 
+		if ( isset( $attributes['via'] ) ) {
+			$via = (new \Twitter\Intents\Tweet())->setVia( $attributes['via'] )->getVia();
+			if ( $via ) {
+				$options['via'] = $via;
+			}
+			unset( $via );
+		}
+
 		if ( isset( $attributes['hashtags'] ) ) {
 			$intent = \Twitter\Intents\Tweet::fromArray( array( 'hashtags' => $attributes['hashtags'] ) );
 			if ( $intent ) {

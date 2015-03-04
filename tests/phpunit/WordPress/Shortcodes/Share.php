@@ -44,7 +44,8 @@ final class Share extends \WP_UnitTestCase {
 	 *
 	 * @return void
 	 */
-	public function testSanitizeShortcodeParametersID( $tweet_id ) {
+	public function testSanitizeShortcodeParametersID( $tweet_id )
+	{
 		$expected = '20';
 
 		// test setting by id attribute
@@ -59,7 +60,8 @@ final class Share extends \WP_UnitTestCase {
 	 *
 	 * @return array array of test values
 	 */
-	public static function sanitizeTweetIDProvider() {
+	public static function sanitizeTweetIDProvider()
+	{
 		return array(
 			array( 'https://twitter.com/jack/status/20' ),
 			array( 'https://twitter.com/jack/statuses/20' ),
@@ -78,7 +80,8 @@ final class Share extends \WP_UnitTestCase {
 	 *
 	 * @return void
 	 */
-	public function testSanitizeShortcodeParametersText() {
+	public function testSanitizeShortcodeParametersText()
+	{
 		$text = 'Hello world';
 		$options = \Twitter\WordPress\Shortcodes\Share::sanitizeShortcodeParameters( array( 'text' => $text ) );
 		$this->assertTrue( ( isset( $options['text'] ) && $options['text'] === $text ), 'Failed to extract Tweet text from attribute' );
@@ -101,7 +104,8 @@ final class Share extends \WP_UnitTestCase {
 	 *
 	 * @return void
 	 */
-	public function testSanitizeShortcodeParametersURL() {
+	public function testSanitizeShortcodeParametersURL()
+	{
 		foreach ( array( 'https://example.com/', ' https://example.com/ ' ) as $url ) {
 			$options = \Twitter\WordPress\Shortcodes\Share::sanitizeShortcodeParameters( array( 'url' => $url ) );
 			$this->assertTrue( ( isset( $options['url'] ) && $options['url'] === trim( $url ) ), 'Failed to extract URL from attribute' );
@@ -125,7 +129,8 @@ final class Share extends \WP_UnitTestCase {
 	 *
 	 * @return void
 	 */
-	public function testSanitizeShortcodeParametersRelated() {
+	public function testSanitizeShortcodeParametersRelated()
+	{
 		// set by array
 		$related = array( 'twitterdev' => '', 'twitterapi' => '' );
 		$options = \Twitter\WordPress\Shortcodes\Share::sanitizeShortcodeParameters( array( 'related' => $related ) );
@@ -141,6 +146,23 @@ final class Share extends \WP_UnitTestCase {
 	}
 
 	/**
+	 * Test setting a via username through shortcode attribute
+	 *
+	 * @since 1.0.1
+	 *
+	 * @covers ::sanitizeShortcodeParameters
+	 * @small
+	 *
+	 * @return void
+	 */
+	public function testSanitizeShortcodeParametersVia()
+	{
+		$username = 'twitter';
+		$options = \Twitter\WordPress\Shortcodes\Share::sanitizeShortcodeParameters( array( 'via' => $username ) );
+		$this->assertTrue( ( isset( $options['via'] ) && $options['via'] === $username ), 'Failed to set a via shortcode parameter' );
+	}
+
+	/**
 	 * Test setting hashtags through shortcode attribute
 	 *
 	 * @since 1.0.0
@@ -150,7 +172,8 @@ final class Share extends \WP_UnitTestCase {
 	 *
 	 * @return void
 	 */
-	public function testSanitizeShortcodeParametersHashtags() {
+	public function testSanitizeShortcodeParametersHashtags()
+	{
 		// set by array
 		$hashtags = array( 'foo', 'bar' );
 		$options = \Twitter\WordPress\Shortcodes\Share::sanitizeShortcodeParameters( array( 'hashtags' => $hashtags ) );
@@ -181,7 +204,8 @@ final class Share extends \WP_UnitTestCase {
 	 *
 	 * @return void
 	 */
-	public function testSanitizeShortcodeParametersAlign( $align, $expected_valid, $message = '' ) {
+	public function testSanitizeShortcodeParametersAlign( $align, $expected_valid, $message = '' )
+	{
 		$options = \Twitter\WordPress\Shortcodes\Share::sanitizeShortcodeParameters( array( 'align' => $align ) );
 
 		if ( $expected_valid ) {
@@ -200,7 +224,8 @@ final class Share extends \WP_UnitTestCase {
 	 *   @type array align value, expected validity, error message
 	 * }
 	 */
-	public static function alignProvider() {
+	public static function alignProvider()
+	{
 		return array(
 			array( 'left', true, 'Failed to set a left button alignment' ),
 			array( 'right', true, 'Failed to set a right button alignment' ),
@@ -224,7 +249,8 @@ final class Share extends \WP_UnitTestCase {
 	 *
 	 * @return void
 	 */
-	public function testSanitizeShortcodeParametersCount( $count, $expected_valid, $message = '' ) {
+	public function testSanitizeShortcodeParametersCount( $count, $expected_valid, $message = '' )
+	{
 		$options = \Twitter\WordPress\Shortcodes\Share::sanitizeShortcodeParameters( array( 'count' => $count ) );
 
 		if ( $expected_valid ) {
@@ -243,7 +269,8 @@ final class Share extends \WP_UnitTestCase {
 	 *   @type array type config, expected validity, error message
 	 * }
 	 */
-	public static function countProvider() {
+	public static function countProvider()
+	{
 		return array(
 			array( 'none', true, 'Failed to set a valid count of none' ),
 			array( 'vertical', true, 'Failed to set a valid count of vertical' ),
@@ -267,7 +294,8 @@ final class Share extends \WP_UnitTestCase {
 	 *
 	 * @return void
 	 */
-	public function testSanitizeShortcodeParametersSize( $size, $expected_valid, $message = '' ) {
+	public function testSanitizeShortcodeParametersSize( $size, $expected_valid, $message = '' )
+	{
 		$options = \Twitter\WordPress\Shortcodes\Share::sanitizeShortcodeParameters( array( 'size' => $size ) );
 
 		if ( $expected_valid ) {
@@ -286,7 +314,8 @@ final class Share extends \WP_UnitTestCase {
 	 *   @type array size, expected validity, error message
 	 * }
 	 */
-	public static function sizeProvider() {
+	public static function sizeProvider()
+	{
 		return array(
 			array( 'large', true, 'Failed to set a valid size' ),
 			array( 'L', true, 'Failed to set a valid size' ),
