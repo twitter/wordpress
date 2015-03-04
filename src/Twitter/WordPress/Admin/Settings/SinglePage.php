@@ -32,8 +32,6 @@ namespace Twitter\WordPress\Admin\Settings;
  */
 class SinglePage
 {
-	use Template;
-
 	/**
 	 * Settings page identifier.
 	 *
@@ -119,6 +117,37 @@ class SinglePage
 	}
 
 	/**
+	 * Load the settings page
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
+	 */
+	public function settingsPage()
+	{
+		if ( ! isset( $this->hook_suffix ) ) {
+			return;
+		}
+
+		do_action( 'add-' . $this->hook_suffix . '-section' );
+
+		echo '<div class="wrap">';
+
+		echo '<header><h2>' . esc_html( static::featureName() ) . '</h2></header>';
+		// handle general messages such as settings updated up top
+		// place individual settings errors alongside their fields
+		settings_errors( 'general' );
+
+		echo '<form method="post" action="' . esc_url( admin_url( 'options.php' ), array( 'https', 'http' ) ) . '">';
+		settings_fields( $this->hook_suffix );
+		do_settings_sections( $this->hook_suffix );
+		submit_button();
+		echo '</form>';
+
+		echo '</div>';
+	}
+
+	/**
 	 * Add contextual help content to the settings screen
 	 *
 	 * @since 1.0.0
@@ -128,7 +157,8 @@ class SinglePage
 	public function addContextualHelp()
 	{
 		$screen = get_current_screen();
-		if ( ! $screen ) { // null if global not set
+		// null if global not set
+		if ( ! $screen ) {
 			return;
 		}
 

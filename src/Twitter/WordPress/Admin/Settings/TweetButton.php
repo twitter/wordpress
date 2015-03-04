@@ -30,7 +30,7 @@ namespace Twitter\WordPress\Admin\Settings;
  *
  * @since 1.0.0
  */
-class TweetButton
+class TweetButton implements SettingsSection
 {
 	/**
 	 * Define our option name

@@ -26,42 +26,47 @@ THE SOFTWARE.
 namespace Twitter\WordPress\Admin\Settings;
 
 /**
- * Share common template functionality across Twitter setting pages
+ * Expected structure of a settings section included in the Twitter settings page
  *
- * @since 1.0.0
+ * @since 1.0.1
  */
-trait Template
+interface SettingsSection
 {
+	/**
+	 * Reference the feature by name
+	 *
+	 * @since 1.0.1
+	 *
+	 * @return string translated feature name
+	 */
+	public static function featureName();
 
 	/**
-	 * Load the settings page
+	 * Register settings, hook an onload handler
 	 *
-	 * @since 1.0.0
+	 * @since 1.0.1
+	 *
+	 * @param string $hook_suffix hook suffix of an existing settings page
+	 *
+	 * @return bool settings section loaded
+	 */
+	public static function addToSettingsPage( $hook_suffix );
+
+	/**
+	 * Set up settings section
+	 *
+	 * @since 1.0.1
 	 *
 	 * @return void
 	 */
-	public function settingsPage()
-	{
-		if ( ! isset( $this->hook_suffix ) ) {
-			return;
-		}
+	public function onload();
 
-		do_action( 'add-' . $this->hook_suffix . '-section' );
-
-		echo '<div class="wrap">';
-
-		echo '<header><h2>' . esc_html( static::featureName() ) . '</h2></header>';
-		// handle general messages such as settings updated up top
-		// place individual settings errors alongside their fields
-		settings_errors( 'general' );
-
-		echo '<form method="post" action="' . esc_url( admin_url( 'options.php' ), array( 'https', 'http' ) ) . '">';
-		settings_fields( $this->hook_suffix );
-		do_settings_sections( $this->hook_suffix );
-		submit_button();
-		echo '</form>';
-
-		echo '</div>';
-	}
-
+	/**
+	 * Add settings section and fields
+	 *
+	 * @since 1.0.1
+	 *
+	 * @return void
+	 */
+	public function defineSection();
 }

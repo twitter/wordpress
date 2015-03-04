@@ -41,20 +41,8 @@ class Loader
 	 */
 	public static function init()
 	{
-		add_action( 'admin_menu', array( __CLASS__, 'settingsMenuItems' ) );
+		add_action( 'admin_menu', array( '\Twitter\WordPress\Admin\Settings\SinglePage', 'menuItem' ) );
 		add_filter( 'plugin_action_links', array( __CLASS__, 'pluginActionLinks' ), 10, 2 );
-	}
-
-	/**
-	 * Add Twitter settings to the WordPress administration menu.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	public static function settingsMenuItems()
-	{
-		\Twitter\WordPress\Admin\Settings\SinglePage::menuItem();
 	}
 
 	/**

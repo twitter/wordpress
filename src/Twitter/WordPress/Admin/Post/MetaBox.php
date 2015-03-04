@@ -145,7 +145,7 @@ class MetaBox
 				\Twitter\WordPress\PluginLoader::getPluginMainFile()
 			), // absolute URI
 			array(), // no dependencies
-			'1.0.0' // last chance. used for caching
+			'1.0.1' // last change. used for caching
 		);
 	}
 

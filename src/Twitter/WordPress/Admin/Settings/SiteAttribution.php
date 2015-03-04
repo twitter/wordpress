@@ -30,7 +30,7 @@ namespace Twitter\WordPress\Admin\Settings;
  *
  * @since 1.0.0
  */
-class SiteAttribution
+class SiteAttribution implements SettingsSection
 {
 	/**
 	 * Define our option name

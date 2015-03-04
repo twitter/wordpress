@@ -30,7 +30,7 @@ namespace Twitter\WordPress\Admin\Settings;
  *
  * @since 1.0.0
  */
-class Theme
+class Theme implements SettingsSection
 {
 	/**
 	 * Define our option array value.
@@ -157,7 +157,7 @@ class Theme
 		// theme
 		add_action(
 			'add-' . $this->hook_suffix . '-section',
-			array( &$this, 'defineThemeSection' ),
+			array( &$this, 'defineSection' ),
 			static::SECTION_PRIORITY, // top of screen
 			0  // no parameters
 		);
@@ -187,7 +187,7 @@ class Theme
 	 *
 	 * @return void
 	 */
-	public function defineThemeSection()
+	public function defineSection()
 	{
 		$section = 'twitter-colorscheme';
 		add_settings_section(
