@@ -3,7 +3,7 @@ Contributors: Twitter, niallkennedy
 Tags: twitter, embedded tweet, twitter video, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 3.9
 Tested up to: 4.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
@@ -25,7 +25,19 @@ Requires PHP version 5.4 or greater.
 
 Contribute to the plugin, submit pull requests, or run test suites through the [Twitter plugin for WordPress GitHub repository](https://github.com/twitter/wordpress). View [Twitter for WordPress documentation](https://dev.twitter.com/web/wordpress) to learn more about customization through filters.
 
+== Upgrade Notice ==
+
+= 1.0.1 =
+
+Display admin notice if current PHP version does not meet minimum requirements. Do not display Tweet button in auto-generated excerpt.
+
 == Changelog ==
+
+= 1.0.1 =
+* Display admin notice if plugin is installed on a site not meeting minimum PHP requirement
+* Disable Tweet button the_content wrapper when called during excerpt generation
+* Tweet button: add support for via shortcode attribute
+* Fix: save Follow button widget with no overrides
 
 = 1.0.0 =
 * Embedded Tweets

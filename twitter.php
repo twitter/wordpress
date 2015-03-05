@@ -24,13 +24,13 @@ THE SOFTWARE.
 */
 /**
  * @package twitter
- * @version 1.0.1-beta
+ * @version 1.0.1
  */
 /*
 Plugin Name: Twitter
 Plugin URI:  http://wordpress.org/plugins/twitter/
 Description: Official Twitter plugin for WordPress. Embed Twitter content and grow your audience on Twitter. Requires PHP 5.4 or greater.
-Version:     1.0.1-beta
+Version:     1.0.1
 Author:      Twitter
 Author URI:  https://dev.twitter.com/
 License:     MIT
@@ -69,7 +69,7 @@ require_once( dirname( __FILE__ ) . '/autoload.php' );
 // initialize on plugins loaded
 add_action(
 	'plugins_loaded',
-	array( '\\Twitter\\WordPress\\PluginLoader', 'init' ),
+	array( '\Twitter\WordPress\PluginLoader', 'init' ),
 	0, // priority
 	0 // expected arguments
 );
