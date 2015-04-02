@@ -49,10 +49,6 @@ Display admin notice if current PHP version does not meet minimum requirements. 
 
 == Frequently Asked Questions ==
 
-= Twitter Cards do not appear for my shared links =
-
-Twitter Cards must be enabled for your domain before they will appear alongside a Tweet. Submit a URL to the [Twitter Cards validator](https://cards-dev.twitter.com/validator) and request Twitter add the card type for your domain.
-
 = How can I change an embedded Tweet's background and link colors to match my site's theme? =
 
 The Twitter plugin for WordPress includes a settings page with options to customize the background color, link color, and border color used in Twitter embedded Tweets and embedded timelines.
