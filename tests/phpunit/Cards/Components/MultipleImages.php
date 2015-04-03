@@ -109,7 +109,7 @@ final class MultipleImages extends \Twitter\Tests\TestWithPrivateAccess
         $this->assertEquals(1, self::getProperty($this->multipleimages, 'image_count'), 'image count does not match expected array size');
 
         $images = self::getProperty($this->multipleimages, 'images');
-        $image = array_shift($images);
+        $image = reset($images);
         $this->assertNotNull($image, 'Failed to set image');
         $this->assertEquals($url, self::getProperty($image, 'src'), 'Failed to set URL string');
         $this->assertEquals($width, self::getProperty($image, 'width', 'Failed to set valid width'));
@@ -132,7 +132,7 @@ final class MultipleImages extends \Twitter\Tests\TestWithPrivateAccess
         $this->multipleimages->addImage(new \Twitter\Cards\Components\Image($image_url));
         $this->assertEquals(1, self::getProperty($this->multipleimages, 'image_count'), 'image count does not match expected array size');
         $images = self::getProperty($this->multipleimages, 'images');
-        $image = array_shift($images);
+        $image = reset($images);
         unset( $images );
         $src = self::getProperty($image, 'src');
         $this->assertEquals(
@@ -167,7 +167,7 @@ final class MultipleImages extends \Twitter\Tests\TestWithPrivateAccess
         $this->assertEquals(1, self::getProperty($this->multipleimages, 'image_count'), 'image count does not match expected array size');
 
         $images = self::getProperty($this->multipleimages, 'images');
-        $image = array_shift($images);
+        $image = reset($images);
         unset( $images );
         $this->assertNotNull($image, 'Failed to set image');
 

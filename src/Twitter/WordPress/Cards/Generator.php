@@ -427,7 +427,7 @@ class Generator
 
 				$images = $cards_image_handler->getTwitterCardImages();
 				if ( ! empty( $images ) ) {
-					$card->setImage( array_shift( $images ) );
+					$card->setImage( reset( $images ) );
 				}
 				unset( $images );
 

@@ -353,7 +353,7 @@ final class Tweet extends \Twitter\Tests\TestWithPrivateAccess
 
         $related = self::getProperty($this->intent, 'related');
         $related = array_keys($related);
-        $related = array_shift($related);
+        $related = reset($related);
         $this->assertEquals(strtolower($expected_result), $related, $message);
     }
 
@@ -374,7 +374,7 @@ final class Tweet extends \Twitter\Tests\TestWithPrivateAccess
 
         $related = self::getProperty($this->intent, 'related');
         $related = array_values($related);
-        $related = array_shift($related);
+        $related = reset($related);
         $this->assertEquals($label, $related, 'Failed to set a related screen_name label');
     }
 
@@ -419,7 +419,7 @@ final class Tweet extends \Twitter\Tests\TestWithPrivateAccess
 
         $hashtags = self::getProperty($this->intent, 'hashtags');
         $hashtags = array_values($hashtags);
-        $hashtags = array_shift($hashtags);
+        $hashtags = reset($hashtags);
         $this->assertEquals($expected_result, $hashtags, $message);
     }
 
