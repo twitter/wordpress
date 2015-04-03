@@ -201,7 +201,7 @@ class Twitter_CompatibilityNotice {
 	 */
 	public static function adminNotice()
 	{
-		echo '<div class="error">';
+		echo '<div class="notice error is-dismissible">';
 		echo '<p>' . esc_html( sprintf( __( 'The Twitter plugin for WordPress requires PHP version %s or greater.', 'twitter' ), Twitter_CompatibilityNotice::MIN_PHP_VERSION ) ) . '</p>';
 
 		$version = PHP_VERSION;
