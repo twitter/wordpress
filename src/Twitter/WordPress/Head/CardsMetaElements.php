@@ -70,7 +70,7 @@ class CardsMetaElements
 		foreach ( $card_properties as $name => $content ) {
 			if ( is_array( $content ) && $name ) {
 				foreach ( $content as $structured_name => $structured_value ) {
-					$html .= \Twitter\WordPress\Head\MetaElement::fromNameContentPair( $name . ':' . $structured_name, $structured_value );
+					$html .= \Twitter\WordPress\Head\MetaElement::fromNameContentPair( ( $structured_name === 'src' ) ? $name : $name . ':' . $structured_name, $structured_value );
 				}
 			} else {
 				$html .= \Twitter\WordPress\Head\MetaElement::fromNameContentPair( $name, $content );
