@@ -2,7 +2,7 @@
 Contributors: Twitter, niallkennedy
 Tags: twitter, embedded tweet, twitter video, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 3.9
-Tested up to: 4.1
+Tested up to: 4.2
 Stable tag: 1.0.1
 License: MIT
 License URI: http://opensource.org/licenses/MIT
