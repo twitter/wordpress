@@ -47,9 +47,6 @@ class Generator
 	public static $SUPPORTED_CARDS = array(
 		'summary'             => '\Twitter\Cards\Summary',
 		'summary_large_image' => '\Twitter\Cards\SummaryLargeImage',
-		'photo'               => '\Twitter\Cards\Photo',
-		'gallery'             => '\Twitter\Cards\Gallery',
-		'product'             => '\Twitter\Cards\Product',
 	);
 
 	/**
@@ -349,15 +346,8 @@ class Generator
 			return;
 		}
 
-		$card_type = 'summary';
-		if ( has_post_format( 'image', $post->ID ) ) {
-			$card_type = 'photo';
-		} else if ( has_post_format( 'gallery', $post->ID ) ) {
-			$card_type = 'gallery';
-		}
-
 		$query_type = 'post';
-		$card = static::getCardObject( $query_type, $post->ID, $card_type );
+		$card = static::getCardObject( $query_type, $post->ID, 'summary' );
 		if ( ! $card ) {
 			return;
 		}
@@ -428,23 +418,6 @@ class Generator
 				$images = $cards_image_handler->getTwitterCardImages();
 				if ( ! empty( $images ) ) {
 					$card->setImage( reset( $images ) );
-				}
-				unset( $images );
-
-				unset( $cards_image_handler );
-			} else if ( defined( $card_class . '::MAX_IMAGES' ) && method_exists( $card, 'addImage' ) ) {
-				// multiple image card type
-
-				$cards_image_handler = new \Twitter\WordPress\Cards\ImageHandler();
-				$cards_image_handler->setLimit( $card::MAX_IMAGES );
-				$cards_image_handler->setMinWidth( $card::MIN_IMAGE_WIDTH );
-				$cards_image_handler->setMinHeight( $card::MIN_IMAGE_HEIGHT );
-
-				// discover images associated with the post
-				$cards_image_handler->addPostImages( $post );
-				$images = $cards_image_handler->getTwitterCardImages();
-				if ( ! empty( $images ) ) {
-					array_walk( $images, array( $card, 'addImage' ) );
 				}
 				unset( $images );
 

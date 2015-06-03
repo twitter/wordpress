@@ -34,7 +34,7 @@ class Card
 {
 
     /**
-     * Twitter Card type. summary, photo, etc.
+     * Twitter Card type. summary, summary_large_image, etc.
      *
      * @since 1.0.0
      *
