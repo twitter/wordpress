@@ -3,7 +3,7 @@ Contributors: Twitter, niallkennedy
 Tags: twitter, embedded tweet, twitter video, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 3.9
 Tested up to: 4.2
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
@@ -27,11 +27,19 @@ Contribute to the plugin, submit pull requests, or run test suites through the [
 
 == Upgrade Notice ==
 
-= 1.0.1 =
+= 1.1.0 =
+Shortcode improvements for ajax-loaded posts. Remove photo, gallery, and product Twitter Cards no longer supported by Twitter.
 
+= 1.0.1 =
 Display admin notice if current PHP version does not meet minimum requirements. Do not display Tweet button in auto-generated excerpt.
 
 == Changelog ==
+
+= 1.1.0 =
+* Shortcodes now include inline asynchronous JavaScript loaders for improved compatibility with ajax-loaded content
+* Twitter announced photo, gallery, and product Twitter Cards are [no longer supported](https://twittercommunity.com/t/deprecating-the-photo-gallery-and-product-cards/38961 "Twitter announcement: deprecation of photo, gallery, product cards"). Removed from plugin
+* Add [Shortcake plugin](https://wordpress.org/plugins/shortcode-ui/ "Shortcake WordPress plugin") compatibility for form-based shortcode construction and previews
+* Improved Twitter Card image compatibility
 
 = 1.0.1 =
 * Display admin notice if plugin is installed on a site not meeting minimum PHP requirement
