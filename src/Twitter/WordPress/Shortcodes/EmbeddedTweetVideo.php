@@ -62,6 +62,55 @@ class EmbeddedTweetVideo extends EmbeddedTweet
 	{
 		// register our shortcode and its handler
 		add_shortcode( self::SHORTCODE_TAG, array( __CLASS__, 'shortcodeHandler' ) );
+
+		// Shortcake UI
+		if ( function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+			add_action(
+				'admin_init',
+				array( __CLASS__, 'shortcodeUI' ),
+				5,
+				0
+			);
+		}
+	}
+
+	/**
+	 * Describe shortcode for Shortcake UI
+	 *
+	 * @since 1.1.0
+	 *
+	 * @link https://github.com/fusioneng/Shortcake Shortcake UI
+	 *
+	 * @return void
+	 */
+	public static function shortcodeUI()
+	{
+		// Shortcake required
+		if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+			return;
+		}
+
+		// id only
+		// avoids an unchecked Shortcake input checkbox requiring a shortcode output
+		shortcode_ui_register_for_shortcode(
+			self::SHORTCODE_TAG,
+			array(
+				'label'         => __( 'Embedded Tweet Video', 'twitter' ),
+				'listItemImage' => 'dashicons-twitter',
+				'attrs'         => array(
+					array(
+						'attr'  => 'id',
+						'label' => 'ID',
+						'type'  => 'text',
+						'meta'  => array(
+							'required'    => true,
+							'pattern'     => '[0-9]+',
+							'placeholder' => '560070183650213889',
+						),
+					),
+				),
+			)
+		);
 	}
 
 	/**
@@ -152,8 +201,14 @@ class EmbeddedTweetVideo extends EmbeddedTweet
 			return '';
 		}
 
-		\Twitter\WordPress\JavaScriptLoaders\Widgets::enqueue();
-		return '<div class="twitter-video">' . $html . '</div>';
+		$html = '<div class="twitter-video">' . $html . '</div>';
+
+		$inline_js = \Twitter\WordPress\JavaScriptLoaders\Widgets::enqueue();
+		if ( $inline_js ) {
+			return $html . $inline_js;
+		}
+
+		return $html;
 	}
 
 	/**

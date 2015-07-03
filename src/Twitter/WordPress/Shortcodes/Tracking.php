@@ -70,6 +70,52 @@ class Tracking
 	public static function init()
 	{
 		add_shortcode( static::SHORTCODE_TAG, array( __CLASS__, 'shortcodeHandler' ) );
+
+		// Shortcake UI
+		if ( function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+			add_action(
+				'admin_init',
+				array( __CLASS__, 'shortcodeUI' ),
+				5,
+				0
+			);
+		}
+	}
+
+	/**
+	 * Describe shortcode for Shortcake UI
+	 *
+	 * @since 1.1.0
+	 *
+	 * @link https://github.com/fusioneng/Shortcake Shortcake UI
+	 *
+	 * @return void
+	 */
+	public static function shortcodeUI()
+	{
+		// Shortcake required
+		if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+			return;
+		}
+
+		shortcode_ui_register_for_shortcode(
+			static::SHORTCODE_TAG,
+			array(
+				'label'         => __( 'Twitter Advertising Tracker', 'twitter' ),
+				'listItemImage' => 'dashicons-twitter',
+				'attrs'         => array(
+					array(
+						'attr'  => 'id',
+						'label' => 'ID',
+						'description' => __( 'Twitter conversion or remarketing audience tracking identifier', 'twitter' ),
+						'type'  => 'text',
+						'meta'  => array(
+							'required' => true,
+						),
+					),
+				),
+			)
+		);
 	}
 
 	/**

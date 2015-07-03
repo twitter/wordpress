@@ -61,6 +61,63 @@ class Share
 	public static function init()
 	{
 		add_shortcode( static::SHORTCODE_TAG, array( __CLASS__, 'shortcodeHandler' ) );
+
+		// Shortcake UI
+		if ( function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+			add_action(
+				'admin_init',
+				array( __CLASS__, 'shortcodeUI' ),
+				5,
+				0
+			);
+		}
+	}
+
+	/**
+	 * Describe shortcode for Shortcake UI
+	 *
+	 * @since 1.1.0
+	 *
+	 * @link https://github.com/fusioneng/Shortcake Shortcake UI
+	 *
+	 * @return void
+	 */
+	public static function shortcodeUI()
+	{
+		// Shortcake required
+		if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+			return;
+		}
+
+		shortcode_ui_register_for_shortcode(
+			static::SHORTCODE_TAG,
+			array(
+				'label'         => __( 'Tweet Button', 'twitter' ),
+				'listItemImage' => 'dashicons-twitter',
+				'attrs'         => array(
+					array(
+						'attr'  => 'text',
+						'label' => _x( 'Text', 'Share / Tweet text', 'twitter' ),
+						'type'  => 'text',
+					),
+					array(
+						'attr'    => 'url',
+						'label'   => 'URL',
+						'type'    => 'url',
+					),
+					array(
+						'attr'    => 'size',
+						'label'   => __( 'Button size:', 'twitter' ),
+						'type'    => 'radio',
+						'value'   => 'medium',
+						'options' => array(
+							''      => _x( 'medium', 'medium size button', 'twitter' ),
+							'large' => _x( 'large',  'large size button',  'twitter' ),
+						),
+					),
+				),
+			)
+		);
 	}
 
 	/**
@@ -374,7 +431,13 @@ class Share
 			return '';
 		}
 
-		\Twitter\WordPress\JavaScriptLoaders\Widgets::enqueue();
-		return '<div class="twitter-share">' . $html . '</div>';
+		$html = '<div class="twitter-share">' . $html . '</div>';
+
+		$inline_js = \Twitter\WordPress\JavaScriptLoaders\Widgets::enqueue();
+		if ( $inline_js ) {
+			return $html . $inline_js;
+		}
+
+		return $html;
 	}
 }
