@@ -34,6 +34,7 @@ class Widgets
 {
 	/**
 	 * Twitter widget JavaScript handle
+	 *
 	 * Used in WordPress JavaScript queue
 	 *
 	 * @since 1.0.0
@@ -41,6 +42,26 @@ class Widgets
 	 * @type string
 	 */
 	const QUEUE_HANDLE = 'twitter-wjs';
+
+	/**
+	 * Twitter widget JavaScript fully-qualified domain name
+	 *
+	 * Used to prefetch DNS lookup
+	 *
+	 * @since 1.1.0
+	 *
+	 * @type string
+	 */
+	const FQDN = 'platform.twitter.com';
+
+	/**
+	 * Twitter widgets JavaScript absolute URI
+	 *
+	 * @since 1.1.0
+	 *
+	 * @type string
+	 */
+	const URI = 'https://platform.twitter.com/widgets.js';
 
 	/**
 	 * Proactively resolve Twitter widget JS FQDN asynchronously before later use
@@ -54,7 +75,7 @@ class Widgets
 	 */
 	public static function dnsPrefetch()
 	{
-		echo '<link rel="dns-prefetch" href="//platform.twitter.com"';
+		echo '<link rel="dns-prefetch" href="//' . esc_attr( self::FQDN ) . '"';
 		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
 		echo '>' . "\n";
 	}
@@ -64,30 +85,41 @@ class Widgets
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return void
+	 * @return bool true on a successful wp_register_script response
 	 */
 	public static function register()
 	{
 		global $wp_scripts;
 
-		wp_register_script(
+		$registered = wp_register_script(
 			self::QUEUE_HANDLE,
-			static::getAbsoluteURI(), // should be overridden during queue output by asyncScriptLoaderSrc
+			self::URI, // should be overridden during queue output by asyncScriptLoaderSrc
 			array(), // no dependencies
 			null, // no not add extra query parameters for cache busting
 			true // in footer
 		);
 
+		// treat null response as true
+		if ( ! is_bool( $registered ) ) {
+			$registered = true;
+		}
+
+		// replace standard script element with async script element
+		add_filter( 'script_loader_src', array( __CLASS__, 'asyncScriptLoaderSrc' ), 1, 2 );
+
 		// initialize the twttr variable to attach ready events before JS loaded
 		$script = 'window.twttr=(function(w){t=w.twttr||{};t._e=[];t.ready=function(f){t._e.push(f);};return t;}(window));';
 		$data = $wp_scripts->get_data( self::QUEUE_HANDLE, 'data' );
 		if ( $data ) {
-			$script = $data . "\n" . $script;
+			// WP 4.3+
+			// do not add script data if data was possibly previously added
+			if ( $registered ) {
+				$script = $data . "\n" . $script;
+			}
 		}
 		$wp_scripts->add_data( self::QUEUE_HANDLE, 'data', $script );
 
-		// replace standard script element with async script element
-		add_filter( 'script_loader_src', array( __CLASS__, 'asyncScriptLoaderSrc' ), 1, 2 );
+		return $registered;
 	}
 
 	/**
@@ -97,7 +129,7 @@ class Widgets
 	 *
 	 * @uses wp_enqueue_script()
 	 *
-	 * @return void
+	 * @return string async JavaScript loading snippet if script queue may not be supported. empty string if enqueued
 	 */
 	public static function enqueue()
 	{
@@ -105,21 +137,13 @@ class Widgets
 			static::register();
 		}
 
-		wp_enqueue_script( self::QUEUE_HANDLE );
-	}
+		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+			return static::asyncScriptLoaderInline();
+		}
 
-	/**
-	 * The absolute URI of the Twitter widgets JavaScript file
-	 *
-	 * Prefer absolute URI over scheme-relative URI
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return string absolute URI for the Twitter widgets JavaScript file
-	 */
-	public static function getAbsoluteURI()
-	{
-		return 'http' . ( is_ssl() ? 's' : '' ) . '://platform.twitter.com/widgets.js';
+		wp_enqueue_script( self::QUEUE_HANDLE );
+
+		return '';
 	}
 
 	/**
@@ -134,7 +158,7 @@ class Widgets
 		// type = text/javascript to match default WP_Scripts output
 		// async property to unlock page load, preload scanner discoverable in modern browsers
 		// defer property for IE 9 and older
-		return '<script type="text/javascript" id="' . esc_attr( self::QUEUE_HANDLE ) . '" async defer src="' . esc_url( static::getAbsoluteURI(), array( 'http', 'https' ) ) . '" charset="utf-8"></script>' . "\n";
+		return '<script type="text/javascript" id="' . esc_attr( self::QUEUE_HANDLE ) . '" async defer src="' . esc_url( self::URI, array( 'http', 'https' ) ) . '" charset="utf-8"></script>' . "\n";
 	}
 
 	/**
@@ -190,5 +214,25 @@ class Widgets
 
 		// empty out the src response to avoid extra <script>
 		return '';
+	}
+
+	/**
+	 * Load Twitter widget JS using an inline script block
+	 *
+	 * Suitable for unknown render environments where a script block may not be included in a standard enqueue output such as the wp_print_footer_scripts action.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param bool $include_script_element_wrapper wrap the returned JavaScript string in a script element wrapper
+	 *
+	 * @return string HTML script element containing loader script
+	 */
+	public static function asyncScriptLoaderInline( $include_script_element_wrapper = true ) {
+		$script = 'window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src=' . json_encode( self::URI ) . ';fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script",' . json_encode( self::QUEUE_HANDLE ) . '));';
+
+		if ( $include_script_element_wrapper ) {
+			return '<script>' . $script . '</script>';
+		}
+		return $script;
 	}
 }

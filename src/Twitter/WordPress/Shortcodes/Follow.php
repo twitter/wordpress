@@ -61,6 +61,62 @@ class Follow
 	public static function init()
 	{
 		add_shortcode( static::SHORTCODE_TAG, array( __CLASS__, 'shortcodeHandler' ) );
+
+		// Shortcake UI
+		if ( function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+			add_action(
+				'admin_init',
+				array( __CLASS__, 'shortcodeUI' ),
+				5,
+				0
+			);
+		}
+	}
+
+	/**
+	 * Describe shortcode for Shortcake UI
+	 *
+	 * @since 1.1.0
+	 *
+	 * @link https://github.com/fusioneng/Shortcake Shortcake UI
+	 *
+	 * @return void
+	 */
+	public static function shortcodeUI()
+	{
+		// Shortcake required
+		if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+			return;
+		}
+
+		shortcode_ui_register_for_shortcode(
+			static::SHORTCODE_TAG,
+			array(
+				'label'         => __( 'Follow Button', 'twitter' ),
+				'listItemImage' => 'dashicons-twitter',
+				'attrs'         => array(
+					array(
+						'attr'  => 'screen_name',
+						'label' => __( 'Twitter @username', 'twitter' ),
+						'type'  => 'text',
+						'meta'  => array(
+							'placeholder' => 'WordPress',
+							'pattern'     => '[A-Za-z0-9_]{1,20}',
+						),
+					),
+					array(
+						'attr'    => 'size',
+						'label'   => __( 'Button size:', 'twitter' ),
+						'type'    => 'radio',
+						'value'   => 'medium',
+						'options' => array(
+							''      => _x( 'medium', 'medium size button', 'twitter' ),
+							'large' => _x( 'large',  'large size button',  'twitter' ),
+						),
+					),
+				),
+			)
+		);
 	}
 
 	/**
@@ -187,7 +243,13 @@ class Follow
 			return '';
 		}
 
-		\Twitter\WordPress\JavaScriptLoaders\Widgets::enqueue();
-		return '<div class="twitter-follow">' . $html . '</div>';
+		$html = '<div class="twitter-follow">' . $html . '</div>';
+
+		$inline_js = \Twitter\WordPress\JavaScriptLoaders\Widgets::enqueue();
+		if ( $inline_js ) {
+			return $html . $inline_js;
+		}
+
+		return $html;
 	}
 }
