@@ -133,7 +133,7 @@ class SinglePage
 
 		echo '<div class="wrap">';
 
-		echo '<header><h2>' . esc_html( static::featureName() ) . '</h2></header>';
+		echo '<header><h1>' . esc_html( static::featureName() ) . '</h1></header>';
 		// handle general messages such as settings updated up top
 		// place individual settings errors alongside their fields
 		settings_errors( 'general' );
