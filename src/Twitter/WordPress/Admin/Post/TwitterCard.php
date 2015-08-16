@@ -137,10 +137,11 @@ class TwitterCard
 
 		echo '<h4>' . esc_html( __( 'Twitter Card', 'twitter' ) ) . '</h4>';
 
-		if ( isset( $cards_fields_supported_by_post_type[ static::TITLE_KEY ] ) ) {
-			echo '<table id="twitter-card">';
-			echo '<thead><tr><th scope="col">' . esc_html( _x( 'Property', 'Object component, such as a title and description of an article', 'twitter' ) ) . '</th><th scope="col">' . esc_html( __( 'Value' ) ) . '</th></tr></thead><tbody>';
+		// set up the table
+		echo '<table id="twitter-card">';
+		echo '<thead><tr><th scope="col">' . esc_html( _x( 'Property', 'Object component, such as a title and description of an article', 'twitter' ) ) . '</th><th scope="col">' . esc_html( __( 'Value' ) ) . '</th></tr></thead><tbody>';
 
+		if ( isset( $cards_fields_supported_by_post_type[ static::TITLE_KEY ] ) ) {
 			echo '<tr>';
 			echo '<th scope="row" class="left"><label for="twitter-card-title">' . esc_html( __( 'Title' ) ) . '</label></th>';
 			echo '<td><input type="text" id="twitter-card-title" name="' . esc_attr( static::META_KEY . '[' . static::TITLE_KEY . ']' ) . '" maxlength="70" autocomplete="off"';
@@ -163,10 +164,11 @@ class TwitterCard
 			}
 			echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '></td>';
 			echo '</tr>';
-
-			echo '</tbody></table>';
-			echo '<p class="description">' . esc_html( __( 'Customize Twitter link previews', 'twitter' ) ) . '</p>';
 		}
+
+		// close the table, describe its contents
+		echo '</tbody></table>';
+		echo '<p class="description">' . esc_html( __( 'Customize Twitter link previews', 'twitter' ) ) . '</p>';
 	}
 
 	/**
