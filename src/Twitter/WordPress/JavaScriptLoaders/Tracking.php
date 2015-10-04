@@ -44,6 +44,15 @@ class Tracking
 	const QUEUE_HANDLE = 'twitter-tracking';
 
 	/**
+	 * Twitter advertising JavaScript absolute URI
+	 *
+	 * @since 1.2.0
+	 *
+	 * @type string
+	 */
+	const URI = 'https://platform.twitter.com/oct.js';
+
+	/**
 	 * Proactively resolve Twitter advertising JS FQDN asynchronously before later use
 	 *
 	 * @since 1.0.0
@@ -71,7 +80,7 @@ class Tracking
 	{
 		wp_register_script(
 			self::QUEUE_HANDLE,
-			static::getAbsoluteURI(),
+			self::URI,
 			array(), // no dependencies
 			null, // no not add extra query parameters for cache busting
 			true // in footer
@@ -90,19 +99,5 @@ class Tracking
 	public static function enqueue()
 	{
 		wp_enqueue_script( self::QUEUE_HANDLE );
-	}
-
-	/**
-	 * The absolute URI of the Twitter advertising tracker JavaScript file
-	 *
-	 * Prefer absolute URI over scheme-relative URI
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return string absolute URI for the Twitter advertising tracker JavaScript file
-	 */
-	public static function getAbsoluteURI()
-	{
-		return 'http' . ( is_ssl() ? 's' : '' ) . '://platform.twitter.com/oct.js';
 	}
 }
