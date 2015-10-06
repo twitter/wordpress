@@ -41,7 +41,7 @@ class PluginLoader
 	 *
 	 * @type string
 	 */
-	const VERSION = '1.1.0';
+	const VERSION = '1.2.0';
 
 	/**
 	 * Unique domain of the plugin's translated text
@@ -219,10 +219,19 @@ class PluginLoader
 				5,
 				0
 			);
+
 			// Twitter embedded videos
 			add_action(
 				'plugins_loaded',
 				array( '\Twitter\WordPress\Shortcodes\EmbeddedTweetVideo', 'init' ),
+				5,
+				0
+			);
+
+			// Twitter Moment
+			add_action(
+				'plugins_loaded',
+				array( '\Twitter\WordPress\Shortcodes\Moment', 'init' ),
 				5,
 				0
 			);

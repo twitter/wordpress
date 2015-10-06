@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: Twitter, niallkennedy
-Tags: twitter, embedded tweet, twitter video, twitter cards, tweet button, follow button, twitter analytics, twitter ads
+Tags: twitter, embedded tweet, twitter moment, twitter video, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 3.9
-Tested up to: 4.3
-Stable tag: 1.1.0
+Tested up to: 4.3.1
+Stable tag: 1.2.0
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
@@ -15,6 +15,7 @@ The Twitter plugin for WordPress optimizes your website for a Twitter audience t
 
 Requires PHP version 5.4 or greater.
 
+* [Embedded Moment](https://dev.twitter.com/web/embedded-moments) - showcase multiple Tweets in a media rich grid layout
 * [Embedded Tweet](https://dev.twitter.com/web/embedded-tweets) - customize backgrounds and color schemes to match your site's theme
 * [Embedded Twitter video](https://dev.twitter.com/web/embedded-video) - showcase video uploaded to Twitter
 * [Tweet button](https://dev.twitter.com/web/tweet-button) - simple sharing of your site's content on Twitter
@@ -27,6 +28,9 @@ Contribute to the plugin, submit pull requests, or run test suites through the [
 
 == Upgrade Notice ==
 
+= 1.2.0 =
+Support Twitter Moment embeds.
+
 = 1.1.0 =
 Shortcode improvements for ajax-loaded posts. Remove photo, gallery, and product Twitter Cards no longer supported by Twitter.
 
@@ -34,6 +38,10 @@ Shortcode improvements for ajax-loaded posts. Remove photo, gallery, and product
 Display admin notice if current PHP version does not meet minimum requirements. Do not display Tweet button in auto-generated excerpt.
 
 == Changelog ==
+
+= 1.2.0 =
+* Embed a Twitter Moment by simply pasting a URL
+* Always load Twitter ads conversion tracking JavaScript over HTTPS
 
 = 1.1.0 =
 * Shortcodes now include inline asynchronous JavaScript loaders for improved compatibility with ajax-loaded content
