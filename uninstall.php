@@ -65,12 +65,14 @@ if ( function_exists( 'delete_post_meta_by_key' ) ) {
 
 // user meta
 if ( function_exists( 'delete_metadata' ) ) {
-	// delete Twitter customizations stored for a WordPress user account
-	delete_metadata(
-		'user',    // meta type
-		0,         // user ID (ignored)
-		'twitter', // meta key
-		'',        // delete all values
-		true       // delete all. ignore passed user id
-	);
+	foreach ( array( 'twitter', 'periscope' ) as $social ) {
+		// delete Twitter customization stored for a WordPress user account
+		delete_metadata(
+			'user',    // meta type
+			0,         // user ID (ignored)
+			$social,   // meta key
+			'',        // delete all values
+			true       // delete all. ignore passed user id
+		);
+	}
 }

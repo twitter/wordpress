@@ -53,7 +53,7 @@ if ( ! function_exists( 'add_action' ) ) {
 // plugin requires PHP 5.4 or greater
 if ( version_compare( PHP_VERSION, '5.4.0', '<' ) ) {
 	if ( ! class_exists( 'Twitter_CompatibilityNotice' ) ) {
-		require_once( dirname(__FILE__) . '/compatibility-notice.php' );
+		require_once( dirname( __FILE__ ) . '/compatibility-notice.php' );
 	}
 
 	// possibly display a notice, trigger error

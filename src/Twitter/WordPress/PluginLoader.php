@@ -136,6 +136,7 @@ class PluginLoader
 	public static function widgetsInit()
 	{
 		register_widget( '\Twitter\WordPress\Widgets\Follow' );
+		register_widget( '\Twitter\WordPress\Widgets\PeriscopeOnAir' );
 	}
 
 	/**
@@ -155,6 +156,7 @@ class PluginLoader
 
 		// User profile fields
 		add_action( 'admin_init', array( '\Twitter\WordPress\Admin\Profile\User', 'init' ) );
+		add_action( 'admin_init', array( '\Twitter\WordPress\Admin\Profile\PeriscopeUser', 'init' ) );
 	}
 
 	/**
@@ -172,7 +174,10 @@ class PluginLoader
 		}
 
 		// load widgets JS if a Twitter widget is active
-		if ( is_active_widget( false, false, \Twitter\WordPress\Widgets\Follow::BASE_ID, true ) ) {
+		if (
+			is_active_widget( false, false, \Twitter\WordPress\Widgets\Follow::BASE_ID, true ) ||
+			is_active_widget( false, false, \Twitter\WordPress\Widgets\PeriscopeOnAir::BASE_ID, true )
+		) {
 			// enqueue after the script is registered in wp_enqueue_scripts action priority 1
 			add_action( 'wp_enqueue_scripts', array( '\Twitter\WordPress\JavaScriptLoaders\Widgets', 'enqueue' ) );
 		}
@@ -241,6 +246,14 @@ class PluginLoader
 		add_action(
 			'plugins_loaded',
 			array( '\Twitter\WordPress\Shortcodes\Follow', 'init' ),
+			5,
+			0
+		);
+
+		// Periscope on air button
+		add_action(
+			'plugins_loaded',
+			array( '\Twitter\WordPress\Shortcodes\PeriscopeOnAir', 'init' ),
 			5,
 			0
 		);

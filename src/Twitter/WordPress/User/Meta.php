@@ -34,26 +34,28 @@ class Meta
 {
 
 	/**
-	 * Get a Twitter @username stored for a given WordPress user identifier
+	 * Get a username value stored for the given WordPress user identifier
 	 *
-	 * @since 1.0.0
+	 * @since 1.3.0
 	 *
 	 * @param int|string $user_id WordPress user identifier. may be WP_User->ID or a separate identifier used by an extending system
+	 * @param string     $key user attribute or meta key storing the username of interest
 	 *
-	 * @return string Twitter username value stored for the given WordPress user identifier
+	 * @return string stored username. empty string if no user_id provided or no username found
 	 */
-	public static function getTwitterUsername( $user_id )
-	{
+	public static function getSocialUsername( $user_id, $key ) {
 		// basic test for invalid passed parameter
 		if ( ! $user_id ) {
 			return '';
 		}
+		if ( ! is_string( $key ) || ! $key ) {
+			return '';
+		}
 
-		$meta_key = 'twitter';
 		if ( function_exists( 'get_user_attribute' ) ) {
-			$username = get_user_attribute( $user_id, $meta_key );
+			$username = get_user_attribute( $user_id, $key );
 		} else {
-			$username = get_user_meta( $user_id, $meta_key, /* single */ true );
+			$username = get_user_meta( $user_id, $key, /* single */ true );
 		}
 
 		if ( ! is_string( $username ) ) {
@@ -70,9 +72,35 @@ class Meta
 			 * @param string     $username Twitter username associated with a WordPress user ID
 			 * @param int|string $user_id  WordPress user identifier. may be WP_User->ID or a separate identifier used by an extending system
 			 */
-			$username = apply_filters( 'twitter_username', $username, $user_id );
+			$username = apply_filters( $key . '_username', $username, $user_id );
 		}
 
 		return $username;
+	}
+
+	/**
+	 * Get a Twitter @username stored for a given WordPress user identifier
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param int|string $user_id WordPress user identifier. may be WP_User->ID or a separate identifier used by an extending system
+	 *
+	 * @return string Twitter username value stored for the given WordPress user identifier
+	 */
+	public static function getTwitterUsername( $user_id ) {
+		return static::getSocialUsername( $user_id, 'twitter' );
+	}
+
+	/**
+	 * Get a Periscope username stored for a given WordPress identifier
+	 *
+	 * @since 1.3.0
+	 *
+	 * @param int|string $user_id WordPress user identifier. may be WP_User->ID or a separate identifier used by an extending system
+	 *
+	 * @return string Periscope username value stored for the given WordPress user identifier
+	 */
+	public static function getPeriscopeUsername( $user_id ) {
+		return static::getSocialUsername( $user_id, 'periscope' );
 	}
 }
