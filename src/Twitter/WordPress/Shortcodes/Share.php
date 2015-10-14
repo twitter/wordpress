@@ -92,12 +92,12 @@ class Share
 		shortcode_ui_register_for_shortcode(
 			static::SHORTCODE_TAG,
 			array(
-				'label'         => __( 'Tweet Button', 'twitter' ),
+				'label'         => esc_html( __( 'Tweet Button', 'twitter' ) ),
 				'listItemImage' => 'dashicons-twitter',
 				'attrs'         => array(
 					array(
 						'attr'  => 'text',
-						'label' => _x( 'Text', 'Share / Tweet text', 'twitter' ),
+						'label' => esc_html( _x( 'Text', 'Share / Tweet text', 'twitter' ) ),
 						'type'  => 'text',
 					),
 					array(
@@ -107,12 +107,12 @@ class Share
 					),
 					array(
 						'attr'    => 'size',
-						'label'   => __( 'Button size:', 'twitter' ),
+						'label'   => esc_html( __( 'Button size:', 'twitter' ) ),
 						'type'    => 'radio',
-						'value'   => 'medium',
+						'value'   => '',
 						'options' => array(
-							''      => _x( 'medium', 'medium size button', 'twitter' ),
-							'large' => _x( 'large',  'large size button',  'twitter' ),
+							''      => esc_html( _x( 'medium', 'medium size button', 'twitter' ) ),
+							'large' => esc_html( _x( 'large',  'large size button',  'twitter' ) ),
 						),
 					),
 				),

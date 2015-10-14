@@ -129,7 +129,7 @@ class Moment
 		shortcode_ui_register_for_shortcode(
 			self::SHORTCODE_TAG,
 			array(
-				'label'         => __( 'Twitter Moment', 'twitter' ),
+				'label'         => esc_html( __( 'Twitter Moment', 'twitter' ) ),
 				'listItemImage' => 'dashicons-twitter',
 				'attrs'         => array(
 					array(

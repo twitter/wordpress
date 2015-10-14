@@ -145,7 +145,7 @@ class EmbeddedTweet
 		shortcode_ui_register_for_shortcode(
 			self::SHORTCODE_TAG,
 			array(
-				'label'         => __( 'Embedded Tweet', 'twitter' ),
+				'label'         => esc_html( __( 'Embedded Tweet', 'twitter' ) ),
 				'listItemImage' => 'dashicons-twitter',
 				'attrs'         => array(
 					array(

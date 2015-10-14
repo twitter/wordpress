@@ -92,12 +92,12 @@ class Follow
 		shortcode_ui_register_for_shortcode(
 			static::SHORTCODE_TAG,
 			array(
-				'label'         => __( 'Follow Button', 'twitter' ),
+				'label'         => esc_html( __( 'Follow Button', 'twitter' ) ),
 				'listItemImage' => 'dashicons-twitter',
 				'attrs'         => array(
 					array(
 						'attr'  => 'screen_name',
-						'label' => __( 'Twitter @username', 'twitter' ),
+						'label' => esc_html( __( 'Twitter @username', 'twitter' ) ),
 						'type'  => 'text',
 						'meta'  => array(
 							'placeholder' => 'WordPress',
@@ -106,12 +106,12 @@ class Follow
 					),
 					array(
 						'attr'    => 'size',
-						'label'   => __( 'Button size:', 'twitter' ),
+						'label'   => esc_html( __( 'Button size:', 'twitter' ) ),
 						'type'    => 'radio',
-						'value'   => 'medium',
+						'value'   => '',
 						'options' => array(
-							''      => _x( 'medium', 'medium size button', 'twitter' ),
-							'large' => _x( 'large',  'large size button',  'twitter' ),
+							''      => esc_html( _x( 'medium', 'medium size button', 'twitter' ) ),
+							'large' => esc_html( _x( 'large',  'large size button',  'twitter' ) ),
 						),
 					),
 				),
