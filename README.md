@@ -4,7 +4,7 @@ The Twitter plugin for WordPress optimizes your website for a Twitter audience t
 
 The Twitter plugin for WordPress requires PHP 5.4 or greater to take advantage of [traits](http://php.net/manual/language.oop5.traits.php), [late static bindings](http://php.net/manual/language.oop5.late-static-bindings.php) for extensibility, [namespaces](http://php.net/manual/language.namespaces.rationale.php), and Twitter libraries. Embedded Tweets require a server capable of communicating with Twitter's servers over TLS/SSL; the [cURL library](http://php.net/manual/book.curl.php) typically works best.
 
-Current version: `1.1.0`
+Current version: `1.2.0`
 
 [![Build Status](https://travis-ci.org/twitter/wordpress.svg)](https://travis-ci.org/twitter/wordpress)
 
@@ -17,6 +17,10 @@ Add an [embedded Tweet](https://dev.twitter.com/web/embedded-tweets) to your sit
 Add a Twitter embedded video widget to your site by using the `twitter_video` shortcode macro.
 
 Customize an embedded Tweet color scheme to match your site's color palette. Choose a theme type, link color, and border color in the WordPress administrative interface.
+
+### Embedded Moment
+
+Add a [Twitter Moment](https://twitter.com/i/moments) to an article by URL or by using the `twitter_moment` shortcode macro.
 
 ### Twitter Cards
 
@@ -35,6 +39,10 @@ Customize Tweet text and add hashtags Tweet Button shares for your post through 
 ### Follow Button
 
 Add a Follow Button to your site by configuring a Follow button [WordPress widget](http://codex.wordpress.org/WordPress_Widgets) for use in an eligible widget area. Add a Follow button anywhere in your post content or theme using the `twitter_follow` shortcode macro.
+
+### Periscope On Air Button
+
+Add a [Periscope On Air Button](https://www.periscope.tv/embed) to any page using the periscope_on_air shortcode macro to help your website audience discover your Periscope account. The button will automatically display your account's on air status when you broadcast.
 
 ### Advertising Tracking
 

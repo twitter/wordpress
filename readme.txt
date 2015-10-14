@@ -22,11 +22,15 @@ Requires PHP version 5.4 or greater.
 * [Twitter Cards](https://dev.twitter.com/cards/overview) - highlight your site's content when shared on Twitter
 * [Twitter Analytics](https://analytics.twitter.com/) - track impressions and top distributors of your site's content on Twitter
 * [Follow button](https://dev.twitter.com/web/follow-button) - grow your Twitter audience
+* [Periscope On Air button](https://www.periscope.tv/embed) - grow your Periscope audience
 * [Twitter ads conversion tracking](https://support.twitter.com/articles/20170807-conversion-tracking-for-websites) - easily track actions on your WordPress site triggered by a Twitter ad or build a custom targeting audience
 
 Contribute to the plugin, submit pull requests, or run test suites through the [Twitter plugin for WordPress GitHub repository](https://github.com/twitter/wordpress). View [Twitter for WordPress documentation](https://dev.twitter.com/web/wordpress) to learn more about customization through filters.
 
 == Upgrade Notice ==
+
+= 1.3.0 =
+Adds Periscope On Air widget for Periscope broadcasters.
 
 = 1.2.0 =
 Support Twitter Moment embeds.
@@ -38,6 +42,9 @@ Shortcode improvements for ajax-loaded posts. Remove photo, gallery, and product
 Display admin notice if current PHP version does not meet minimum requirements. Do not display Tweet button in auto-generated excerpt.
 
 == Changelog ==
+
+= 1.3.0 =
+* Add a [Periscope On Air button](https://www.periscope.tv/embed) through a widget, shortcode, or as an embed handler for a Periscope profile URL
 
 = 1.2.0 =
 * Embed a Twitter Moment by simply pasting a URL
