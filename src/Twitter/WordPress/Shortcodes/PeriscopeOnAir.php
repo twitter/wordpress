@@ -43,6 +43,15 @@ class PeriscopeOnAir
 	const SHORTCODE_TAG = 'periscope_on_air';
 
 	/**
+	 * Regex used to match a Periscope profile URL in text
+	 *
+	 * @since 1.3.0
+	 *
+	 * @type string
+	 */
+	const PERISCOPE_PROFILE_URL_REGEX = '#^https://(www\.)?periscope\.tv/([a-z0-9_]{1,20})#i';
+
+	/**
 	 * Accepted shortcode attributes and their default values
 	 *
 	 * @since 1.3.0
@@ -71,6 +80,14 @@ class PeriscopeOnAir
 				0
 			);
 		}
+
+		// pass a Periscope profile URL through the Periscope On Air shortcode handler
+		wp_embed_register_handler(
+			self::SHORTCODE_TAG,
+			static::PERISCOPE_PROFILE_URL_REGEX,
+			array( __CLASS__, 'linkHandler' ),
+			1
+		);
 	}
 
 	/**
@@ -120,9 +137,30 @@ class PeriscopeOnAir
 	}
 
 	/**
+	 * Handle a URL matched by an embed handler
+	 *
+	 * @since 1.3.0
+	 *
+	 * @param array  $matches The regex matches from the provided regex when calling {@link wp_embed_register_handler()}.
+	 * @param array  $attr    Embed attributes. Not used.
+	 * @param string $url     The original URL that was matched by the regex. Not used.
+	 * @param array  $rawattr The original unmodified attributes. Not used.
+	 *
+	 * @return string HTML markup for the Tweet or an empty string if requirements not met
+	 */
+	public static function linkHandler( $matches, $attr, $url, $rawattr )
+	{
+		if ( ! ( is_array( $matches ) && isset( $matches[2] ) && $matches[2] ) ) {
+			return '';
+		}
+
+		return static::shortcodeHandler( array( 'username' => $matches[2] ) );
+	}
+
+	/**
 	 * Clean up provided shortcode values
 	 *
-	 * @since 1.0.0
+	 * @since 1.3.0
 	 *
 	 * @param array $attributes provided shortcode attributes {
 	 *   @type string shortcode attribute name
