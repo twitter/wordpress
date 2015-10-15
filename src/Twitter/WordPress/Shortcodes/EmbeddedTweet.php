@@ -101,17 +101,15 @@ class EmbeddedTweet
 		// register our shortcode and its handler
 		add_shortcode( self::SHORTCODE_TAG, array( __CLASS__, 'shortcodeHandler' ) );
 
-		if ( is_admin() ) {
-			// Shortcake UI
-			if ( function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
-				add_action(
-					'admin_init',
-					array( __CLASS__, 'shortcodeUI' ),
-					5,
-					0
-				);
-			}
-		} else {
+		// Shortcode UI, if supported
+		add_action(
+			'register_shortcode_ui',
+			array( __CLASS__, 'shortcodeUI' ),
+			5,
+			0
+		);
+	
+		if ( ! is_admin() ) {
 			// unhook the WordPress Core oEmbed handler
 			wp_oembed_remove_provider( static::OEMBED_CORE_REGEX );
 			// pass a Tweet detail URL through the Tweet shortcode handler

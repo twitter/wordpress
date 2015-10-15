@@ -71,22 +71,20 @@ class PeriscopeOnAir
 	{
 		add_shortcode( static::SHORTCODE_TAG, array( __CLASS__, 'shortcodeHandler' ) );
 
-		// Shortcake UI
-		if ( function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
-			add_action(
-				'admin_init',
-				array( __CLASS__, 'shortcodeUI' ),
-				5,
-				0
-			);
-		}
-
 		// pass a Periscope profile URL through the Periscope On Air shortcode handler
 		wp_embed_register_handler(
 			self::SHORTCODE_TAG,
 			static::PERISCOPE_PROFILE_URL_REGEX,
 			array( __CLASS__, 'linkHandler' ),
 			1
+		);
+
+		// Shortcode UI, if supported
+		add_action(
+			'register_shortcode_ui',
+			array( __CLASS__, 'shortcodeUI' ),
+			5,
+			0
 		);
 	}
 

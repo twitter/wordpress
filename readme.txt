@@ -45,6 +45,7 @@ Display admin notice if current PHP version does not meet minimum requirements. 
 
 = 1.3.0 =
 * Add a [Periscope On Air button](https://www.periscope.tv/embed) through a widget, shortcode, or as an embed handler for a Periscope profile URL
+* Shortcode UI integration now uses the `register_shortcode_ui` action introduced in Shortcake 0.5.0
 
 = 1.2.0 =
 * Embed a Twitter Moment by simply pasting a URL
