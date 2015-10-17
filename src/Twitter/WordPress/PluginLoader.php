@@ -198,6 +198,7 @@ class PluginLoader
 		) {
 			// enqueue after the script is registered in wp_enqueue_scripts action priority 1
 			add_action( 'wp_enqueue_scripts', array( '\Twitter\WordPress\JavaScriptLoaders\Widgets', 'enqueue' ) );
+			add_action( 'wp_head', array( '\Twitter\WordPress\JavaScriptLoaders\Widgets', 'dnsPrefetch' ) );
 		}
 
 		// do not add content filters to HTTP 404 response

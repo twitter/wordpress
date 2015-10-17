@@ -68,16 +68,14 @@ class Widgets
 	 *
 	 * @since 1.0.0
 	 *
-	 * @link http://dev.chromium.org/developers/design-documents/dns-prefetching Chromium prefetch behavior
+	 * @link https://dev.chromium.org/developers/design-documents/dns-prefetching Chromium prefetch behavior
 	 * @link https://developer.mozilla.org/en-US/docs/Controlling_DNS_prefetching Firefox prefetch behavior
 	 *
 	 * @return void
 	 */
 	public static function dnsPrefetch()
 	{
-		echo '<link rel="dns-prefetch" href="//' . esc_attr( self::FQDN ) . '"';
-		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
-		echo '>' . "\n";
+		echo '<link rel="dns-prefetch" href="//' . esc_attr( self::FQDN ) . '"' . \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '>' . "\n";
 	}
 
 	/**
