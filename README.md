@@ -42,7 +42,7 @@ Add a Follow Button to your site by configuring a Follow button [WordPress widge
 
 ### Periscope On Air Button
 
-Add a [Periscope On Air Button](https://www.periscope.tv/embed) to any page using the periscope_on_air shortcode macro to help your website audience discover your Periscope account. The button will automatically display your account's on air status when you broadcast.
+Add a [Periscope On Air Button](https://www.periscope.tv/embed) to any page using the `periscope_on_air` shortcode macro to help your website audience discover your Periscope account. The button will automatically display your account's on air status when you broadcast.
 
 ### Advertising Tracking
 
