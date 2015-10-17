@@ -76,6 +76,32 @@ class SinglePage
 	}
 
 	/**
+	 * Do not display a settings section if the related feature has been disabled by the site
+	 *
+	 * @since 1.3.0
+	 *
+	 * @return array {
+	 *   Settings component full qualified class names
+
+	 *    @type string fully qualified class name
+	 * }
+	 */
+	public static function getSettingsComponentsForEnabledFeatures() {
+		$components = static::$SETTINGS_COMPONENTS;
+		$features = \Twitter\WordPress\Features::getEnabledFeatures();
+
+		if ( ! isset( $features[ \Twitter\WordPress\Features::EMBED_TWEET ] ) ) {
+			unset( $components['\Twitter\WordPress\Admin\Settings\Theme'] );
+		}
+
+		if ( ! isset( $features[ \Twitter\WordPress\Features::TWEET_BUTTON ] ) ) {
+			unset( $components['\Twitter\WordPress\Admin\Settings\TweetButton'] );
+		}
+
+		return $components;
+	}
+
+	/**
 	 * Add a submenu item to WordPress admin.
 	 *
 	 * @since 1.0.0
@@ -101,8 +127,10 @@ class SinglePage
 		}
 		$settings->hook_suffix = $hook_suffix;
 
+		$settings_components = static::getSettingsComponentsForEnabledFeatures();
+
 		// add each settings component to the single page settings page
-		foreach ( static::$SETTINGS_COMPONENTS as $settings_component ) {
+		foreach ( $settings_components as $settings_component ) {
 			$settings_component::addToSettingsPage( $hook_suffix );
 		}
 

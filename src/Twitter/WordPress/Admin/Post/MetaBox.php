@@ -66,9 +66,13 @@ class MetaBox
 	 */
 	public static function load()
 	{
-		add_action( 'wp', array( '\Twitter\WordPress\Admin\Post\TweetIntent', 'registerPostMeta' ), 10, 0 );
 		add_action( 'add_meta_boxes', array( __CLASS__, 'addMetaBox' ), 1, 0 );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueueScripts' ) );
+
+		$features = \Twitter\WordPress\Features::getEnabledFeatures();
+		if ( isset( $features[ \Twitter\WordPress\Features::TWEET_BUTTON ] ) ) {
+			add_action( 'wp', array( '\Twitter\WordPress\Admin\Post\TweetIntent', 'registerPostMeta' ), 10, 0 );
+		}
 	}
 
 	/**
@@ -163,8 +167,14 @@ class MetaBox
 		// Use nonce for verification
 		wp_nonce_field( plugin_basename( __FILE__ ), self::NONCE_NAME );
 
-		\Twitter\WordPress\Admin\Post\TweetIntent::metaBoxContent();
-		\Twitter\WordPress\Admin\Post\TwitterCard::metaBoxContent();
+		$features = \Twitter\WordPress\Features::getEnabledFeatures();
+
+		if ( isset( $features[ \Twitter\WordPress\Features::TWEET_BUTTON ] ) ) {
+			\Twitter\WordPress\Admin\Post\TweetIntent::metaBoxContent();
+		}
+		if ( isset( $features[ \Twitter\WordPress\Features::CARDS ] ) ) {
+			\Twitter\WordPress\Admin\Post\TwitterCard::metaBoxContent();
+		}
 	}
 
 	/**
