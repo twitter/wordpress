@@ -26,58 +26,41 @@ THE SOFTWARE.
 namespace Twitter\WordPress\Shortcodes;
 
 /**
- * Display a Moment
+ * Common methods expected to exist in each shortcode handler
  *
- * @since 1.2.0
+ * @since 1.3.0
  */
-class Moment extends TweetGrid
+interface ShortcodeInterface
 {
-
 	/**
-	 * Shortcode tag to be matched
-	 *
-	 * @since 1.2.0
-	 *
-	 * @type string
-	 */
-	const SHORTCODE_TAG = 'twitter_moment';
-
-	/**
-	 * HTML class to be used in div wrapper
+	 * Register shortcode macro and handler
 	 *
 	 * @since 1.3.0
 	 *
-	 * @type string
+	 * @return void
 	 */
-	const HTML_CLASS = 'twitter-moment';
+	public static function init();
 
 	/**
-	 * Regex used to match a Moment in text
-	 *
-	 * @since 1.2.0
-	 *
-	 * @type string
-	 */
-	const URL_REGEX = '#^https://twitter\.com/i/moments/([0-9]+)#i';
-
-	/**
-	 * Base URL used to reconstruct a Moment URL
-	 *
-	 * @since 1.2.0
-	 *
-	 * @type string
-	 */
-	const BASE_URL = 'https://twitter.com/i/moments/';
-
-	/**
-	 * Reference the feature by name
+	 * Describe shortcode for Shortcake UI
 	 *
 	 * @since 1.3.0
 	 *
-	 * @return string translated feature name
+	 * @link https://github.com/fusioneng/Shortcake Shortcake UI
+	 *
+	 * @return void
 	 */
-	public static function featureName()
-	{
-		return __( 'Twitter Moment', 'twitter' );
-	}
+	public static function shortcodeUI();
+
+	/**
+	 * Handle shortcode macro
+	 *
+	 * @since 1.3.0
+	 *
+	 * @param array  $attributes shortcode attributes
+	 * @param string $content    shortcode content. no effect
+	 *
+	 * @return string HTML result or empty string. JavaScript dependencies should be enqueued or loaded in the returned HTML
+	 */
+	public static function shortcodeHandler( $attributes, $content );
 }

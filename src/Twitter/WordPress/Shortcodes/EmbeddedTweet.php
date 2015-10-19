@@ -30,8 +30,9 @@ namespace Twitter\WordPress\Shortcodes;
  *
  * @since 1.0.0
  */
-class EmbeddedTweet
+class EmbeddedTweet implements ShortcodeInterface
 {
+	use OEmbedTrait;
 
 	/**
 	 * Shortcode tag to be matched
@@ -41,6 +42,15 @@ class EmbeddedTweet
 	 * @type string
 	 */
 	const SHORTCODE_TAG = 'tweet';
+
+	/**
+	 * PHP class to use for fetching oEmbed data
+	 *
+	 * @since 1.3.0
+	 *
+	 * @type string
+	 */
+	const OEMBED_API_CLASS = '\Twitter\WordPress\Helpers\TwitterAPI';
 
 	/**
 	 * Relative path for the oEmbed API relative to Twitter API base path
@@ -70,6 +80,15 @@ class EmbeddedTweet
 	 * @type string
 	 */
 	const TWEET_URL_REGEX = '#^https?://(www\.)?twitter\.com/.+?/status(es)?/([0-9]+)#i';
+
+	/**
+	 * Base URL used to reconstruct a Tweet URL
+	 *
+	 * @since 1.3.0
+	 *
+	 * @type string
+	 */
+	const BASE_URL = 'https://twitter.com/_/status/';
 
 	/**
 	 * Accepted values for the align parameter
@@ -333,40 +352,6 @@ class EmbeddedTweet
 	}
 
 	/**
-	 * Get the base set of oEmbed params before applying shortcode customizations
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param string $tweet_id Tweet identifier
-	 *
-	 * @return array associative array of query parameters ready for http_build_query {
-	 *   @type string query parameter name
-	 *   @type string|bool query parameter value
-	 * }
-	 */
-	public static function getBaseOEmbedParams( $tweet_id )
-	{
-		$tweet_id = trim( $tweet_id );
-		if ( ! $tweet_id ) {
-			return array();
-		}
-
-		// omit JavaScript. enqueue separately
-		$query_parameters = array(
-			'id' => $tweet_id,
-			'omit_script' => true,
-		);
-
-		// attempt to customize text for site language
-		$lang = \Twitter\WordPress\Language::localeToTwitterLang();
-		if ( $lang ) {
-			$query_parameters['lang'] = $lang;
-		}
-
-		return $query_parameters;
-	}
-
-	/**
 	 * Convert shortcode parameters into query parameters supported by the Twitter oEmbed endpoint
 	 *
 	 * @since 1.0.0
@@ -461,46 +446,5 @@ class EmbeddedTweet
 		}
 
 		return implode( '_', $key_pieces );
-	}
-
-	/**
-	 * Request and parse oEmbed markup from Twitter's API servers
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param array $query_parameters request parameters
-	 *
-	 * @return string HTML markup returned by the oEmbed endpoint
-	 */
-	public static function getOEmbedMarkup( array $query_parameters )
-	{
-		$cache_key = static::oEmbedCacheKey( $query_parameters );
-		if ( ! $cache_key ) {
-			return '';
-		}
-
-		// check for cached result
-		$html = get_transient( $cache_key );
-		if ( $html ) {
-			return $html;
-		}
-
-		$ttl = DAY_IN_SECONDS;
-
-		$oembed_response = \Twitter\WordPress\Helpers\TwitterAPI::getJSON( self::OEMBED_API_ENDPOINT, $query_parameters );
-		if ( ! $oembed_response || ! isset( $oembed_response->type ) || 'rich' !== $oembed_response->type || ! ( isset( $oembed_response->html ) && $oembed_response->html ) ) {
-			// do not rerequest errors with every page request
-			set_transient( $cache_key, ' ', $ttl );
-			return '';
-		}
-
-		$html = $oembed_response->html;
-
-		if ( isset( $oembed_response->cache_age ) ) {
-			$ttl = absint( $oembed_response->cache_age );
-		}
-		set_transient( $cache_key, $html, $ttl );
-
-		return $html;
 	}
 }

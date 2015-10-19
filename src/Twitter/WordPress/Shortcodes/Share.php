@@ -30,7 +30,7 @@ namespace Twitter\WordPress\Shortcodes;
  *
  * @since 1.0.0
  */
-class Share
+class Share implements ShortcodeInterface
 {
 
 	/**

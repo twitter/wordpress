@@ -79,6 +79,15 @@ class Features
 	const EMBED_MOMENT = 'embed-moment';
 
 	/**
+	 * Embed multiple Tweets in a responsive grid format by URL or shortcode
+	 *
+	 * @since 1.3.0
+	 *
+	 * @type string
+	 */
+	const EMBED_TWEETS_GRID = 'embed-tweets-grid';
+
+	/**
 	 * Display a Twitter follow button using a shortcode
 	 *
 	 * @since 1.3.0
@@ -140,6 +149,7 @@ class Features
 		self::EMBED_MOMENT      => true, // Twitter Moment
 		self::EMBED_TWEET       => true, // single Tweet
 		self::EMBED_TWEET_VIDEO => true, // single Tweet with video-specific display template
+		self::EMBED_TWEETS_GRID => true, // multiple Tweets displayed in a grid layout
 		self::FOLLOW_BUTTON     => true, // Twitter Follow button
 		self::TWEET_BUTTON      => true, // Tweet button
 		self::PERISCOPE_ON_AIR  => true, // Periscope On Air button

@@ -248,6 +248,7 @@ class PluginLoader
 					\Twitter\WordPress\Features::EMBED_TWEET       => 'EmbeddedTweet',
 					\Twitter\WordPress\Features::EMBED_TWEET_VIDEO => 'EmbeddedTweetVideo',
 					\Twitter\WordPress\Features::EMBED_MOMENT      => 'Moment',
+					\Twitter\WordPress\Features::EMBED_TWEETS_GRID => 'TweetGrid',
 				) as $feature => $shortcode_class
 			) {
 				if ( ! isset( $features[ $feature ] ) ) {
@@ -269,7 +270,7 @@ class PluginLoader
 				\Twitter\WordPress\Features::FOLLOW_BUTTON    => 'Follow',
 				\Twitter\WordPress\Features::TWEET_BUTTON     => 'Share',
 				\Twitter\WordPress\Features::PERISCOPE_ON_AIR => 'PeriscopeOnAir',
-				\Twitter\WordPress\Features::TRACKING_PIXEL         => 'Tracking',
+				\Twitter\WordPress\Features::TRACKING_PIXEL   => 'Tracking',
 			) as $feature => $shortcode_class
 		) {
 			if ( ! isset( $features[ $feature ] ) ) {
@@ -334,10 +335,10 @@ class PluginLoader
 	 */
 	public static function registerScripts()
 	{
-		// widgets.js
+		// Twitter widgets
 		\Twitter\WordPress\JavaScriptLoaders\Widgets::register();
 
-		// ad tracker
+		// Twitter audience tracker and conversion
 		\Twitter\WordPress\JavaScriptLoaders\Tracking::register();
 	}
 

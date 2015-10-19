@@ -30,7 +30,7 @@ namespace Twitter\WordPress\Shortcodes;
  *
  * @since 1.3.0
  */
-class PeriscopeOnAir
+class PeriscopeOnAir implements ShortcodeInterface
 {
 
 	/**

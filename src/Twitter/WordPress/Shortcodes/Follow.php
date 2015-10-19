@@ -30,7 +30,7 @@ namespace Twitter\WordPress\Shortcodes;
  *
  * @since 1.0.0
  */
-class Follow
+class Follow implements ShortcodeInterface
 {
 
 	/**
