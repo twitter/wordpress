@@ -10,7 +10,15 @@ Current version: `1.2.0`
 
 ## Features
 
-### Embedded Tweets
+### Grid widget
+
+Display a Twitter collection by URL or by using the `twitter_grid` shortcode macro.
+
+### Embedded Moment
+
+Add a [Twitter Moment](https://twitter.com/i/moments) to an article by URL or by using the `twitter_moment` shortcode macro.
+
+### Embedded Tweet
 
 Add an [embedded Tweet](https://dev.twitter.com/web/embedded-tweets) to your site by URL or by using the `tweet` [shortcode macro](http://codex.wordpress.org/Shortcode).
 
@@ -18,9 +26,9 @@ Add a Twitter embedded video widget to your site by using the `twitter_video` sh
 
 Customize an embedded Tweet color scheme to match your site's color palette. Choose a theme type, link color, and border color in the WordPress administrative interface.
 
-### Embedded Moment
+### Embedded Vine
 
-Add a [Twitter Moment](https://twitter.com/i/moments) to an article by URL or by using the `twitter_moment` shortcode macro.
+Add a [Vine simple embed](https://dev.twitter.com/web/vine) to an article by URL or by using the `vine` shortcode macro.
 
 ### Twitter Cards
 
