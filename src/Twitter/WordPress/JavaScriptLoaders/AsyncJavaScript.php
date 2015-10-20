@@ -44,7 +44,7 @@ abstract class AsyncJavaScript
 	 */
 	public static function dnsPrefetch()
 	{
-		if ( ! ( defined( 'static::FQDN' ) && static::FQDN ) ) {
+		if ( ! ( defined( get_called_class() . '::FQDN' ) && static::FQDN ) ) {
 			return;
 		}
 
@@ -64,7 +64,8 @@ abstract class AsyncJavaScript
 	{
 		global $wp_scripts;
 
-		if ( ! ( defined( 'static::QUEUE_HANDLE' ) && static::QUEUE_HANDLE && defined( 'static::URI' ) && static::URI ) ) {
+		$classname = get_called_class();
+		if ( ! ( defined( $classname . '::QUEUE_HANDLE' ) && static::QUEUE_HANDLE && defined( $classname . '::URI' ) && static::URI ) ) {
 			return false;
 		}
 
@@ -84,7 +85,7 @@ abstract class AsyncJavaScript
 		// replace standard script element with async script element
 		add_filter( 'script_loader_src', array( get_called_class(), 'asyncScriptLoaderSrc' ), 1, 2 );
 
-		if ( defined( 'static::SCRIPT_EXTRA' ) && is_string( static::SCRIPT_EXTRA ) && static::SCRIPT_EXTRA ) {
+		if ( defined( $classname . '::SCRIPT_EXTRA' ) && is_string( static::SCRIPT_EXTRA ) && static::SCRIPT_EXTRA ) {
 			$script = static::SCRIPT_EXTRA;
 			$data = $wp_scripts->get_data( static::QUEUE_HANDLE, 'data' );
 			if ( $data ) {
@@ -111,7 +112,7 @@ abstract class AsyncJavaScript
 	 */
 	public static function enqueue()
 	{
-		if ( ! ( defined( 'static::QUEUE_HANDLE' ) && static::QUEUE_HANDLE ) ) {
+		if ( ! ( defined( get_called_class() . '::QUEUE_HANDLE' ) && static::QUEUE_HANDLE ) ) {
 			return '';
 		}
 
@@ -139,7 +140,8 @@ abstract class AsyncJavaScript
 	 */
 	public static function getScriptElement()
 	{
-		if ( ! ( defined( 'static::QUEUE_HANDLE' ) && static::QUEUE_HANDLE && defined( 'static::URI' ) && static::URI ) ) {
+		$classname = get_called_class();
+		if ( ! ( defined( $classname . '::QUEUE_HANDLE' ) && static::QUEUE_HANDLE && defined( $classname . '::URI' ) && static::URI ) ) {
 			return false;
 		}
 
@@ -165,7 +167,7 @@ abstract class AsyncJavaScript
 	 */
 	public static function scriptLoaderTag( $tag, $handle, $src = '' )
 	{
-		if ( ! ( defined( 'static::QUEUE_HANDLE' ) && static::QUEUE_HANDLE ) ) {
+		if ( ! ( defined( get_called_class() . '::QUEUE_HANDLE' ) && static::QUEUE_HANDLE ) ) {
 			return '';
 		}
 
@@ -193,7 +195,7 @@ abstract class AsyncJavaScript
 	{
 		global $wp_scripts;
 
-		if ( ! ( is_string( $handle ) && defined( 'static::QUEUE_HANDLE' ) && $handle === static::QUEUE_HANDLE ) ) {
+		if ( ! ( is_string( $handle ) && defined( get_called_class() . '::QUEUE_HANDLE' ) && $handle === static::QUEUE_HANDLE ) ) {
 			return $src;
 		}
 
@@ -220,8 +222,10 @@ abstract class AsyncJavaScript
 	 *
 	 * @return string HTML script element containing loader script
 	 */
-	public static function asyncScriptLoaderInline( $include_script_element_wrapper = true ) {
-		if ( ! ( defined( 'static::QUEUE_HANDLE' ) && static::QUEUE_HANDLE && defined( 'static::URI' ) && static::URI ) ) {
+	public static function asyncScriptLoaderInline( $include_script_element_wrapper = true )
+	{
+		$classname = get_called_class();
+		if ( ! ( defined( $classname . '::QUEUE_HANDLE' ) && static::QUEUE_HANDLE && defined( $classname . '::URI' ) && static::URI ) ) {
 			return '';
 		}
 

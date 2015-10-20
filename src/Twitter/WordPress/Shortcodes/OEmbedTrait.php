@@ -89,7 +89,8 @@ trait OEmbedTrait
 			return $html;
 		}
 
-		if ( ! defined( 'static::OEMBED_API_CLASS' ) || empty( static::OEMBED_API_CLASS ) ) {
+		$classname = get_called_class();
+		if ( ! defined( $classname . '::OEMBED_API_CLASS' ) || empty( static::OEMBED_API_CLASS ) ) {
 			return '';
 		}
 		$oembed_api_class = static::OEMBED_API_CLASS;
@@ -97,16 +98,23 @@ trait OEmbedTrait
 			return '';
 		}
 
-		$ttl = DAY_IN_SECONDS;
-
-		if ( defined( 'static::BASE_URL' ) ) {
+		if ( defined( $classname . '::BASE_URL' ) ) {
 			// convert ID to full URL to allow more flexibility for oEmbed endpoint
 			$query_parameters['url'] = static::BASE_URL . $query_parameters['id'];
 			unset( $query_parameters['id'] );
 		}
 
+		$allowed_resource_types = array( 'rich' => true, 'video' => true );
+		$ttl = DAY_IN_SECONDS;
+
 		$oembed_response = $oembed_api_class::getJSON( static::OEMBED_API_ENDPOINT, $query_parameters );
-		if ( ! $oembed_response || ! isset( $oembed_response->type ) || 'rich' !== $oembed_response->type || ! ( isset( $oembed_response->html ) && $oembed_response->html ) ) {
+		if ( ! (
+			$oembed_response &&
+			isset( $oembed_response->type ) &&
+			isset( $allowed_resource_types[ $oembed_response->type ] ) &&
+			isset( $oembed_response->html ) &&
+			$oembed_response->html
+		) ) {
 			// do not rerequest errors with every page request
 			set_transient( $cache_key, ' ', $ttl );
 			return '';
