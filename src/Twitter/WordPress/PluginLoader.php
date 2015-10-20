@@ -247,8 +247,9 @@ class PluginLoader
 				array(
 					\Twitter\WordPress\Features::EMBED_TWEET       => 'EmbeddedTweet',
 					\Twitter\WordPress\Features::EMBED_TWEET_VIDEO => 'EmbeddedTweetVideo',
-					\Twitter\WordPress\Features::EMBED_MOMENT      => 'Moment',
+					\Twitter\WordPress\Features::EMBED_VINE        => 'Vine',
 					\Twitter\WordPress\Features::EMBED_TWEETS_GRID => 'TweetGrid',
+					\Twitter\WordPress\Features::EMBED_MOMENT      => 'Moment',
 				) as $feature => $shortcode_class
 			) {
 				if ( ! isset( $features[ $feature ] ) ) {
@@ -337,6 +338,9 @@ class PluginLoader
 	{
 		// Twitter widgets
 		\Twitter\WordPress\JavaScriptLoaders\Widgets::register();
+
+		// Vine embed
+		\Twitter\WordPress\JavaScriptLoaders\VineEmbed::register();
 
 		// Twitter audience tracker and conversion
 		\Twitter\WordPress\JavaScriptLoaders\Tracking::register();

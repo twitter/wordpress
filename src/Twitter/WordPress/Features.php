@@ -68,6 +68,17 @@ class Features
 	const EMBED_TWEET_VIDEO = 'embed-tweet-video';
 
 	/**
+	 * Embed a single Vine
+	 *
+	 * @since 1.3.0
+	 *
+	 * @link https://dev.twitter.com/web/vine Vine Embed
+	 *
+	 * @type string
+	 */
+	const EMBED_VINE = 'embed-vine';
+
+	/**
 	 * Embed a Twitter Moment by URL or shortcode
 	 *
 	 * @since 1.3.0
@@ -149,6 +160,7 @@ class Features
 		self::EMBED_MOMENT      => true, // Twitter Moment
 		self::EMBED_TWEET       => true, // single Tweet
 		self::EMBED_TWEET_VIDEO => true, // single Tweet with video-specific display template
+		self::EMBED_VINE        => true, // single Vine
 		self::EMBED_TWEETS_GRID => true, // multiple Tweets displayed in a grid layout
 		self::FOLLOW_BUTTON     => true, // Twitter Follow button
 		self::TWEET_BUTTON      => true, // Tweet button
