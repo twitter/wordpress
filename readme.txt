@@ -19,9 +19,7 @@ Requires PHP version 5.4 or greater.
 
 = Embed Twitter content =
 
-Embed a [single Tweet](https://dev.twitter.com/web/embedded-tweets), [single Tweet with video template[(https://dev.twitter.com/web/embedded-video), [Moment](https://dev.twitter.com/web/embedded-moments "Twitter Moment"), or [Twitter collection](https://dev.twitter.com/web/embedded-timelines/collection) grid template by pasting a URL into your article content. Customize advanced options using a shortcode.
-
-https://twitter.com/Interior/status/655151841450266624
+Embed a [single Tweet](https://dev.twitter.com/web/embedded-tweets), [single Tweet with video template](https://dev.twitter.com/web/embedded-video), [Moment](https://dev.twitter.com/web/embedded-moments "Twitter Moment"), or [Twitter collection](https://dev.twitter.com/web/embedded-timelines/collection) grid template by pasting a URL into your article content. Customize advanced options using a shortcode.
 
 Choose a light or dark theme, customize link and border colors, and configure other widget template options through your site's WordPress administrative interface.
 
@@ -30,8 +28,6 @@ The plugin automatically customizes embed HTML to match the locale or your site,
 = Embed a Vine =
 
 Embed a Vine by pasting a URL into your article content. Customize advanced options using a shortcode.
-
-https://vine.co/v/MdKjXez002d
 
 The plugin optimally enqueues Vine's embed JavaScript to handle unpausing and unmuting videos as they become visible on the page.
 
