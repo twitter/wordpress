@@ -10,6 +10,12 @@
 	<rule ref="PEAR.Commenting.FunctionComment.MissingParamTag" />
 	<rule ref="PEAR.Commenting.FunctionComment.ParamNameNoMatch" />
 
+	<rule ref="Squiz">
+		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
+		<exclude name="Squiz.Commenting.InlineComment.NotCapital" />
+		<exclude name="Squiz.Commenting.FileComment.WrongStyle" />
+	</rule>
+
 	<rule ref="WordPress">
 		<exclude-pattern type="relative">^/src/Twitter/Cards/*</exclude-pattern>
 

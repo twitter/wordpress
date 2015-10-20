@@ -90,7 +90,7 @@ trait OEmbedTrait
 		}
 
 		$classname = get_called_class();
-		if ( ! defined( $classname . '::OEMBED_API_CLASS' ) || empty( static::OEMBED_API_CLASS ) ) {
+		if ( ! ( defined( $classname . '::OEMBED_API_CLASS' ) && static::OEMBED_API_CLASS ) ) {
 			return '';
 		}
 		$oembed_api_class = static::OEMBED_API_CLASS;
