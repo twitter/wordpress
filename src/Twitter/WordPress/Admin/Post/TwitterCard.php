@@ -139,7 +139,7 @@ class TwitterCard
 
 		// set up the table
 		echo '<table id="twitter-card">';
-		echo '<thead><tr><th scope="col">' . esc_html( _x( 'Property', 'Object component, such as a title and description of an article', 'twitter' ) ) . '</th><th scope="col">' . esc_html( __( 'Value' ) ) . '</th></tr></thead><tbody>';
+		echo '<thead><tr><th scope="col">' . esc_html( _x( 'Property', 'Object component, such as a title and description of an article', 'twitter' ) ) . '</th><th scope="col">' . esc_html( _x( 'Value', 'Table column header: user-inputted value', 'twitter' ) ) . '</th></tr></thead><tbody>';
 
 		if ( isset( $cards_fields_supported_by_post_type[ static::TITLE_KEY ] ) ) {
 			echo '<tr>';

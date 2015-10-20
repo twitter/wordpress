@@ -153,7 +153,7 @@ class TweetIntent
 
 		echo '<h4>' . esc_html( _x( 'Tweet', 'Tweet verb. Sharing.', 'twitter' ) ) . '</h4>';
 		echo '<table id="tweet-intent">';
-		echo '<thead><tr><th scope="col">' . esc_html( _x( 'Parameter', 'Customization or variable', 'twitter' ) ) . '</th><th scope="col">' . esc_html( __( 'Value' ) ) . '</th></tr></thead><tbody>';
+		echo '<thead><tr><th scope="col">' . esc_html( _x( 'Parameter', 'Customization or variable', 'twitter' ) ) . '</th><th scope="col">' . esc_html( _x( 'Value', 'Table column header: user-inputted value', 'twitter' ) ) . '</th></tr></thead><tbody>';
 
 		$available_characters = 140;
 		// t.co wrapped URL length
