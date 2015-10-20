@@ -1,33 +1,73 @@
 === Plugin Name ===
 Contributors: Twitter, niallkennedy
-Tags: twitter, embedded tweet, twitter moment, twitter video, twitter cards, tweet button, follow button, twitter analytics, twitter ads
+Tags: twitter, embedded tweet, twitter moment, twitter video, twitter grid, vine, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 3.9
 Tested up to: 4.3.1
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
-Official Twitter plugin for WordPress. Embed Twitter content and grow your audience on Twitter. Requires PHP 5.4 or greater.
+Official Twitter, Vine, and Periscope plugin for WordPress. Embed content and grow your audience. Requires PHP 5.4 or greater.
 
 == Description ==
 
-The Twitter plugin for WordPress optimizes your website for a Twitter audience through easy to use sharing buttons, embedded Tweets, auto-generated markup indexed by Twitter, and Follow buttons to help grow your Twitter audience. All features are deeply integrated with WordPress APIs to make building your webpages and administrative features as easy as possible with the extensibility you expect from WordPress.
+The Twitter plugin for WordPress makes it easy to embed single Tweets, multiple Tweets, a Moment, or a Vine on your website. Improve the reach of your content with the Tweet button and populate rich link previews on Twitter with automatically-generated Twitter Card markup. Help your audience follow your latest updates with the Twitter follow button and Periscope On Air button.
+
+All features are deeply integrated with WordPress APIs to make building your webpages and administrative features as easy as possible with the extensibility you expect from WordPress. The plugin is multisite-aware, supports post meta customizations through the WordPress REST API, and shortcode customizations through shortcode UI.
 
 Requires PHP version 5.4 or greater.
 
-* [Embedded Tweets grid template](https://dev.twitter.com/web/embedded-timelines/collection#template-grid) - tell rich, engaging stories with multiple Tweets in a media-rich, responsive grid layout
-* [Embedded Moment](https://dev.twitter.com/web/embedded-moments) - showcase a Twitter Moment in a media-rich responsive grid layout
-* [Embedded Tweet](https://dev.twitter.com/web/embedded-tweets) - customize backgrounds and color schemes to match your site's theme
-* [Embedded Twitter video](https://dev.twitter.com/web/embedded-video) - showcase video uploaded to Twitter
-* [Embedded Vine](https://dev.twitter.com/web/vine) - display Vine videos
-* [Tweet button](https://dev.twitter.com/web/tweet-button) - simple sharing of your site's content on Twitter
-* [Twitter Cards](https://dev.twitter.com/cards/overview) - highlight your site's content when shared on Twitter
-* [Twitter Analytics](https://analytics.twitter.com/) - track impressions and top distributors of your site's content on Twitter
-* [Follow button](https://dev.twitter.com/web/follow-button) - grow your Twitter audience
-* [Periscope On Air button](https://www.periscope.tv/embed) - grow your Periscope audience
-* [Twitter ads conversion tracking](https://support.twitter.com/articles/20170807-conversion-tracking-for-websites) - easily track actions on your WordPress site triggered by a Twitter ad or build a custom targeting audience
+= Embed Twitter content =
 
-Contribute to the plugin, submit pull requests, or run test suites through the [Twitter plugin for WordPress GitHub repository](https://github.com/twitter/wordpress). View [Twitter for WordPress documentation](https://dev.twitter.com/web/wordpress) to learn more about customization through filters.
+Embed a [single Tweet](https://dev.twitter.com/web/embedded-tweets), [single Tweet with video template[(https://dev.twitter.com/web/embedded-video), [Moment](https://dev.twitter.com/web/embedded-moments "Twitter Moment"), or [Twitter collection](https://dev.twitter.com/web/embedded-timelines/collection) grid template by pasting a URL into your article content. Customize advanced options using a shortcode.
+
+https://twitter.com/Interior/status/655151841450266624
+
+Choose a light or dark theme, customize link and border colors, and configure other widget template options through your site's WordPress administrative interface.
+
+The plugin automatically customizes embed HTML to match the locale or your site, optimally enqueues Twitter's widgets JavaScript for fast loading and extensibility, and handles advanced cases such as articles loaded asynchronously via the WordPress API.
+
+= Embed a Vine =
+
+Embed a Vine by pasting a URL into your article content. Customize advanced options using a shortcode.
+
+https://vine.co/v/MdKjXez002d
+
+The plugin optimally enqueues Vine's embed JavaScript to handle unpausing and unmuting videos as they become visible on the page.
+
+= Add a Tweet button to public posts =
+
+Add a Tweet button to public posts to encourage your visitors to share your content on Twitter. The Tweet button automatically constructs share text, URLs, and shares your site's Twitter account in the Tweet. Visitors may see recommended accounts to follow after posting your content, including your site's specified accounts.
+
+Customize the pre-populated share text and hashtags shown in a Tweet composer for each post from your site's post editor.
+
+= Enable link previews and Twitter bylines with Twitter Cards =
+
+The plugin automatically generates [Twitter Card](https://dev.twitter.com/cards/overview) markup to populate link previews on Twitter and attribute articles to a site and author Twitter account. Increase engagement with your content and related Twitter accounts.
+
+Twitter Cards with site attribution provides access to [Twitter Analytics](https://analytics.twitter.com/) for detailed information about your site's Twitter audience including top sharers and engagement data.
+
+Provide a custom link preview title and description for each post from your site's post editor.
+
+= Twitter follow button =
+
+Add a [Twitter follow button](https://dev.twitter.com/web/follow-button) with a WordPress widget or shortcode.
+
+= Periscope On Air button =
+
+Display a [Periscope On Air button](https://www.periscope.tv/embed) by pasting a Periscope profile URL into article content. Customize advanced options using a shortcode.
+
+= Associate WordPress accounts with Twitter and Periscope identities =
+
+Add a Twitter or Periscope username to a WordPress profile page for easy reference to your authors' external accounts. The plugin includes author attribution for posts and can dynamically include Twitter follow or Periscope On Air buttons through a shortcode when account information exists.
+
+= Add an advertising pixel with a shortcode =
+
+Add a Twitter audience pixel or [track advertising conversions](https://support.twitter.com/articles/20170807-conversion-tracking-for-websites "Twitter advertising conversion tracking") by adding an advertising pixel through a simple shortcode.
+
+> <strong>Docs and active development</strong><br>
+>Contribute to the plugin, submit pull requests, or run test suites through the [Twitter plugin for WordPress GitHub repository](https://github.com/twitter/wordpress).
+> View [Twitter for WordPress documentation](https://dev.twitter.com/web/wordpress) to learn more about customization through WordPress filters.
 
 == Upgrade Notice ==
 
