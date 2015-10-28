@@ -79,7 +79,7 @@ class EmbeddedTweet implements ShortcodeInterface
 	 *
 	 * @type string
 	 */
-	const TWEET_URL_REGEX = '#^https?://(www\.)?twitter\.com/.+?/status(es)?/([0-9]+)#i';
+	const TWEET_URL_REGEX = '#^https?://(www\.)?twitter\.com/[a-z0-9_]{1,20}/status(es)?/([0-9]+)#i';
 
 	/**
 	 * Base URL used to reconstruct a Tweet URL

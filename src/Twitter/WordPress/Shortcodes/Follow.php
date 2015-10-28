@@ -43,6 +43,15 @@ class Follow implements ShortcodeInterface
 	const SHORTCODE_TAG = 'twitter_follow';
 
 	/**
+	 * Regex used to match a Twitter profile URL in text
+	 *
+	 * @since 1.3.0
+	 *
+	 * @type string
+	 */
+	const URL_REGEX = '#^https://twitter\.com/([a-z0-9_]{1,20})#i';
+
+	/**
 	 * Accepted shortcode attributes and their default values
 	 *
 	 * @since 1.0.0
@@ -60,12 +69,22 @@ class Follow implements ShortcodeInterface
 	 */
 	public static function init()
 	{
-		add_shortcode( static::SHORTCODE_TAG, array( __CLASS__, 'shortcodeHandler' ) );
+		$classname = get_called_class();
+
+		add_shortcode( static::SHORTCODE_TAG, array( $classname, 'shortcodeHandler' ) );
+
+		// convert a URL into the shortcode equivalent
+		wp_embed_register_handler(
+			static::SHORTCODE_TAG,
+			static::URL_REGEX,
+			array( $classname, 'linkHandler' ),
+			1
+		);
 
 		// Shortcode UI, if supported
 		add_action(
 			'register_shortcode_ui',
-			array( __CLASS__, 'shortcodeUI' ),
+			array( $classname, 'shortcodeUI' ),
 			5,
 			0
 		);
@@ -115,6 +134,27 @@ class Follow implements ShortcodeInterface
 				),
 			)
 		);
+	}
+
+	/**
+	 * Handle a URL matched by a embed handler
+	 *
+	 * @since 1.3.1
+	 *
+	 * @param array  $matches The regex matches from the provided regex when calling {@link wp_embed_register_handler()}.
+	 * @param array  $attr    Embed attributes. Not used.
+	 * @param string $url     The original URL that was matched by the regex. Not used.
+	 * @param array  $rawattr The original unmodified attributes. Not used.
+	 *
+	 * @return string HTML markup for the follow button or an empty string if requirements not met
+	 */
+	public static function linkHandler( $matches, $attr, $url, $rawattr )
+	{
+		if ( ! ( is_array( $matches ) && isset( $matches[1] ) && $matches[1] ) ) {
+			return '';
+		}
+
+		return static::shortcodeHandler( array( 'screen_name' => $matches[1] ) );
 	}
 
 	/**

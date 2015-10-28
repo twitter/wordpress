@@ -59,7 +59,7 @@ class TweetGrid implements ShortcodeInterface
 	 *
 	 * @type string
 	 */
-	const URL_REGEX = '#^https://twitter\.com/.+?/timelines/([0-9]+)#i';
+	const URL_REGEX = '#^https://twitter\.com/[a-z0-9_]{1,20}/timelines/([0-9]+)#i';
 
 	/**
 	 * Base URL used to reconstruct a Collection URL
@@ -197,7 +197,7 @@ class TweetGrid implements ShortcodeInterface
 	 * @param string $url     The original URL that was matched by the regex. Not used.
 	 * @param array  $rawattr The original unmodified attributes. Not used.
 	 *
-	 * @return string HTML markup for the Tweet or an empty string if requirements not met
+	 * @return string HTML markup for the Tweet grid or an empty string if requirements not met
 	 */
 	public static function linkHandler( $matches, $attr, $url, $rawattr )
 	{

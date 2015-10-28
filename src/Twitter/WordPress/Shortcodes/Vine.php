@@ -198,7 +198,7 @@ class Vine implements ShortcodeInterface
 	 * @param string $url     The original URL that was matched by the regex. Not used.
 	 * @param array  $rawattr The original unmodified attributes. Not used.
 	 *
-	 * @return string HTML markup for the Tweet or an empty string if requirements not met
+	 * @return string HTML markup for the Vine or an empty string if requirements not met
 	 */
 	public static function linkHandler( $matches, $attr, $url, $rawattr )
 	{
