@@ -135,7 +135,7 @@ class TwitterCard
 		// separate Twitter Cards content from Intent content above
 		echo '<hr' . \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '>';
 
-		echo '<h4>' . esc_html( __( 'Twitter Card', 'twitter' ) ) . '</h4>';
+		echo '<h3>' . esc_html( __( 'Twitter Card', 'twitter' ) ) . '</h3>';
 
 		// set up the table
 		echo '<table id="twitter-card">';

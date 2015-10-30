@@ -151,7 +151,7 @@ class TweetIntent
 			}
 		}
 
-		echo '<h4>' . esc_html( _x( 'Tweet', 'Tweet verb. Sharing.', 'twitter' ) ) . '</h4>';
+		echo '<h3>' . esc_html( _x( 'Tweet', 'Tweet verb. Sharing.', 'twitter' ) ) . '</h3>';
 		echo '<table id="tweet-intent">';
 		echo '<thead><tr><th scope="col">' . esc_html( _x( 'Parameter', 'Customization or variable', 'twitter' ) ) . '</th><th scope="col">' . esc_html( _x( 'Value', 'Table column header: user-inputted value', 'twitter' ) ) . '</th></tr></thead><tbody>';
 
