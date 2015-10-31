@@ -57,7 +57,7 @@ class PeriscopeOnAir extends \WP_Widget
 	{
 		parent::__construct(
 			static::BASE_ID, // Base ID
-			__( 'Periscope On Air', 'twitter' ), // name
+			__( 'Periscope On Air Button', 'twitter' ), // name
 			array(
 				'description' => __( 'Lets a viewer discover your Periscope account and on air status', 'twitter' ) // args
 			)
@@ -128,7 +128,7 @@ class PeriscopeOnAir extends \WP_Widget
 		<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html( __( 'Title:', 'twitter' ) ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( trim( strip_tags( $instance['title'] ) ) ); ?>"<?php echo $close_void_element; ?>></p>
 
-		<p><label for="<?php echo esc_attr( $this->get_field_id( 'username' ) ); ?>"><?php echo esc_html( __( 'Periscope username', 'twitter' ) ); ?></label>
+		<p><label for="<?php echo esc_attr( $this->get_field_id( 'username' ) ); ?>"><?php echo esc_html( _x( 'Periscope username', 'Prompt requesting entry of a Periscope username', 'twitter' ) ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'username' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'username' ) ); ?>" type="text" pattern="[a-zA-Z0-9_]{1,20}" value="<?php echo esc_attr( $instance['username'] ); ?>"<?php echo $close_void_element; ?>></p>
 
 		<p><label for="<?php echo esc_attr( $this->get_field_id( 'size' ) ); ?>"><?php echo esc_html( __( 'Button size:', 'twitter' ) ); ?></label>

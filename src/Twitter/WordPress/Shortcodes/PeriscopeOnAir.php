@@ -107,7 +107,7 @@ class PeriscopeOnAir implements ShortcodeInterface
 		shortcode_ui_register_for_shortcode(
 			static::SHORTCODE_TAG,
 			array(
-				'label'         => esc_html( __( 'Periscope On Air', 'twitter' ) ),
+				'label'         => esc_html( __( 'Periscope On Air Button', 'twitter' ) ),
 				'listItemImage' => 'dashicons-video-alt',
 				'attrs'         => array(
 					array(

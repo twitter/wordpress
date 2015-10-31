@@ -137,7 +137,7 @@ class TweetGrid implements ShortcodeInterface
 	 */
 	public static function featureName()
 	{
-		return __( 'Tweet Grid', 'twitter' );
+		return _x( 'Tweet Grid', 'Tweets displayed in a grid layout', 'twitter' );
 	}
 
 	/**
