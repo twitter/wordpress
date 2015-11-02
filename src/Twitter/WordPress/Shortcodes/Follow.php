@@ -49,7 +49,7 @@ class Follow implements ShortcodeInterface
 	 *
 	 * @type string
 	 */
-	const URL_REGEX = '#^https://twitter\.com/([a-z0-9_]{1,20})#i';
+	const URL_REGEX = '#^https://twitter\.com/([a-z0-9_]{1,20})$#i';
 
 	/**
 	 * Accepted shortcode attributes and their default values
