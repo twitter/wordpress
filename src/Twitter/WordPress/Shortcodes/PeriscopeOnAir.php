@@ -112,7 +112,7 @@ class PeriscopeOnAir implements ShortcodeInterface
 				'attrs'         => array(
 					array(
 						'attr'  => 'username',
-						'label' => esc_html( __( 'Periscope username', 'twitter' ) ),
+						'label' => esc_html( _x( 'Periscope username', 'Prompt requesting entry of a Periscope username', 'twitter' ) ),
 						'type'  => 'text',
 						'meta'  => array(
 							'placeholder' => 'photomatt',
