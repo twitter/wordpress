@@ -35,7 +35,6 @@ Author:      Twitter
 Author URI:  https://dev.twitter.com/
 License:     MIT
 Text Domain: twitter
-Domain Path: /languages/
 */
 
 // make sure the plugin does not expose any info if called directly
