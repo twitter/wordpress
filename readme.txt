@@ -3,7 +3,7 @@ Contributors: Twitter, niallkennedy
 Tags: twitter, embedded tweet, twitter moment, twitter video, twitter grid, vine, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 3.9
 Tested up to: 4.4
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
@@ -47,7 +47,7 @@ Provide a custom link preview title and description for each post from your site
 
 = Twitter follow button =
 
-Add a [Twitter follow button](https://dev.twitter.com/web/follow-button) with a WordPress widget or shortcode.
+Add a [Twitter follow button](https://dev.twitter.com/web/follow-button) with a WordPress widget, shortcode, or by pasting a Twitter profile link into a post.
 
 = Periscope On Air button =
 
@@ -66,6 +66,8 @@ Add a Twitter audience pixel or [track advertising conversions](https://support.
 > View [Twitter for WordPress documentation](https://dev.twitter.com/web/wordpress) to learn more about customization through WordPress filters.
 
 == Upgrade Notice ==
+= 1.4.0 =
+Remove Tweet button options for share count. Display a Follow button by pasting a Twitter profile URL.
 
 = 1.3.0 =
 Adds embedded Tweets grid template, Vine embeds, and Periscope On Air buttons.
@@ -80,6 +82,10 @@ Shortcode improvements for ajax-loaded posts. Remove photo, gallery, and product
 Display admin notice if current PHP version does not meet minimum requirements. Do not display Tweet button in auto-generated excerpt.
 
 == Changelog ==
+= 1.4.0 =
+* Remove Tweet button options for share count and align display, matching Twitter's changes
+* Convert Twitter profile URLs into a Follow button
+* Enable language packs loaded from WordPress.org
 
 = 1.3.0 =
 * Display multiple Tweets in a [media-rich responsive grid template](https://dev.twitter.com/web/embedded-timelines/collection#template-grid) by pasting a Twitter collection URL 
