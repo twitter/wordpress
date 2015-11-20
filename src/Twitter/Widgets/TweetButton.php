@@ -54,37 +54,6 @@ class TweetButton extends BaseWidget
     const INTENT_CLASS = '\Twitter\Intents\Tweet';
 
     /**
-     * Allowed values for the count variable
-     *
-     * @since 1.0.0
-     *
-     * @type array allowed values {
-     *   @type string count value
-     *   @type bool exists
-     * }
-     */
-    public static $ALLOWED_COUNT_VALUES = array(
-        ''       => true,   // reset to default (horizontal)
-        'none'   => true,   // hide Tweet count
-        'vertical' => true, // display above Tweet button
-    );
-
-    /**
-     * Allowed values for the align variable
-     *
-     * @since 1.0.0
-     *
-     * @type array allowed values {
-     *   @type string align value
-     *   @type bool exists
-     * }
-     */
-    public static $ALLOWED_ALIGN_VALUES = array(
-        'left'  => true,
-        'right' => true,
-    );
-
-    /**
      * Tweet Web Intent
      *
      * @since 1.0.0
@@ -103,35 +72,6 @@ class TweetButton extends BaseWidget
      * @type string
      */
     protected $size;
-
-    /**
-     * Show the number of Tweets mentioning this URL
-     *
-     * @since 1.0.0
-     *
-     * @type string
-     */
-    protected $count = '';
-
-    /**
-     * URL to use for Tweet count purposes
-     *
-     * Count should also be true for the URL used for the count to affect the button
-     *
-     * @since 1.0.0
-     *
-     * @type string
-     */
-    protected $counturl;
-
-    /**
-     * Force align the button to the left or right of the generated iframe
-     *
-     * @since 1.0.0
-     *
-     * @type string
-     */
-    protected $align;
 
     /**
      * Create a new button. Initialize the web intent.
@@ -182,67 +122,6 @@ class TweetButton extends BaseWidget
         if ('large' === $size) {
             $this->size = $size;
         }
-        return $this;
-    }
-
-    /**
-     * Show the Tweet count next to the Tweet button
-     *
-     * @since 1.0.0
-     *
-     * @param string $count a valid count value
-     *
-     * @return __CLASS__ support chaining
-     */
-    public function setCount($count)
-    {
-        if (is_string($count) && isset(static::$ALLOWED_COUNT_VALUES[$count])) {
-            $this->count = $count;
-        }
-
-        return $this;
-    }
-
-    /**
-     * Set the URL used for Tweet counts
-     *
-     * @since 1.0.0
-     *
-     * @param string $url absolute URL to be used for Tweet count
-     *
-     * @return __CLASS__ support chaining
-     */
-    public function setCountURL($url)
-    {
-        $url = trim($url);
-        if ($url) {
-            if ($this->intent->shouldValidate()) {
-                if ($this->intent->isHTTPURL($url)) {
-                    $this->counturl = $url;
-                }
-            } else {
-                $this->counturl = $url;
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * Force the alignment of the button inside the iframe
-     *
-     * @since 1.0.0
-     *
-     * @param string $align left|right
-     *
-     * @return __CLASS__ support chaining
-     */
-    public function setAlign($align)
-    {
-        if (isset(static::$ALLOWED_ALIGN_VALUES[$align])) {
-            $this->align = $align;
-        }
-
         return $this;
     }
 
@@ -358,7 +237,7 @@ class TweetButton extends BaseWidget
             $options = array();
         }
 
-        $class = __CLASS__;
+        $class = get_called_class();
         $button = new $class();
         unset( $class );
 
@@ -374,15 +253,6 @@ class TweetButton extends BaseWidget
         // button parameters
         if (isset( $options['size'] )) {
             $button->setSize($options['size']);
-        }
-        if (isset( $options['count'] )) {
-            $button->setCount($options['count']);
-        }
-        if (isset( $options['counturl'] )) {
-            $button->setCountURL($options['counturl']);
-        }
-        if (isset( $options['align'] )) {
-            $button->setAlign($options['align']);
         }
 
         return $button;
@@ -404,18 +274,6 @@ class TweetButton extends BaseWidget
 
         if ($this->size) {
             $data['size'] = $this->size;
-        }
-
-        // empty string is default value
-        if ($this->count) {
-            $data['count'] = $this->count;
-        }
-        // only include counturl if a count will be shown
-        if ('none' !== $this->count && $this->counturl) {
-            $data['counturl'] = $this->counturl;
-        }
-        if ($this->align) {
-            $data['align'] = $this->align;
         }
 
         return $data;

@@ -382,7 +382,7 @@ class Tweet
             $values = array();
         }
 
-        $class = __CLASS__;
+        $class = get_called_class();
         $intent = new $class;
         unset( $class );
 

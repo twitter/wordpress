@@ -49,7 +49,7 @@ class Share implements ShortcodeInterface
 	 *
 	 * @type array
 	 */
-	public static $SHORTCODE_DEFAULTS = array( 'in_reply_to' => '', 'text' => '', 'url' => '', 'hashtags' => array(), 'via' => '', 'related' => array(), 'size' => '', 'align' => '', 'count' => '', 'counturl' => '' );
+	public static $SHORTCODE_DEFAULTS = array( 'in_reply_to' => '', 'text' => '', 'url' => '', 'hashtags' => array(), 'via' => '', 'related' => array(), 'size' => '' );
 
 	/**
 	 * Attach handlers for Tweet button
@@ -228,15 +228,10 @@ class Share implements ShortcodeInterface
 			$options['text'] = $attributes['text'];
 		}
 
-		foreach ( array( 'url', 'counturl' ) as $url_param ) {
-			if ( ! ( isset( $attributes[ $url_param ] ) && $attributes[ $url_param ] ) ) {
-				continue;
-			}
-
-			// filter the URL
-			$url = esc_url_raw( trim( $attributes[ $url_param ] ), array( 'http', 'https' ) );
+		if ( isset( $attributes['url'] ) && $attributes['url'] ) {
+			$url = esc_url_raw( trim( $attributes['url'] ), array( 'http', 'https' ) );
 			if ( $url ) {
-				$options[ $url_param ] = $url;
+				$options['url'] = $url;
 			}
 			unset( $url );
 		}
@@ -271,22 +266,6 @@ class Share implements ShortcodeInterface
 				unset( $hashtags );
 			}
 			unset( $intent );
-		}
-
-		if ( isset( $attributes['align'] ) && is_string( $attributes['align'] ) && $attributes['align'] ) {
-			$align = strtolower( trim( $attributes['align'] ) );
-			if ( array_key_exists( $align, \Twitter\Widgets\TweetButton::$ALLOWED_ALIGN_VALUES ) ) {
-				$options['align'] = $align;
-			}
-			unset( $align );
-		}
-
-		if ( isset( $attributes['count'] ) && is_string( $attributes['count'] ) ) {
-			$count = strtolower( trim( $attributes['count'] ) );
-			if ( array_key_exists( $count, \Twitter\Widgets\TweetButton::$ALLOWED_COUNT_VALUES ) ) {
-				$options['count'] = $count;
-			}
-			unset( $count );
 		}
 
 		// large is the only option

@@ -158,13 +158,6 @@ class TweetButton implements SettingsSection
 			$section
 		);
 		add_settings_field(
-			'tweet-button-count',
-			_x( 'Count', 'Numeric sum: number of Tweets referencing this URL', 'twitter' ),
-			array( &$this, 'displayCount' ),
-			$this->hook_suffix,
-			$section
-		);
-		add_settings_field(
 			'tweet-button-size',
 			__( 'Size' ),
 			array( &$this, 'displaySize' ),
@@ -266,27 +259,6 @@ class TweetButton implements SettingsSection
 	}
 
 	/**
-	 * Control display of the total number of Tweets citing the Tweet URL
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	public function displayCount()
-	{
-		$key = 'count';
-
-		echo '<label><input type="checkbox" name="' . esc_attr( static::OPTION_NAME . '[' . $key . ']' ) . '" value="1"';
-		if ( ! ( isset( $this->existing_options ) && isset( $this->existing_options[ $key ] ) && 'none' === $this->existing_options[ $key ] ) ) {
-			echo ' checked';
-			if ( ! current_theme_supports( 'html5' ) ) {
-				echo '="checked"';
-			}
-		}
-		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '> ' . esc_html( __( 'Show the number of Tweets citing the post URL', 'twitter' ) ) . '</label>';
-	}
-
-	/**
 	 * Sanitize posted option before saving
 	 *
 	 * @since 1.0.0
@@ -322,12 +294,6 @@ class TweetButton implements SettingsSection
 		if ( isset( $options['size'] ) && 'large' === $options['size'] ) {
 			$clean_options['size'] = 'large';
 		}
-
-		$key = 'count';
-		if ( ! ( isset( $options[ $key ] ) && 1 == $options[ $key ] ) ) {
-			$clean_options[ $key ] = 'none';
-		}
-		unset( $key );
 
 		return $clean_options;
 	}
