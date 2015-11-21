@@ -147,7 +147,7 @@ Twitter advertising trackers are only included on the page when invoked by the s
 
 1. Settings screen. Customize Tweet and Timeline color schemes including background, text colors, and borders. Attribute site content to a Twitter account. Automatically include Tweet buttons alongside your post content.
 2. Post editor meta box. Define custom Tweet text, hashtags, and Twitter Card data.
-3. Twitter widgets and buttons in action.
+3. Embed single Tweets, Tweets with video templates, multiple Tweets in a grid format, Twitter Moments, and Vines.
 
 == Installation ==
 
