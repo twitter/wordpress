@@ -112,7 +112,7 @@ class SinglePage
 	{
 		$settings = new static();
 
-		$hook_suffix = add_utility_page(
+		$hook_suffix = add_menu_page(
 			static::featureName(), // page <title>
 			'Twitter', // brand name. not translated
 			'manage_options', // capability needed
