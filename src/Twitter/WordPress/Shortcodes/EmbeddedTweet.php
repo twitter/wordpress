@@ -30,7 +30,7 @@ namespace Twitter\WordPress\Shortcodes;
  *
  * @since 1.0.0
  */
-class EmbeddedTweet implements ShortcodeInterface
+class EmbeddedTweet implements ShortcodeInterface, PublishOEmbedEndpoint
 {
 	use OEmbedTrait;
 
@@ -42,24 +42,6 @@ class EmbeddedTweet implements ShortcodeInterface
 	 * @type string
 	 */
 	const SHORTCODE_TAG = 'tweet';
-
-	/**
-	 * PHP class to use for fetching oEmbed data
-	 *
-	 * @since 1.3.0
-	 *
-	 * @type string
-	 */
-	const OEMBED_API_CLASS = '\Twitter\WordPress\Helpers\TwitterAPI';
-
-	/**
-	 * Relative path for the oEmbed API relative to Twitter API base path
-	 *
-	 * @since 1.0.0
-	 *
-	 * @type string
-	 */
-	const OEMBED_API_ENDPOINT = 'statuses/oembed';
 
 	/**
 	 * oEmbed regex registered by WordPress Core
@@ -117,13 +99,15 @@ class EmbeddedTweet implements ShortcodeInterface
 	 */
 	public static function init()
 	{
+		$classname = get_called_class();
+
 		// register our shortcode and its handler
-		add_shortcode( self::SHORTCODE_TAG, array( __CLASS__, 'shortcodeHandler' ) );
+		add_shortcode( self::SHORTCODE_TAG, array( $classname, 'shortcodeHandler' ) );
 
 		// Shortcode UI, if supported
 		add_action(
 			'register_shortcode_ui',
-			array( __CLASS__, 'shortcodeUI' ),
+			array( $classname, 'shortcodeUI' ),
 			5,
 			0
 		);
@@ -135,7 +119,7 @@ class EmbeddedTweet implements ShortcodeInterface
 			wp_embed_register_handler(
 				self::SHORTCODE_TAG,
 				static::TWEET_URL_REGEX,
-				array( __CLASS__, 'linkHandler' ),
+				array( $classname, 'linkHandler' ),
 				1
 			);
 		}

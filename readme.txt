@@ -3,7 +3,7 @@ Contributors: Twitter, niallkennedy
 Tags: twitter, embedded tweet, twitter moment, twitter video, twitter grid, vine, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 3.9
 Tested up to: 4.5
-Stable tag: 1.4.0
+Stable tag: 1.5.0
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
@@ -66,6 +66,9 @@ Add a Twitter audience pixel or [track advertising conversions](https://support.
 > View [Twitter for WordPress documentation](https://dev.twitter.com/web/wordpress) to learn more about customization through WordPress filters.
 
 == Upgrade Notice ==
+= 1.5.0 =
+Update admin menu functionality for compatibility with WordPress 4.5+.
+
 = 1.4.0 =
 Remove Tweet button options for share count. Display a Follow button by pasting a Twitter profile URL.
 
@@ -82,6 +85,10 @@ Shortcode improvements for ajax-loaded posts. Remove photo, gallery, and product
 Display admin notice if current PHP version does not meet minimum requirements. Do not display Tweet button in auto-generated excerpt.
 
 == Changelog ==
+= 1.5.0 =
+* Place Twitter administrative menu as a general menu item, not the deprecated utility menu. WordPress 4.5 compatibility feature.
+* Use publish.twitter.com oEmbed API endpoint for single Tweet oEmbed
+
 = 1.4.0 =
 * Remove Tweet button options for share count and align display, matching Twitter's changes
 * Convert Twitter profile URLs into a Follow button

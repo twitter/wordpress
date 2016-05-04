@@ -2,7 +2,7 @@
 /*
 The MIT License (MIT)
 
-Copyright (c) 2015 Twitter Inc.
+Copyright (c) 2016 Twitter Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -26,67 +26,26 @@ THE SOFTWARE.
 namespace Twitter\WordPress\Shortcodes;
 
 /**
- * Display a Moment
+ * Set up and fetch a Twitter oEmbed capable object
  *
- * @since 1.2.0
+ * @since 1.5.0
  */
-class Moment extends TweetGrid
-{
-
+interface PublishOEmbedEndpoint {
 	/**
-	 * Shortcode tag to be matched
-	 *
-	 * @since 1.2.0
-	 *
-	 * @type string
-	 */
-	const SHORTCODE_TAG = 'twitter_moment';
-
-	/**
-	 * oEmbed regex registered by WordPress Core
+	 * PHP class to use for fetching oEmbed data
 	 *
 	 * @since 1.5.0
 	 *
 	 * @type string
 	 */
-	const OEMBED_CORE_REGEX = '#https?://(www\.)?twitter\.com/i/moments/.*#i';
+	const OEMBED_API_CLASS = '\Twitter\WordPress\Helpers\TwitterOEmbed';
 
 	/**
-	 * HTML class to be used in div wrapper
+	 * Relative path for the oEmbed API relative to Twitter publishers base path
 	 *
-	 * @since 1.3.0
+	 * @since 1.5.0
 	 *
 	 * @type string
 	 */
-	const HTML_CLASS = 'twitter-moment';
-
-	/**
-	 * Regex used to match a Moment in text
-	 *
-	 * @since 1.2.0
-	 *
-	 * @type string
-	 */
-	const URL_REGEX = '#^https://twitter\.com/i/moments/([0-9]+)#i';
-
-	/**
-	 * Base URL used to reconstruct a Moment URL
-	 *
-	 * @since 1.2.0
-	 *
-	 * @type string
-	 */
-	const BASE_URL = 'https://twitter.com/i/moments/';
-
-	/**
-	 * Reference the feature by name
-	 *
-	 * @since 1.3.0
-	 *
-	 * @return string translated feature name
-	 */
-	public static function featureName()
-	{
-		return __( 'Twitter Moment', 'twitter' );
-	}
+	const OEMBED_API_ENDPOINT = 'oembed';
 }

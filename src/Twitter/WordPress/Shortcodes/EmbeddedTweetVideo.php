@@ -60,13 +60,15 @@ class EmbeddedTweetVideo extends EmbeddedTweet
 	 */
 	public static function init()
 	{
+		$classname = get_called_class();
+
 		// register our shortcode and its handler
-		add_shortcode( self::SHORTCODE_TAG, array( __CLASS__, 'shortcodeHandler' ) );
+		add_shortcode( self::SHORTCODE_TAG, array( $classname, 'shortcodeHandler' ) );
 
 		// Shortcode UI, if supported
 		add_action(
 			'register_shortcode_ui',
-			array( __CLASS__, 'shortcodeUI' ),
+			array( $classname, 'shortcodeUI' ),
 			5,
 			0
 		);

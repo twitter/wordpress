@@ -30,7 +30,7 @@ namespace Twitter\WordPress\Shortcodes;
  *
  * @since 1.3.0
  */
-class TweetGrid implements ShortcodeInterface
+class TweetGrid implements ShortcodeInterface, PublishOEmbedEndpoint
 {
 	use OEmbedTrait;
 
@@ -42,6 +42,15 @@ class TweetGrid implements ShortcodeInterface
 	 * @type string
 	 */
 	const SHORTCODE_TAG = 'twitter_grid';
+
+	/**
+	 * oEmbed regex registered by WordPress Core
+	 *
+	 * @since 1.5.0
+	 *
+	 * @type string
+	 */
+	const OEMBED_CORE_REGEX = '#https?://(www\.)?twitter\.com/.+?/timelines/.*#i';
 
 	/**
 	 * HTML class to be used in div wrapper
@@ -71,24 +80,6 @@ class TweetGrid implements ShortcodeInterface
 	const BASE_URL = 'https://twitter.com/_/timelines/';
 
 	/**
-	 * PHP class to use for fetching oEmbed data
-	 *
-	 * @since 1.3.0
-	 *
-	 * @type string
-	 */
-	const OEMBED_API_CLASS = '\Twitter\WordPress\Helpers\TwitterOEmbed';
-
-	/**
-	 * Relative path for the oEmbed API relative to Twitter publishers base path
-	 *
-	 * @since 1.3.0
-	 *
-	 * @type string
-	 */
-	const OEMBED_API_ENDPOINT = 'oembed';
-
-	/**
 	 * Accepted shortcode attributes and their default values
 	 *
 	 * @since 1.3.0
@@ -111,14 +102,6 @@ class TweetGrid implements ShortcodeInterface
 		// register our shortcode and its handler
 		add_shortcode( static::SHORTCODE_TAG, array( $classname, 'shortcodeHandler' ) );
 
-		// convert a URL into the shortcode equivalent
-		wp_embed_register_handler(
-			static::SHORTCODE_TAG,
-			static::URL_REGEX,
-			array( $classname, 'linkHandler' ),
-			1
-		);
-
 		// Shortcode UI, if supported
 		add_action(
 			'register_shortcode_ui',
@@ -126,6 +109,19 @@ class TweetGrid implements ShortcodeInterface
 			5,
 			0
 		);
+
+		if ( ! is_admin() ) {
+			// unhook the WordPress Core oEmbed handler
+			wp_oembed_remove_provider( static::OEMBED_CORE_REGEX );
+
+			// convert a URL into the shortcode equivalent
+			wp_embed_register_handler(
+				static::SHORTCODE_TAG,
+				static::URL_REGEX,
+				array( $classname, 'linkHandler' ),
+				1
+			);
+		}
 	}
 
 	/**
