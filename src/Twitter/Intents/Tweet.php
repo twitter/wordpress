@@ -259,7 +259,11 @@ class Tweet
     {
         $hashtag = \Twitter\Helpers\Validators\Hashtag::trim($hashtag);
         if ($hashtag) {
-            $comparison_hashtag = mb_strtolower($hashtag);
+            if (function_exists('mb_strtolower')) {
+                $comparison_hashtag = mb_strtolower($hashtag);
+            } else {
+                $comparison_hashtag = strtolower($hashtag);
+            }
             if (! isset( $this->hashtags[ $comparison_hashtag ] )) {
                 $this->hashtags[ $comparison_hashtag ] = $hashtag;
             }
