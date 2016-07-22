@@ -218,10 +218,6 @@ class Follow implements ShortcodeInterface
 	 */
 	public static function getScreenName()
 	{
-		if ( ! in_the_loop() ) {
-			return '';
-		}
-
 		$screen_name = \Twitter\WordPress\User\Meta::getTwitterUsername( get_the_author_meta( 'ID' ) );
 		if ( ! $screen_name ) {
 			return '';

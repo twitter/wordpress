@@ -205,10 +205,6 @@ class PeriscopeOnAir implements ShortcodeInterface
 	 */
 	public static function getUsername()
 	{
-		if ( ! in_the_loop() ) {
-			return '';
-		}
-
 		$username = \Twitter\WordPress\User\Meta::getPeriscopeUsername( get_the_author_meta( 'ID' ) );
 		if ( ! $username ) {
 			return '';

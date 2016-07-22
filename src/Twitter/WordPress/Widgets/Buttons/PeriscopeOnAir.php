@@ -76,19 +76,14 @@ class PeriscopeOnAir extends \WP_Widget
 	 */
 	public function widget( $args, $instance )
 	{
-		// no Periscope username target
-		if ( empty( $instance['username'] ) ) {
+		$button_html = \Twitter\WordPress\Shortcodes\PeriscopeOnAir::shortcodeHandler( $instance );
+		if ( ! $button_html ) {
 			return;
 		}
 
 		/** This filter is documented in wp-includes/default-widgets.php */
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 		unset( $instance['title'] );
-
-		$button_html = \Twitter\WordPress\Shortcodes\PeriscopeOnAir::shortcodeHandler( $instance );
-		if ( ! $button_html ) {
-			return;
-		}
 
 		echo $args['before_widget'];
 

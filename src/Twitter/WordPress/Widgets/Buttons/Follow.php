@@ -76,11 +76,6 @@ class Follow extends \WP_Widget
 	 */
 	public function widget( $args, $instance )
 	{
-		// no follow target
-		if ( empty( $instance['screen_name'] ) ) {
-			return;
-		}
-
 		$follow_button_html = \Twitter\WordPress\Shortcodes\Follow::shortcodeHandler( $instance );
 		if ( ! $follow_button_html ) {
 			return;
