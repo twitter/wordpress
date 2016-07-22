@@ -23,14 +23,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\WordPress\Admin\Settings;
+namespace Twitter\WordPress\Admin\Settings\Embeds;
 
 /**
  * Site-level settings for Twitter widget themes
  *
  * @since 1.0.0
  */
-class Theme implements SettingsSection
+class Theme implements \Twitter\WordPress\Admin\Settings\SettingsSection
 {
 	/**
 	 * Define our option array value.

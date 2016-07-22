@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\Widgets;
+namespace Twitter\Widgets\Buttons;
 
 /**
  * Follow button markup to be interpreted by Twitter's widget JavaScript
@@ -32,7 +32,7 @@ namespace Twitter\Widgets;
  *
  * @link https://dev.twitter.com/web/follow-button Follow button documentation
  */
-class FollowButton extends BaseWidget
+class Follow extends \Twitter\Widgets\BaseWidget
 {
 
     /**

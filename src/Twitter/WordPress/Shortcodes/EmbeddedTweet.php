@@ -111,7 +111,7 @@ class EmbeddedTweet implements ShortcodeInterface, PublishOEmbedEndpoint
 			5,
 			0
 		);
-	
+
 		if ( ! is_admin() ) {
 			// unhook the WordPress Core oEmbed handler
 			wp_oembed_remove_provider( static::OEMBED_CORE_REGEX );

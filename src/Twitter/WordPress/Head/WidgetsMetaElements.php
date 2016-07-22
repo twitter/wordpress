@@ -41,7 +41,7 @@ class WidgetsMetaElements
 	 */
 	public static function getWidgetOptions()
 	{
-		return get_option( \Twitter\WordPress\Admin\Settings\Theme::OPTION_NAME );
+		return get_option( \Twitter\WordPress\Admin\Settings\Embeds\Theme::OPTION_NAME );
 	}
 
 	/**

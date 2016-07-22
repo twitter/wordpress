@@ -23,14 +23,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\WordPress\Admin\Settings;
+namespace Twitter\WordPress\Admin\Settings\Cards;
 
 /**
  * Store a Twitter username for attribution of site content
  *
  * @since 1.0.0
  */
-class SiteAttribution implements SettingsSection
+class SiteAttribution implements \Twitter\WordPress\Admin\Settings\SettingsSection
 {
 	/**
 	 * Define our option name

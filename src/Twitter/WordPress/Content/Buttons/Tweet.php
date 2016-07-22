@@ -23,14 +23,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\WordPress\Content;
+namespace Twitter\WordPress\Content\Buttons;
 
 /**
  * Add a Tweet button to post content
  *
  * @since 1.0.0
  */
-class TweetButton
+class Tweet
 {
 	/**
 	 * Get the stored site option for Tweet button content
@@ -44,7 +44,7 @@ class TweetButton
 	 */
 	protected static function getOption()
 	{
-		return get_option( \Twitter\WordPress\Admin\Settings\TweetButton::OPTION_NAME, array() );
+		return get_option( \Twitter\WordPress\Admin\Settings\Buttons\Tweet::OPTION_NAME, array() );
 	}
 
 	/**

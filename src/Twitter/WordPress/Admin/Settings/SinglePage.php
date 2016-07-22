@@ -61,7 +61,7 @@ class SinglePage
 	 *   @type string fully qualified class name
 	 * }
 	 */
-	protected static $SETTINGS_COMPONENTS = array( '\Twitter\WordPress\Admin\Settings\Theme', '\Twitter\WordPress\Admin\Settings\SiteAttribution', '\Twitter\WordPress\Admin\Settings\TweetButton' );
+	protected static $SETTINGS_COMPONENTS = array( '\Twitter\WordPress\Admin\Settings\Embeds\Theme', '\Twitter\WordPress\Admin\Settings\Cards\SiteAttribution', '\Twitter\WordPress\Admin\Settings\Buttons\Tweet' );
 
 	/**
 	 * Reference the feature by name
@@ -91,11 +91,11 @@ class SinglePage
 		$features = \Twitter\WordPress\Features::getEnabledFeatures();
 
 		if ( ! isset( $features[ \Twitter\WordPress\Features::EMBED_TWEET ] ) ) {
-			unset( $components['\Twitter\WordPress\Admin\Settings\Theme'] );
+			unset( $components['\Twitter\WordPress\Admin\Settings\Embeds\Theme'] );
 		}
 
 		if ( ! isset( $features[ \Twitter\WordPress\Features::TWEET_BUTTON ] ) ) {
-			unset( $components['\Twitter\WordPress\Admin\Settings\TweetButton'] );
+			unset( $components['\Twitter\WordPress\Admin\Settings\Buttons\Tweet'] );
 		}
 
 		return $components;

@@ -136,11 +136,11 @@ class PluginLoader
 		$features = \Twitter\WordPress\Features::getEnabledFeatures();
 
 		if ( isset( $features[ \Twitter\WordPress\Features::FOLLOW_BUTTON ] ) ) {
-			register_widget( '\Twitter\WordPress\Widgets\Follow' );
+			register_widget( '\Twitter\WordPress\Widgets\Buttons\Follow' );
 		}
 
 		if ( isset( $features[ \Twitter\WordPress\Features::PERISCOPE_ON_AIR ] ) ) {
-			register_widget( '\Twitter\WordPress\Widgets\PeriscopeOnAir' );
+			register_widget( '\Twitter\WordPress\Widgets\Buttons\PeriscopeOnAir' );
 		}
 	}
 
@@ -189,8 +189,8 @@ class PluginLoader
 
 		// load widgets JS if a Twitter widget is active
 		if (
-			( isset( $features[ \Twitter\WordPress\Features::FOLLOW_BUTTON ] ) && is_active_widget( false, false, \Twitter\WordPress\Widgets\Follow::BASE_ID, true ) ) ||
-			( isset( $features[ \Twitter\WordPress\Features::PERISCOPE_ON_AIR ] ) && is_active_widget( false, false, \Twitter\WordPress\Widgets\PeriscopeOnAir::BASE_ID, true ) )
+			( isset( $features[ \Twitter\WordPress\Features::FOLLOW_BUTTON ] ) && is_active_widget( false, false, \Twitter\WordPress\Widgets\Buttons\Follow::BASE_ID, true ) ) ||
+			( isset( $features[ \Twitter\WordPress\Features::PERISCOPE_ON_AIR ] ) && is_active_widget( false, false, \Twitter\WordPress\Widgets\Buttons\PeriscopeOnAir::BASE_ID, true ) )
 		) {
 			// enqueue after the script is registered in wp_enqueue_scripts action priority 1
 			add_action( 'wp_enqueue_scripts', array( '\Twitter\WordPress\JavaScriptLoaders\Widgets', 'enqueue' ) );
@@ -221,7 +221,7 @@ class PluginLoader
 		// possibly add Tweet button(s)
 		add_filter(
 			'the_content',
-			array( '\Twitter\WordPress\Content\TweetButton', 'contentFilter' ),
+			array( '\Twitter\WordPress\Content\Buttons\Tweet', 'contentFilter' ),
 			$twitter_content_priority
 		);
 	}

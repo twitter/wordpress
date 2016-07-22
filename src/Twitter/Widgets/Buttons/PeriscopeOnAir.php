@@ -23,14 +23,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\Widgets;
+namespace Twitter\Widgets\Buttons;
 
 /**
  * Periscope profile button with on-air status display
  *
  * @since 1.3.0
  */
-class PeriscopeOnAir extends BaseWidget
+class PeriscopeOnAir extends \Twitter\Widgets\BaseWidget
 {
     /**
      * HTML class expected by the Periscope widget JS

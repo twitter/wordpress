@@ -23,24 +23,24 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\Tests\Widgets;
+namespace Twitter\Tests\Widgets\Buttons;
 
 /**
- * @coversDefaultClass \Twitter\Widgets\TweetButton
+ * @coversDefaultClass \Twitter\Widgets\Buttons\Tweet
  */
-final class TweetButton extends \Twitter\Tests\TestWithPrivateAccess
+final class Tweet extends \Twitter\Tests\TestWithPrivateAccess
 {
     /**
-     * Initialized TweetButton
+     * Initialized Tweet button object
      *
      * @since 1.0.0
      *
-     * @type \Twitter\Widgets\TweetButton
+     * @type \Twitter\Widgets\Buttons\Tweet
      */
     protected $button;
 
     /**
-     * Initialize a TweetButton object before each test
+     * Initialize a Tweet object before each test
      *
      * @since 1.0.0
      *
@@ -48,7 +48,7 @@ final class TweetButton extends \Twitter\Tests\TestWithPrivateAccess
      */
     public function setUp()
     {
-        $this->button = new \Twitter\Widgets\TweetButton();
+        $this->button = new \Twitter\Widgets\Buttons\Tweet();
     }
 
     /**

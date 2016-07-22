@@ -55,7 +55,7 @@ class Username
 			$post_id = null;
 		}
 
-		$username = get_option( \Twitter\WordPress\Admin\Settings\SiteAttribution::OPTION_NAME, '' );
+		$username = get_option( \Twitter\WordPress\Admin\Settings\Cards\SiteAttribution::OPTION_NAME, '' );
 
 		if ( ! is_string( $username ) ) {
 			$username = '';

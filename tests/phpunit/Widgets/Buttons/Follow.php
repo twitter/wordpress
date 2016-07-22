@@ -23,16 +23,16 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\Tests\Widgets;
+namespace Twitter\Tests\Widgets\Buttons;
 
 /**
- * @coversDefaultClass \Twitter\Widgets\FollowButton
+ * @coversDefaultClass \Twitter\Widgets\Follow
  */
-final class FollowButton extends \Twitter\Tests\TestWithPrivateAccess
+final class Follow extends \Twitter\Tests\TestWithPrivateAccess
 {
 
     /**
-     * Initialize a new FollowButton object using this screen_name
+     * Initialize a new Follow object using this screen_name
      *
      * @since 1.0.0
      *
@@ -41,16 +41,16 @@ final class FollowButton extends \Twitter\Tests\TestWithPrivateAccess
     const SCREEN_NAME = 'twitter';
 
     /**
-     * FollowButton object initialized to 'twitter' screen_name before each test
+     * Follow object initialized to 'twitter' screen_name before each test
      *
      * @since 1.0.0
      *
-     * @type \Twitter\Widgets\FollowButton
+     * @type \Twitter\Widgets\Buttons\Follow
      */
     protected $button;
 
     /**
-     * Initialize a FollowButton object before each test
+     * Initialize a Follow object before each test
      *
      * @since 1.0.0
      *
@@ -58,7 +58,7 @@ final class FollowButton extends \Twitter\Tests\TestWithPrivateAccess
      */
     public function setUp()
     {
-        $this->button = new \Twitter\Widgets\FollowButton(self::SCREEN_NAME, /* validate */ false);
+        $this->button = new \Twitter\Widgets\Buttons\Follow(self::SCREEN_NAME, /* validate */ false);
     }
 
     /**
@@ -278,7 +278,7 @@ final class FollowButton extends \Twitter\Tests\TestWithPrivateAccess
         $options = self::optionsArraySetUp();
         $options['show_count'] = $test_value;
 
-        $this->button = \Twitter\Widgets\FollowButton::fromArray($options);
+        $this->button = \Twitter\Widgets\Buttons\Follow::fromArray($options);
         $this->assertNotNull($this->button);
         $this->hideCountResult();
     }
@@ -303,7 +303,7 @@ final class FollowButton extends \Twitter\Tests\TestWithPrivateAccess
         $options = self::optionsArraySetUp();
         $options['show_screen_name'] = $test_value;
 
-        $this->button = \Twitter\Widgets\FollowButton::fromArray($options);
+        $this->button = \Twitter\Widgets\Buttons\Follow::fromArray($options);
         $this->assertNotNull($this->button);
         $this->hideScreenNameResult();
     }
@@ -329,7 +329,7 @@ final class FollowButton extends \Twitter\Tests\TestWithPrivateAccess
         $options = self::optionsArraySetUp();
         $options['size'] = $size;
 
-        $this->button = \Twitter\Widgets\FollowButton::fromArray($options);
+        $this->button = \Twitter\Widgets\Buttons\Follow::fromArray($options);
         $this->assertNotNull($this->button);
         $this->setSizeResult($size, $expected_valid, $message);
     }

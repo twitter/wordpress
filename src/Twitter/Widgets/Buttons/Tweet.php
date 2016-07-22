@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\Widgets;
+namespace Twitter\Widgets\Buttons;
 
 /**
  * Tweet button markup to be interpreted by Twitter's widget JavaScript
@@ -32,7 +32,7 @@ namespace Twitter\Widgets;
  *
  * @link https://dev.twitter.com/web/tweet-button Tweet button documentation
  */
-class TweetButton extends BaseWidget
+class Tweet extends \Twitter\Widgets\BaseWidget
 {
 
     /**

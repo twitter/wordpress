@@ -271,7 +271,7 @@ class Follow implements ShortcodeInterface
 		// update the options array with the Follow screen name
 		$options['screen_name'] = $screen_name;
 
-		$follow = \Twitter\Widgets\FollowButton::fromArray( $options );
+		$follow = \Twitter\Widgets\Buttons\Follow::fromArray( $options );
 		if ( ! $follow ) {
 			return '';
 		}

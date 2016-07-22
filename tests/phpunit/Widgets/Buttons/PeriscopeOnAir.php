@@ -23,10 +23,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\Tests\Widgets;
+namespace Twitter\Tests\Widgets\Buttons;
 
 /**
- * @coversDefaultClass \Twitter\Widgets\PeriscopeOnAir
+ * @coversDefaultClass \Twitter\Widgets\Buttons\PeriscopeOnAir
  */
 final class PeriscopeOnAir extends \Twitter\Tests\TestWithPrivateAccess
 {
@@ -45,7 +45,7 @@ final class PeriscopeOnAir extends \Twitter\Tests\TestWithPrivateAccess
      *
      * @since 1.3.0
      *
-     * @type \Twitter\Widgets\PeriscopeOnAir
+     * @type \Twitter\Widgets\Buttons\PeriscopeOnAir
      */
     protected $button;
 
@@ -58,7 +58,7 @@ final class PeriscopeOnAir extends \Twitter\Tests\TestWithPrivateAccess
      */
     public function setUp()
     {
-        $this->button = new \Twitter\Widgets\PeriscopeOnAir(self::USERNAME, /* validate */ false);
+        $this->button = new \Twitter\Widgets\Buttons\PeriscopeOnAir(self::USERNAME, /* validate */ false);
     }
 
     /**
@@ -177,7 +177,7 @@ final class PeriscopeOnAir extends \Twitter\Tests\TestWithPrivateAccess
         $options = self::optionsArraySetUp();
         $options['size'] = $size;
 
-        $this->button = \Twitter\Widgets\PeriscopeOnAir::fromArray($options);
+        $this->button = \Twitter\Widgets\Buttons\PeriscopeOnAir::fromArray($options);
         $this->assertNotNull($this->button);
         $this->setSizeResult($size, $expected_valid, $message);
     }

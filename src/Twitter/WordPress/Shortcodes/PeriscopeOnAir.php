@@ -259,7 +259,7 @@ class PeriscopeOnAir implements ShortcodeInterface
 		$options['username'] = $username;
 		unset( $username );
 
-		$on_air = \Twitter\Widgets\PeriscopeOnAir::fromArray( $options );
+		$on_air = \Twitter\Widgets\Buttons\PeriscopeOnAir::fromArray( $options );
 		if ( ! $on_air ) {
 			return '';
 		}

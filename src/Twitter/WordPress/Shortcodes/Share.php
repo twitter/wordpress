@@ -398,7 +398,7 @@ class Share implements ShortcodeInterface
 			unset( $via_username );
 		}
 
-		$button = \Twitter\Widgets\TweetButton::fromArray( $options );
+		$button = \Twitter\Widgets\Buttons\Tweet::fromArray( $options );
 		if ( ! $button ) {
 			return '';
 		}
