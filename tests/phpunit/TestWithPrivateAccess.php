@@ -99,5 +99,8 @@ abstract class TestWithPrivateAccess extends \PHPUnit_Framework_TestCase
 
         $reflection = new \ReflectionClass($class);
         $method = $reflection->getMethod($method_name);
+        $method->setAccessible(true);
+
+        return $method;
     }
 }

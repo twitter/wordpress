@@ -153,12 +153,14 @@ final class SingleImage extends \Twitter\Tests\TestWithPrivateAccess
      */
     public function testEmptyCardProperties()
     {
-        $this->assertEquals('', self::getMethod($this->singleimage, 'imageCardProperties'));
-
         $image = $this->getMockBuilder('\Twitter\Cards\Components\Image')->disableOriginalConstructor()->getMock();
         $image->method('asCardProperties')->willReturn('');
         self::setProperty($this->singleimage, 'image', $image);
 
-        $this->assertEquals('', self::getMethod($this->singleimage, 'imageCardProperties'));
+        $properties_method = self::getMethod($this->singleimage, 'imageCardProperties');
+        $this->assertNotNull($properties_method);
+
+        $image_properties = $properties_method->invoke($this->singleimage);
+        $this->assertEquals('', $image_properties);
     }
 }
