@@ -49,7 +49,7 @@ class EmbeddedTweetVideo extends EmbeddedTweet
 	 *
 	 * @type array
 	 */
-	public static $SHORTCODE_DEFAULTS = array( 'id' => '', 'status' => true );
+	public static $SHORTCODE_DEFAULTS = array( 'id' => '' );
 
 	/**
 	 * Attach handlers for Twitter embedded video
@@ -145,17 +145,6 @@ class EmbeddedTweetVideo extends EmbeddedTweet
 			unset( $tweet_id );
 		}
 
-		// allow option style or oEmbed style parameter
-		if ( isset( $attributes['status'] ) ) {
-			if ( false === $attributes['status'] || '0' == $attributes['status'] || ( is_string( $attributes['status'] ) && in_array( strtolower( $attributes['status'] ), array( 'false', 'no', 'off' ) ) ) ) {
-				$options['status'] = false;
-			}
-		} else if ( isset( $attributes['hide_tweet'] ) ) {
-			if ( true === $attributes['hide_tweet'] || '1' == $attributes['hide_tweet'] || ( is_string( $attributes['hide_tweet'] ) && in_array( strtolower( $attributes['hide_tweet'] ), array( 'true', 'yes', 'on' ) ) ) ) {
-				$options['status'] = false;
-			}
-		}
-
 		return $options;
 	}
 
@@ -229,10 +218,6 @@ class EmbeddedTweetVideo extends EmbeddedTweet
 		}
 		$query_parameters['widget_type'] = 'video';
 
-		if ( isset( $shortcode_options['status'] ) && false === $shortcode_options['status'] ) {
-			$query_parameters['hide_tweet'] = true;
-		}
-
 		return $query_parameters;
 	}
 
@@ -250,12 +235,6 @@ class EmbeddedTweetVideo extends EmbeddedTweet
 	 */
 	public static function getOEmbedCacheKeyCustomParameters( array $query_parameters )
 	{
-		$customizations = '';
-
-		if ( isset( $query_parameters['hide_tweet'] ) && $query_parameters['hide_tweet'] ) {
-			$customizations .= 'h';
-		}
-
-		return $customizations;
+		return '';
 	}
 }
