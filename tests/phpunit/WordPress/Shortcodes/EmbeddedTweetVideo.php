@@ -69,59 +69,6 @@ final class EmbeddedTweetVideo extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Test disabling a Tweet Video status overlay through a shortcode option
-	 *
-	 * @since 1.0.0
-	 *
-	 * @covers ::sanitizeShortcodeParameters
-	 * @small
-	 *
-	 * @dataProvider hideStatusProvider
-	 *
-	 * @param array $attributes shortcode attributes {
-	 *   @type string attribute
-	 *   @type mixed value
-	 * }
-	 *
-	 * @return void
-	 */
-	public function testSanitizeShortCodeParametersStatus( $attributes ) {
-		$options = \Twitter\WordPress\Shortcodes\EmbeddedTweetVideo::sanitizeShortcodeParameters( $attributes );
-		$this->assertTrue( ( isset( $options['status'] ) && false === $options['status'] ), 'Failed to set a status value of false' );
-	}
-
-	/**
-	 * Shortcode attributes which should all trigger a status option equal to false
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return array array of test values
-	 */
-	public static function hideStatusProvider() {
-		return array(
-			array( array( 'status' => false ) ),
-			array( array( 'status' => 'false' ) ),
-			array( array( 'status' => 'FALSE' ) ),
-			array( array( 'status' => 0 ) ),
-			array( array( 'status' => '0' ) ),
-			array( array( 'status' => 'no' ) ),
-			array( array( 'status' => 'NO' ) ),
-			array( array( 'status' => 'off' ) ),
-			array( array( 'status' => 'OFF' ) ),
-			array( array( 'hide_tweet' => true ) ),
-			array( array( 'hide_tweet' => 'true' ) ),
-			array( array( 'hide_tweet' => 'TRUE' ) ),
-			array( array( 'hide_tweet' => 1 ) ),
-			array( array( 'hide_tweet' => '1' ) ),
-			array( array( 'hide_tweet' => 'yes' ) ),
-			array( array( 'hide_tweet' => 'YES' ) ),
-			array( array( 'hide_tweet' => 'on' ) ),
-			array( array( 'hide_tweet' => 'ON' ) ),
-			array( array( 'status' => false, 'hide_tweet' => false ) ),
-		);
-	}
-
-	/**
 	 * Test building a unique cache key component for shortcode customizations
 	 *
 	 * @since 1.0.0
@@ -133,9 +80,9 @@ final class EmbeddedTweetVideo extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testGetOEmbedCacheKeyCustomParameters() {
 		$this->assertEquals(
-			'h',
+			'',
 			\Twitter\WordPress\Shortcodes\EmbeddedTweetVideo::getOEmbedCacheKeyCustomParameters( array( 'hide_tweet' => true ) ),
-			'Failed to set a unique cache key for the hide Tweet customization'
+			'Failed to set an empty cache modifier key'
 		);
 	}
 }
