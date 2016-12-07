@@ -2,7 +2,7 @@
 Contributors: Twitter, niallkennedy
 Tags: twitter, embedded tweet, twitter moment, twitter video, twitter grid, vine, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 3.9
-Tested up to: 4.6
+Tested up to: 4.7
 Stable tag: 1.5.0
 License: MIT
 License URI: http://opensource.org/licenses/MIT

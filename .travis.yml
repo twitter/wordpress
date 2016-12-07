@@ -11,8 +11,10 @@ language: php
 
 # Declare versions of PHP to test
 php:
-  # bleeding edge. alias of 7 until GA
-  - nightly
+  # aliased to a recent 7.1.x version
+  - 7.1
+  # aliased to a recent 7.0.x version
+  - 7.0
   # aliased to a recent 5.6.x version
   - 5.6
   # aliased to a recent 5.5.x version
@@ -23,14 +25,14 @@ php:
 # WordPress comes from the Git mirror, where 'master' mirrors svn 'trunk' and
 # x.y mirrors the latest from the x.y branch
 env:
-  # WordPress 4.3
-  - WP_VERSION=4.3
-  # WordPress 4.0
-  - WP_VERSION=4.2
-  # WordPress 4.1
-  - WP_VERSION=4.1
-  # WordPress 4.0
-  - WP_VERSION=4.0
+  # WordPress 4.7
+  - WP_VERSION=4.7
+  # WordPress 4.6
+  - WP_VERSION=4.6
+  # WordPress 4.5
+  - WP_VERSION=4.5
+  # WordPress 4.4
+  - WP_VERSION=4.4
   # WordPress 3.9
   - WP_VERSION=3.9
 
