@@ -151,6 +151,51 @@ final class Image extends \Twitter\Tests\TestWithPrivateAccess
     }
 
     /**
+     * Test possible alternative text values
+     *
+     * @since 2.0.0
+     *
+     * @return array test values
+     */
+    public static function altTextProvider()
+    {
+        return array(
+            array('A flower', true,  'Failed to accept valid alternative text' ),
+            array('',         false, 'Failed to reject empty string'           ),
+            array(' ',        false, 'Failed to reject whitespace only string' ),
+            array(42,         false, 'Failed to reject int as alternative text')
+        );
+    }
+
+    /**
+     * Test setting alternative text
+     *
+     * @since 2.0.0
+     *
+     * @covers ::setAlternateText
+     * @small
+     *
+     * @dataProvider altTextProvider
+     *
+     * @param string $alt      alternative text to set
+     * @param bool   $is_valid expected validity
+     * @param bool   $message  error message to display on failure
+     *
+     * @return void
+     */
+    public function testSetAlternativeText($alt, $is_valid, $message = '')
+    {
+        $this->image->setAlternativeText($alt);
+        $property = self::getProperty($this->image, 'alt');
+
+        if ($is_valid) {
+            $this->assertEquals($alt, $property, $message);
+        } else {
+            $this->assertNull($property, $message);
+        }
+    }
+
+    /**
      * Test an image without any set width or height
      *
      * @since 1.0.0

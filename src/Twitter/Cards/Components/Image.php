@@ -60,6 +60,15 @@ class Image
     protected $height;
 
     /**
+     * A text description of the image
+     *
+     * @since 2.0.0
+     *
+     * @type string
+     */
+    protected $alt;
+
+    /**
      * @since 1.0.0
      *
      * @return void
@@ -143,6 +152,36 @@ class Image
     }
 
     /**
+     * Get a text description of the image
+     *
+     * @since 2.0.0
+     *
+     * @return string a text description of the image
+     */
+    public function getAlternativeText()
+    {
+        return $this->alt ?: '';
+    }
+
+    /**
+     * Set a text description of the image
+     *
+     * @since 2.0.0
+     *
+     * @return __CLASS__ support chaining
+     */
+    public function setAlternativeText($alt)
+    {
+        if (is_string($alt)) {
+            $alt = trim($alt);
+            if ($alt) {
+                $this->alt = $alt;
+            }
+        }
+        return $this;
+    }
+
+    /**
      * Convert to card properties
      *
      * @since 1.0.0
@@ -151,15 +190,25 @@ class Image
      */
     public function asCardProperties()
     {
-        if (! ( isset( $this->src ) && $this->src )) {
+        if (! ( isset($this->src) && $this->src )) {
             return '';
         }
-        if (isset( $this->width ) && isset( $this->height )) {
-            return array(
-                'src' => $this->src,
-                'width' => $this->width,
-                'height' => $this->height,
-            );
+        $properties = array(
+            'src' => $this->src
+        );
+        $has_properties = false;
+        if (isset($this->alt)) {
+            $properties['alt'] = $this->alt;
+            $has_properties = true;
+        }
+        if (isset($this->width) && isset($this->height)) {
+            $properties['width'] = $this->width;
+            $properties['height'] = $this->height;
+            $has_properties = true;
+        }
+
+        if ($has_properties) {
+            return $properties;
         } else {
             return $this->src;
         }

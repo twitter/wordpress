@@ -329,6 +329,12 @@ class ImageHandler
 		}
 		$image = new \Twitter\Cards\Components\Image( $url );
 
+		$alt = trim( strip_tags( get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ) );
+		if ( $alt ) {
+			$image->setAlternativeText( $alt );
+		}
+		unset( $alt );
+
 		if ( ! empty( $width ) ) {
 			$width = absint( $width );
 			if ( $width ) {
