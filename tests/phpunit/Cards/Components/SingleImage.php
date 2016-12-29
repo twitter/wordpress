@@ -161,6 +161,6 @@ final class SingleImage extends \Twitter\Tests\TestWithPrivateAccess
         $this->assertNotNull($properties_method);
 
         $image_properties = $properties_method->invoke($this->singleimage);
-        $this->assertEquals('', $image_properties);
+        $this->assertEmpty($image_properties);
     }
 }
