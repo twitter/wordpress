@@ -46,7 +46,7 @@ trait Creator
      *
      * @param \Twitter\Cards\Components\Account $creator Twitter account
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setCreator($creator)
     {

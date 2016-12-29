@@ -63,7 +63,7 @@ class Account
         $account->setScreenName($screen_name);
 
         if (! $account->hasScreenName()) {
-            return;
+            return null;
         }
 
         return $account;
@@ -84,7 +84,7 @@ class Account
         $account->setID($id);
 
         if (! $account->hasID()) {
-            return;
+            return null;
         }
 
         return $account;
@@ -135,7 +135,7 @@ class Account
      *
      * @param string $id Twitter user id
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setID($id)
     {

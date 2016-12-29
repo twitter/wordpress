@@ -69,8 +69,6 @@ class Summary extends Card
      * Set the card type
      *
      * @since 1.0.0
-     *
-     * @return void
      */
     public function __construct()
     {

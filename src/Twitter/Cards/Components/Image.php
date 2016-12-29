@@ -71,7 +71,7 @@ class Image
     /**
      * @since 1.0.0
      *
-     * @return void
+     * @param string $src image URL
      */
     public function __construct($src)
     {
@@ -112,7 +112,7 @@ class Image
      *
      * @param int $width width of the image in whole pixels
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setWidth($width)
     {
@@ -141,7 +141,7 @@ class Image
      *
      * @param int $height
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setHeight($height)
     {
@@ -168,7 +168,7 @@ class Image
      *
      * @since 2.0.0
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setAlternativeText($alt)
     {

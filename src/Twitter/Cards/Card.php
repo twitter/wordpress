@@ -104,7 +104,7 @@ class Card
      *
      * @param string $title content title
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setTitle($title)
     {
@@ -123,7 +123,7 @@ class Card
      *
      * @since 1.0.0
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setSite($site)
     {

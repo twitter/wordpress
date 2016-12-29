@@ -215,7 +215,7 @@ class ImageHandler
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param WP_Post $post post of interest
+	 * @param \WP_Post $post post of interest
 	 *
 	 * @return void
 	 */
@@ -313,9 +313,9 @@ class ImageHandler
 					$intermediate_size = apply_filters( 'twitter_card_intermediate_image_size', 'large', $attachment_id );
 					// check filtered intermediate size to avoid possible infinite loop
 					if ( ! $intermediate_size || 'full' === $intermediate_size || ! has_image_size( $intermediate_size ) ) {
-						return;
+						return null;
 					}
-					return $handler->attachmentToTwitterImage( $attachment_id, $intermediate_size );
+					return $this->attachmentToTwitterImage( $attachment_id, $intermediate_size );
 				}
 				unset( $bytes );
 			}
@@ -325,7 +325,7 @@ class ImageHandler
 		list( $url, $width, $height ) = wp_get_attachment_image_src( $attachment_id, $size );
 
 		if ( empty( $url ) ) {
-			return;
+			return null;
 		}
 		$image = new \Twitter\Cards\Components\Image( $url );
 
@@ -340,7 +340,7 @@ class ImageHandler
 			if ( $width ) {
 				if ( $width < $this->min_width ) {
 					// reject if image width below required width
-					return;
+					return null;
 				}
 				$image->setWidth( $width );
 			}
@@ -350,7 +350,7 @@ class ImageHandler
 				if ( $height ) {
 					if ( $height < $this->min_height ) {
 						// reject if image height below required height
-						return;
+						return null;
 					}
 					$image->setHeight( $height );
 				}

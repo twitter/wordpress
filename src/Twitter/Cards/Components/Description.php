@@ -71,7 +71,7 @@ trait Description
      *
      * @param string $description content description
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setDescription($description)
     {
