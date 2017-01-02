@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-require_once( dirname(__FILE__) . '/autoload.php' );
+require_once(dirname(__FILE__) . '/autoload.php');
 
 // discover the WordPress testing framework
 $_tests_dir = getenv('WP_TESTS_DIR');
@@ -41,9 +41,8 @@ if (! $_tests_dir) {
 require_once $_tests_dir . '/includes/functions.php';
 
 // activate the plugin
-tests_add_filter('muplugins_loaded', function() {
-    require_once( (defined('TWITTER_PLUGIN_DIR') ? TWITTER_PLUGIN_DIR : dirname(dirname(__DIR__))) . '/twitter.php' );
-
+tests_add_filter('muplugins_loaded', function () {
+    require_once((defined('TWITTER_PLUGIN_DIR') ? TWITTER_PLUGIN_DIR : dirname(dirname(__DIR__))) . '/twitter.php');
 });
 
 require $_tests_dir . '/includes/bootstrap.php';

@@ -59,4 +59,4 @@ spl_autoload_register(function ($class) {
 });
 
 // register Twitter namespace loader
-require_once( (defined('TWITTER_PLUGIN_DIR') ? TWITTER_PLUGIN_DIR : dirname(dirname(__DIR__))) . '/autoload.php' );
+require_once((defined('TWITTER_PLUGIN_DIR') ? TWITTER_PLUGIN_DIR : dirname(dirname(__DIR__))) . '/autoload.php');
