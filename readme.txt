@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: Twitter, niallkennedy
 Tags: twitter, embedded tweet, twitter moment, twitter video, twitter grid, vine, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
-Requires at least: 3.9
+Requires at least: 4.1
 Tested up to: 4.7
 Stable tag: 1.5.0
 License: MIT

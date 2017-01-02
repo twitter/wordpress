@@ -33,8 +33,12 @@ env:
   - WP_VERSION=4.5
   # WordPress 4.4
   - WP_VERSION=4.4
-  # WordPress 3.9
-  - WP_VERSION=3.9
+  # WordPress 4.3
+  - WP_VERSION=4.3
+  # WordPress 4.2
+  - WP_VERSION=4.2
+  # WordPress 4.1
+  - WP_VERSION=4.1
 
 matrix:
   fast_finish: true
