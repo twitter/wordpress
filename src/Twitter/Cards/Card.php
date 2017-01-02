@@ -146,21 +146,21 @@ class Card
      */
     public function toArray()
     {
-        if (! ( isset( $this->type ) && $this->type )) {
+        if (! ( isset($this->type) && $this->type )) {
             return array();
         }
 
         $card = array( 'card' => $this->type );
-        if (isset( $this->title ) && $this->title) {
+        if (isset($this->title) && $this->title) {
             $card['title'] = $this->title;
         }
 
-        if (isset( $this->site ) && $this->site) {
+        if (isset($this->site) && $this->site) {
             $site = $this->site->asCardProperties();
             if ($site) {
                 $card['site'] = $site;
             }
-            unset( $site );
+            unset($site);
         }
 
         return $card;

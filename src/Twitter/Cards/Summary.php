@@ -89,22 +89,22 @@ class Summary extends Card
     {
         $card = parent::toArray();
 
-        if (isset( $this->description ) && $this->description) {
+        if (isset($this->description) && $this->description) {
             $card['description'] = $this->description;
         }
 
         $image_properties = $this->imageCardProperties();
-        if (! empty( $image_properties )) {
+        if (! empty($image_properties)) {
             $card['image'] = $image_properties;
         }
-        unset( $image_properties );
+        unset($image_properties);
 
-        if (isset( $this->creator ) && $this->creator) {
+        if (isset($this->creator) && $this->creator) {
             $creator = $this->creator->asCardProperties();
             if ($creator) {
                 $card['creator'] = $creator;
             }
-            unset( $creator );
+            unset($creator);
         }
 
         return $card;

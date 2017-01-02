@@ -40,7 +40,7 @@ class HTMLBuilder
      *
      * @param string $class possible HTML class
      *
-     * @return class name stripped of invalid values or empty string
+     * @return string class name stripped of invalid values or empty string
      */
     public static function escapeClassName($class)
     {
@@ -109,78 +109,78 @@ class HTMLBuilder
 
         $clean_attributes = array();
 
-        if (is_array($attributes) && ! empty( $attributes )) {
+        if (is_array($attributes) && ! empty($attributes)) {
             // string
-            if (isset( $attributes['id'] )) {
+            if (isset($attributes['id'])) {
                 $id = static::escapeAttributeValue(trim($attributes['id']));
                 if ($id) {
                     $clean_attributes['id'] = $id;
                 }
-                unset( $id );
+                unset($id);
             }
 
             // accept array of values to be combined
             $tokens = array( 'class', 'rel' );
             foreach ($tokens as $attribute) {
-                if (! isset( $attributes[ $attribute ] )) {
+                if (! isset($attributes[ $attribute ])) {
                     continue;
                 }
 
                 $attribute_tokens = array();
                 if (is_array($attributes[ $attribute ])) {
-                    if (! empty( $attributes[ $attribute ] )) {
+                    if (! empty($attributes[ $attribute ])) {
                         $cleaned_tokens = array_filter(array_map('trim', $attributes[ $attribute ]));
-                        if (! empty( $cleaned_tokens )) {
+                        if (! empty($cleaned_tokens)) {
                             $attribute_tokens = $cleaned_tokens;
                         }
-                        unset( $cleaned_tokens );
+                        unset($cleaned_tokens);
                     }
                 } elseif (is_string($attributes[ $attribute ])) {
                     $cleaned_token = trim($attributes[ $attribute ]);
                     if ($cleaned_token) {
                          $attribute_tokens = explode(' ', $cleaned_token);
                     }
-                    unset( $cleaned_token );
+                    unset($cleaned_token);
                 }
 
                 // filter and store
-                if (! empty( $attribute_tokens )) {
+                if (! empty($attribute_tokens)) {
                     $attribute_tokens = array_map(
                         __CLASS__ . '::' . ( $attribute === 'class' ? 'escapeClassName' : 'escapeAttribute' ),
                         $attribute_tokens
                     );
-                    if (! empty( $attribute_tokens )) {
+                    if (! empty($attribute_tokens)) {
                         $clean_attributes[ $attribute ] = implode(' ', $attribute_tokens);
                     }
                 }
-                unset( $attribute_tokens );
+                unset($attribute_tokens);
             }
-            unset( $tokens );
+            unset($tokens);
 
             // URL
-            if (isset( $attributes['ping'] )) {
+            if (isset($attributes['ping'])) {
                 $ping = static::escapeURL(trim($attributes['ping']));
                 if ($ping) {
                     $clean_attributes['ping'] = $ping;
                 }
-                unset( $ping );
+                unset($ping);
             }
 
             // enum
-            if (isset( $attributes['target'] )) {
+            if (isset($attributes['target'])) {
                 $target = trim('target');
                 if ($target) {
                     $valid_targets = array( '_blank' => true, '_self' => true, '_parent' => true, '_top' => true );
-                    if (isset( $valid_targets[ $target ] )) {
+                    if (isset($valid_targets[ $target ])) {
                         $clean_attributes['target'] = $target;
                     }
-                    unset( $valid_targets );
+                    unset($valid_targets);
                 }
-                unset( $target );
+                unset($target);
             }
         }
 
-        if (is_array($data_attributes) && ! empty( $data_attributes )) {
+        if (is_array($data_attributes) && ! empty($data_attributes)) {
             foreach ($data_attributes as $attribute => $value) {
                 if (! $attribute) {
                     continue;
