@@ -39,11 +39,12 @@ class Meta
 	 * @since 1.3.0
 	 *
 	 * @param int|string $user_id WordPress user identifier. may be WP_User->ID or a separate identifier used by an extending system
-	 * @param string     $key user attribute or meta key storing the username of interest
+	 * @param string     $key     user attribute or meta key storing the username of interest
 	 *
 	 * @return string stored username. empty string if no user_id provided or no username found
 	 */
-	public static function getSocialUsername( $user_id, $key ) {
+	public static function getSocialUsername( $user_id, $key )
+	{
 		// basic test for invalid passed parameter
 		if ( ! $user_id ) {
 			return '';
@@ -87,7 +88,8 @@ class Meta
 	 *
 	 * @return string Twitter username value stored for the given WordPress user identifier
 	 */
-	public static function getTwitterUsername( $user_id ) {
+	public static function getTwitterUsername( $user_id )
+	{
 		return static::getSocialUsername( $user_id, 'twitter' );
 	}
 
@@ -100,7 +102,8 @@ class Meta
 	 *
 	 * @return string Periscope username value stored for the given WordPress user identifier
 	 */
-	public static function getPeriscopeUsername( $user_id ) {
+	public static function getPeriscopeUsername( $user_id )
+	{
 		return static::getSocialUsername( $user_id, 'periscope' );
 	}
 }

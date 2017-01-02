@@ -83,6 +83,8 @@ class Language
      *
      * @since 1.0.0
      *
+     * @param string $lang language code
+     *
      * @return bool true if passed language exists in list of Twitter production language codes
      */
     public static function isSupportedLanguage($lang)
