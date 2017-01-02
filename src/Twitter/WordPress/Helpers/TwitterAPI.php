@@ -104,9 +104,26 @@ class TwitterAPI
 	 */
 	public static function getUserAgent()
 	{
-		global $wp_version;
+		$wp_version = '';
+		if ( isset( $GLOBALS['wp_version'] ) ) {
+			$wp_version = trim( $GLOBALS['wp_version'] );
+		}
+		$wordpress = 'WordPress';
+		if ( $wp_version ) {
+			$wordpress .= '/' . $wp_version;
+		}
 
-		return apply_filters( 'http_headers_useragent', 'WordPress/' . $wp_version . '; TfWP/' . \Twitter\WordPress\PluginLoader::VERSION . '; ' . get_bloginfo( 'url' ) );
+		return apply_filters(
+			'http_headers_useragent',
+			implode(
+				'; ',
+				array(
+					$wordpress,
+					'TfWP/' . \Twitter\WordPress\PluginLoader::VERSION,
+					get_bloginfo( 'url' ),
+				)
+			)
+		);
 	}
 
 	/**
@@ -135,7 +152,7 @@ class TwitterAPI
 			array(
 				'redirection' => 0,
 				'httpversion' => '1.1',
-				'user-agent' => static::getUserAgent()
+				'user-agent' => static::getUserAgent(),
 			)
 		);
 		if ( is_wp_error( $response ) ) {
