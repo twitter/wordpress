@@ -65,6 +65,7 @@ class Tracking
 	public static function dnsPrefetch()
 	{
 		echo '<link rel="dns-prefetch" href="//platform.twitter.com"';
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
 		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
 		echo '>' . "\n";
 	}

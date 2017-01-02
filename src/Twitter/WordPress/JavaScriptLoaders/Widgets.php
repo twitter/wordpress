@@ -88,8 +88,9 @@ class Widgets extends AsyncJavaScript
 	 *
 	 * @return string HTML script element containing loader script
 	 */
-	public static function asyncScriptLoaderInline( $include_script_element_wrapper = true ) {
-		$script = 'window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src=' . json_encode( self::URI ) . ';fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script",' . json_encode( self::QUEUE_HANDLE ) . '));';
+	public static function asyncScriptLoaderInline( $include_script_element_wrapper = true )
+	{
+		$script = 'window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src=' . wp_json_encode( self::URI ) . ';fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script",' . wp_json_encode( self::QUEUE_HANDLE ) . '));';
 
 		if ( $include_script_element_wrapper ) {
 			return '<script>' . $script . '</script>';
