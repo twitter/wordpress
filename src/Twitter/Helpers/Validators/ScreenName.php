@@ -33,6 +33,67 @@ namespace Twitter\Helpers\Validators;
 class ScreenName
 {
     /**
+     * Unicode characters possibly preceding a Twitter username in common citation syntax
+     *
+     * @since 2.0.0
+     *
+     * @link https://github.com/twitter/twitter-text/blob/master/java/src/com/twitter/Regex.java Twitter Text AT_SIGNS_CHARS
+     *
+     * @type string
+     */
+    const AT_SIGNS = '@＠';
+
+    /**
+     * Characters allowed in a Twitter username
+     *
+     * @since 2.0.0
+     *
+     * @link https://github.com/twitter/twitter-text/blob/master/java/src/com/twitter/Regex.java Twitter Text VALID_REPLY
+     *
+     * @type string
+     */
+    const ALLOWED_CHARACTERS = 'a-zA-Z0-9_';
+
+    /**
+     * Maximum allowed length of a Twitter username
+     *
+     * @since 2.0.0
+     *
+     * @link https://github.com/twitter/twitter-text/blob/master/java/src/com/twitter/Regex.java Twitter Text VALID_REPLY
+     *
+     * @type int
+     */
+    const MAX_LENGTH = 20;
+
+    /**
+     * Combine allowed characters and max length into a pattern suitable for use in HTML form validation or inside a regex matcher
+     *
+     * @since 2.0.0
+     *
+     * @link https://tc39.github.io/ecma262/#prod-Pattern JavaScript pattern production
+     *
+     * @return string pattern string
+     */
+    public static function getPattern()
+    {
+        return '[' . static::ALLOWED_CHARACTERS . ']{1,' . static::MAX_LENGTH . '}';
+    }
+
+    /**
+     * Get a PCRE pattern suitable for use in a matcher
+     *
+     * @since 2.0.0
+     *
+     * @link http://php.net/manual/en/pcre.pattern.php PHP PCRE pattern
+     *
+     * @return string PCRE pattern
+     */
+    public static function getRegexPattern()
+    {
+        return '/^' . static::getPattern() . '$/';
+    }
+
+    /**
      * Remove possible '@' from beginning of a Twitter screen_name
      *
      * @since 1.0.0
@@ -43,7 +104,7 @@ class ScreenName
      */
     public static function trim($screen_name)
     {
-        return ltrim(trim($screen_name), '@＠');
+        return ltrim(trim($screen_name), static::AT_SIGNS);
     }
 
     /**
@@ -59,7 +120,7 @@ class ScreenName
      */
     public static function isValid($screen_name)
     {
-        return (bool) preg_match('/^[a-z0-9_]{1,20}$/i', $screen_name);
+        return (bool) preg_match(static::getRegexPattern(), $screen_name);
     }
 
     /**
