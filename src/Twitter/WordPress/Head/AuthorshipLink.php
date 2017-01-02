@@ -45,7 +45,12 @@ class AuthorshipLink
 	{
 		$site_username = \Twitter\WordPress\Site\Username::getViaAttribution( ( in_the_loop() ? get_the_ID() : null ) );
 		if ( $site_username ) {
-			echo '<link rel="me" href="' . esc_url( \Twitter\Helpers\TwitterURL::profile( $site_username ), array( 'https', 'http' ) ) . '"' . \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '>';
+			echo '<link rel="me" href="' . esc_url( \Twitter\Helpers\TwitterURL::profile( $site_username ), array( 'https', 'http' ) ) . '"';
+
+			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+			echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+
+			echo '>';
 		}
 	}
 }

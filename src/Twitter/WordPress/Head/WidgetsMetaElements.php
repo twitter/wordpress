@@ -157,8 +157,7 @@ class WidgetsMetaElements
 	public static function outputMetaElements()
 	{
 		// escaped in markup builder
-		// @codingStandardsIgnoreStart WordPress.XSS.EscapeOutput
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
 		echo static::buildMetaElements();
-		// @codingStandardsIgnoreEnd WordPress.XSS.EscapeOutput
 	}
 }

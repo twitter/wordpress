@@ -32,6 +32,7 @@ namespace Twitter\WordPress\Cards;
  */
 class Generator
 {
+
 	/**
 	 * Card types supported by the Twitter plugin for WordPress
 	 *
@@ -94,7 +95,7 @@ class Generator
 	public static function getCardObject( $query_type = null, $object_id = null, $card_type = 'summary' )
 	{
 		if ( ! static::isSupportedCardType( $card_type ) ) {
-			return;
+			return null;
 		}
 		if ( ! ( is_string( $query_type ) && $query_type ) ) {
 			$query_type = null;
@@ -115,10 +116,10 @@ class Generator
 
 		$card = static::getCardForType( $card_type );
 		if ( ! ( $card && is_a( $card, '\Twitter\Cards\Card' ) ) ) {
-			return;
+			return null;
 		}
 
-		return static::addSiteAttribution( $card, ( $query_type === 'post' ? $object_id : null ) );
+		return static::addSiteAttribution( $card, ( ('post' === $query_type) ? $object_id : null ) );
 	}
 
 	/**
@@ -406,7 +407,6 @@ class Generator
 		if ( defined( $card_class . '::MIN_IMAGE_WIDTH' ) && defined( $card_class . '::MIN_IMAGE_HEIGHT' ) ) {
 			if ( method_exists( $card, 'setImage' ) ) {
 				// single image card type
-
 				$cards_image_handler = new \Twitter\WordPress\Cards\ImageHandler();
 				$cards_image_handler->setLimit( 1 );
 				$cards_image_handler->setMinWidth( $card::MIN_IMAGE_WIDTH );

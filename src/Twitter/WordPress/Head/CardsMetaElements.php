@@ -70,7 +70,10 @@ class CardsMetaElements
 		foreach ( $card_properties as $name => $content ) {
 			if ( is_array( $content ) && $name ) {
 				foreach ( $content as $structured_name => $structured_value ) {
-					$html .= \Twitter\WordPress\Head\MetaElement::fromNameContentPair( ( $structured_name === 'src' ) ? $name : $name . ':' . $structured_name, $structured_value );
+					$html .= \Twitter\WordPress\Head\MetaElement::fromNameContentPair(
+						( 'src' === $structured_name ) ? $name : $name . ':' . $structured_name,
+						$structured_value
+					);
 				}
 			} else {
 				$html .= \Twitter\WordPress\Head\MetaElement::fromNameContentPair( $name, $content );
@@ -88,6 +91,12 @@ class CardsMetaElements
 	 */
 	public static function outputMetaElements()
 	{
-		echo "\n" . static::buildMetaElements() . "\n";
+		echo "\n";
+
+		// Escaped when building individual elements
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+		static::buildMetaElements();
+
+		echo "\n";
 	}
 }
