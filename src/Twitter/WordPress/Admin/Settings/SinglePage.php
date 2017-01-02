@@ -61,7 +61,11 @@ class SinglePage
 	 *   @type string fully qualified class name
 	 * }
 	 */
-	protected static $SETTINGS_COMPONENTS = array( '\Twitter\WordPress\Admin\Settings\Embeds\Theme', '\Twitter\WordPress\Admin\Settings\Cards\SiteAttribution', '\Twitter\WordPress\Admin\Settings\Buttons\Tweet' );
+	protected static $SETTINGS_COMPONENTS = array(
+		'\Twitter\WordPress\Admin\Settings\Embeds\Theme',
+		'\Twitter\WordPress\Admin\Settings\Cards\SiteAttribution',
+		'\Twitter\WordPress\Admin\Settings\Buttons\Tweet',
+	);
 
 	/**
 	 * Reference the feature by name
@@ -86,9 +90,10 @@ class SinglePage
 	 *    @type string fully qualified class name
 	 * }
 	 */
-	public static function getSettingsComponentsForEnabledFeatures() {
+	public static function getSettingsComponentsForEnabledFeatures()
+	{
 		$components = static::$SETTINGS_COMPONENTS;
-		$features = \Twitter\WordPress\Features::getEnabledFeatures();
+		$features   = \Twitter\WordPress\Features::getEnabledFeatures();
 
 		if ( ! isset( $features[ \Twitter\WordPress\Features::EMBED_TWEET ] ) ) {
 			unset( $components['\Twitter\WordPress\Admin\Settings\Embeds\Theme'] );
@@ -123,7 +128,7 @@ class SinglePage
 
 		// hook_suffix may be false if current viewer does not have the manage_options capability
 		if ( ! $hook_suffix ) {
-			return;
+			return null;
 		}
 		$settings->hook_suffix = $hook_suffix;
 
@@ -157,7 +162,7 @@ class SinglePage
 			return;
 		}
 
-		do_action( 'add-' . $this->hook_suffix . '-section' );
+		do_action( 'add_' . $this->hook_suffix . '_section' );
 
 		echo '<div class="wrap">';
 
@@ -190,6 +195,6 @@ class SinglePage
 			return;
 		}
 
-		do_action( 'add-' . $this->hook_suffix . '-help-tab', $screen );
+		do_action( 'add_' . $this->hook_suffix . '_help_tab', $screen );
 	}
 }

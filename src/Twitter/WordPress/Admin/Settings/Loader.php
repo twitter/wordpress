@@ -57,7 +57,7 @@ class Loader
 	 */
 	public static function pluginActionLinks( $links, $file )
 	{
-		if ( $file === plugin_basename( \Twitter\WordPress\PluginLoader::getPluginMainFile() ) ) {
+		if ( plugin_basename( \Twitter\WordPress\PluginLoader::getPluginMainFile() === $file ) ) {
 			array_unshift( $links, '<a href="' . esc_url( admin_url( 'admin.php' ) . '?' . http_build_query( array( 'page' => \Twitter\WordPress\Admin\Settings\SinglePage::PAGE_SLUG ) ) ) . '">' . __( 'Settings' ) . '</a>' );
 		}
 

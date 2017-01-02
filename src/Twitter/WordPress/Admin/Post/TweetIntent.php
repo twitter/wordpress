@@ -65,7 +65,7 @@ class TweetIntent
 	 * Used by WordPress JSON API to expose programmatic editor beyond the post meta box display used in the HTML-based admin interface
 	 *
 	 * @since 1.0.0
-	 * @uses register_meta
+	 * @uses  register_meta
 	 *
 	 * @return void
 	 */
@@ -122,7 +122,9 @@ class TweetIntent
 					if ( 'https' === strtolower( parse_url( $post_url, PHP_URL_SCHEME ) ) ) {
 						$is_https = true;
 					}
-				} catch(Exception $e) {}
+				} catch (Exception $e) {
+					// assume not HTTPS if parse_url throws exception
+				}
 				if ( $is_https ) {
 					$url_length = absint( $config->short_url_length_https );
 				}
@@ -165,21 +167,33 @@ class TweetIntent
 
 		echo '<tr>';
 		echo '<th scope="row" class="left"><label for="tweet-text">' . esc_html( _x( 'Text', 'Share / Tweet text', 'twitter' ) ) . '</label></th>';
-		echo '<td><input id="tweet-text" name="' . esc_attr( static::META_KEY . '[' . static::TEXT_KEY . ']' ) . '" type="text" maxlength="' . $available_characters . '" autocomplete="off"';
+		echo '<td><input id="tweet-text" name="' . esc_attr( static::META_KEY . '[' . static::TEXT_KEY . ']' ) . '" type="text" maxlength="';
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo $available_characters;
+		echo '" autocomplete="off"';
 		if ( isset( $stored_values[ static::TEXT_KEY ] ) ) {
 			echo ' value="' . esc_attr( $stored_values[ static::TEXT_KEY ] ) . '"';
 		} else {
 			echo ' placeholder="' . esc_attr( get_the_title( $post ) ) . '"';
 		}
-		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '></td>';
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+		echo '></td>';
 		echo '</tr>';
 		echo '<tr>';
 		echo '<th scope="row" class="left"><label for="tweet-hashtags">' . esc_html( __( 'Hashtags', 'twitter' ) ) . '</label></th>';
-		echo '<td><input id="tweet-hashtags" name="' . esc_attr( static::META_KEY . '[' . static::HASHTAGS_KEY . ']' ) . '" type="text" maxlength="' . ($available_characters - 2) . '" autocomplete="off"';
+		echo '<td><input id="tweet-hashtags" name="' . esc_attr( static::META_KEY . '[' . static::HASHTAGS_KEY . ']' ) . '" type="text" maxlength="';
+		// integer does not need escaping
+		// @codingStandardsIgnoreStart WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo ($available_characters - 2);
+		// @codingStandardsIgnoreEnd WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo '" autocomplete="off"';
 		if ( isset( $stored_values[ static::HASHTAGS_KEY ] ) && is_array( $stored_values[ static::HASHTAGS_KEY ] ) ) {
 			echo ' value="' . esc_attr( implode( ',', $stored_values[ static::HASHTAGS_KEY ] ) ) . '"';
 		}
-		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '></td>';
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+		echo '></td>';
 		echo '</tr>';
 
 		echo '</tbody></table>';

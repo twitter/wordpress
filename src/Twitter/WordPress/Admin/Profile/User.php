@@ -62,14 +62,14 @@ class User
 	 * @see wp_get_user_contact_methods()
 	 *
 	 * @param array   $methods contact methods and their labels {
-	 *   @type string contact method
-	 *   @type string label
+	 *   @type  string contact method
+	 *   @type  string label
 	 * }
 	 * @param WP_User $user    WP_User object.
 	 *
 	 * @return array contact methods and their labels {
-	 *   @type string contact method
-	 *   @type string label
+	 *   @type   string contact method
+	 *   @type   string label
 	 * }
 	 */
 	public static function addContactMethod( $methods, $user )

@@ -116,7 +116,7 @@ class SiteAttribution implements \Twitter\WordPress\Admin\Settings\SettingsSecti
 		}
 
 		add_action(
-			'add-' . $this->hook_suffix . '-section',
+			'add_' . $this->hook_suffix . '_section',
 			array( &$this, 'defineSection' ),
 			static::SECTION_PRIORITY,
 			0  // no parameters
@@ -124,7 +124,7 @@ class SiteAttribution implements \Twitter\WordPress\Admin\Settings\SettingsSecti
 
 		// contextual help
 		add_action(
-			'add-' . $this->hook_suffix . '-help-tab',
+			'add_' . $this->hook_suffix . '_help_tab',
 			array( __CLASS__, 'addHelpTab' ),
 			static::SECTION_PRIORITY,
 			1 // accept current screen as a parameter
@@ -193,9 +193,8 @@ class SiteAttribution implements \Twitter\WordPress\Admin\Settings\SettingsSecti
 		$html .= \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '>';
 
 		// escaped in markup builder
-		// @codingStandardsIgnoreStart WordPress.XSS.EscapeOutput
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput
 		echo $html;
-		// @codingStandardsIgnoreEnd WordPress.XSS.EscapeOutput
 	}
 
 	/**

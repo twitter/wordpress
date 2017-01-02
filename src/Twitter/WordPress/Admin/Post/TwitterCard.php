@@ -65,7 +65,7 @@ class TwitterCard
 	 * Used by WordPress JSON API to expose programmatic editor beyond the post meta box display used in the HTML-based admin interface
 	 *
 	 * @since 1.0.0
-	 * @uses register_meta
+	 * @uses  register_meta
 	 *
 	 * @return void
 	 */
@@ -86,8 +86,8 @@ class TwitterCard
 	 * @param string $post_type post type
 	 *
 	 * @return array associative array of supported fields {
-	 *   @type string field name (examples: title, description)
-	 *   @type bool exists boolean for easy key reference
+	 *   @type   string field name (examples: title, description)
+	 *   @type   bool   exists boolean for easy key reference
 	 * }
 	 */
 	public static function supportedCardFieldsByPostType( $post_type )
@@ -133,7 +133,10 @@ class TwitterCard
 		}
 
 		// separate Twitter Cards content from Intent content above
-		echo '<hr' . \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '>';
+		echo '<hr';
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+		echo '>';
 
 		echo '<h3>' . esc_html( __( 'Twitter Card', 'twitter' ) ) . '</h3>';
 
@@ -151,7 +154,9 @@ class TwitterCard
 				echo ' placeholder="' . esc_attr( get_the_title( $post ) ) . '"';
 			}
 
-			echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '></td>';
+			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+			echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+			echo '></td>';
 			echo '</tr>';
 		}
 
@@ -162,7 +167,9 @@ class TwitterCard
 			if ( isset( $stored_values[ static::DESCRIPTION_KEY ] ) ) {
 				echo ' value="' . esc_attr( $stored_values[ static::DESCRIPTION_KEY ] ) . '"';
 			}
-			echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '></td>';
+			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+			echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+			echo '></td>';
 			echo '</tr>';
 		}
 
@@ -199,14 +206,14 @@ class TwitterCard
 			if ( $title ) {
 				$cleaned_fields[ static::TITLE_KEY ] = $title;
 			}
-			unset($title);
+			unset( $title );
 		}
 		if ( isset( $fields[ static::DESCRIPTION_KEY ] ) ) {
 			$description = \Twitter\WordPress\Cards\Sanitize::sanitizePlainTextString( $fields[ static::DESCRIPTION_KEY ], /* remove breaks */ true );
 			if ( $description ) {
 				$cleaned_fields[ static::DESCRIPTION_KEY ] = $description;
 			}
-			unset($description);
+			unset( $description );
 		}
 
 		return $cleaned_fields;

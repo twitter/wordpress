@@ -122,7 +122,7 @@ class Tweet implements \Twitter\WordPress\Admin\Settings\SettingsSection
 		$this->existing_options = $options;
 
 		add_action(
-			'add-' . $this->hook_suffix . '-section',
+			'add_' . $this->hook_suffix . '_section',
 			array( &$this, 'defineSection' ),
 			static::SECTION_PRIORITY,
 			0  // no parameters
@@ -186,8 +186,8 @@ class Tweet implements \Twitter\WordPress\Admin\Settings\SettingsSection
 	 * @since 1.0.0
 	 *
 	 * @return array option values and labels {
-	 *   @type string option value
-	 *   @type string translated option label
+	 *   @type   string option value
+	 *   @type   string translated option label
 	 * }
 	 */
 	public static function getPositionOptions()
@@ -196,7 +196,7 @@ class Tweet implements \Twitter\WordPress\Admin\Settings\SettingsSection
 			'' => ' ',
 			'before' => _x( 'before', 'before another piece of content', 'twitter' ),
 			'after' => _x( 'after', 'after another piece of content', 'twitter' ),
-			'both' => _x( 'before & after', 'before and after another piece of content', 'twitter' )
+			'both' => _x( 'before & after', 'before and after another piece of content', 'twitter' ),
 		);
 	}
 
@@ -233,6 +233,8 @@ class Tweet implements \Twitter\WordPress\Admin\Settings\SettingsSection
 		}
 		$select .= '</select>';
 
+		// <select> markup escaped when building the element
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
 		echo sprintf( esc_html( _x( 'Display Tweet Button %s post content', 'display Tweet Button relative to the content of an article', 'twitter' ) ), $select );
 	}
 
@@ -255,7 +257,11 @@ class Tweet implements \Twitter\WordPress\Admin\Settings\SettingsSection
 				echo '="checked"';
 			}
 		}
-		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '> ' . esc_html( __( 'Large button', 'twitter' ) ) . '</label>';
+
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+
+		echo '> ' . esc_html( __( 'Large button', 'twitter' ) ) . '</label>';
 	}
 
 	/**
@@ -264,13 +270,13 @@ class Tweet implements \Twitter\WordPress\Admin\Settings\SettingsSection
 	 * @since 1.0.0
 	 *
 	 * @param array $options submitted option {
-	 *   @type string option name
-	 *   @type mixed option value
+	 *   @type  string option name
+	 *   @type  mixed option value
 	 * }
 	 *
 	 * @return array $options cleaned option {
-	 *   @type string option name
-	 *   @type string option value
+	 *   @type   string option name
+	 *   @type   string option value
 	 * }
 	 */
 	public static function sanitizeOption( $options )
@@ -289,7 +295,7 @@ class Tweet implements \Twitter\WordPress\Admin\Settings\SettingsSection
 			}
 			unset( $position_options );
 		}
-		unset($key);
+		unset( $key );
 
 		if ( isset( $options['size'] ) && 'large' === $options['size'] ) {
 			$clean_options['size'] = 'large';

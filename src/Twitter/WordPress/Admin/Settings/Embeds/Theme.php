@@ -84,7 +84,7 @@ class Theme implements \Twitter\WordPress\Admin\Settings\SettingsSection
 	{
 		return array(
 			'light' => _x( 'light', 'Option for content to appear with a light background and dark text', 'twitter' ),
-			'dark'  => _x( 'dark', 'Option for content to appear with a dark background and light text', 'twitter' )
+			'dark'  => _x( 'dark', 'Option for content to appear with a dark background and light text', 'twitter' ),
 		);
 	}
 
@@ -156,14 +156,14 @@ class Theme implements \Twitter\WordPress\Admin\Settings\SettingsSection
 
 		// theme
 		add_action(
-			'add-' . $this->hook_suffix . '-section',
+			'add_' . $this->hook_suffix . '_section',
 			array( &$this, 'defineSection' ),
 			static::SECTION_PRIORITY, // top of screen
 			0  // no parameters
 		);
 		// contextual help
 		add_action(
-			'add-' . $this->hook_suffix . '-help-tab',
+			'add_' . $this->hook_suffix . '_help_tab',
 			array( __CLASS__, 'addHelpTab' ),
 			static::SECTION_PRIORITY,
 			1
@@ -292,7 +292,7 @@ class Theme implements \Twitter\WordPress\Admin\Settings\SettingsSection
 		echo '</p>';
 	}
 
-		/**
+	/**
 	 * Choose a theme
 	 *
 	 * @since 1.0.0
@@ -314,8 +314,12 @@ class Theme implements \Twitter\WordPress\Admin\Settings\SettingsSection
 
 		echo '<fieldset id="' . esc_attr( 'twitter-' . $key ) . '">';
 		foreach ( $choices as $value => $label ) {
-			echo '<div><label><input type="radio" name="' . $name_attribute . '" value="' . esc_attr( $value ) . '"' . checked( $existing_value, $value, false ) . $close_void_element;
+			echo '<div><label><input type="radio" name="' . $name_attribute . '" value="' . esc_attr( $value ) . '"' . checked( $existing_value, $value, false );
+			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+			echo $close_void_element;
+
 			echo ' ' . esc_html( $label );
+
 			echo '</label></div>';
 		}
 		echo '</fieldset>';
@@ -336,7 +340,10 @@ class Theme implements \Twitter\WordPress\Admin\Settings\SettingsSection
 		if ( isset( $this->existing_options[ $key ] ) ) {
 			echo ' value="' . esc_attr( '#' . $this->existing_options[ $key ] ) . '"';
 		}
-		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '>';
+
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+		echo '>';
 
 		echo '<p class="description">';
 		echo esc_html( __( 'Color of link text inside a Twitter widget.', 'twitter' ) );
@@ -358,7 +365,9 @@ class Theme implements \Twitter\WordPress\Admin\Settings\SettingsSection
 		if ( isset( $this->existing_options[ $key ] ) ) {
 			echo ' value="' . esc_attr( '#' . $this->existing_options[ $key ] ) . '"';
 		}
-		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '>';
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+		echo '>';
 
 		echo '<p class="description">';
 		echo esc_html( __( 'Color of border surrounding a Twitter widget.', 'twitter' ) );
@@ -420,13 +429,15 @@ class Theme implements \Twitter\WordPress\Admin\Settings\SettingsSection
 		echo '<label>';
 		echo '<input type="checkbox" name="' . esc_attr( self::OPTION_NAME . '[' . $key . ']' ) . '" id="twitter-dnt" value="1"';
 		checked( isset( $this->existing_options[ $key ] ) );
-		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '>';
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+		echo '>';
 		echo esc_html( __( 'Do not use my website to tailor content and suggestions for Twitter users', 'twitter' ) );
 		echo '</label>';
 
 		echo '<p class="description">';
 		echo esc_html( __( 'Twitter may track website visitors for advertising targeting, suggested Twitter accounts, and other purposes.', 'twitter' ) );
-		echo ' ' . '<a href="https://dev.twitter.com/web/overview/privacy" target="_blank">' . esc_html( _x( 'Read more', 'learn more about this topic', 'twitter' ) ) . '</a>';
+		echo ' <a href="https://dev.twitter.com/web/overview/privacy" target="_blank">' . esc_html( _x( 'Read more', 'learn more about this topic', 'twitter' ) ) . '</a>';
 		echo '</p><p class="description">';
 		echo esc_html( __( 'Select this option if you wish to opt-out of Twitter tracking visitors when a Twitter button or widget appears on a webpage.', 'twitter' ) );
 		echo '</p>';
@@ -459,7 +470,9 @@ class Theme implements \Twitter\WordPress\Admin\Settings\SettingsSection
 
 		echo '<label><input type="checkbox" name="' . esc_attr( self::OPTION_NAME . '[' . $key . ']' ) . '" value="1"';
 		checked( isset( $this->existing_options[ $key ] ) );
-		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement() . '>';
+		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+		echo '>';
 		echo esc_html( __( 'Suppress Content Security Policy warnings', 'twitter' ) );
 		echo '</label>';
 
