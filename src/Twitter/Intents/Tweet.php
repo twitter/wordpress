@@ -34,6 +34,7 @@ namespace Twitter\Intents;
  */
 class Tweet
 {
+    use \Twitter\Intents\Traits\Related;
 
     /**
      * Tweet Web Intent URL
@@ -102,27 +103,13 @@ class Tweet
     protected $via;
 
     /**
-     * Related Twitter usernames
-     *
-     * May be presented as a suggested account to follow after the Tweet is published
-     *
-     * @since 1.0.0
-     *
-     * @type array {
-     *   @type string username in lowercase
-     *   @type string description of how the username relates to Tweet content
-     * }
-     */
-    protected $related = array();
-
-    /**
      * Do not validate inputs
      *
      * Disabling validation may speed up Web Intent generation but may also cause user-facing issues
      *
      * @since 1.0.0
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function disableValidation()
     {
@@ -135,7 +122,7 @@ class Tweet
      *
      * @since 1.0.0
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function enableValidation()
     {
@@ -162,7 +149,7 @@ class Tweet
      *
      * @param string $tweet_id Parent Tweet ID
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setInReplyTo($tweet_id)
     {
@@ -181,7 +168,7 @@ class Tweet
      *
      * @param string $text Tweet text
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setText($text)
     {
@@ -228,7 +215,7 @@ class Tweet
      *
      * @param string $url absolute URL
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setURL($url)
     {
@@ -253,7 +240,7 @@ class Tweet
      *
      * @param string $hashtag hashtag
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function addHashtag($hashtag)
     {
@@ -264,7 +251,7 @@ class Tweet
             } else {
                 $comparison_hashtag = strtolower($hashtag);
             }
-            if (! isset( $this->hashtags[ $comparison_hashtag ] )) {
+            if (! isset($this->hashtags[ $comparison_hashtag ])) {
                 $this->hashtags[ $comparison_hashtag ] = $hashtag;
             }
         }
@@ -305,7 +292,7 @@ class Tweet
      *
      * @param string $username Twitter username
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setVia($username)
     {
@@ -324,51 +311,6 @@ class Tweet
     }
 
     /**
-     * Add a related Twitter account
-     *
-     * @since 1.0.0
-     *
-     * @param string $username Twitter username
-     * @param string $label brief description of how the account relates to the Tweet content
-     *
-     * @return __CLASS__ support chaining
-     */
-    public function addRelated($username, $label = '')
-    {
-        $username = \Twitter\Helpers\Validators\ScreenName::trim($username);
-        if ($username) {
-            // normalize passed parameter
-            $comparison_username = strtolower($username);
-            if (! isset( $this->related[ $comparison_username ] )) {
-                if ($this->validate_inputs) {
-                    if (\Twitter\Helpers\Validators\ScreenName::isValid($username)) {
-                        $this->related[ $comparison_username ] = trim($label);
-                    }
-                } else {
-                    $this->related[ $comparison_username ] = trim($label);
-                }
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * Get related Twitter usernames
-     *
-     * @since 1.0.0
-     *
-     * @return array {
-     *   @type string username in lowercase
-     *   @type string description of how the username relates to Tweet content
-     * }
-     */
-    public function getRelated()
-    {
-        return $this->related;
-    }
-
-    /**
      * Construct a new Tweet intent object from an options array
      *
      * @since 1.0.0
@@ -378,7 +320,7 @@ class Tweet
      *   @type string|int|bool option value
      * }
      *
-     * @return __CLASS__ object initialized based on passed array values
+     * @return self object initialized based on passed array values
      */
     public static function fromArray($values)
     {
@@ -388,9 +330,9 @@ class Tweet
 
         $class = get_called_class();
         $intent = new $class;
-        unset( $class );
+        unset($class);
 
-        if (isset( $values['validate'] )) {
+        if (isset($values['validate'])) {
             if (false == $values['validate'] || 'false' === $values['validate'] || 0 == $values['validate']) {
                 $intent->disableValidation();
             }
@@ -400,16 +342,16 @@ class Tweet
         $values = array_filter($values);
 
         // intent parameters
-        if (isset( $values['in_reply_to'] )) {
+        if (isset($values['in_reply_to'])) {
             $intent->setInReplyTo($values['in_reply_to']);
         }
-        if (isset( $values['text'] )) {
+        if (isset($values['text'])) {
             $intent->setText($values['text']);
         }
-        if (isset( $values['url'] )) {
+        if (isset($values['url'])) {
             $intent->setURL($values['url']);
         }
-        if (isset( $values['hashtags'] )) {
+        if (isset($values['hashtags'])) {
             $hashtags = array();
 
             if (is_array($values['hashtags'])) {
@@ -418,16 +360,16 @@ class Tweet
                 $hashtags = explode(',', $values['hashtags']);
             }
 
-            if (! empty( $hashtags )) {
+            if (! empty($hashtags)) {
                 array_walk($hashtags, array( $intent, 'addHashtag' ));
             }
 
-            unset( $hashtags );
+            unset($hashtags);
         }
-        if (isset( $values['via'] )) {
+        if (isset($values['via'])) {
             $intent->setVia($values['via']);
         }
-        if (isset( $values['related'] )) {
+        if (isset($values['related'])) {
             $related = array();
 
             if (is_array($values['related'])) {
@@ -437,12 +379,12 @@ class Tweet
                 foreach ($related_accounts as $related_account) {
                     // extract the label
                     $account_pieces = explode(':', $related_account, 2);
-                    $related[ $account_pieces[0] ] = ( isset( $account_pieces[1] ) ? rawurldecode($account_pieces[1]) : '' );
-                    unset( $account_pieces );
+                    $related[ $account_pieces[0] ] = ( isset($account_pieces[1]) ? rawurldecode($account_pieces[1]) : '' );
+                    unset($account_pieces);
                 }
             }
 
-            if (! empty( $related )) {
+            if (! empty($related)) {
                 foreach ($related as $username => $label) {
                     if (! ( is_string($username) && $username )) {
                         continue;
@@ -452,7 +394,7 @@ class Tweet
                 }
             }
 
-            unset( $related );
+            unset($related);
         }
 
         return $intent;
@@ -483,16 +425,16 @@ class Tweet
         }
 
         $hashtags = $this->getHashtags();
-        if (! empty( $hashtags )) {
+        if (! empty($hashtags)) {
             $data['hashtags'] = implode(',', $hashtags);
         }
-        unset( $hashtags );
+        unset($hashtags);
 
         if ($this->via) {
             $data['via'] = $this->via;
         }
 
-        if (! empty( $this->related )) {
+        if (! empty($this->related)) {
             $related_value = array();
             foreach ($this->related as $username => $label) {
                 if ($label) {
@@ -502,7 +444,7 @@ class Tweet
                 }
             }
             $data['related'] = implode(',', $related_value);
-            unset( $related_value );
+            unset($related_value);
         }
 
         return $data;
@@ -519,7 +461,7 @@ class Tweet
     {
         $query_parameters = $this->toQueryParameters();
 
-        if (! empty( $query_parameters )) {
+        if (! empty($query_parameters)) {
             return self::INTENT_URL . '?' . http_build_query($query_parameters, '', '&', PHP_QUERY_RFC3986);
         }
 
