@@ -23,42 +23,36 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\WordPress\Shortcodes;
+namespace Twitter\Widgets\Embeds\Timeline;
 
 /**
- * Set up and fetch a Twitter oEmbed capable object
+ * Display Tweets included in a Twitter Moment
  *
- * @since 1.5.0
+ * @since 2.0.0
  */
-interface PublishOEmbedEndpoint
+class Moment extends \Twitter\Widgets\Embeds\Timeline\Collection
 {
-	/**
-	 * PHP class to use for fetching oEmbed data
-	 *
-	 * @since 1.5.0
-	 *
-	 * @type string
-	 */
-	const OEMBED_API_CLASS = '\Twitter\WordPress\Helpers\TwitterOEmbed';
+    /**
+     * Construct a full Twitter URI by appending to base string
+     *
+     * @since 2.0.0
+     *
+     * @type string
+     */
+    const BASE_URL = 'https://twitter.com/i/moments/';
 
-	/**
-	 * Relative path for the oEmbed API relative to Twitter publishers base path
-	 *
-	 * @since 1.5.0
-	 *
-	 * @type string
-	 */
-	const OEMBED_API_ENDPOINT = 'oembed';
+    /**
+     * Create a new Moment object
+     *
+     * @since 2.0.0
+     *
+     * @param string $id unique identifier of the Moment
+     */
+    public function __construct($id)
+    {
+        parent::__construct($id);
 
-	/**
-	 * Create a unique cache key to represent the requested object
-	 *
-	 * @since 2.0.0
-	 *
-	 * @param string $id               datasource identifier
-	 * @param array  $query_parameters oEmbed-compatible API parameters possibly affecting display
-	 *
-	 * @return string cache key
-	 */
-	public static function getOEmbedCacheKey( $id, array $query_parameters );
+        // all moments are grids
+        $this->setGridTemplate();
+    }
 }

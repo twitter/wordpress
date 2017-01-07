@@ -23,42 +23,35 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\WordPress\Shortcodes;
+namespace Twitter\Tests\Widgets\Embeds\Timeline;
 
 /**
- * Set up and fetch a Twitter oEmbed capable object
- *
- * @since 1.5.0
+ * @coversDefaultClass \Twitter\Widgets\Embeds\Timeline\Moment
  */
-interface PublishOEmbedEndpoint
+final class Moment extends \Twitter\Tests\TestWithPrivateAccess
 {
-	/**
-	 * PHP class to use for fetching oEmbed data
-	 *
-	 * @since 1.5.0
-	 *
-	 * @type string
-	 */
-	const OEMBED_API_CLASS = '\Twitter\WordPress\Helpers\TwitterOEmbed';
+    /**
+     * Moment ID for testing
+     *
+     * @since 2.0.0
+     *
+     * @type string
+     */
+    const VALID_MOMENT_ID = '650667182356082688';
 
-	/**
-	 * Relative path for the oEmbed API relative to Twitter publishers base path
-	 *
-	 * @since 1.5.0
-	 *
-	 * @type string
-	 */
-	const OEMBED_API_ENDPOINT = 'oembed';
-
-	/**
-	 * Create a unique cache key to represent the requested object
-	 *
-	 * @since 2.0.0
-	 *
-	 * @param string $id               datasource identifier
-	 * @param array  $query_parameters oEmbed-compatible API parameters possibly affecting display
-	 *
-	 * @return string cache key
-	 */
-	public static function getOEmbedCacheKey( $id, array $query_parameters );
+    /**
+     * Test expected use of the constructor
+     *
+     * @since 2.0.0
+     *
+     * @covers ::__construct
+     *
+     * @return void
+     */
+    public function testConstructor()
+    {
+        $timeline = new \Twitter\Widgets\Embeds\Timeline\Moment(self::VALID_MOMENT_ID);
+        $this->assertEquals(self::VALID_MOMENT_ID, self::getProperty($timeline, 'id'), 'Moment constructor did not set valid ID');
+        $this->assertEquals(\Twitter\Widgets\Embeds\Timeline\Moment::WIDGET_TYPE_GRID, self::getProperty($timeline, 'widget_type'), 'Moment constructor did not set grid widget type');
+    }
 }

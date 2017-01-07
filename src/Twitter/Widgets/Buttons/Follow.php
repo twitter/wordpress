@@ -32,7 +32,7 @@ namespace Twitter\Widgets\Buttons;
  *
  * @link https://dev.twitter.com/web/follow-button Follow button documentation
  */
-class Follow extends \Twitter\Widgets\BaseWidget
+class Follow extends \Twitter\Widgets\Base
 {
 
     /**
@@ -110,7 +110,7 @@ class Follow extends \Twitter\Widgets\BaseWidget
      *
      * @since 1.0.0
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function showCount()
     {
@@ -123,7 +123,7 @@ class Follow extends \Twitter\Widgets\BaseWidget
      *
      * @since 1.0.0
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function hideCount()
     {
@@ -148,7 +148,7 @@ class Follow extends \Twitter\Widgets\BaseWidget
      *
      * @since 1.0.0
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function showScreenName()
     {
@@ -161,7 +161,7 @@ class Follow extends \Twitter\Widgets\BaseWidget
      *
      * @since 1.0.0
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function hideScreenName()
     {
@@ -176,7 +176,7 @@ class Follow extends \Twitter\Widgets\BaseWidget
      *
      * @param string $size button size
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setSize($size)
     {
@@ -197,28 +197,28 @@ class Follow extends \Twitter\Widgets\BaseWidget
      *   @type string|int|bool option value
      * }
      *
-     * @return __CLASS__ support chaining
+     * @return static|null Follow button object or null if minimum requirements not met
      */
     public static function fromArray($options)
     {
-        if (! isset( $options['screen_name'] ) && $options['screen_name']) {
-            return;
+        if (! isset($options['screen_name']) && $options['screen_name']) {
+            return null;
         }
 
-        $class = __CLASS__;
+        $class = get_called_class();
         $follow = new $class( $options['screen_name'] );
-        unset( $class );
+        unset($class);
 
         $follow->setBaseOptions($options);
 
-        if (isset( $options['show_count'] ) && ( false === $options['show_count'] || 'false' === $options['show_count'] || 0 == $options['show_count'] )) {
+        if (isset($options['show_count']) && ( false === $options['show_count'] || 'false' === $options['show_count'] || 0 == $options['show_count'] )) {
             $follow->hideCount();
         }
-        if (isset( $options['show_screen_name'] ) && ( false === $options['show_screen_name'] || 'false' === $options['show_screen_name'] || 0 == $options['show_screen_name'] )) {
+        if (isset($options['show_screen_name']) && ( false === $options['show_screen_name'] || 'false' === $options['show_screen_name'] || 0 == $options['show_screen_name'] )) {
             $follow->hideScreenName();
         }
 
-        if (isset( $options['size'] ) && 'medium' !== $options['size']) {
+        if (isset($options['size']) && 'medium' !== $options['size']) {
             $follow->setSize($options['size']);
         }
 

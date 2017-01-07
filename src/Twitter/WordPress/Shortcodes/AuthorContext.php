@@ -26,39 +26,26 @@ THE SOFTWARE.
 namespace Twitter\WordPress\Shortcodes;
 
 /**
- * Set up and fetch a Twitter oEmbed capable object
+ * Add author context for the current post
  *
- * @since 1.5.0
+ * @since 2.0.0
  */
-interface PublishOEmbedEndpoint
+trait AuthorContext
 {
 	/**
-	 * PHP class to use for fetching oEmbed data
-	 *
-	 * @since 1.5.0
-	 *
-	 * @type string
-	 */
-	const OEMBED_API_CLASS = '\Twitter\WordPress\Helpers\TwitterOEmbed';
-
-	/**
-	 * Relative path for the oEmbed API relative to Twitter publishers base path
-	 *
-	 * @since 1.5.0
-	 *
-	 * @type string
-	 */
-	const OEMBED_API_ENDPOINT = 'oembed';
-
-	/**
-	 * Create a unique cache key to represent the requested object
+	 * Get the Twitter screen name of the author of the current post
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string $id               datasource identifier
-	 * @param array  $query_parameters oEmbed-compatible API parameters possibly affecting display
-	 *
-	 * @return string cache key
+	 * @return string Twitter screen name or empty if no screen name stored
 	 */
-	public static function getOEmbedCacheKey( $id, array $query_parameters );
+	public static function getScreenName()
+	{
+		$screen_name = \Twitter\WordPress\User\Meta::getTwitterUsername( get_the_author_meta( 'ID' ) );
+		if ( ! $screen_name ) {
+			return '';
+		}
+
+		return $screen_name;
+	}
 }

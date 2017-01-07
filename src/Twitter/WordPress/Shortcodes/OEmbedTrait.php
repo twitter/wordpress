@@ -37,23 +37,15 @@ trait OEmbedTrait
 	 *
 	 * @since 1.3.0
 	 *
-	 * @param string $snowflake_id object identifier
-	 *
 	 * @return array associative array of query parameters ready for http_build_query {
 	 *   @type string query parameter name
 	 *   @type string|bool query parameter value
 	 * }
 	 */
-	public static function getBaseOEmbedParams( $snowflake_id )
+	public static function getBaseOEmbedParams()
 	{
-		$snowflake_id = trim( $snowflake_id );
-		if ( ! $snowflake_id ) {
-			return array();
-		}
-
 		// omit JavaScript. enqueue separately
 		$query_parameters = array(
-			'id' => $snowflake_id,
 			'omit_script' => true,
 		);
 
@@ -71,15 +63,14 @@ trait OEmbedTrait
 	 *
 	 * @since 1.3.0
 	 *
-	 * @param array $query_parameters query parameters to be passed to the oEmbed endpoint
+	 * @param array  $query_parameters query parameters to be passed to the oEmbed endpoint
+	 * @param string $cache_key        key to retrieve and store HTML values for the given configuration
 	 *
-	 * @todo make this not mocked
 	 * @return string HTML markup returned by the oEmbed endpoint
 	 */
-	public static function getOEmbedMarkup( $query_parameters )
+	public static function getOEmbedMarkup( $query_parameters, $cache_key )
 	{
-		$cache_key = static::oEmbedCacheKey( $query_parameters );
-		if ( ! $cache_key ) {
+		if ( ! (is_string( $cache_key ) && $cache_key ) ) {
 			return '';
 		}
 
@@ -98,23 +89,26 @@ trait OEmbedTrait
 			return '';
 		}
 
-		if ( defined( $classname . '::BASE_URL' ) ) {
-			// convert ID to full URL to allow more flexibility for oEmbed endpoint
-			$query_parameters['url'] = static::BASE_URL . $query_parameters['id'];
-			unset( $query_parameters['id'] );
+		if ( ! isset( $query_parameters['url'] ) ) {
+			if ( defined( $classname . '::BASE_URL' ) && isset( $query_parameters['id'] ) ) {
+				// convert ID to full URL to allow more flexibility for oEmbed endpoint
+				$query_parameters['url'] = static::BASE_URL . $query_parameters['id'];
+				unset( $query_parameters['id'] );
+			} else {
+				return '';
+			}
 		}
 
 		$allowed_resource_types = array( 'rich' => true, 'video' => true );
 		$ttl = DAY_IN_SECONDS;
 
 		$oembed_response = $oembed_api_class::getJSON( static::OEMBED_API_ENDPOINT, $query_parameters );
-		if ( ! (
-			$oembed_response &&
-			isset( $oembed_response->type ) &&
-			isset( $allowed_resource_types[ $oembed_response->type ] ) &&
-			isset( $oembed_response->html ) &&
-			$oembed_response->html
-		) ) {
+		if ( ! ($oembed_response
+			&& isset( $oembed_response->type )
+			&& isset( $allowed_resource_types[ $oembed_response->type ] )
+			&& isset( $oembed_response->html )
+			&& $oembed_response->html            )
+		) {
 			// do not rerequest errors with every page request
 			set_transient( $cache_key, ' ', $ttl );
 			return '';

@@ -2,7 +2,7 @@
 /*
 The MIT License (MIT)
 
-Copyright (c) 2016 Twitter Inc.
+Copyright (c) 2015 Twitter Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,42 +23,70 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\WordPress\Shortcodes;
+namespace Twitter\WordPress\Shortcodes\Embeds;
 
 /**
- * Set up and fetch a Twitter oEmbed capable object
+ * Display a Moment
  *
- * @since 1.5.0
+ * @since 1.2.0
  */
-interface PublishOEmbedEndpoint
+class Moment extends Timeline\Collection
 {
+
 	/**
-	 * PHP class to use for fetching oEmbed data
+	 * Shortcode tag to be matched
+	 *
+	 * @since 1.2.0
+	 *
+	 * @type string
+	 */
+	const SHORTCODE_TAG = 'twitter_moment';
+
+	/**
+	 * The oEmbed regex registered by WordPress Core
 	 *
 	 * @since 1.5.0
 	 *
 	 * @type string
 	 */
-	const OEMBED_API_CLASS = '\Twitter\WordPress\Helpers\TwitterOEmbed';
+	const OEMBED_CORE_REGEX = '#https?://(www\.)?twitter\.com/i/moments/.*#i';
 
 	/**
-	 * Relative path for the oEmbed API relative to Twitter publishers base path
+	 * HTML class to be used in div wrapper
 	 *
-	 * @since 1.5.0
+	 * @since 1.3.0
 	 *
 	 * @type string
 	 */
-	const OEMBED_API_ENDPOINT = 'oembed';
+	const HTML_CLASS = 'twitter-moment';
 
 	/**
-	 * Create a unique cache key to represent the requested object
+	 * Regex used to match a Moment in text
 	 *
-	 * @since 2.0.0
+	 * @since 1.2.0
 	 *
-	 * @param string $id               datasource identifier
-	 * @param array  $query_parameters oEmbed-compatible API parameters possibly affecting display
-	 *
-	 * @return string cache key
+	 * @type string
 	 */
-	public static function getOEmbedCacheKey( $id, array $query_parameters );
+	const URL_REGEX = '#^https://twitter\.com/i/moments/([0-9]+)#i';
+
+	/**
+	 * Base URL used to reconstruct a Moment URL
+	 *
+	 * @since 1.2.0
+	 *
+	 * @type string
+	 */
+	const BASE_URL = 'https://twitter.com/i/moments/';
+
+	/**
+	 * Reference the feature by name
+	 *
+	 * @since 1.3.0
+	 *
+	 * @return string translated feature name
+	 */
+	public static function featureName()
+	{
+		return __( 'Twitter Moment', 'twitter' );
+	}
 }
