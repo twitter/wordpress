@@ -122,7 +122,7 @@ class TweetIntent
 					if ( 'https' === strtolower( parse_url( $post_url, PHP_URL_SCHEME ) ) ) {
 						$is_https = true;
 					}
-				} catch (Exception $e) {
+				} catch (\Exception $e) {
 					// assume not HTTPS if parse_url throws exception
 				}
 				if ( $is_https ) {
@@ -280,7 +280,7 @@ class TweetIntent
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param WP_Post $post WordPress post object
+	 * @param \WP_Post $post WordPress post object
 	 *
 	 * @return void
 	 */

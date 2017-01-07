@@ -62,6 +62,15 @@ class Theme implements \Twitter\WordPress\Admin\Settings\SettingsSection
 	protected $hook_suffix;
 
 	/**
+	 * Store existing options, if any exist
+	 *
+	 * @since 1.0.0
+	 *
+	 * @type array
+	 */
+	protected $existing_options;
+
+	/**
 	 * Reference the feature by name
 	 *
 	 * @since 1.0.0
@@ -379,7 +388,7 @@ class Theme implements \Twitter\WordPress\Admin\Settings\SettingsSection
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param WP_Screen $screen current screen
+	 * @param \WP_Screen $screen current screen
 	 *
 	 * @return void
 	 */

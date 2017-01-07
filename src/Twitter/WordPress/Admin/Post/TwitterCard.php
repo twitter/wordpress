@@ -202,14 +202,14 @@ class TwitterCard
 		$cleaned_fields = array();
 
 		if ( isset( $fields[ static::TITLE_KEY ] ) ) {
-			$title = \Twitter\WordPress\Cards\Sanitize::sanitizePlainTextString( $fields[ static::TITLE_KEY ], /* remove breaks */ true );
+			$title = \Twitter\WordPress\Cards\Sanitize::sanitizePlainTextString( $fields[ static::TITLE_KEY ] );
 			if ( $title ) {
 				$cleaned_fields[ static::TITLE_KEY ] = $title;
 			}
 			unset( $title );
 		}
 		if ( isset( $fields[ static::DESCRIPTION_KEY ] ) ) {
-			$description = \Twitter\WordPress\Cards\Sanitize::sanitizePlainTextString( $fields[ static::DESCRIPTION_KEY ], /* remove breaks */ true );
+			$description = \Twitter\WordPress\Cards\Sanitize::sanitizePlainTextString( $fields[ static::DESCRIPTION_KEY ] );
 			if ( $description ) {
 				$cleaned_fields[ static::DESCRIPTION_KEY ] = $description;
 			}
@@ -226,7 +226,7 @@ class TwitterCard
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param WP_Post $post WordPress post object
+	 * @param \WP_Post $post WordPress post object
 	 *
 	 * @return void
 	 */

@@ -65,7 +65,7 @@ class User
 	 *   @type  string contact method
 	 *   @type  string label
 	 * }
-	 * @param WP_User $user    WP_User object.
+	 * @param \WP_User $user    WP_User object.
 	 *
 	 * @return array contact methods and their labels {
 	 *   @type   string contact method

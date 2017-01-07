@@ -62,6 +62,15 @@ class Tweet implements \Twitter\WordPress\Admin\Settings\SettingsSection
 	protected $hook_suffix;
 
 	/**
+	 * Store existing options, if any exist
+	 *
+	 * @since 1.0.0
+	 *
+	 * @type array
+	 */
+	protected $existing_options;
+
+	/**
 	 * Reference the feature by name
 	 *
 	 * @since 1.0.0

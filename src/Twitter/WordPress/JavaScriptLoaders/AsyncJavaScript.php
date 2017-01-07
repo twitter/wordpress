@@ -220,7 +220,7 @@ abstract class AsyncJavaScript
 	 *
 	 * @param string $src    script URL
 	 * @param string $handle WordPress registered script handle
-	 * @global WP_Scripts $wp_scripts match concatenation preferences
+	 * @global \WP_Scripts $wp_scripts match concatenation preferences
 	 *
 	 * @return string empty string if our queue handle requested, else give back the src variable
 	 */

@@ -41,7 +41,7 @@ class HTMLBuilder extends \Twitter\Helpers\HTMLBuilder
 	 *
 	 * @param string $class possible HTML class
 	 *
-	 * @return class name stripped of invalid values or empty string
+	 * @return string class name stripped of invalid values or empty string
 	 */
 	public static function escapeClassName( $class )
 	{

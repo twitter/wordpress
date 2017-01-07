@@ -202,7 +202,7 @@ class SiteAttribution implements \Twitter\WordPress\Admin\Settings\SettingsSecti
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param WP_Screen $screen current screen
+	 * @param \WP_Screen $screen current screen
 	 *
 	 * @return void
 	 */

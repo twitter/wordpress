@@ -158,7 +158,7 @@ class MetaBox
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param WP_Post $post WordPress post object
+	 * @param \WP_Post $post WordPress post object
 	 *
 	 * @return void
 	 */

@@ -26,7 +26,7 @@ THE SOFTWARE.
 namespace Twitter\WordPress\Cards;
 
 /**
- * Compatability wrappers for popular WordPress plugins with existing Twitter Cards functionality
+ * Compatibility wrappers for popular WordPress plugins with existing Twitter Cards functionality
  *
  * @since 1.0.0
  */

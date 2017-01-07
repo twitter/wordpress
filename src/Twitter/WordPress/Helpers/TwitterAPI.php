@@ -134,17 +134,17 @@ class TwitterAPI
 	 * @param string $relative_path API path without the response type. e.g. statuses/show
 	 * @param array  $parameters    query parameters
 	 *
-	 * @return stdClass|null json decoded result or null if no JSON returned or issues with parameters
+	 * @return \stdClass|null json decoded result or null if no JSON returned or issues with parameters
 	 */
 	public static function getJSON( $relative_path, $parameters = null )
 	{
 		if ( ! $relative_path ) {
-			return;
+			return null;
 		}
 
 		$request_url = static::getAPIURL( $relative_path, $parameters );
 		if ( ! $request_url ) {
-			return;
+			return null;
 		}
 
 		$response = wp_safe_remote_get(
@@ -156,11 +156,11 @@ class TwitterAPI
 			)
 		);
 		if ( is_wp_error( $response ) ) {
-			return;
+			return null;
 		}
 		$response_body = wp_remote_retrieve_body( $response );
 		if ( ! $response_body ) {
-			return;
+			return null;
 		}
 
 		$json_response = json_decode( $response_body );
@@ -169,5 +169,7 @@ class TwitterAPI
 		if ( $json_response ) {
 			return $json_response;
 		}
+
+		return null;
 	}
 }
