@@ -32,7 +32,7 @@ namespace Twitter\Widgets\Buttons;
  *
  * @link https://dev.twitter.com/web/tweet-button Tweet button documentation
  */
-class Tweet extends \Twitter\Widgets\BaseWidget
+class Tweet extends \Twitter\Widgets\Base
 {
 
     /**
@@ -96,7 +96,7 @@ class Tweet extends \Twitter\Widgets\BaseWidget
      *
      * @param \Twitter\Intents\Tweet $intent Tweet Intent
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setIntent($intent)
     {
@@ -114,7 +114,7 @@ class Tweet extends \Twitter\Widgets\BaseWidget
      *
      * @param string $size button size
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setSize($size)
     {
@@ -132,7 +132,7 @@ class Tweet extends \Twitter\Widgets\BaseWidget
      *
      * @param string $tweet_id Parent Tweet ID
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setInReplyTo($tweet_id)
     {
@@ -148,7 +148,7 @@ class Tweet extends \Twitter\Widgets\BaseWidget
      *
      * @param string $text Tweet text
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setText($text)
     {
@@ -164,7 +164,7 @@ class Tweet extends \Twitter\Widgets\BaseWidget
      *
      * @param string $url absolute URL
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setURL($url)
     {
@@ -180,7 +180,7 @@ class Tweet extends \Twitter\Widgets\BaseWidget
      *
      * @param string $hashtag hashtag
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function addHashtag($hashtag)
     {
@@ -196,11 +196,13 @@ class Tweet extends \Twitter\Widgets\BaseWidget
      *
      * @param string $username Twitter username
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function setVia($username)
     {
         $this->intent->setVia($username);
+
+        return $this;
     }
 
     /**
@@ -211,7 +213,7 @@ class Tweet extends \Twitter\Widgets\BaseWidget
      * @param string $username Twitter username
      * @param string $label    brief description of how the account relates to the Tweet content
      *
-     * @return __CLASS__ support chaining
+     * @return self support chaining
      */
     public function addRelated($username, $label = '')
     {
@@ -228,7 +230,7 @@ class Tweet extends \Twitter\Widgets\BaseWidget
      *   @type string|int|bool parameter value
      * }
      *
-     * @return __CLASS__ new button with configured parameters
+     * @return self new button with configured parameters
      */
     public static function fromArray($options)
     {
@@ -239,7 +241,7 @@ class Tweet extends \Twitter\Widgets\BaseWidget
 
         $class = get_called_class();
         $button = new $class();
-        unset( $class );
+        unset($class);
 
         // remove values which evaluate to false
         $options = array_filter($options);
@@ -248,10 +250,10 @@ class Tweet extends \Twitter\Widgets\BaseWidget
         // intent parameters
         $intent_class = static::INTENT_CLASS;
         $button->setIntent($intent_class::fromArray($options));
-        unset( $intent_class );
+        unset($intent_class);
 
         // button parameters
-        if (isset( $options['size'] )) {
+        if (isset($options['size'])) {
             $button->setSize($options['size']);
         }
 
@@ -259,7 +261,7 @@ class Tweet extends \Twitter\Widgets\BaseWidget
     }
 
     /**
-     * Return Tweet button parameters suitable
+     * Return Tweet button parameters suitable for conversion to data-*
      *
      * @since 1.0.0
      *

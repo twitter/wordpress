@@ -2,7 +2,7 @@
 /*
 The MIT License (MIT)
 
-Copyright (c) 2015 Twitter Inc. and PHP Framework Interop Group
+Copyright (c) 2016 Twitter Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,26 +23,36 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-require_once(dirname(__FILE__) . '/autoload.php');
+namespace Twitter\Widgets\Embeds\Timeline;
 
-// discover the WordPress testing framework
-$_tests_dir = getenv('WP_TESTS_DIR');
-if (! $_tests_dir) {
-    if (false !== getenv('WP_DEVELOP_DIR')) {
-        $_tests_dir = getenv('WP_DEVELOP_DIR') . '/tests/phpunit';
-    } elseif (file_exists('../../../../../tests/phpunit/includes/bootstrap.php')) {
-        $_tests_dir = '../../../../../tests/phpunit';
-    } elseif (file_exists('/tmp/wordpress-tests-lib/includes/bootstrap.php')) {
-        $_tests_dir = '/tmp/wordpress-tests-lib';
+/**
+ * Display Tweets included in a Twitter Moment
+ *
+ * @since 2.0.0
+ */
+class Moment extends \Twitter\Widgets\Embeds\Timeline\Collection
+{
+    /**
+     * Construct a full Twitter URI by appending to base string
+     *
+     * @since 2.0.0
+     *
+     * @type string
+     */
+    const BASE_URL = 'https://twitter.com/i/moments/';
+
+    /**
+     * Create a new Moment object
+     *
+     * @since 2.0.0
+     *
+     * @param string $id unique identifier of the Moment
+     */
+    public function __construct($id)
+    {
+        parent::__construct($id);
+
+        // all moments are grids
+        $this->setGridTemplate();
     }
 }
-
-// @link https://core.trac.wordpress.org/browser/trunk/tests/phpunit/includes/functions.php
-require_once $_tests_dir . '/includes/functions.php';
-
-// activate the plugin
-tests_add_filter('muplugins_loaded', function () {
-    require_once((defined('TWITTER_PLUGIN_DIR') ? TWITTER_PLUGIN_DIR : dirname(dirname(__DIR__))) . '/twitter.php');
-});
-
-require $_tests_dir . '/includes/bootstrap.php';

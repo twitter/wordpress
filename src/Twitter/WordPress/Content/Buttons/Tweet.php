@@ -69,7 +69,7 @@ class Tweet
 			$position = $options['position'];
 			unset( $options['position'] );
 
-			$tweet_button = \Twitter\WordPress\Shortcodes\Share::shortcodeHandler( $options );
+			$tweet_button = \Twitter\WordPress\Shortcodes\Buttons\Share::shortcodeHandler( $options );
 			if ( $tweet_button ) {
 				// wrap in newlines to preserve content scanners looking for adjacent content on its own line
 				$tweet_button = "\n" . $tweet_button . "\n";

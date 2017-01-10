@@ -2,7 +2,7 @@
 /*
 The MIT License (MIT)
 
-Copyright (c) 2015 Twitter Inc. and PHP Framework Interop Group
+Copyright (c) 2016 Twitter Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,26 +23,35 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-require_once(dirname(__FILE__) . '/autoload.php');
+namespace Twitter\Tests\Widgets\Embeds\Timeline;
 
-// discover the WordPress testing framework
-$_tests_dir = getenv('WP_TESTS_DIR');
-if (! $_tests_dir) {
-    if (false !== getenv('WP_DEVELOP_DIR')) {
-        $_tests_dir = getenv('WP_DEVELOP_DIR') . '/tests/phpunit';
-    } elseif (file_exists('../../../../../tests/phpunit/includes/bootstrap.php')) {
-        $_tests_dir = '../../../../../tests/phpunit';
-    } elseif (file_exists('/tmp/wordpress-tests-lib/includes/bootstrap.php')) {
-        $_tests_dir = '/tmp/wordpress-tests-lib';
+/**
+ * @coversDefaultClass \Twitter\Widgets\Embeds\Timeline\Moment
+ */
+final class Moment extends \Twitter\Tests\TestWithPrivateAccess
+{
+    /**
+     * Moment ID for testing
+     *
+     * @since 2.0.0
+     *
+     * @type string
+     */
+    const VALID_MOMENT_ID = '650667182356082688';
+
+    /**
+     * Test expected use of the constructor
+     *
+     * @since 2.0.0
+     *
+     * @covers ::__construct
+     *
+     * @return void
+     */
+    public function testConstructor()
+    {
+        $timeline = new \Twitter\Widgets\Embeds\Timeline\Moment(self::VALID_MOMENT_ID);
+        $this->assertEquals(self::VALID_MOMENT_ID, self::getProperty($timeline, 'id'), 'Moment constructor did not set valid ID');
+        $this->assertEquals(\Twitter\Widgets\Embeds\Timeline\Moment::WIDGET_TYPE_GRID, self::getProperty($timeline, 'widget_type'), 'Moment constructor did not set grid widget type');
     }
 }
-
-// @link https://core.trac.wordpress.org/browser/trunk/tests/phpunit/includes/functions.php
-require_once $_tests_dir . '/includes/functions.php';
-
-// activate the plugin
-tests_add_filter('muplugins_loaded', function () {
-    require_once((defined('TWITTER_PLUGIN_DIR') ? TWITTER_PLUGIN_DIR : dirname(dirname(__DIR__))) . '/twitter.php');
-});
-
-require $_tests_dir . '/includes/bootstrap.php';

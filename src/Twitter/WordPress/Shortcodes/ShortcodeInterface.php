@@ -46,7 +46,7 @@ interface ShortcodeInterface
 	 *
 	 * @since 1.3.0
 	 *
-	 * @link https://github.com/fusioneng/Shortcake Shortcake UI
+	 * @see https://github.com/wp-shortcake/shortcake Shortcake UI
 	 *
 	 * @return void
 	 */
@@ -63,4 +63,25 @@ interface ShortcodeInterface
 	 * @return string HTML result or empty string. JavaScript dependencies should be enqueued or loaded in the returned HTML
 	 */
 	public static function shortcodeHandler( $attributes, $content );
+
+	/**
+	 * Process and clean supplied attributes
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param array $attributes array of attributes passed by WordPress shortcode API
+	 *
+	 * @return array processed attriutes prepped
+	 */
+	public static function getShortcodeAttributes( $attributes );
+
+	/**
+	 * Describe the shortcode
+	 *
+	 * Used by shortcake UI to list available shortcodes.
+	 * May be used by a widget or other visuals to describe a feature
+	 *
+	 * @return string Translated feature name
+	 */
+	public static function featureName();
 }

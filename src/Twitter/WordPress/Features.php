@@ -79,24 +79,59 @@ class Features
 	const EMBED_VINE = 'embed-vine';
 
 	/**
+	 * Embed the latest Tweets from a Twitter profile by URL or shortcode
+	 *
+	 * @since 2.0.0
+	 *
+	 * @link https://dev.twitter.com/web/embedded-timelines/user Embedded Profile Timeline
+	 *
+	 * @type string
+	 */
+	const EMBED_PROFILE = 'embed-profile';
+
+	/**
+	 * Embed the latest Tweets from a list of Twitter accounts by URL or shortcode
+	 *
+	 * @since 2.0.0
+	 *
+	 * @link https://dev.twitter.com/web/embedded-timelines/list Embedded List Timeline
+	 *
+	 * @type string
+	 */
+	const EMBED_LIST = 'embed-list';
+
+	/**
+	 * Embed multiple Tweets in a vertical format by URL or shortcode
+	 *
+	 * @since 2.0.0
+	 *
+	 * @link https://dev.twitter.com/web/embedded-timelines/collection Embedded Collection
+	 *
+	 * @type string
+	 */
+	const EMBED_COLLECTION = 'embed-collection';
+
+	/**
+	 * Embed multiple Tweets in a vertical format by URL or shortcode
+	 *
+	 * @since 2.0.0
+	 *
+	 * @link https://dev.twitter.com/web/embedded-timelines/collection Embedded Collection
+	 *
+	 * @type string
+	 */
+	const EMBED_COLLECTION_GRID = 'embed-collection-grid';
+
+	/**
 	 * Embed a Twitter Moment by URL or shortcode
 	 *
 	 * @since 1.3.0
 	 *
-	 * @link https://twitter.com/i/moments Twitter Moments
+	 * @link https://dev.twitter.com/web/embedded-moments Embedded Moment
 	 *
 	 * @type string
 	 */
 	const EMBED_MOMENT = 'embed-moment';
-
-	/**
-	 * Embed multiple Tweets in a responsive grid format by URL or shortcode
-	 *
-	 * @since 1.3.0
-	 *
-	 * @type string
-	 */
-	const EMBED_TWEETS_GRID = 'embed-tweets-grid';
 
 	/**
 	 * Display a Twitter follow button using a shortcode
@@ -139,8 +174,8 @@ class Features
 	 *
 	 * @since 1.3.0
 	 *
-	 * @link https://business.twitter.com/help/website-tag-for-remarketing Twitter website tag for remarketing
-	 * @link https://business.twitter.com/help/conversion-tracking-for-websites Twitter conversion tracking for websites
+	 * @link https://business.twitter.com/en/help/campaign-setup/campaign-targeting/tailored-audiences-from-web.html Twitter website tag for remarketing
+	 * @link https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html Twitter conversion tracking for websites
 	 *
 	 * @type string
 	 */
@@ -156,16 +191,19 @@ class Features
 	 * @type array
 	 */
 	public static $features = array(
-		self::CARDS             => true, // Twitter Cards
-		self::EMBED_MOMENT      => true, // Twitter Moment
-		self::EMBED_TWEET       => true, // single Tweet
-		self::EMBED_TWEET_VIDEO => true, // single Tweet with video-specific display template
-		self::EMBED_VINE        => true, // single Vine
-		self::EMBED_TWEETS_GRID => true, // multiple Tweets displayed in a grid layout
-		self::FOLLOW_BUTTON     => true, // Twitter Follow button
-		self::TWEET_BUTTON      => true, // Tweet button
-		self::PERISCOPE_ON_AIR  => true, // Periscope On Air button
-		self::TRACKING_PIXEL    => true, // audience and conversion pixel
+		self::CARDS                 => true, // Twitter Cards
+		self::EMBED_TWEET           => true, // single Tweet
+		self::EMBED_TWEET_VIDEO     => true, // single Tweet with video-specific display template
+		self::EMBED_VINE            => true, // single Vine
+		self::EMBED_PROFILE         => true, // Twitter profile
+		self::EMBED_LIST            => true, // Twitter List
+		self::EMBED_COLLECTION      => true, // multiple Tweets organized into a collection
+		self::EMBED_COLLECTION_GRID => true, // multiple Tweets organized into a collection displayed in a grid format
+		self::EMBED_MOMENT          => true, // Twitter Moment
+		self::FOLLOW_BUTTON         => true, // Twitter Follow button
+		self::TWEET_BUTTON          => true, // Tweet button
+		self::PERISCOPE_ON_AIR      => true, // Periscope On Air button
+		self::TRACKING_PIXEL        => true, // audience and conversion pixel
 	);
 
 	/**
