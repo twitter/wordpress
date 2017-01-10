@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\Tests\WordPress\Shortcodes\Embeds\Tweet;
+namespace Twitter\Tests\WordPress\Shortcodes\Embeds;
 
 /**
  * @group shortcode
@@ -63,12 +63,13 @@ final class Timeline extends \WP_UnitTestCase
      */
     public function testShortcodeAttributesToTimelineKeys()
     {
-        $this->assertEquals(array(), $this->widget::shortcodeAttributesToTimelineKeys(42), 'Failed to return empty array for invalid passed options');
+        $class = $this->widget;
+        $this->assertEquals(array(), $class::shortcodeAttributesToTimelineKeys(42), 'Failed to return empty array for invalid passed options');
 
         $width = 400;
         $height = 300;
         $limit = 5;
-        $clean = $this->widget::shortcodeAttributesToTimelineKeys(array( 'width' => strval($width), 'height' => strval($height), 'limit' => strval($limit)));
+        $clean = $class::shortcodeAttributesToTimelineKeys(array( 'width' => strval($width), 'height' => strval($height), 'limit' => strval($limit)));
         $this->assertArrayHasKey('width', $clean, 'Width value not returned from attribute cleaner');
         $this->assertEquals($width, $clean['width'], 'Width value not properly converted');
         $this->assertArrayHasKey('height', $clean, 'Height value not returned from attribute cleaner');
@@ -81,7 +82,7 @@ final class Timeline extends \WP_UnitTestCase
         $aria_live = 'assertive';
         $link_color = '21759b';
         $border_color = 'd54e21';
-        $clean = $this->widget::shortcodeAttributesToTimelineKeys(array('aria_polite' => $aria_live, 'link_color' => $link_color, 'border_color' => $border_color));
+        $clean = $class::shortcodeAttributesToTimelineKeys(array('aria_polite' => $aria_live, 'link_color' => $link_color, 'border_color' => $border_color));
         $this->assertArrayHasKey('aria-polite', $clean, 'Dashed ARIA polite value not returned from attribute cleaner');
         $this->assertEquals($aria_live, $clean['aria-polite'], 'ARIA polite value not properly converted');
         $this->assertArrayHasKey('link-color', $clean, 'Link color value not returned from attribute cleaner');
@@ -91,7 +92,7 @@ final class Timeline extends \WP_UnitTestCase
         unset($aria_live, $link_color, $border_color);
         unset($clean);
 
-        $clean = $this->widget::shortcodeAttributesToTimelineKeys(array('chrome'=>'noheader,nofooter,transparent'));
+        $clean = $class::shortcodeAttributesToTimelineKeys(array('chrome'=>'noheader,nofooter,transparent'));
         $this->assertArrayHasKey('chrome', $clean, 'Chrome value not returned from attribute cleaner');
         $this->assertEquals(array('noheader','nofooter','transparent'), $clean['chrome'], 'Chrome values not extracted during shortcode processing');
     }
@@ -107,7 +108,8 @@ final class Timeline extends \WP_UnitTestCase
      */
     public function testGetOEmbedCacheKeyCustomParameters()
     {
-        $this->assertEquals('', $this->widget::getOEmbedCacheKeyCustomParameters(array()), 'Failed to return an empty string for no query parameters passed');
+        $class = $this->widget;
+        $this->assertEquals('', $class::getOEmbedCacheKeyCustomParameters(array()), 'Failed to return an empty string for no query parameters passed');
 
         $maxwidth = 400;
         $maxheight = 300;
@@ -124,7 +126,7 @@ final class Timeline extends \WP_UnitTestCase
             'link_color'   => $link_color,
             'border_color' => '#' . $border_color,
         );
-        $cache_key = $this->widget::getOEmbedCacheKeyCustomParameters($query_parameters);
+        $cache_key = $class::getOEmbedCacheKeyCustomParameters($query_parameters);
         $cache_pieces = array(
             'w'.$maxwidth,
             'l'.$limit,
@@ -136,7 +138,7 @@ final class Timeline extends \WP_UnitTestCase
         );
         $this->assertEquals(
             implode('_', $cache_pieces),
-            $this->widget::getOEmbedCacheKeyCustomParameters($query_parameters),
+            $class::getOEmbedCacheKeyCustomParameters($query_parameters),
             'Cache key with limit and maxheight does not match expected value'
         );
 
@@ -145,7 +147,7 @@ final class Timeline extends \WP_UnitTestCase
         $cache_pieces[1] = 'h'.$maxheight;
         $this->assertEquals(
             implode('_', $cache_pieces),
-            $this->widget::getOEmbedCacheKeyCustomParameters($query_parameters),
+            $class::getOEmbedCacheKeyCustomParameters($query_parameters),
             'Cache key does not match expected value'
         );
     }

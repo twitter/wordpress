@@ -88,10 +88,11 @@ final class Theme extends \Twitter\Tests\TestWithPrivateAccess
      */
     public function testIsValidTheme($theme, $is_valid, $message = '')
     {
+        $class = $this->widget;
         if ($is_valid) {
-            $this->assertTrue($this->widget::isValidTheme($theme), $message);
+            $this->assertTrue($class::isValidTheme($theme), $message);
         } else {
-            $this->assertFalse($this->widget::isValidTheme($theme), $message);
+            $this->assertFalse($class::isValidTheme($theme), $message);
         }
     }
 
@@ -119,7 +120,8 @@ final class Theme extends \Twitter\Tests\TestWithPrivateAccess
         if ($is_valid) {
             $this->assertEquals($theme, $property, $message);
         } else {
-            $this->assertEquals($this->widget::$THEME_LIGHT, $property, $message);
+            $class = $this->widget;
+            $this->assertEquals($class::$THEME_LIGHT, $property, $message);
         }
     }
 
@@ -178,10 +180,11 @@ final class Theme extends \Twitter\Tests\TestWithPrivateAccess
      */
     public function testIsValidHexadecimalColor($color, $is_valid, $message = '')
     {
+        $class = $this->widget;
         if ($is_valid) {
-            $this->assertTrue($this->widget::isValidHexadecimalColor($color), $message);
+            $this->assertTrue($class::isValidHexadecimalColor($color), $message);
         } else {
-            $this->assertFalse($this->widget::isValidHexadecimalColor($color), $message);
+            $this->assertFalse($class::isValidHexadecimalColor($color), $message);
         }
     }
 

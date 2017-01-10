@@ -70,10 +70,11 @@ final class Timeline extends \Twitter\Tests\TestWithPrivateAccess
      */
     public function testIsValidWidth($width, $is_valid, $message = '')
     {
+        $class = $this->widget;
         if ($is_valid) {
-            $this->assertTrue($this->widget::isValidWidth($width), $message);
+            $this->assertTrue($class::isValidWidth($width), $message);
         } else {
-            $this->assertFalse($this->widget::isValidWidth($width), $message);
+            $this->assertFalse($class::isValidWidth($width), $message);
         }
     }
 
@@ -142,10 +143,11 @@ final class Timeline extends \Twitter\Tests\TestWithPrivateAccess
      */
     public function testIsValidHeight($height, $is_valid, $message = '')
     {
+        $class = $this->widget;
         if ($is_valid) {
-            $this->assertTrue($this->widget::isValidHeight($height), $message);
+            $this->assertTrue($class::isValidHeight($height), $message);
         } else {
-            $this->assertFalse($this->widget::isValidHeight($height), $message);
+            $this->assertFalse($class::isValidHeight($height), $message);
         }
     }
 
@@ -213,10 +215,11 @@ final class Timeline extends \Twitter\Tests\TestWithPrivateAccess
      */
     public function testIsValidLimit($limit, $is_valid, $message = '')
     {
+        $class = $this->widget;
         if ($is_valid) {
-            $this->assertTrue($this->widget::isValidLimit($limit), $message);
+            $this->assertTrue($class::isValidLimit($limit), $message);
         } else {
-            $this->assertFalse($this->widget::isValidHeight($limit), $message);
+            $this->assertFalse($class::isValidHeight($limit), $message);
         }
     }
 
@@ -285,10 +288,11 @@ final class Timeline extends \Twitter\Tests\TestWithPrivateAccess
      */
     public function testIsValidChromeOption($option, $is_valid, $message)
     {
+        $class = $this->widget;
         if ($is_valid) {
-            $this->assertTrue($this->widget::isValidChromeOption($option), $message);
+            $this->assertTrue($class::isValidChromeOption($option), $message);
         } else {
-            $this->assertFalse($this->widget::isValidChromeOption($option), $message);
+            $this->assertFalse($class::isValidChromeOption($option), $message);
         }
     }
 

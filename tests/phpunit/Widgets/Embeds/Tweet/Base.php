@@ -77,7 +77,8 @@ final class Base extends \Twitter\Tests\TestWithPrivateAccess
      */
     public function testIsValidID($id, $expected_valid, $message = '')
     {
-        $validity = $this->widget::isValidID($id);
+        $class = $this->widget;
+        $validity = $class::isValidID($id);
         if ($expected_valid) {
             $this->assertTrue($validity, $message);
         } else {
