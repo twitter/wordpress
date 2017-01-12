@@ -32,7 +32,7 @@ namespace Twitter\WordPress\Widgets\Embeds\Timeline;
  *
  * @since 2.0.0
  */
-class Collection extends \Twitter\WordPress\Widgets\Embeds\Timeline
+class Collection extends \Twitter\WordPress\Widgets\Embeds\Timeline implements WidgetInterface
 {
 	/**
 	 * Class of the related PHP object builder and validator

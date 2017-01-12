@@ -54,17 +54,6 @@ abstract class Timeline extends \WP_Widget
 	}
 
 	/**
-	 * A short description of the widget
-	 *
-	 * Displayed in the Available Widgets listing
-	 *
-	 * @since 2.0.0
-	 *
-	 * @return string translated short description of the widget
-	 */
-	abstract public static function getDescription();
-
-	/**
 	 * Get displayed options for chrome configuration with label
 	 *
 	 * @since 2.0.0
@@ -239,7 +228,7 @@ foreach ( $theme_choices as $value => $label ) {
 	}
 
 	/**
-	 * Form elements unique to the datasource (profile, list, etc) displayed
+	 * Fields specific to the timeline datasource configured in the widget
 	 *
 	 * @since 2.0.0
 	 *
