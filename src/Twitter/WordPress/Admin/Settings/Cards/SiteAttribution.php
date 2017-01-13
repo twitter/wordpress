@@ -74,6 +74,18 @@ class SiteAttribution implements \Twitter\WordPress\Admin\Settings\SettingsSecti
 	}
 
 	/**
+	 * Describe the setting
+	 *
+	 * @since 2.0.0
+	 *
+	 * @return string description of the setting
+	 */
+	public static function getDescription()
+	{
+		return __( "Attribute shared content to your site's Twitter account", 'twitter' );
+	}
+
+	/**
 	 * Add site attribution option and settings section to an existing settings page
 	 *
 	 * @since 1.0.0
@@ -91,7 +103,18 @@ class SiteAttribution implements \Twitter\WordPress\Admin\Settings\SettingsSecti
 		$settings = new static();
 		$settings->hook_suffix = $hook_suffix;
 
-		register_setting( $hook_suffix, self::OPTION_NAME, array( __CLASS__, 'sanitize' ) );
+		$args = array(
+			'type'              => 'string',
+			'description'       => static::getDescription(),
+			'sanitize_callback' => array( get_called_class(), 'sanitize' ),
+			'default'           => '',
+			'show_in_rest'      => true,
+		);
+		// WordPress 4.7+ registered settings
+		if ( ! function_exists( 'get_registered_settings' ) ) {
+			$args = $args['sanitize_callback'];
+		}
+		register_setting( $hook_suffix, self::OPTION_NAME, $args );
 		add_action(
 			'load-' . $hook_suffix,
 			array( &$settings, 'onload' ),
@@ -172,7 +195,7 @@ class SiteAttribution implements \Twitter\WordPress\Admin\Settings\SettingsSecti
 	public static function sectionHeader()
 	{
 		echo '<p>';
-		echo esc_html( __( "Attribute shared content to your site's Twitter account", 'twitter' ) );
+		echo esc_html( static::getDescription() );
 		echo '</p>';
 	}
 
@@ -186,7 +209,7 @@ class SiteAttribution implements \Twitter\WordPress\Admin\Settings\SettingsSecti
 	public function displaySiteAttributionUsername()
 	{
 		$html = '<input type="text" id="' . esc_attr( self::OPTION_NAME ) . '" name="' . esc_attr( self::OPTION_NAME ) . '" size="20"';
-		$site_username = get_option( self::OPTION_NAME );
+		$site_username = get_option( self::OPTION_NAME, '' );
 		if ( $site_username ) {
 			$html .= ' value="' . esc_attr( $site_username ) . '"';
 		}
