@@ -69,12 +69,13 @@ class Tracking implements \Twitter\WordPress\Shortcodes\ShortcodeInterface
 	 */
 	public static function init()
 	{
-		add_shortcode( static::SHORTCODE_TAG, array( __CLASS__, 'shortcodeHandler' ) );
+		$class = get_called_class();
+		add_shortcode( static::SHORTCODE_TAG, array( $class, 'shortcodeHandler' ) );
 
 		// Shortcode UI, if supported
 		add_action(
 			'register_shortcode_ui',
-			array( __CLASS__, 'shortcodeUI' ),
+			array( $class, 'shortcodeUI' ),
 			5,
 			0
 		);
@@ -183,7 +184,7 @@ class Tracking implements \Twitter\WordPress\Shortcodes\ShortcodeInterface
 	 *
 	 * @return string empty string. markup is queued for inclusion in wp_footer output
 	 */
-	public static function shortcodeHandler( $attributes, $content = null )
+	public static function shortcodeHandler( $attributes, $content = '' )
 	{
 		$options = static::getShortcodeAttributes( $attributes );
 
@@ -197,6 +198,7 @@ class Tracking implements \Twitter\WordPress\Shortcodes\ShortcodeInterface
 
 		if ( false === has_action( 'wp_footer', array( $class, 'trackerJavaScript' ) ) ) {
 			// execute script after wp_print_footer_scripts action completes at priority 20
+			// async function queue should be inserted with footer scripts
 			add_action( 'wp_footer', array( $class, 'trackerJavaScript' ), 25 );
 		}
 
@@ -205,7 +207,7 @@ class Tracking implements \Twitter\WordPress\Shortcodes\ShortcodeInterface
 	}
 
 	/**
-	 * Track a Twitter advertising event using the twttr.conversion.trackPid JavaScript function
+	 * Track a Twitter advertising event as a UWT PageView
 	 *
 	 * @since 2.0.0
 	 *
@@ -215,7 +217,7 @@ class Tracking implements \Twitter\WordPress\Shortcodes\ShortcodeInterface
 	 */
 	protected static function trackEventUsingJavaScript( $tracking_id )
 	{
-		echo 'twttr.conversion.trackPid(' . wp_json_encode( $tracking_id ) . ');';
+		echo 'twq("init",' . wp_json_encode( $tracking_id ) . ');twq("track","PageView");';
 	}
 
 	/**
@@ -234,9 +236,11 @@ class Tracking implements \Twitter\WordPress\Shortcodes\ShortcodeInterface
 		echo '<img height="1" width="1" alt=" " src="' . esc_url( 'https://analytics.twitter.com/i/adsct?' . $query_parameters, array( 'https', 'http' ) ) . '"';
 		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
 		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+
 		echo '><img height="1" width="1" alt=" " src="' . esc_url( 'https://t.co/i/adsct?' . $query_parameters, array( 'https', 'http' ) ) . '"';
 		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
 		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+
 		echo '>';
 	}
 
@@ -254,15 +258,16 @@ class Tracking implements \Twitter\WordPress\Shortcodes\ShortcodeInterface
 		}
 
 		$tracking_ids = array_keys( static::$tracking_ids );
+		$class = get_called_class();
 
 		// JavaScript available
-		echo '<script type="text/javascript">';
-		array_walk( $tracking_ids, array( __CLASS__, 'trackEventUsingJavaScript' ) );
-		echo '</script>';
+		echo '<script type="text/javascript">if(typeof window.twq !== "undefined"){';
+		array_walk( $tracking_ids, array( $class, 'trackEventUsingJavaScript' ) );
+		echo '}</script>';
 
 		// JavaScript unavailable
 		echo '<noscript>';
-		array_walk( $tracking_ids, array( __CLASS__, 'trackEventUsingFallbackImages' ) );
+		array_walk( $tracking_ids, array( $class, 'trackEventUsingFallbackImages' ) );
 		echo '</noscript>';
 	}
 }
