@@ -227,17 +227,18 @@ final class Image extends \Twitter\Tests\TestWithPrivateAccess
     {
         $width = 640;
         $height = 480;
+        $alt = 'alt text';
         self::setProperty($this->image, 'width', $width);
         self::setProperty($this->image, 'height', $height);
+        self::setProperty($this->image, 'alt', $alt);
 
         $this->assertEquals(
             array(
                 'src' => self::SRC,
-                'width' => $width,
-                'height' => $height,
+                'alt' => $alt,
             ),
             $this->image->asCardProperties(),
-            'Image with src, width, height should return a card array with each'
+            'Image with src, width, height should return a card array with src only'
         );
     }
 }
