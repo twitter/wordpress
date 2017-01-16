@@ -32,7 +32,7 @@ namespace Twitter\WordPress\Widgets\Buttons;
  *
  * @since 1.0.0
  */
-class Follow extends \WP_Widget
+class Follow extends \Twitter\WordPress\Widgets\Widget implements \Twitter\WordPress\Widgets\WidgetInterface
 {
 
 	/**
@@ -57,9 +57,21 @@ class Follow extends \WP_Widget
 			static::BASE_ID, // Base ID
 			__( 'Twitter Follow Button', 'twitter' ), // name
 			array(
-				'description' => __( 'Lets a viewer follow your Twitter account', 'twitter' ),// args
+				'description' => static::getDescription(), // args
 			)
 		);
+	}
+
+	/**
+	 * Describe the functionality offered by the widget
+	 *
+	 * @since 2.0.0
+	 *
+	 * @return string description of the widget functionality
+	 */
+	public static function getDescription()
+	{
+		return __( 'Lets a viewer follow your Twitter account', 'twitter' );
 	}
 
 	/**
@@ -127,16 +139,12 @@ class Follow extends \WP_Widget
 			)
 		);
 
+		$this->titleFormElements( $instance );
 		$close_void_element = \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
-?>
-		<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html( __( 'Title:' ) ); ?></label>
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( trim( strip_tags( $instance['title'] ) ) ); ?>"<?php
-			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
-			echo $close_void_element;
-		?>></p>
 
+?>
 		<p><label for="<?php echo esc_attr( $this->get_field_id( 'screen_name' ) ); ?>"><?php echo esc_html( __( '@username:', 'twitter' ) ); ?></label>
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'screen_name' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'screen_name' ) ); ?>" type="text" pattern="[a-zA-Z0-9_]{1,20}" value="<?php echo esc_attr( $instance['screen_name'] ); ?>"<?php
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'screen_name' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'screen_name' ) ); ?>" type="text" pattern="<?php echo esc_attr( \Twitter\Helpers\Validators\ScreenName::getPattern() ); ?>" inputmode="verbatim" spellcheck="false" maxlength="<?php echo esc_attr( \Twitter\Helpers\Validators\ScreenName::MAX_LENGTH ); ?>" value="<?php echo esc_attr( $instance['screen_name'] ); ?>"<?php
 			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
 			echo $close_void_element;
 		?>></p>

@@ -28,11 +28,11 @@ namespace Twitter\WordPress\Widgets\Embeds\Timeline;
 /**
  * Add embedded profile timeline as a WordPress widget
  *
- * @link http://codex.wordpress.org/Widgets_API WordPress widgets API
+ * @see http://codex.wordpress.org/Widgets_API WordPress widgets API
  *
  * @since 2.0.0
  */
-class Profile extends \Twitter\WordPress\Widgets\Embeds\Timeline implements WidgetInterface
+class Profile extends \Twitter\WordPress\Widgets\Embeds\Timeline
 {
 	/**
 	 * Class of the related PHP object builder and validator

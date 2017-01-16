@@ -23,10 +23,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\WordPress\Widgets\Embeds\Timeline;
+namespace Twitter\WordPress\Widgets;
 
 /**
- * Describe functions expected to be implemented by every timeline widget class
+ * Describe functions expected to be implemented by every widget class
  *
  * @since 2.0.0
  */

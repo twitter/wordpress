@@ -32,7 +32,7 @@ namespace Twitter\WordPress\Widgets\Embeds;
  *
  * @since 2.0.0
  */
-abstract class Timeline extends \WP_Widget
+abstract class Timeline extends \Twitter\WordPress\Widgets\Widget implements \Twitter\WordPress\Widgets\WidgetInterface
 {
 	/**
 	 * Register widget with WordPress
@@ -147,24 +147,6 @@ abstract class Timeline extends \WP_Widget
 		$this->titleFormElements( $instance );
 		$this->dataSourceFormElements( $instance );
 		$this->timelineFormElements( $instance );
-	}
-
-	/**
-	 * Allow a site author to include a title before the widget area
-	 *
-	 * @since 2.0.0
-	 *
-	 * @param array $instance settings for a particular instance of the widget
-	 *
-	 * @return void
-	 */
-	public function titleFormElements( $instance )
-	{
-		?><p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html( __( 'Title', 'twitter' ) . ':' ); ?></label>
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( trim( strip_tags( $instance['title'] ) ) ); ?>"<?php
-			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
-			echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
-		?>></p><?php
 	}
 
 	/**

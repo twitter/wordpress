@@ -142,6 +142,7 @@ class PluginLoader
 			\Twitter\WordPress\Features::EMBED_PROFILE    => '\Twitter\WordPress\Widgets\Embeds\Timeline\Profile',
 			\Twitter\WordPress\Features::EMBED_LIST       => '\Twitter\WordPress\Widgets\Embeds\Timeline\TwitterList',
 			\Twitter\WordPress\Features::EMBED_COLLECTION => '\Twitter\WordPress\Widgets\Embeds\Timeline\Collection',
+			\Twitter\WordPress\Features::TRACKING_PIXEL   => '\Twitter\WordPress\Widgets\Advertising\Tracking',
 		);
 	}
 

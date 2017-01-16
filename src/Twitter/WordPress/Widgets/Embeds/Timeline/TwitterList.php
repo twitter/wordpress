@@ -32,7 +32,7 @@ namespace Twitter\WordPress\Widgets\Embeds\Timeline;
  *
  * @since 2.0.0
  */
-class TwitterList extends Profile implements WidgetInterface
+class TwitterList extends Profile
 {
 	/**
 	 * Class of the related PHP object builder and validator

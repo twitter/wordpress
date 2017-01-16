@@ -32,7 +32,7 @@ namespace Twitter\WordPress\Widgets\Buttons\Periscope;
  *
  * @since 1.3.0
  */
-class OnAir extends \WP_Widget
+class OnAir extends \Twitter\WordPress\Widgets\Widget implements \Twitter\WordPress\Widgets\WidgetInterface
 {
 
 	/**
@@ -142,15 +142,10 @@ class OnAir extends \WP_Widget
 		);
 
 		$close_void_element = \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+		$this->titleFormElements( $instance );
 ?>
-		<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html( __( 'Title:', 'twitter' ) ); ?></label>
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( trim( strip_tags( $instance['title'] ) ) ); ?>"<?php
-			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
-			echo $close_void_element;
-		?>></p>
-
 		<p><label for="<?php echo esc_attr( $this->get_field_id( 'username' ) ); ?>"><?php echo esc_html( _x( 'Periscope username', 'Prompt requesting entry of a Periscope username', 'twitter' ) ); ?></label>
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'username' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'username' ) ); ?>" type="text" pattern="[a-zA-Z0-9_]{1,20}" value="<?php echo esc_attr( $instance['username'] ); ?>"<?php
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'username' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'username' ) ); ?>" type="text" pattern="<?php echo esc_attr( \Twitter\Helpers\Validators\PeriscopeUsername::getPattern() ); ?>" inputmode="verbatim" spellcheck="false" maxlength="<?php echo esc_attr( \Twitter\Helpers\Validators\PeriscopeUsername::MAX_LENGTH ); ?>" value="<?php echo esc_attr( $instance['username'] ); ?>"<?php
 			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
 			echo $close_void_element;
 		?>></p>
