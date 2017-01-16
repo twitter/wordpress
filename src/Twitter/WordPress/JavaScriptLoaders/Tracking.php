@@ -30,7 +30,7 @@ namespace Twitter\WordPress\JavaScriptLoaders;
  *
  * @since 1.0.0
  */
-class Tracking
+class Tracking extends AsyncJavaScript
 {
 	/**
 	 * Twitter tracking JavaScript handle
@@ -44,61 +44,59 @@ class Tracking
 	const QUEUE_HANDLE = 'twitter-tracking';
 
 	/**
+	 * Twitter advertising widget fully-qualified domain name
+	 *
+	 * Used to prefetch DNS lookup
+	 *
+	 * @since 2.0.0
+	 *
+	 * @type string
+	 */
+	const FQDN = 'static.ads-twitter.com';
+
+	/**
 	 * Twitter advertising JavaScript absolute URI
 	 *
 	 * @since 1.2.0
 	 *
 	 * @type string
 	 */
-	const URI = 'https://platform.twitter.com/oct.js';
+	const URI = 'https://static.ads-twitter.com/uwt.js';
 
 	/**
-	 * Proactively resolve Twitter advertising JS FQDN asynchronously before later use
+	 * Extra JavaScript to be loaded with external JS
 	 *
-	 * @since 1.0.0
+	 * Initialize the twttr variable to attach ready events before JS loaded
 	 *
-	 * @link http://dev.chromium.org/developers/design-documents/dns-prefetching Chromium prefetch behavior
-	 * @link https://developer.mozilla.org/en-US/docs/Controlling_DNS_prefetching Firefox prefetch behavior
+	 * @see WP_Scripts::print_extra_script()
 	 *
-	 * @return void
+	 * @since 2.0.0
+	 *
+	 * @type string
 	 */
-	public static function dnsPrefetch()
-	{
-		echo '<link rel="dns-prefetch" href="//platform.twitter.com"';
-		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
-		echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
-		echo '>' . "\n";
-	}
+	const SCRIPT_EXTRA = 'window.twq=(function(w){t=w.twq||function(){window.twq.exe?window.twq.exe(window.twq,arguments):window.twq.queue.push(arguments)};t.version="1.1";t.queue=[];return t}(window));';
 
 	/**
-	 * Register Twitter advertising JavaScript
+	 * Load Twitter ad tracking JS using an inline script block
 	 *
-	 * @since 1.0.0
+	 * Suitable for unknown render environments where a script block may not be included in a standard enqueue output such as the wp_print_footer_scripts action.
 	 *
-	 * @return void
+	 * @since 2.0.0
+	 *
+	 * @param bool $include_script_element_wrapper wrap the returned JavaScript string in a script element wrapper
+	 *
+	 * @return string HTML script element containing loader script
 	 */
-	public static function register()
+	public static function asyncScriptLoaderInline( $include_script_element_wrapper = true )
 	{
-		wp_register_script(
-			self::QUEUE_HANDLE,
-			self::URI,
-			array(), // no dependencies
-			null, // no not add extra query parameters for cache busting
-			true // in footer
-		);
-	}
+		$script = '!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version=\'1.1\',s.queue=[],u=t.createElement(n),u.async=!0,u.src=' . wp_json_encode( self::URI ) . ',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,"script");';
 
-	/**
-	 * Enqueue the advertising JavaScript
-	 *
-	 * @since 1.0.0
-	 *
-	 * @uses wp_enqueue_script()
-	 *
-	 * @return void
-	 */
-	public static function enqueue()
-	{
-		wp_enqueue_script( self::QUEUE_HANDLE );
+		if ( $include_script_element_wrapper ) {
+			return '<script>' . $script . '</script>';
+		}
+
+		return $script;
 	}
 }
