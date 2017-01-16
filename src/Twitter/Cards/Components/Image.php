@@ -201,11 +201,6 @@ class Image
             $properties['alt'] = $this->alt;
             $has_properties = true;
         }
-        if (isset($this->width) && isset($this->height)) {
-            $properties['width'] = $this->width;
-            $properties['height'] = $this->height;
-            $has_properties = true;
-        }
 
         if ($has_properties) {
             return $properties;

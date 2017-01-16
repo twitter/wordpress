@@ -95,7 +95,7 @@ class CardsMetaElements
 
 		// Escaped when building individual elements
 		// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
-		static::buildMetaElements();
+		echo static::buildMetaElements();
 
 		echo "\n";
 	}
