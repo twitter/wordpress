@@ -141,6 +141,7 @@ class PluginLoader
 			\Twitter\WordPress\Features::PERISCOPE_ON_AIR => '\Twitter\WordPress\Widgets\Buttons\Periscope\OnAir',
 			\Twitter\WordPress\Features::EMBED_PROFILE    => '\Twitter\WordPress\Widgets\Embeds\Timeline\Profile',
 			\Twitter\WordPress\Features::EMBED_LIST       => '\Twitter\WordPress\Widgets\Embeds\Timeline\TwitterList',
+			\Twitter\WordPress\Features::EMBED_SEARCH     => '\Twitter\WordPress\Widgets\Embeds\Timeline\Search',
 			\Twitter\WordPress\Features::EMBED_COLLECTION => '\Twitter\WordPress\Widgets\Embeds\Timeline\Collection',
 			\Twitter\WordPress\Features::TRACKING_PIXEL   => '\Twitter\WordPress\Widgets\Advertising\Tracking',
 		);
@@ -284,12 +285,13 @@ class PluginLoader
 			}
 		}
 
-		// initialize buttons and ad pixel if not disabled
+		// initialize buttons, search timeline, and ad pixel if not disabled
 		foreach (
 			array(
 				\Twitter\WordPress\Features::FOLLOW_BUTTON    => 'Buttons\\Follow',
 				\Twitter\WordPress\Features::TWEET_BUTTON     => 'Buttons\\Share',
-				\Twitter\WordPress\Features::PERISCOPE_ON_AIR => 'Buttons\\Periscope\OnAir',
+				\Twitter\WordPress\Features::PERISCOPE_ON_AIR => 'Buttons\\Periscope\\OnAir',
+				\Twitter\WordPress\Features::EMBED_SEARCH     => 'Embeds\\Timeline\\Search',
 				\Twitter\WordPress\Features::TRACKING_PIXEL   => 'Advertising\\Tracking',
 			) as $feature => $shortcode_class
 		) {

@@ -124,7 +124,7 @@ class Follow implements \Twitter\WordPress\Shortcodes\ShortcodeInterface
 						'type'  => 'text',
 						'meta'  => array(
 							'placeholder' => 'WordPress',
-							'pattern'     => '[A-Za-z0-9_]{1,20}',
+							'pattern'     => \Twitter\Helpers\Validators\ScreenName::getPattern(),
 						),
 					),
 					array(
