@@ -101,6 +101,17 @@ class Features
 	const EMBED_LIST = 'embed-list';
 
 	/**
+	 * Embed recent Tweets matching a search query configured at twitter.com/settings/widgets
+	 *
+	 * @since 2.0.0
+	 *
+	 * @link https://dev.twitter.com/web/embedded-timelines/search Embedded Search Timeline
+	 *
+	 * @type string
+	 */
+	const EMBED_SEARCH = 'embed-search';
+
+	/**
 	 * Embed multiple Tweets in a vertical format by URL or shortcode
 	 *
 	 * @since 2.0.0
@@ -197,6 +208,7 @@ class Features
 		self::EMBED_VINE            => true, // single Vine
 		self::EMBED_PROFILE         => true, // Twitter profile
 		self::EMBED_LIST            => true, // Twitter List
+		self::EMBED_SEARCH          => true, // Twitter search
 		self::EMBED_COLLECTION      => true, // multiple Tweets organized into a collection
 		self::EMBED_COLLECTION_GRID => true, // multiple Tweets organized into a collection displayed in a grid format
 		self::EMBED_MOMENT          => true, // Twitter Moment

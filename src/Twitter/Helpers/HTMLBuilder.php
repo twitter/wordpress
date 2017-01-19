@@ -146,7 +146,7 @@ class HTMLBuilder
                 // filter and store
                 if (! empty($attribute_tokens)) {
                     $attribute_tokens = array_map(
-                        __CLASS__ . '::' . ( $attribute === 'class' ? 'escapeClassName' : 'escapeAttribute' ),
+                        get_called_class() . '::' . ( $attribute === 'class' ? 'escapeClassName' : 'escapeAttribute' ),
                         $attribute_tokens
                     );
                     if (! empty($attribute_tokens)) {
@@ -184,6 +184,9 @@ class HTMLBuilder
             foreach ($data_attributes as $attribute => $value) {
                 if (! $attribute) {
                     continue;
+                }
+                if (is_array($value)) {
+                    $value = implode(' ', $value);
                 }
 
                 $clean_attributes[ 'data-' . $attribute ] = static::escapeAttributeValue(trim($value));
