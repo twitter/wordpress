@@ -75,18 +75,22 @@ class Search extends \Twitter\WordPress\Widgets\Embeds\Timeline
 	 */
 	protected function dataSourceFormElements( $instance )
 	{
+		$close_html_element = \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
 		?><p><label for="<?php echo esc_attr( $this->get_field_id( 'widget_id' ) ); ?>"><?php echo esc_html( __( 'Twitter widget ID', 'twitter' ) . ':' ); ?></label>
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'widget_id' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'widget_id' ) ); ?>" type="text" pattern="[0-9]+" inputmode="verbatim" spellcheck="false" value="<?php echo esc_attr( $instance['widget_id'] ); ?>"<?php
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'widget_id' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'widget_id' ) ); ?>" type="text" pattern="[0-9]+" inputmode="verbatim" spellcheck="false" value="<?php echo esc_attr( $instance['widget_id'] ); ?>" required<?php
 			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
-			echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
-		?>><br><small><?php
+			echo $close_html_element;
+		?>><br<?php
+			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
+			echo $close_html_element;
+		?>><small><?php
 			printf(
 				esc_html( _x( 'Create a new widget ID at %s', 'Create a widget identifier at a URL', 'twitter' ) ),
 				'<a href="' . esc_url( 'https://twitter.com/settings/widgets/new/search', array( 'https', 'http' ) )  . '">' . esc_html( 'twitter.com/settings/widgets' ) . '</a>'
 			);
 		?></small></p><p><label for="<?php echo esc_attr( $this->get_field_id( 'terms' ) ); ?>"><?php echo esc_html( __( 'Search terms', 'twitter' ) . ':' ); ?></label><input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'terms' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'terms' ) ); ?>" type="text" maxlength="450" value="<?php echo esc_attr( $instance['terms'] ); ?>"<?php
 			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
-			echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
+			echo $close_html_element;
 		?>></p>
 		<?php
 	}
