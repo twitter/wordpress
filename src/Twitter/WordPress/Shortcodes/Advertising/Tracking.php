@@ -165,7 +165,7 @@ class Tracking implements \Twitter\WordPress\Shortcodes\ShortcodeInterface
 		}
 
 		if ( isset( $options['id'] ) ) {
-			$options['id'] = trim( $options['id'] );
+			$options['id'] = \Twitter\Helpers\Validators\WebsiteTag::sanitize( $options['id'] );
 			if ( ! $options['id'] ) {
 				unset( $options['id'] );
 			}

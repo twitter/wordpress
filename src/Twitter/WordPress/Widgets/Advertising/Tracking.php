@@ -145,7 +145,7 @@ class Tracking extends \Twitter\WordPress\Widgets\Widget
 		);
 
 		?><p><label for="<?php echo esc_attr( $this->get_field_id( 'id' ) ); ?>"><?php echo esc_html( _x( 'Website tag ID', 'Identifier used to track an advertising campaign including conversion and custom audiences', 'twitter' ) . ':' ); ?></label>
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'id' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'id' ) ); ?>" type="text" inputmode="verbatim" spellcheck="false" maxlength="15" value="<?php echo esc_attr( trim( $instance['id'] ) ); ?>"<?php
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'id' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'id' ) ); ?>" type="text" inputmode="verbatim" spellcheck="false" pattern="<?php echo esc_attr( \Twitter\Helpers\Validators\WebsiteTag::getPattern() ); ?>" maxlength="<?php echo esc_attr( \Twitter\Helpers\Validators\WebsiteTag::MAX_LENGTH ); ?>" value="<?php echo esc_attr( trim( $instance['id'] ) ); ?>" required<?php
 			// @codingStandardsIgnoreLine WordPress.XSS.EscapeOutput.OutputNotEscaped
 			echo \Twitter\WordPress\Helpers\HTMLBuilder::closeVoidHTMLElement();
 		?>></p><?php
@@ -167,7 +167,7 @@ class Tracking extends \Twitter\WordPress\Widgets\Widget
 
 		$id = '';
 		if ( isset( $new_instance['id'] ) ) {
-			$id = trim( $new_instance['id'] );
+			$id = \Twitter\Helpers\Validators\WebsiteTag::sanitize( $new_instance['id'] );
 		}
 		// ID required, otherwise nothing to track
 		if ( ! $id ) {
