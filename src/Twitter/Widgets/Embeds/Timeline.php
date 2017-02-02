@@ -583,6 +583,10 @@ abstract class Timeline extends \Twitter\Widgets\Base
             $this->setWidth($options['width']);
         }
 
+        if (isset($options['aria-polite']) && $options['aria-polite']) {
+            $this->setAriaLive($options['aria-polite']);
+        }
+
         if (isset($options['limit']) && $options['limit']) {
             $this->setLimit($options['limit']);
         } elseif (isset($options['height']) && $options['height']) {
@@ -591,10 +595,6 @@ abstract class Timeline extends \Twitter\Widgets\Base
 
         if (isset($options['chrome']) && is_array($options['chrome']) && !empty($options['chrome'])) {
             $this->setChrome($options['chrome']);
-        }
-
-        if (isset($options['aria-polite']) && $options['aria-polite']) {
-            $this->setAriaLive($options['aria-polite']);
         }
 
         return $this;
@@ -621,6 +621,7 @@ abstract class Timeline extends \Twitter\Widgets\Base
             $data['tweet-limit'] = $this->limit;
             // scroll bar is not used on expanded timeline display triggered by limit
             unset($this->chrome[static::CHROME_NOSCROLLBAR]);
+            $this->aria_politeness = null;
         } elseif (isset($this->height)) {
             $data['height'] = $this->height;
         }
@@ -629,7 +630,7 @@ abstract class Timeline extends \Twitter\Widgets\Base
             $data['chrome'] = array_keys($this->chrome);
         }
 
-        if ($this->aria_politeness !== static::ARIA_POLITE_POLITE) {
+        if ($this->aria_politeness && $this->aria_politeness !== static::ARIA_POLITE_POLITE) {
             $data['aria-polite'] = $this->aria_politeness;
         }
 
@@ -648,29 +649,30 @@ abstract class Timeline extends \Twitter\Widgets\Base
      */
     public function toOEmbedParameterArray()
     {
-        $oembed = parent::toArray();
-        $oembed = array_merge($oembed, $this->themeToOEmbedParameterArray());
+        $query_parameters = parent::toArray();
+        $query_parameters = array_merge($query_parameters, $this->themeToOEmbedParameterArray());
 
         if (isset($this->width)) {
-            $oembed['maxwidth'] = $this->width;
+            $query_parameters['maxwidth'] = $this->width;
         }
 
         if (isset($this->limit)) {
-            $oembed['limit'] = $this->limit;
+            $query_parameters['limit'] = $this->limit;
             // scroll bar is not used on expanded timeline display triggered by limit
             unset($this->chrome[static::CHROME_NOSCROLLBAR]);
+            $this->aria_politeness = null;
         } elseif (isset($this->height)) {
-            $oembed['maxheight'] = $this->height;
+            $query_parameters['maxheight'] = $this->height;
         }
 
         if (isset($this->chrome)) {
-            $oembed['chrome'] = implode(' ', array_keys($this->chrome));
+            $query_parameters['chrome'] = implode(' ', array_keys($this->chrome));
         }
 
-        if ($this->aria_politeness !== static::ARIA_POLITE_POLITE) {
-            $oembed['aria_polite'] = $this->aria_politeness;
+        if ($this->aria_politeness && $this->aria_politeness !== static::ARIA_POLITE_POLITE) {
+            $query_parameters['aria_polite'] = $this->aria_politeness;
         }
 
-        return $oembed;
+        return $query_parameters;
     }
 }

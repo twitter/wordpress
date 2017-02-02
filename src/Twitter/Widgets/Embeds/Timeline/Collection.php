@@ -51,6 +51,21 @@ class Collection extends \Twitter\Widgets\Embeds\Timeline
     const WIDGET_TYPE_GRID = 'grid';
 
     /**
+     * Fields supported in a vertical template not supported in a grid template
+     *
+     * @since 2.0.0
+     *
+     * @type array data-* key, oEmbed value
+     */
+    public static $FIELDS_NOT_SUPPORTED_IN_GRID = array(
+      'height'       => 'maxheight',    // auto-expands to limit
+      'aria-polite'  => 'aria_polite',  // grid is not a live region
+      'theme'        => 'theme',        // always light text on dark theme
+      'link-color'   => 'link_color',   // text color
+      'border-color' => 'border_color',
+    );
+
+    /**
      * Collection unique identifier
      *
      * @since 2.0.0
@@ -234,15 +249,9 @@ class Collection extends \Twitter\Widgets\Embeds\Timeline
             if (static::WIDGET_TYPE_GRID === $this->widget_type) {
                 $data['widget-type'] = $this->widget_type;
 
-                $fields_not_supported_in_grid = array(
-                    'height',      // auto-expands to limit
-                    'aria-polite', // grid is not a live region
-                    'theme',
-                    'link-color',
-                    'border-color',
-                );
+                $unsupported_fields = array_keys(static::$FIELDS_NOT_SUPPORTED_IN_GRID);
 
-                foreach ($fields_not_supported_in_grid as $key) {
+                foreach ($unsupported_fields as $key) {
                     unset($data[$key]);
                 }
 
@@ -276,39 +285,33 @@ class Collection extends \Twitter\Widgets\Embeds\Timeline
      */
     public function toOEmbedParameterArray()
     {
-        $data = parent::toOEmbedParameterArray();
+        $query_parameters = parent::toOEmbedParameterArray();
 
         $url = $this->getURL();
         if (! $url) {
             return array();
         }
-        $data['url'] = $url;
+        $query_parameters['url'] = $url;
 
         if ($this->widget_type) {
             if (static::WIDGET_TYPE_GRID === $this->widget_type) {
-                $data['widget_type'] = static::WIDGET_TYPE_GRID;
+                $query_parameters['widget_type'] = static::WIDGET_TYPE_GRID;
 
-                $fields_not_supported_in_grid = array(
-                    'maxheight',   // auto-expands to limit
-                    'aria_polite', // grid is not a live region
-                    'theme',
-                    'link_color',
-                    'border_color',
-                );
-
-                foreach ($fields_not_supported_in_grid as $key) {
-                    unset($data[$key]);
+                $unsupported_parameters = array_values(static::$FIELDS_NOT_SUPPORTED_IN_GRID);
+                foreach ($unsupported_parameters as $key) {
+                    unset($query_parameters[$key]);
                 }
+                unset($unsupported_parameters);
 
                 // only footer applies. footer is transparent
                 if (array_key_exists(static::CHROME_NOFOOTER, $this->chrome)) {
-                    $data['chrome'] = array(static::CHROME_NOFOOTER);
+                    $query_parameters['chrome'] = array(static::CHROME_NOFOOTER);
                 } else {
-                    unset($data['chrome']);
+                    unset($query_parameters['chrome']);
                 }
             }
         }
 
-        return $data;
+        return $query_parameters;
     }
 }
