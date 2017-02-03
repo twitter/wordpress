@@ -142,7 +142,7 @@ The Twitter plugin for WordPress makes it easier to explicitly include Twitter f
 
 Twitter widgets and buttons load Twitter's widgets.js library through the WordPress JavaScript queue. Read more about [how Twitter for Websites widgets respect user privacy](https://dev.twitter.com/web/overview/privacy).
 
-Twitter advertising trackers are only included on the page when invoked by the site using the `twitter_tracking` shortcode or placing the Twitter advertising shortcode in a widget area. Read more about [Twitter's policies for conversion tracking and tailored audiences products](https://support.twitter.com/articles/20171365-policies-for-conversion-tracking-and-tailored-audiences).
+Twitter advertising trackers are only included on the page when invoked by the site using the `twitter_tracking` shortcode or placing the Twitter advertising shortcode in a widget area. Read more about [Twitter's policies for conversion tracking and tailored audiences products](https://support.twitter.com/articles/20171365).
 
 == Screenshots ==
 

@@ -230,7 +230,7 @@ class Collection extends \Twitter\Widgets\Embeds\Timeline
      *
      * @since 2.0.0
      *
-     * @return array profile timeline parameter array {
+     * @return array collection parameter array {
      *   @type string dashed parameter name
      *   @type string parameter value
      * }

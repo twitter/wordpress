@@ -30,7 +30,7 @@ namespace Twitter\WordPress\Shortcodes\Embeds;
  *
  * @since 1.2.0
  */
-class Moment extends Timeline\Collection
+class Moment extends Timeline\CollectionGrid
 {
 
 	/**
@@ -88,5 +88,34 @@ class Moment extends Timeline\Collection
 	public static function featureName()
 	{
 		return __( 'Twitter Moment', 'twitter' );
+	}
+
+	/**
+	 * Handle shortcode macro
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param array  $attributes set of shortcode attribute-value pairs or positional content matching the WordPress shortcode regex {
+	 *   @type string|int attribute name or positional int
+	 *   @type mixed      shortcode value
+	 * }
+	 * @param string $content    content inside a shortcode macro. no effect on this shortcode
+	 *
+	 * @return string HTML markup. empty string if parameter requirement not met or no collection info found
+	 */
+	public static function shortcodeHandler( $attributes, $content = '' )
+	{
+		$options = static::getShortcodeAttributes( $attributes );
+		// Moment ID required
+		if ( ! $options['id'] ) {
+			return '';
+		}
+
+		$timeline = \Twitter\Widgets\Embeds\Moment::fromArray( $options );
+		if ( ! ( $timeline && $timeline->getID() ) ) {
+			return '';
+		}
+
+		return static::getHTMLForTimeline( $timeline );
 	}
 }

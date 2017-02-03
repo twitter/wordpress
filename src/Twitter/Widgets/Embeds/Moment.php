@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\Widgets\Embeds\Timeline;
+namespace Twitter\Widgets\Embeds;
 
 /**
  * Display Tweets included in a Twitter Moment
@@ -54,5 +54,43 @@ class Moment extends \Twitter\Widgets\Embeds\Timeline\Collection
 
         // all moments are grids
         $this->setGridTemplate();
+    }
+
+    /**
+     * Return Moment parameters suitable for conversion to data-*
+     *
+     * @since 2.0.0
+     *
+     * @return array Moment timeline parameter array {
+     *   @type string dashed parameter name
+     *   @type string parameter value
+     * }
+     */
+    public function toArray()
+    {
+        $data = parent::toArray();
+
+        unset($data['widget-type']);
+
+        return $data;
+    }
+
+    /**
+     * Output Moment as an array suitable for use as oEmbed query parameters
+     *
+     * @since 2.0.0
+     *
+     * @return array Moment parameter array {
+     *   @type string query parameter name
+     *   @type string query parameter value
+     * }
+     */
+    public function toOEmbedParameterArray()
+    {
+        $query_parameters = parent::toOEmbedParameterArray();
+
+        unset($query_parameters['widget_type']);
+
+        return $query_parameters;
     }
 }

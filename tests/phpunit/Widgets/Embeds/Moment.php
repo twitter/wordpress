@@ -23,10 +23,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-namespace Twitter\Tests\Widgets\Embeds\Timeline;
+namespace Twitter\Tests\Widgets\Embeds;
 
 /**
- * @coversDefaultClass \Twitter\Widgets\Embeds\Timeline\Moment
+ * @coversDefaultClass \Twitter\Widgets\Embeds\Moment
  */
 final class Moment extends \Twitter\Tests\TestWithPrivateAccess
 {
@@ -50,8 +50,8 @@ final class Moment extends \Twitter\Tests\TestWithPrivateAccess
      */
     public function testConstructor()
     {
-        $timeline = new \Twitter\Widgets\Embeds\Timeline\Moment(self::VALID_MOMENT_ID);
+        $timeline = new \Twitter\Widgets\Embeds\Moment(self::VALID_MOMENT_ID);
         $this->assertEquals(self::VALID_MOMENT_ID, self::getProperty($timeline, 'id'), 'Moment constructor did not set valid ID');
-        $this->assertEquals(\Twitter\Widgets\Embeds\Timeline\Moment::WIDGET_TYPE_GRID, self::getProperty($timeline, 'widget_type'), 'Moment constructor did not set grid widget type');
+        $this->assertEquals(\Twitter\Widgets\Embeds\Moment::WIDGET_TYPE_GRID, self::getProperty($timeline, 'widget_type'), 'Moment constructor did not set grid widget type');
     }
 }

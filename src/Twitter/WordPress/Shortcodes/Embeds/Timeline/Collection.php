@@ -181,7 +181,7 @@ class Collection implements \Twitter\WordPress\Shortcodes\ShortcodeInterface, \T
 	{
 		// allow grid displays to be triggered from the main collection shortcode, handled by the compatibility layer of the grid shortcode
 		if ( isset( $attributes['template'] ) && \Twitter\Widgets\Embeds\Timeline\Collection::WIDGET_TYPE_GRID === $attributes['template'] ) {
-			\Twitter\WordPress\Shortcodes\Embeds\Timeline\CollectionGrid::shortcodeHandler( $attributes, $content );
+			return \Twitter\WordPress\Shortcodes\Embeds\Timeline\CollectionGrid::shortcodeHandler( $attributes, $content );
 		}
 		$options = static::getShortcodeAttributes( $attributes );
 		// collection ID required
