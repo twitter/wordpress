@@ -256,6 +256,11 @@ class Search extends \Twitter\Widgets\Embeds\Timeline
             $data['widget-id'] = $this->widget_id;
         }
 
+        // always include theme value. may override value stored with widget
+        if($this->theme) {
+            $data['theme'] = $this->theme;
+        }
+
         return $data;
     }
 

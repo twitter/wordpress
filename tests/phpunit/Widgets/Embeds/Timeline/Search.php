@@ -245,14 +245,18 @@ final class Search extends \Twitter\Tests\TestWithPrivateAccess
     public function testToArray()
     {
         $width = 400;
+        $theme = 'light';
         $timeline = new \Twitter\Widgets\Embeds\Timeline\Search(self::VALID_WIDGET_ID);
         self::setProperty($timeline, 'width', $width);
+        self::setProperty($timeline, 'theme', $theme);
         $data = $timeline->toArray();
 
         $this->assertArrayHasKey('widget-id', $data, 'Search timeline array does not include a widget ID');
         $this->assertEquals(self::VALID_WIDGET_ID, $data['widget-id'], 'Widget ID in associative array does not match set object property');
         $this->assertArrayHasKey('width', $data, 'Search timeline array does not include a set base timeline value');
         $this->assertEquals($width, $data['width'], 'Search timeline array width value does not match set object property');
+        $this->assertArrayHasKey('theme', $data, 'Search timeline array does not include a theme value');
+        $this->assertEquals($theme, $data['theme'], 'Search timeline array does not contain default theme value');
     }
 
     /**
