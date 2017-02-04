@@ -51,6 +51,15 @@ class Search extends \Twitter\Widgets\Embeds\Timeline
     const BASE_URL = 'https://twitter.com/search';
 
     /**
+     * Twitter widgets setting URL including a widget ID as a path component
+     *
+     * @since 2.0.0
+     *
+     * @type string
+     */
+    const SETTINGS_URL_REGEX = '#^https://twitter\.com/settings/widgets/([0-9]+)/edit$#i';
+
+    /**
      * Widget ID configured on Twitter.com
      *
      * @since 2.0.0
@@ -86,6 +95,30 @@ class Search extends \Twitter\Widgets\Embeds\Timeline
         if ($search_terms) {
             $this->setSearchTerms($search_terms);
         }
+    }
+
+    /**
+     * Extract a widget ID from a Twitter.com widgets setting URL
+     *
+     * @since 2.0.0
+     *
+     * @param string $url Twitter.com widgets setting URL
+     *
+     * @return string widget ID or empty string if none found
+     */
+    public static function getWidgetIDFromSettingsURL($url)
+    {
+        if (! (is_string($url) && $url)) {
+            return '';
+        }
+        $url = trim($url);
+        $matches = array();
+        preg_match(static::SETTINGS_URL_REGEX, $url, $matches);
+        if (is_array($matches) && isset($matches[1]) && $matches[1]) {
+            return $matches[1];
+        }
+
+        return '';
     }
 
     /**

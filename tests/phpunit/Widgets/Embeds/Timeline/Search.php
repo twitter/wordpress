@@ -93,6 +93,29 @@ final class Search extends \Twitter\Tests\TestWithPrivateAccess
     }
 
     /**
+     * Test extracting a widget ID from a Twitter.com widget settings URL
+     *
+     * @since 2.0.0
+     *
+     * @covers ::getWidgetIDFromSettingsURL
+     *
+     * @return void
+     */
+    public function testGetWidgetIDFromSettingsURL()
+    {
+        $this->assertEquals(
+            self::VALID_WIDGET_ID,
+            \Twitter\Widgets\Embeds\Timeline\Search::getWidgetIDFromSettingsURL('https://twitter.com/settings/widgets/' . self::VALID_WIDGET_ID . '/edit'),
+            'Failed to extract a widget ID from a Twitter.com widget settings URL'
+        );
+        $this->assertEquals(
+            '',
+            \Twitter\Widgets\Embeds\Timeline\Search::getWidgetIDFromSettingsURL('https://twitter.com/TwitterDev'),
+            'Empty string not returned for invalid Twitter.com widget settings URL'
+        );
+    }
+
+    /**
      * Test verifying a widget ID
      *
      * @since 2.0.0
