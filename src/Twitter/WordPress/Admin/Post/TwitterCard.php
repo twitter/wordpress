@@ -71,10 +71,20 @@ class TwitterCard
 	 */
 	public static function registerPostMeta()
 	{
+		$args = array( get_called_class(), 'sanitizeFields' );
+		if ( function_exists( 'registered_meta_key_exists' ) ) {
+			$args = array(
+				'sanitize_callback' => $args,
+				'description'       => __( 'Customize title and description shown in Twitter link previews', 'twitter' ),
+				'show_in_rest'      => true,
+				'type'              => 'array',
+				'single'            => true,
+			);
+		}
 		register_meta(
 			'post',
 			static::META_KEY,
-			array( __CLASS__, 'sanitizeFields' )
+			$args
 		);
 	}
 
@@ -248,7 +258,7 @@ class TwitterCard
 
 		$fields = static::sanitizeFields( $fields );
 		if ( empty( $fields ) ) {
-			delete_post_meta_by_key( static::META_KEY );
+			delete_post_meta( $post->ID, static::META_KEY );
 		} else {
 			update_post_meta( $post->ID, static::META_KEY, $fields );
 		}

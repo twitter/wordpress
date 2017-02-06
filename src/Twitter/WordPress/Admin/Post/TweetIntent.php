@@ -71,10 +71,21 @@ class TweetIntent
 	 */
 	public static function registerPostMeta()
 	{
+		$args = array( get_called_class(), 'sanitizeFields' );
+		// extra parameters for WordPress 4.6+
+		if ( function_exists( 'registered_meta_key_exists' ) ) {
+			$args = array(
+				'sanitize_callback' => $args,
+				'description'       => __( 'Customize Tweet button pre-populated share text and hashtags', 'twitter' ),
+				'show_in_rest'      => true,
+				'type'              => 'array',
+				'single'            => true,
+			);
+		}
 		register_meta(
 			'post',
 			static::META_KEY,
-			array( __CLASS__, 'sanitizeFields' )
+			$args
 		);
 	}
 
@@ -86,13 +97,14 @@ class TweetIntent
 	 *
 	 * @since 1.0.0
 	 *
+	 * @see https://dev.twitter.com/rest/reference/get/help/configuration
+	 *
 	 * @return object object with short_url_length and optional short_url_length_https properties
 	 */
 	public static function getTwitterConfiguration()
 	{
 		$config = new \stdClass();
-		$config->short_url_length = 22;
-		$config->short_url_length_https = $config->short_url_length + 1;
+		$config->short_url_length = 23;
 
 		return $config;
 	}
@@ -111,27 +123,7 @@ class TweetIntent
 		if ( ! ( is_object( $config ) && isset( $config->short_url_length ) ) ) {
 			return 0;
 		}
-		$url_length = absint( $config->short_url_length );
-
-		// check if the post URL to be wrapped uses the HTTPS scheme
-		if ( isset( $config->short_url_length_https ) ) {
-			$post_url = get_permalink();
-			if ( $post_url ) {
-				$is_https = false;
-				try {
-					if ( 'https' === strtolower( parse_url( $post_url, PHP_URL_SCHEME ) ) ) {
-						$is_https = true;
-					}
-				} catch (\Exception $e) {
-					// assume not HTTPS if parse_url throws exception
-				}
-				if ( $is_https ) {
-					$url_length = absint( $config->short_url_length_https );
-				}
-			}
-		}
-
-		return $url_length;
+		return absint( $config->short_url_length );
 	}
 
 	/**
@@ -302,7 +294,7 @@ class TweetIntent
 
 		$fields = static::sanitizeFields( $fields );
 		if ( empty( $fields ) ) {
-			delete_post_meta_by_key( static::META_KEY );
+			delete_post_meta( $post->ID, static::META_KEY );
 		} else {
 			update_post_meta( $post->ID, static::META_KEY, $fields );
 		}
