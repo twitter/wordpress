@@ -258,6 +258,13 @@ class Search extends \Twitter\Widgets\Embeds\Timeline
         if (! (is_string($options['widget_id']) && $options['widget_id'])) {
             return null;
         }
+        // parse a widget ID from a Twitter.com widget settings URL
+        if (strlen($options['widget_id']) > 7 && 0 === substr_compare('https://', $options['widget_id'], 0, 8, true)) {
+            $options['widget_id'] = static::getWidgetIDFromSettingsURL($options['widget_id']);
+            if (!$options['widget_id']) {
+                return null;
+            }
+        }
 
         $search_terms = '';
         if (isset($options['terms']) && is_string($options['terms']) && $options['terms']) {

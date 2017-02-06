@@ -254,6 +254,9 @@ final class Search extends \Twitter\Tests\TestWithPrivateAccess
         $timeline = \Twitter\Widgets\Embeds\Timeline\Search::fromArray(array('widget_id'=>static::VALID_WIDGET_ID, 'width'=>$width));
         $this->assertEquals(self::VALID_WIDGET_ID, self::getProperty($timeline, 'widget_id'), 'Failed to set widget ID from associative parameter array');
         $this->assertEquals($width, self::getProperty($timeline, 'width'), 'Failed to set base parameter from associative array');
+
+        $timeline = \Twitter\Widgets\Embeds\Timeline\Search::fromArray(array('widget_id'=>'https://twitter.com/settings/widgets/' . self::VALID_WIDGET_ID . '/edit'));
+        $this->assertEquals(self::VALID_WIDGET_ID, self::getProperty($timeline, 'widget_id'), 'Failed to set widget ID from a Twitter.com widget settings URL');
     }
 
     /**
