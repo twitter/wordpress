@@ -167,6 +167,66 @@ class PluginLoader
 	}
 
 	/**
+	 * Load Twitter widgets JavaScript early in the page build if a dependent widget will be rendered
+	 *
+	 * @since 2.0.1
+	 *
+	 * @return void
+	 */
+	public static function loadTwitterWidgetsJavaScriptWhenWidgetsActive()
+	{
+		$widgets_js_widgets = static::getAvailableWidgets();
+		// remove widgets not depending on Twitter widgets JS
+		unset( $widgets_js_widgets[ \Twitter\WordPress\Features::TRACKING_PIXEL ] );
+		if ( empty( $widgets_js_widgets ) ) {
+			return;
+		}
+
+		$features = \Twitter\WordPress\Features::getEnabledFeatures();
+		foreach ( $widgets_js_widgets as $feature_name => $widget_class ) {
+			if ( isset( $features[ $feature_name ] ) ) {
+				if ( method_exists( $widget_class, 'getBaseID' ) ) {
+					$base_id = $widget_class::getBaseID();
+					if ( $base_id && is_active_widget( false, false, $base_id, true ) ) {
+						// enqueue after the script is registered in wp_enqueue_scripts action priority 1
+						add_action( 'wp_enqueue_scripts', array( '\Twitter\WordPress\JavaScriptLoaders\Widgets', 'enqueue' ) );
+
+						// register DNS prefetch before WordPress resource hints run at wp_head priority 2
+						add_action( 'wp_head', array( '\Twitter\WordPress\JavaScriptLoaders\Widgets', 'dnsPrefetch' ), 1 );
+
+						// only enqueue once
+						return;
+					}
+					unset( $base_id );
+				}
+			}
+		}
+	}
+
+	/**
+	 * Load Twitter advertising JavaScript early in the page build if an ad tracker widget will be rendered
+	 *
+	 * @since 2.0.1
+	 *
+	 * @return void
+	 */
+	public static function loadTwitterAdvertisingJavaScriptWhenWidgetsActive()
+	{
+		$features = \Twitter\WordPress\Features::getEnabledFeatures();
+		if ( ! isset( $features[ \Twitter\WordPress\Features::TRACKING_PIXEL ] ) ) {
+			return;
+		}
+
+		if ( is_active_widget( false, false, \Twitter\WordPress\Widgets\Advertising\Tracking::getBaseID(), true ) ) {
+			// enqueue after the script is registered in wp_enqueue_scripts action priority 1
+			add_action( 'wp_enqueue_scripts', array( '\Twitter\WordPress\JavaScriptLoaders\Tracking', 'enqueue' ) );
+
+			// register DNS prefetch before WordPress resource hints run at wp_head priority 2
+			add_action( 'wp_head', array( '\Twitter\WordPress\JavaScriptLoaders\Tracking', 'dnsPrefetch' ), 1 );
+		}
+	}
+
+	/**
 	 * Hook into actions and filters specific to a WordPress administrative view
 	 *
 	 * @since 1.0.0
@@ -209,14 +269,9 @@ class PluginLoader
 		$features = \Twitter\WordPress\Features::getEnabledFeatures();
 
 		// load widgets JS if a Twitter widget is active
-		if ( ( isset( $features[ \Twitter\WordPress\Features::FOLLOW_BUTTON ] ) && is_active_widget( false, false, \Twitter\WordPress\Widgets\Buttons\Follow::BASE_ID, true ) )
-			|| ( isset( $features[ \Twitter\WordPress\Features::PERISCOPE_ON_AIR ] ) && is_active_widget( false, false, \Twitter\WordPress\Widgets\Buttons\Periscope\OnAir::BASE_ID, true ) )
-		) {
-			// enqueue after the script is registered in wp_enqueue_scripts action priority 1
-			add_action( 'wp_enqueue_scripts', array( '\Twitter\WordPress\JavaScriptLoaders\Widgets', 'enqueue' ) );
-			// register DNS prefetch before WordPress resource hints run at wp_head priority 2
-			add_action( 'wp_head', array( '\Twitter\WordPress\JavaScriptLoaders\Widgets', 'dnsPrefetch' ), 1 );
-		}
+		static::loadTwitterWidgetsJavaScriptWhenWidgetsActive();
+		// load advertising JS if an ad tracking widget is active
+		static::loadTwitterAdvertisingJavaScriptWhenWidgetsActive();
 
 		// do not add content filters to HTTP 404 response
 		if ( is_404() ) {

@@ -54,6 +54,19 @@ abstract class Timeline extends \Twitter\WordPress\Widgets\Widget implements \Tw
 	}
 
 	/**
+	 * Get the base ID used to identify widgets of this type installed in a widget area
+	 *
+	 * @since 2.0.1
+	 *
+	 * @return string widget base ID
+	 */
+	public static function getBaseID()
+	{
+		$shortcode_class = static::SHORTCODE_CLASS;
+		return $shortcode_class::HTML_CLASS;
+	}
+
+	/**
 	 * Get displayed options for chrome configuration with label
 	 *
 	 * @since 2.0.0

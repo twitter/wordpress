@@ -41,6 +41,15 @@ interface WidgetInterface
 	function __construct();
 
 	/**
+	 * Get the base ID used to identify widgets of this type installed in a widget area
+	 *
+	 * @since 2.0.1
+	 *
+	 * @return string widget base ID
+	 */
+	public static function getBaseID();
+
+	/**
 	 * Describe the functionality offered by the widget
 	 *
 	 * @since 2.0.0

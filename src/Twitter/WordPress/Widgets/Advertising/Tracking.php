@@ -35,6 +35,15 @@ namespace Twitter\WordPress\Widgets\Advertising;
 class Tracking extends \Twitter\WordPress\Widgets\Widget
 {
 	/**
+	 * Widget base ID
+	 *
+	 * @since 2.0.1
+	 *
+	 * @type string
+	 */
+	const BASE_ID = 'twitter-tracking';
+
+	/**
 	 * Class of the related shortcode handler
 	 *
 	 * @since 2.0.0
@@ -54,12 +63,24 @@ class Tracking extends \Twitter\WordPress\Widgets\Widget
 	{
 		$shortcode_class = static::SHORTCODE_CLASS;
 		parent::__construct(
-			'twitter-tracking',              // Base ID
+			static::BASE_ID, // Base ID
 			$shortcode_class::featureName(), // name
 			array(
 				'description' => static::getDescription(),
 			)
 		);
+	}
+
+	/**
+	 * Get the base ID used to identify widgets of this type installed in a widget area
+	 *
+	 * @since 2.0.1
+	 *
+	 * @return string widget base ID
+	 */
+	public static function getBaseID()
+	{
+		return static::BASE_ID;
 	}
 
 	/**
