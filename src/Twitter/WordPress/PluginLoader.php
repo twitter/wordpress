@@ -41,7 +41,7 @@ class PluginLoader
 	 *
 	 * @type string
 	 */
-	const VERSION = '2.0.0';
+	const VERSION = '2.0.1';
 
 	/**
 	 * Unique domain of the plugin's translated text

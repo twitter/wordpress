@@ -3,7 +3,7 @@ Contributors: Twitter, niallkennedy
 Tags: twitter, embedded tweet, embedded timeline, twitter profile, twitter list, twitter moment, twitter video, twitter grid, vine, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 4.1
 Tested up to: 4.7
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -72,6 +72,12 @@ Shortcode improvements for ajax-loaded posts. Remove photo, gallery, and product
 Display admin notice if current PHP version does not meet minimum requirements. Do not display Tweet button in auto-generated excerpt.
 
 == Changelog ==
+= 2.0.1 =
+* Enqueue Twitter widgets JavaScript and advertising JavaScript early in the page build process if a widget is active on the page
+* Tweet button: update expected length of a wrapped t.co URL with HTTP scheme
+* Support expanded post metadata descriptors in WordPress 4.6+. Includes REST API support for custom Tweet button and Twitter Cards values
+* Fix post metadata deletion for custom Tweet button and Twitter Card text
+
 = 2.0.0 =
 * Embed a [profile timeline](https://dev.twitter.com/web/embedded-timelines/user "Twitter embedded profile timeline"), [list timeline](https://dev.twitter.com/web/embedded-timelines/list "Twitter embedded list timeline"), or [collection](https://dev.twitter.com/web/embedded-timelines/collection "Twitter embedded collection") by pasting a URL, customizing a shortcode, or a widget
 * Embed a [search timeline](https://dev.twitter.com/web/embedded-timelines/search "Twitter embedded search timeline") by shortcode or widget using a widget ID configured on Twitter.com
