@@ -37,6 +37,9 @@ THE SOFTWARE.
  *
  * @return void
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 spl_autoload_register(function ($class) {
     // project-specific namespace prefix
     $prefix = 'Twitter\\';
