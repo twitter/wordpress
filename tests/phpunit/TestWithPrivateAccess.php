@@ -25,12 +25,14 @@ THE SOFTWARE.
 
 namespace Twitter\Tests;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * Create reflection wrappers for private and protected access
  *
  * @since 1.0.0
  */
-abstract class TestWithPrivateAccess extends \PHPUnit_Framework_TestCase
+abstract class TestWithPrivateAccess extends TestCase
 {
     /**
      * Get a private or protected property

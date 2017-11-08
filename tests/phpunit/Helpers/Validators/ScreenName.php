@@ -25,10 +25,12 @@ THE SOFTWARE.
 
 namespace Twitter\Tests\Helpers\Validators;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * @coversDefaultClass \Twitter\Helpers\Validators\ScreenName
  */
-final class ScreenName extends \PHPUnit_Framework_TestCase
+final class ScreenName extends TestCase
 {
     /**
      * Test trimming of an @ symbol before the screenname
