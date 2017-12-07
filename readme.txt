@@ -1,8 +1,8 @@
 === Plugin Name ===
 Contributors: Twitter, niallkennedy
 Tags: twitter, embedded tweet, embedded timeline, twitter profile, twitter list, twitter moment, twitter video, twitter grid, vine, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
-Requires at least: 4.1
-Tested up to: 4.7
+Requires at least: 4.7
+Tested up to: 4.9
 Stable tag: 2.0.1
 License: MIT
 License URI: https://opensource.org/licenses/MIT
