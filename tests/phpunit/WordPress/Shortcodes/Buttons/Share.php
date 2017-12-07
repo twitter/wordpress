@@ -87,8 +87,8 @@ final class Share extends \WP_UnitTestCase
         $options = \Twitter\WordPress\Shortcodes\Buttons\Share::sanitizeShortcodeParameters(array( 'text' => $text ));
         $this->assertTrue(( isset($options['text']) && $options['text'] === $text ), 'Failed to extract Tweet text from attribute');
 
-        // accept Tweet text over 140 characters in length
-        $text = 'Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed. A yellow dressinggown, ungirdled, was sustained gently behind him on the mild morning air.';
+        // accept Tweet text over 280 characters in length
+        $text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget tortor risus. Donec a justo nec ex faucibus commodo. Duis ornare dui a leo euismod, ut aliquet diam maximus. Nulla vel laoreet diam. Nam condimentum ultricies volutpat. Phasellus non sem ligula. Proin at lorem porttitor, feugiat nisl id, commodo risus.';
         $options = \Twitter\WordPress\Shortcodes\Buttons\Share::sanitizeShortcodeParameters(array( 'text' => $text ));
         $this->assertTrue(( isset($options['text']) && $options['text'] === $text ), 'Failed to extract lengthy Tweet text from attribute');
     }

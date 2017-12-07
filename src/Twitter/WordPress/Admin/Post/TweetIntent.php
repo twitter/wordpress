@@ -149,7 +149,7 @@ class TweetIntent
 		echo '<table id="tweet-intent">';
 		echo '<thead><tr><th scope="col">' . esc_html( _x( 'Parameter', 'Customization or variable', 'twitter' ) ) . '</th><th scope="col">' . esc_html( _x( 'Value', 'Table column header: user-inputted value', 'twitter' ) ) . '</th></tr></thead><tbody>';
 
-		$available_characters = 140;
+		$available_characters = 280;
 		// t.co wrapped URL length
 		$short_url_length = static::getShortURLLength();
 		if ( $short_url_length ) {
