@@ -25,20 +25,12 @@ php:
 # WordPress comes from the Git mirror, where 'master' mirrors svn 'trunk' and
 # x.y mirrors the latest from the x.y branch
 env:
+  # WordPress 4.9
+  - WP_VERSION=4.9
+  # WordPress 4.8
+  - WP_VERSION=4.8
   # WordPress 4.7
   - WP_VERSION=4.7
-  # WordPress 4.6
-  - WP_VERSION=4.6
-  # WordPress 4.5
-  - WP_VERSION=4.5
-  # WordPress 4.4
-  - WP_VERSION=4.4
-  # WordPress 4.3
-  - WP_VERSION=4.3
-  # WordPress 4.2
-  - WP_VERSION=4.2
-  # WordPress 4.1
-  - WP_VERSION=4.1
 
 matrix:
   fast_finish: true
