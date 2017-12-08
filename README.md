@@ -44,10 +44,6 @@ Add a Twitter collection with a grid template display to an article by URL or by
 
 Add a [Twitter Moment](https://twitter.com/i/moments) to an article by URL or by using the `twitter_moment` shortcode macro.
 
-### Embedded Vine
-
-Add a [Vine simple embed](https://dev.twitter.com/web/vine) to an article by URL or by using the `vine` shortcode macro.
-
 ### Twitter Cards
 
 The Twitter plugin for WordPress will automatically generate Twitter [Twitter Cards](https://dev.twitter.com/cards/overview) markup to highlight your post content when shared on Twitter. Add your site and author Twitter usernames through the WordPress administrative interface to attribute content to Twitter authors and drive followers.
