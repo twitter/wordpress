@@ -79,7 +79,7 @@ WordPress-powered sites with Twitter advertising accounts can use the `twitter_t
 The plugin is split into PHP object builders for constructing buttons, widgets, and cards and validating parameters. WordPress-specific code exists under `src/Twitter/WordPress/`. Coding standards therefore vary between PSR style (e.g. space indent) and WordPress style (e.g. tab indent) based on directory and its target runtime environment.
 
 ## Code of Conduct
-This, and all github.com/twitter projects, are under the [Twitter Open Source Code of Conduct](https://engineering.twitter.com/opensource/code-of-conduct). Additionally, see the [Typelevel Code of Conduct](http://typelevel.org/conduct) for specific examples of harassing behavior that are not tolerated.
+This, and all github.com/twitter projects, are under the [Twitter Open Source Code of Conduct](https://github.com/twitter/code-of-conduct/blob/master/code-of-conduct.md). Additionally, see the [Typelevel Code of Conduct](http://typelevel.org/conduct) for specific examples of harassing behavior that are not tolerated.
 
 ## Contact
 
