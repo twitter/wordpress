@@ -1,13 +1,13 @@
 === Plugin Name ===
 Contributors: Twitter, niallkennedy, sobkowicz
-Tags: twitter, embedded tweet, embedded timeline, twitter profile, twitter list, twitter moment, twitter video, twitter grid, vine, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
+Tags: twitter, embedded tweet, embedded timeline, twitter profile, twitter list, twitter moment, twitter video, twitter grid, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 4.7
 Tested up to: 4.9
 Stable tag: 2.0.2
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
-Official Twitter, Periscope, and Vine plugin for WordPress. Embed content and grow your audience. Requires PHP 5.4 or greater.
+Official Twitter and Periscope plugin for WordPress. Embed content and grow your audience. Requires PHP 5.4 or greater.
 
 == Description ==
 
@@ -18,14 +18,13 @@ Requires PHP version 5.4 or greater.
 = Embed Twitter content =
 Embed Twitter content by pasting a URL, customizing a shortcode, or in a widget area.
 
-* [single Tweet](https://dev.twitter.com/web/embedded-tweets "single Tweet embed")
-* [single Tweet with video template](https://dev.twitter.com/web/embedded-video "single Tweet with video embed")
-* [profile timeline](https://dev.twitter.com/web/embedded-timelines/user "Twitter embedded profile timeline")
-* [list timeline](https://dev.twitter.com/web/embedded-timelines/list "Twitter embedded list timeline")
-* [search timeline](https://dev.twitter.com/web/embedded-timelines/search "Twitter embedded search timeline")
-* [collection](https://dev.twitter.com/web/embedded-timelines/collection "Twitter embedded collection")
-* [Moment](https://dev.twitter.com/web/embedded-moments "Twitter embedded Moment")
-* [Vine](https://dev.twitter.com/web/vine "Vine embed")
+* [single Tweet](https://github.com/twitter/wordpress/wiki/Embedded-Tweet "single Tweet embed")
+* [single Tweet with video template](https://github.com/twitter/wordpress/wiki/Embedded-Video "single Tweet with video embed")
+* [profile timeline](https://github.com/twitter/wordpress/wiki/Embedded-Profile-Timeline "Twitter embedded profile timeline")
+* [list timeline](https://github.com/twitter/wordpress/wiki/Embedded-List-Timeline "Twitter embedded list timeline")
+* [search timeline](https://github.com/twitter/wordpress/wiki/Embedded-Search-Timeline "Twitter embedded search timeline")
+* [collection](https://github.com/twitter/wordpress/wiki/Embedded-Collection-Timeline "Twitter embedded collection")
+* [Moment](https://github.com/twitter/wordpress/wiki/Moments "Twitter embedded Moment")
 
 Customize embed display to match your theme. Choose a light or dark background, customize link and border colors, and customize timeline template components through your site's WordPress administrative interface.
 
@@ -33,13 +32,13 @@ The plugin automatically customizes an embed's template text to match the locale
 
 = Grow your Twitter audience =
 
-Automatically generate link previews for your site's URLs shared on Twitter using [Twitter Cards markup](https://dev.twitter.com/cards/overview) . Easily identify your site and author Twitter accounts through your site and user administrative interfaces.
+Automatically generate link previews for your site's URLs shared on Twitter using [Twitter Cards markup](https://github.com/twitter/wordpress/wiki/Cards) . Easily identify your site and author Twitter accounts through your site and user administrative interfaces.
 
-Add a [Tweet button](https://dev.twitter.com/web/tweet-button) to public posts to encourage your visitors to share your content on Twitter. Visitors may see recommended accounts to follow after sharing your content including your site and its authors.
+Add a [Tweet button](https://github.com/twitter/wordpress/wiki/Tweet-Button) to public posts to encourage your visitors to share your content on Twitter. Visitors may see recommended accounts to follow after sharing your content including your site and its authors.
 
-Add a [Follow button](https://dev.twitter.com/web/follow-button) to convert your site visitors into Twitter subscribers.
+Add a [Follow button](https://github.com/twitter/wordpress/wiki/Follow-Button) to convert your site visitors into Twitter subscribers.
 
-Add a [Periscope On Air button](https://www.periscope.tv/embed#on-air-button) to convert your site visitors into Periscope subscribers.
+Add a [Periscope On Air button](https://github.com/twitter/wordpress/wiki/Periscope-On-Air-Button) to convert your site visitors into Periscope subscribers.
 
 = Improve Twitter advertising campaigns =
 
@@ -47,7 +46,7 @@ Easily add a Twitter website tag to your website to track the effectiveness and 
 
 > <strong>Docs and active development</strong><br>
 > Contribute to the plugin, submit pull requests, or run test suites through the [Twitter plugin for WordPress GitHub repository](https://github.com/twitter/wordpress).
-> View [Twitter for WordPress documentation](https://dev.twitter.com/web/wordpress) to learn more about customization through WordPress filters.
+> View [Twitter for WordPress documentation](https://github.com/twitter/wordpress/wiki) to learn more about customization through WordPress filters.
 
 == Upgrade Notice ==
 = 2.0.0 =
