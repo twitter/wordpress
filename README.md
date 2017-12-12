@@ -16,7 +16,7 @@ Features built on top of oEmbed APIs omit JavaScript from the oEmbed response, a
 
 ### Embedded Tweet
 
-Add an [embedded Tweet](https://dev.twitter.com/web/embedded-tweets) to your site by URL or by using the `tweet` [shortcode macro](http://codex.wordpress.org/Shortcode). Shortcode syntax is compatible with Jetpack, allowing flexible migration for WordPress.com or Jetpack sites.
+Add an [embedded Tweet](https://github.com/twitter/wordpress/wiki/Embedded-Tweet) to your site by URL or by using the `tweet` [shortcode macro](http://codex.wordpress.org/Shortcode). Shortcode syntax is compatible with Jetpack, allowing flexible migration for WordPress.com or Jetpack sites.
 
 Add a Twitter embedded video widget to your site by using the `twitter_video` shortcode macro.
 
@@ -24,29 +24,29 @@ Customize an embedded Tweet color scheme to match your site's color palette. Cho
 
 ### Twitter profile
 
-Add an [embedded profile timeline](https://dev.twitter.com/web/embedded-timelines/user) to your site by URL, using the `[twitter_profile]` shortcode macro, or adding a widget to your theme's widget area.
+Add an [embedded profile timeline](https://github.com/twitter/wordpress/wiki/Embedded-Profile-Timeline) to your site by URL, using the `[twitter_profile]` shortcode macro, or adding a widget to your theme's widget area.
 
 ### Twitter list
 
-Add an [embedded list timeline](https://dev.twitter.com/web/embedded-timelines/list) to your site by URL, using the `[twitter_list]` shortcode macro, or adding a widget to your theme's widget area.
+Add an [embedded list timeline](https://github.com/twitter/wordpress/wiki/Embedded-List-Timeline) to your site by URL, using the `[twitter_list]` shortcode macro, or adding a widget to your theme's widget area.
 
 ### Twitter search
 
-Add an [embedded search timeline](https://dev.twitter.com/web/embedded-timelines/search) to your site using the `[twitter_list]` shortcode macro or adding a widget to your theme's widget area.
+Add an [embedded search timeline](https://github.com/twitter/wordpress/wiki/Embedded-Search-Timeline) to your site using the `[twitter_list]` shortcode macro or adding a widget to your theme's widget area.
 
 ### Collection
 
-Display a [Twitter collection](https://dev.twitter.com/web/embedded-timelines/collection) by URL, using the `twitter_collection` shortcode macro, or adding widget to a theme's widget area.
+Display a [Twitter collection](https://github.com/twitter/wordpress/wiki/Embedded-Collection-Timeline) by URL, using the `twitter_collection` shortcode macro, or adding widget to a theme's widget area.
 
 Add a Twitter collection with a grid template display to an article by URL or by using the `twitter_grid` shortcode macro.
 
 ### Embedded Moment
 
-Add a [Twitter Moment](https://twitter.com/i/moments) to an article by URL or by using the `twitter_moment` shortcode macro.
+Add a [Twitter Moment](https://github.com/twitter/wordpress/wiki/Moments) to an article by URL or by using the `twitter_moment` shortcode macro.
 
 ### Twitter Cards
 
-The Twitter plugin for WordPress will automatically generate Twitter [Twitter Cards](https://dev.twitter.com/cards/overview) markup to highlight your post content when shared on Twitter. Add your site and author Twitter usernames through the WordPress administrative interface to attribute content to Twitter authors and drive followers.
+The Twitter plugin for WordPress will automatically generate Twitter [Twitter Cards](https://github.com/twitter/wordpress/wiki/Cards) markup to highlight your post content when shared on Twitter. Add your site and author Twitter usernames through the WordPress administrative interface to attribute content to Twitter authors and drive followers.
 
 Add your site's Twitter username through the WordPress administrative interface to enable free [Twitter Analytics](https://analytics.twitter.com/) for your site. Twitter Analytics shows the popularity of your site's URLs shared on Twitter, the Twitter accounts growing your content's reach, and how your content spreads across Twitter.
 
@@ -54,17 +54,17 @@ Customize each post's Twitter Card title and description directly from the WordP
 
 ### Tweet Button
 
-Add a [Tweet Button](https://dev.twitter.com/web/tweet-button) to any page using the `twitter_share` shortcode macro to encourage sharing of your content on Twitter. The Twitter plugin for WordPress automatically pulls in site and author Twitter accounts to credit in the Tweet and grow followers.
+Add a [Tweet Button](https://github.com/twitter/wordpress/wiki/Tweet-Button) to any page using the `twitter_share` shortcode macro to encourage sharing of your content on Twitter. The Twitter plugin for WordPress automatically pulls in site and author Twitter accounts to credit in the Tweet and grow followers.
 
 Customize Tweet text and add hashtags Tweet Button shares for your post through a custom editor in the WordPress post editing interface.
 
 ### Follow Button
 
-Add a Follow Button to your site by configuring a Follow button [WordPress widget](http://codex.wordpress.org/WordPress_Widgets) for use in an eligible widget area. Add a Follow button anywhere in your post content or theme using the `twitter_follow` shortcode macro.
+Add a [Follow Button](https://github.com/twitter/wordpress/wiki/Follow-Button) to your site by configuring a Follow button [WordPress widget](http://codex.wordpress.org/WordPress_Widgets) for use in an eligible widget area. Add a Follow button anywhere in your post content or theme using the `twitter_follow` shortcode macro.
 
 ### Periscope On Air Button
 
-Add a [Periscope On Air Button](https://www.periscope.tv/embed) to any page using a Periscope profile URL or the `periscope_on_air` shortcode macro to help your website audience discover your Periscope account. The button will automatically display your account's on air status when you broadcast.
+Add a [Periscope On Air Button](https://github.com/twitter/wordpress/wiki/Periscope-On-Air-Button) to any page using a Periscope profile URL or the `periscope_on_air` shortcode macro to help your website audience discover your Periscope account. The button will automatically display your account's on air status when you broadcast.
 
 ### Advertising Tracking
 
