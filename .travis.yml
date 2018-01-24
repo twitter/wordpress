@@ -57,4 +57,4 @@ before_install:
   # prepare for running the tests
   - cd $plugin_dir
 
-script: phpunit
+script: vendor/bin/phpunit
