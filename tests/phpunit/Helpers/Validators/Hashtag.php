@@ -25,10 +25,12 @@ THE SOFTWARE.
 
 namespace Twitter\Tests\Helpers\Validators;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * @coversDefaultClass \Twitter\Helpers\Validators\Hashtag
  */
-final class Hashtag extends \PHPUnit_Framework_TestCase
+final class Hashtag extends TestCase
 {
 
     /**

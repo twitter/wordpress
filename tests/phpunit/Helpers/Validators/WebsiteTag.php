@@ -25,10 +25,12 @@ THE SOFTWARE.
 
 namespace Twitter\Tests\Helpers\Validators;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * @coversDefaultClass \Twitter\Helpers\Validators\WebsiteTag
  */
-final class WebsiteTag extends \PHPUnit_Framework_TestCase
+final class WebsiteTag extends TestCase
 {
 	/**
 	 * Test validity of a website tag
@@ -87,7 +89,7 @@ final class WebsiteTag extends \PHPUnit_Framework_TestCase
 	 *
 	 * @since 2.0.0
 	 *
-	 * @return array website tag value, 
+	 * @return array website tag value,
 	 */
 	public static function websiteTagProvider()
 	{

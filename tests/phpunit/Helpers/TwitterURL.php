@@ -25,10 +25,12 @@ THE SOFTWARE.
 
 namespace Twitter\Tests\Helpers;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * @coversDefaultClass \Twitter\Helpers\TwitterURL
  */
-final class TwitterURL extends \PHPUnit_Framework_TestCase
+final class TwitterURL extends TestCase
 {
     /**
      * Test building a profile from a passed screen_name

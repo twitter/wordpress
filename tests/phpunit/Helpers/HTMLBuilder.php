@@ -25,10 +25,12 @@ THE SOFTWARE.
 
 namespace Twitter\Tests\Helpers;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * @coversDefaultClass \Twitter\Helpers\HTMLBuilder
  */
-final class HTMLBuilder extends \PHPUnit_Framework_TestCase
+final class HTMLBuilder extends TestCase
 {
     /**
      * Test proper escaping of a class name before it is inserted as a class attribute value

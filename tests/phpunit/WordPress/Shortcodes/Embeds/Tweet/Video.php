@@ -25,11 +25,13 @@ THE SOFTWARE.
 
 namespace Twitter\Tests\WordPress\Shortcodes\Embeds\Tweet;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * @group shortcode
  * @coversDefaultClass \Twitter\WordPress\Shortcodes\Embeds\Tweet\Video
  */
-final class Video extends \PHPUnit_Framework_TestCase
+final class Video extends TestCase
 {
 
     /**

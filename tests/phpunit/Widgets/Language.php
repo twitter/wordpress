@@ -25,10 +25,12 @@ THE SOFTWARE.
 
 namespace Twitter\Tests\Widgets;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * @coversDefaultClass \Twitter\Widgets\Language
  */
-final class Language extends \PHPUnit_Framework_TestCase
+final class Language extends TestCase
 {
 
     /**
@@ -55,7 +57,7 @@ final class Language extends \PHPUnit_Framework_TestCase
             $this->assertFalse(\Twitter\Widgets\Language::isSupportedLanguage($language_code), $message);
         }
     }
-    
+
     /**
      * Test language codes
      *
