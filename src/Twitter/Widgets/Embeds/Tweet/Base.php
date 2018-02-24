@@ -136,9 +136,9 @@ abstract class Base extends \Twitter\Widgets\Base
     {
         if ($this->id) {
             return static::BASE_URL . $this->id;
-        } else {
-            return '';
         }
+
+        return '';
     }
 
     /**

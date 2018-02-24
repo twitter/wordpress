@@ -113,9 +113,9 @@ class Collection extends \Twitter\Widgets\Embeds\Timeline
         if (is_string($id)) {
             if (function_exists('ctype_digit')) {
                 return ctype_digit($id);
-            } else {
-                return (bool) (preg_match("/^[0-9]+$/", $id));
             }
+
+            return (bool) (preg_match("/^[0-9]+$/", $id));
         }
 
         return false;

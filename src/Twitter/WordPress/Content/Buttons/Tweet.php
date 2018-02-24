@@ -75,12 +75,16 @@ class Tweet
 				$tweet_button = "\n" . $tweet_button . "\n";
 				if ( 'before' === $position ) {
 					return $tweet_button . $content;
-				} else if ( 'after' === $position ) {
-					return $content . $tweet_button;
-				} else if ( 'both' === $position ) {
-					return $tweet_button . $content . $tweet_button;
 				}
-			}
+
+                if ( 'after' === $position ) {
+                    return $content . $tweet_button;
+                }
+
+                if ( 'both' === $position ) {
+                    return $tweet_button . $content . $tweet_button;
+                }
+            }
 		}
 
 		return $content;
