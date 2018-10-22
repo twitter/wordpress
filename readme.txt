@@ -2,8 +2,8 @@
 Contributors: Twitter, niallkennedy, sobkowicz
 Tags: twitter, embedded tweet, embedded timeline, twitter profile, twitter list, twitter moment, twitter video, twitter grid, vine, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 4.7
-Tested up to: 4.9
-Stable tag: 2.0.2
+Tested up to: 5.0
+Stable tag: 2.0.3
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -72,6 +72,9 @@ Shortcode improvements for ajax-loaded posts. Remove photo, gallery, and product
 Display admin notice if current PHP version does not meet minimum requirements. Do not display Tweet button in auto-generated excerpt.
 
 == Changelog ==
+= 2.0.3 =
+* Add support for WordPress 5.0
+
 = 2.0.2 =
 * Support 280 characters
 * Add support for WordPress 4.8 and 4.9

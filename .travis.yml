@@ -12,6 +12,10 @@ language: php
 # Declare versions of PHP to test
 php:
   # aliased to a recent 7.1.x version
+  - 7.3
+    # aliased to a recent 7.1.x version
+  - 7.2
+  # aliased to a recent 7.1.x version
   - 7.1
   # aliased to a recent 7.0.x version
   - 7.0
@@ -25,6 +29,8 @@ php:
 # WordPress comes from the Git mirror, where 'master' mirrors svn 'trunk' and
 # x.y mirrors the latest from the x.y branch
 env:
+  # WordPress 5.0
+  - WP_VERSION=5.0
   # WordPress 4.9
   - WP_VERSION=4.9
   # WordPress 4.8
