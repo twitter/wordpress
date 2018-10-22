@@ -12,10 +12,6 @@ language: php
 # Declare versions of PHP to test
 php:
   # aliased to a recent 7.1.x version
-  - 7.3
-    # aliased to a recent 7.1.x version
-  - 7.2
-  # aliased to a recent 7.1.x version
   - 7.1
   # aliased to a recent 7.0.x version
   - 7.0
