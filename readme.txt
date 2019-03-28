@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: Twitter, niallkennedy, sobkowicz
-Tags: twitter, embedded tweet, embedded timeline, twitter profile, twitter list, twitter moment, twitter video, twitter grid, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
+Tags: twitter, embedded tweet, embedded timeline, twitter profile, twitter list, twitter moment, twitter video, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 4.7
-Tested up to: 5.0
-Stable tag: 2.0.3
+Tested up to: 5.1
+Stable tag: 2.0.4
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -19,10 +19,8 @@ Requires PHP version 5.4 or greater.
 Embed Twitter content by pasting a URL, customizing a shortcode, or in a widget area.
 
 * [single Tweet](https://github.com/twitter/wordpress/wiki/Embedded-Tweet "single Tweet embed")
-* [single Tweet with video template](https://github.com/twitter/wordpress/wiki/Embedded-Video "single Tweet with video embed")
 * [profile timeline](https://github.com/twitter/wordpress/wiki/Embedded-Profile-Timeline "Twitter embedded profile timeline")
 * [list timeline](https://github.com/twitter/wordpress/wiki/Embedded-List-Timeline "Twitter embedded list timeline")
-* [search timeline](https://github.com/twitter/wordpress/wiki/Embedded-Search-Timeline "Twitter embedded search timeline")
 * [collection](https://github.com/twitter/wordpress/wiki/Embedded-Collection-Timeline "Twitter embedded collection")
 * [Moment](https://github.com/twitter/wordpress/wiki/Moments "Twitter embedded Moment")
 
@@ -71,6 +69,10 @@ Shortcode improvements for ajax-loaded posts. Remove photo, gallery, and product
 Display admin notice if current PHP version does not meet minimum requirements. Do not display Tweet button in auto-generated excerpt.
 
 == Changelog ==
+= 2.0.4 =
+* Add support for WordPress 5.1
+* Remove documentation on video widget, grid widget, and search timeline widget which have been deprecated.
+
 = 2.0.3 =
 * Add support for WordPress 5.0
 
