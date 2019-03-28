@@ -25,6 +25,8 @@ php:
 # WordPress comes from the Git mirror, where 'master' mirrors svn 'trunk' and
 # x.y mirrors the latest from the x.y branch
 env:
+  # WordPress 5.1
+  - WP_VERSION=5.1
   # WordPress 5.0
   - WP_VERSION=5.0
   # WordPress 4.9

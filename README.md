@@ -4,7 +4,7 @@ The Twitter plugin for WordPress optimizes your website for a Twitter audience t
 
 The Twitter plugin for WordPress requires PHP 5.4 or greater to take advantage of [traits](http://php.net/manual/language.oop5.traits.php), [late static bindings](http://php.net/manual/language.oop5.late-static-bindings.php) for extensibility, [namespaces](http://php.net/manual/language.namespaces.rationale.php), and Twitter libraries. Embedded Tweets require a server capable of communicating with Twitter's servers over TLS/SSL; the [cURL library](http://php.net/manual/book.curl.php) typically works best.
 
-Current version: `2.0.3`
+Current version: `2.0.4`
 
 [![Build Status](https://travis-ci.org/twitter/wordpress.svg)](https://travis-ci.org/twitter/wordpress)
 
@@ -18,8 +18,6 @@ Features built on top of oEmbed APIs omit JavaScript from the oEmbed response, a
 
 Add an [embedded Tweet](https://github.com/twitter/wordpress/wiki/Embedded-Tweet) to your site by URL or by using the `tweet` [shortcode macro](http://codex.wordpress.org/Shortcode). Shortcode syntax is compatible with Jetpack, allowing flexible migration for WordPress.com or Jetpack sites.
 
-Add a Twitter embedded video widget to your site by using the `twitter_video` shortcode macro.
-
 Customize an embedded Tweet color scheme to match your site's color palette. Choose a theme type, link color, and border color in the WordPress administrative interface.
 
 ### Twitter profile
@@ -30,15 +28,9 @@ Add an [embedded profile timeline](https://github.com/twitter/wordpress/wiki/Emb
 
 Add an [embedded list timeline](https://github.com/twitter/wordpress/wiki/Embedded-List-Timeline) to your site by URL, using the `[twitter_list]` shortcode macro, or adding a widget to your theme's widget area.
 
-### Twitter search
-
-Add an [embedded search timeline](https://github.com/twitter/wordpress/wiki/Embedded-Search-Timeline) to your site using the `[twitter_list]` shortcode macro or adding a widget to your theme's widget area.
-
 ### Collection
 
 Display a [Twitter collection](https://github.com/twitter/wordpress/wiki/Embedded-Collection-Timeline) by URL, using the `twitter_collection` shortcode macro, or adding widget to a theme's widget area.
-
-Add a Twitter collection with a grid template display to an article by URL or by using the `twitter_grid` shortcode macro.
 
 ### Embedded Moment
 
