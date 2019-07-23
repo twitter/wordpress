@@ -2,8 +2,8 @@
 Contributors: Twitter, niallkennedy, sobkowicz
 Tags: twitter, embedded tweet, embedded timeline, twitter profile, twitter list, twitter moment, twitter video, periscope, twitter cards, tweet button, follow button, twitter analytics, twitter ads
 Requires at least: 4.7
-Tested up to: 5.1
-Stable tag: 2.0.4
+Tested up to: 5.2
+Stable tag: 2.0.5
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -69,6 +69,9 @@ Shortcode improvements for ajax-loaded posts. Remove photo, gallery, and product
 Display admin notice if current PHP version does not meet minimum requirements. Do not display Tweet button in auto-generated excerpt.
 
 == Changelog ==
+= 2.0.5 =
+* Add support for WordPress 5.2
+* Fix conversation option to properly set hide_thread oEmbed param
 = 2.0.4 =
 * Add support for WordPress 5.1
 * Remove documentation on video widget, grid widget, and search timeline widget which have been deprecated.

@@ -265,6 +265,7 @@ class Tweet extends \Twitter\Widgets\Embeds\Tweet\Base
         if (isset($options['cards']) && ( false === $options['cards'] || 'false' === $options['cards'] || 0 == $options['cards'] )) {
             $tweet->hideCards();
         }
+
         if (isset($options['conversation']) && ( false === $options['conversation'] || 'false' === $options['conversation'] || 0 == $options['conversation'] )) {
             $tweet->hideParentTweet();
         }
@@ -333,7 +334,7 @@ class Tweet extends \Twitter\Widgets\Embeds\Tweet\Base
             $oembed['hide_media'] = false;
         }
         if (false === $this->conversation) {
-            $oembed['hide_thread'] = false;
+            $oembed['hide_thread'] = true;
         }
         if (static::ALIGN_NONE !== $this->align) {
             $oembed['align'] = $this->align;
