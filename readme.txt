@@ -72,6 +72,7 @@ Display admin notice if current PHP version does not meet minimum requirements. 
 = 2.0.5 =
 * Add support for WordPress 5.2
 * Fix conversation option to properly set hide_thread oEmbed param
+
 = 2.0.4 =
 * Add support for WordPress 5.1
 * Remove documentation on video widget, grid widget, and search timeline widget which have been deprecated.
