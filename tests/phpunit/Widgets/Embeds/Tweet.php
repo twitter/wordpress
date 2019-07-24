@@ -310,7 +310,7 @@ final class Tweet extends \Twitter\Tests\TestWithPrivateAccess
         $this->assertArrayHasKey('hide_media', $parameters, 'Cards override not returned');
         $this->assertFalse($parameters['hide_media'], 'Failed to return false bool for cards override');
         $this->assertArrayHasKey('hide_thread', $parameters, 'Parent Tweet override not returned');
-        $this->assertFalse($parameters['hide_thread'], 'Failed to return false bool for conversation override');
+        $this->assertTrue($parameters['hide_thread'], 'Failed to return true bool for conversation override');
         $this->assertArrayHasKey('align', $parameters, 'Align value not returned');
         $this->assertEquals(\Twitter\Widgets\Embeds\Tweet::ALIGN_LEFT, $parameters['align'], 'Align value not returned as expected');
         $this->assertArrayHasKey('theme', $parameters, 'Theme value not returned');
