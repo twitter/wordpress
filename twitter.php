@@ -24,13 +24,13 @@ THE SOFTWARE.
 */
 /**
  * @package twitter
- * @version 2.0.4
+ * @version 2.0.5
  */
 /*
 Plugin Name: Twitter
 Plugin URI:  https://wordpress.org/plugins/twitter/
-Description: Official Twitter plugin for WordPress. Embed Twitter content and grow your audience on Twitter. Requires PHP 5.4 or greater.
-Version:     2.0.4
+Description: Official Twitter plugin for WordPress. Embed Twitter content and grow your audience on Twitter. Requires PHP 5.6 or greater.
+Version:     2.0.5
 Author:      Twitter
 Author URI:  https://dev.twitter.com/
 License:     MIT
@@ -49,8 +49,8 @@ if ( ! function_exists( 'add_action' ) ) {
 	exit( 'Hi there! I am a WordPress plugin requiring functions included with WordPress. I am not meant to be addressed directly.' );
 }
 
-// plugin requires PHP 5.4 or greater
-if ( version_compare( PHP_VERSION, '5.4.0', '<' ) ) {
+// plugin requires PHP 5.6 or greater
+if ( version_compare( PHP_VERSION, '5.6.0', '<' ) ) {
 	if ( ! class_exists( 'Twitter_CompatibilityNotice' ) ) {
 		require_once( dirname( __FILE__ ) . '/compatibility-notice.php' );
 	}

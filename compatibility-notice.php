@@ -38,7 +38,7 @@ class Twitter_CompatibilityNotice {
 	 *
 	 * @type string
 	 */
-	const MIN_PHP_VERSION = '5.4';
+	const MIN_PHP_VERSION = '5.6';
 
 	/**
 	 * Release dates of PHP versions greater than the WordPress minimum requirement and less than the plugin minimum requirement

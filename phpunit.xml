@@ -9,7 +9,7 @@
   <testsuites>
     <!-- Default test suite to run all tests -->
     <testsuite>
-      <directory phpVersion="5.4.0" suffix=".php">tests/phpunit</directory>
+      <directory phpVersion="5.6.0" suffix=".php">tests/phpunit</directory>
     </testsuite>
   </testsuites>
 </phpunit>
