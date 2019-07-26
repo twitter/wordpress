@@ -175,7 +175,9 @@ class Account
     {
         if ($this->hasID()) {
             return array( 'id' => $this->id );
-        } elseif ($this->hasScreenName()) {
+        }
+
+        if ($this->hasScreenName()) {
             return '@' . $this->screen_name;
         }
     }

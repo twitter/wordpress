@@ -162,15 +162,21 @@ class Generator
 	{
 		if ( is_home() || is_front_page() ) {
 			return static::buildHomepageCard();
-		} else if ( is_singular() ) {
-			return static::buildPostCard();
-		} else if ( is_author() ) {
-			return static::buildAuthorCard();
-		} else if ( is_archive() ) {
-			return static::buildArchiveCard();
 		}
 
-		return null;
+        if ( is_singular() ) {
+            return static::buildPostCard();
+        }
+
+        if ( is_author() ) {
+            return static::buildAuthorCard();
+        }
+
+        if ( is_archive() ) {
+            return static::buildArchiveCard();
+        }
+
+        return null;
 	}
 
 	/**

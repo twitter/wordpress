@@ -61,18 +61,22 @@ class Language extends \Twitter\Widgets\Language
 
 		if ( 'tl' === $locale ) {
 			return 'fil';
-		} else if ( 'ms' === $locale ) {
-			return 'msa';
 		}
 
-		// handle regional
+        if ( 'ms' === $locale ) {
+            return 'msa';
+        }
+
+        // handle regional
 		if ( 'zh_cn' === $locale ) {
 			return 'zh-cn';
-		} else if ( 'zh_tw' === $locale ) {
-			return 'zh-tw';
 		}
 
-		if ( isset( static::$SUPPORTED_LANGUAGES[ $locale ] ) ) {
+        if ( 'zh_tw' === $locale ) {
+            return 'zh-tw';
+        }
+
+        if ( isset( static::$SUPPORTED_LANGUAGES[ $locale ] ) ) {
 			return $locale;
 		}
 

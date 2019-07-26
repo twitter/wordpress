@@ -204,8 +204,8 @@ class Image
 
         if ($has_properties) {
             return $properties;
-        } else {
-            return $this->src;
         }
+
+        return $this->src;
     }
 }
