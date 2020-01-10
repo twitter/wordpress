@@ -393,7 +393,7 @@ class Generator
 				$description = $cards_post_meta['description'];
 			} else if ( ! empty( $post->post_excerpt ) ) {
 				/** This filter is documented in wp-includes/post-template.php */
-				$description = apply_filters( 'get_the_excerpt', $post->post_excerpt );
+				$description = apply_filters( 'get_the_excerpt', $post->post_excerpt, $post );
 				/** This filter is documented in ::buildHomepageCard */
 				$description = apply_filters( 'twitter_card_description', $description, $query_type, $post->ID );
 			} else {
