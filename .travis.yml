@@ -1,62 +1,67 @@
-# Travis CI Configuration file
-# @link https://travis-ci.org/
-
-# Use new Travis container-based infrastructure
-# http://docs.travis-ci.com/user/workers/container-based-infrastructure/
 sudo: false
+dist: trusty
 
-# PHP
-# @link http://docs.travis-ci.com/user/languages/php/
 language: php
 
-# Declare versions of PHP to test
-php:
-  # aliased to a recent 7.1.x version
-  - 7.1
-  # aliased to a recent 7.0.x version
-  - 7.0
-  # aliased to a recent 5.6.x version
-  - 5.6
+notifications:
+  email:
+    on_success: never
+    on_failure: change
 
-# WordPress comes from the Git mirror, where 'master' mirrors svn 'trunk' and
-# x.y mirrors the latest from the x.y branch
-env:
-  # WordPress 5.2
-  - WP_VERSION=5.2
-  # WordPress 5.1
-  - WP_VERSION=5.1
-  # WordPress 5.0
-  - WP_VERSION=5.0
-  # WordPress 4.9
-  - WP_VERSION=4.9
-  # WordPress 4.8
-  - WP_VERSION=4.8
-  # WordPress 4.7
-  - WP_VERSION=4.7
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - $HOME/.composer/cache
 
 matrix:
-  fast_finish: true
+  include:
+    - php: 7.2
+      env: WP_VERSION=latest
+    - php: 7.1
+      env: WP_VERSION=latest
+    - php: 7.0
+      env: WP_VERSION=latest
+    - php: 5.6
+      env: WP_VERSION=4.7
+    - php: 5.6
+      env: WP_VERSION=latest
+    - php: 5.6
+      env: WP_VERSION=trunk
+    - php: 5.6
+      env: WP_TRAVISCI=phpcs
+    - php: 5.3
+      env: WP_VERSION=latest
+      dist: precise
 
-# before_install: Failures in this section will result in build status 'errored'
-before_install:
-  # set up WP install
-  - export WP_DEVELOP_DIR=/tmp/wordpress/
-  - mkdir -p $WP_DEVELOP_DIR
-  - git clone --depth=1 --branch="$WP_VERSION" git://develop.git.wordpress.org/ $WP_DEVELOP_DIR
-  - plugin_slug=$(basename $(pwd))
-  - plugin_dir=$WP_DEVELOP_DIR/src/wp-content/plugins/$plugin_slug
-  - cd ..
-  - mv $plugin_slug $plugin_dir
-  # set up tests config
-  - cd $WP_DEVELOP_DIR
-  - echo $WP_DEVELOP_DIR
-  - cp wp-tests-config-sample.php wp-tests-config.php
-  - sed -i "s/youremptytestdbnamehere/wordpress_test/" wp-tests-config.php
-  - sed -i "s/yourusernamehere/travis/" wp-tests-config.php
-  - sed -i "s/yourpasswordhere//" wp-tests-config.php
-  # create database
-  - mysql -e 'CREATE DATABASE wordpress_test;' -uroot
-  # prepare for running the tests
-  - cd $plugin_dir
+before_script:
+  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  - |
+    if [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then
+      phpenv config-rm xdebug.ini
+    else
+      echo "xdebug.ini does not exist"
+    fi
+  - |
+    if [[ ! -z "$WP_VERSION" ]] ; then
+      bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+      composer global require "phpunit/phpunit=4.8.*|5.7.*"
+    fi
+  - |
+    if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
+      composer global require wp-coding-standards/wpcs
+      phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
+    fi
 
-script: phpunit
+script:
+  - |
+    if [[ ! -z "$WP_VERSION" ]] ; then
+      phpunit
+      WP_MULTISITE=1 phpunit
+    fi
+  - |
+    if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
+      phpcs
+    fi
