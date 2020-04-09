@@ -7,13 +7,13 @@ Stable tag: 2.0.6
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
-Official Twitter and Periscope plugin for WordPress. Embed content and grow your audience. Requires PHP 7.3 or greater.
+Official Twitter and Periscope plugin for WordPress. Embed content and grow your audience. Requires PHP 5.6 or greater.
 
 == Description ==
 
 Embed Twitter content, improve sharing on Twitter, convert your web audience into Twitter or Periscope subscribers, and easily track visits to your website from Twitter advertising.
 
-Requires PHP version 7.3 or greater.
+Requires PHP version 5.6 or greater.
 
 = Embed Twitter content =
 Embed Twitter content by pasting a URL, customizing a shortcode, or in a widget area.

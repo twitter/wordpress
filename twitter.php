@@ -49,8 +49,8 @@ if ( ! function_exists( 'add_action' ) ) {
 	exit( 'Hi there! I am a WordPress plugin requiring functions included with WordPress. I am not meant to be addressed directly.' );
 }
 
-// plugin requires PHP 7.3 or greater
-if ( version_compare( PHP_VERSION, '7.3.0', '<' ) ) {
+// plugin requires PHP 5.6 or greater
+if ( version_compare( PHP_VERSION, '5.6.0', '<' ) ) {
 	if ( ! class_exists( 'Twitter_CompatibilityNotice' ) ) {
 		require_once( dirname( __FILE__ ) . '/compatibility-notice.php' );
 	}
