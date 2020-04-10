@@ -9,6 +9,9 @@ sudo: false
 # @link http://docs.travis-ci.com/user/languages/php/
 language: php
 
+services:
+  - mysql
+
 # Declare versions of PHP to test
 php:
   # aliased to a recent 7.3.x version
