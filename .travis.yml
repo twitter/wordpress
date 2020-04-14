@@ -42,6 +42,9 @@ env:
   - WP_VERSION=4.7
 
 matrix:
+  include:
+    - php: 7.0
+    env: WP_TRAVISCI=travis:phpunit
   fast_finish: true
 
 # before_install: Failures in this section will result in build status 'errored'
@@ -66,4 +69,4 @@ before_install:
   # prepare for running the tests
   - cd $plugin_dir
 
-script: ./vendor/bin/phpunit
+script: phpunit
