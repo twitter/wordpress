@@ -66,4 +66,5 @@ before_install:
   # prepare for running the tests
   - cd $plugin_dir
 
+# help me 
 script: phpunit --ignore-platform-reqs
