@@ -4,9 +4,9 @@ The Twitter plugin for WordPress optimizes your website for a Twitter audience t
 
 The Twitter plugin for WordPress requires PHP 5.6 or greater to take advantage of [traits](http://php.net/manual/language.oop5.traits.php), [late static bindings](http://php.net/manual/language.oop5.late-static-bindings.php) for extensibility, [namespaces](http://php.net/manual/language.namespaces.rationale.php), and Twitter libraries. Embedded Tweets require a server capable of communicating with Twitter's servers over TLS/SSL; the [cURL library](http://php.net/manual/book.curl.php) typically works best.
 
-Current version: `2.0.5`
+Current version: `2.0.5` 
 
-[![Build Status](https://travis-ci.org/twitter/wordpress.svg)](https://travis-ci.org/twitter/wordpress)
+[![status: retired](https://opensource.twitter.dev/status/retired.svg)](https://opensource.twitter.dev/status/#retired)
 
 ## Features
 
@@ -69,18 +69,10 @@ The plugin is split into PHP object builders for constructing buttons, widgets, 
 ## Code of Conduct
 This, and all github.com/twitter projects, are under the [Twitter Open Source Code of Conduct](https://github.com/twitter/code-of-conduct/blob/master/code-of-conduct.md). Additionally, see the [Typelevel Code of Conduct](http://typelevel.org/conduct) for specific examples of harassing behavior that are not tolerated.
 
-## Contact
-
-End user support questions should be submitted to the WordPress plugin repository forum:
-<https://wordpress.org/support/plugin/twitter>
-
-Bugs or feature development contributions should be created through the GitHub repository:
-<https://github.com/twitter/wordpress/issues>
-
 ## Authors
 * Niall Kennedy <https://twitter.com/niall>
 
-## Maintainers
+## Former maintainer
 * Evan Sobkowicz <https://twitter.com/evansobkowicz>
 
 A full list of [contributors](https://github.com/twitter/wordpress/graphs/contributors) can be found on GitHub.
